@@ -10,7 +10,7 @@ Welcome to MEPhI Docs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   2022/index.md
+   2022/index.rst
 
 
 Indices and tables
