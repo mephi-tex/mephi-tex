@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Добро пожаловать MEPhI Docs!
-============================
+Добро пожаловать в MEPhI Docs!
+==============================
 
 .. toctree::
    :maxdepth: 2
