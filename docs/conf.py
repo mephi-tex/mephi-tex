@@ -57,18 +57,18 @@ myst_enable_extensions = [
 
 # latex_additional_files = ["preamble.sty"]
 
-mathjax3_config = {
-    "TeX": {
-        "Macros": {
-            "braket": ["\\langle #1 \\rangle", 1],
-            "wrapmat": ["\\begin{#1} #2 \\end{#1}", 2],
-            "mat": ["\\wrapmat{Vmatrix}{#1}", 1],
-            "det": ["\\wrapmat{vmatrix}{#1}", 1],
-            "upline": ["\\overline{#1}", 1],
-            "dnline": ["\\underline{#1}", 1]
-        }
-    }
-}
+# mathjax3_config = {
+#     "TeX": {
+#         "Macros": {
+#             "braket": ["\\langle #1 \\rangle", 1],
+#             "wrapmat": ["\\begin{#1} #2 \\end{#1}", 2],
+#             "mat": ["\\wrapmat{Vmatrix}{#1}", 1],
+#             "det": ["\\wrapmat{vmatrix}{#1}", 1],
+#             "upline": ["\\overline{#1}", 1],
+#             "dnline": ["\\underline{#1}", 1],
+#         }
+#     }
+# }
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
