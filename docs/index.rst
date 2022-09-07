@@ -13,10 +13,9 @@
    2022/index.rst
 
 
-Индексы и таблицы
-=================
+.. Индексы и таблицы
+.. =================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
