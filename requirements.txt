@@ -1,5 +1,0 @@
-# mkdocs
-# pymdown-extensions
-
-myst-parser
-sphinx
