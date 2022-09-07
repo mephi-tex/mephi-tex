@@ -3,18 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to MEPhI Docs's documentation!
-======================================
+Добро пожаловать MEPhI Docs!
+============================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Содержание:
 
    2022/index.rst
 
 
-Indices and tables
-==================
+Индексы и таблицы
+=================
 
 * :ref:`genindex`
 * :ref:`modindex`
