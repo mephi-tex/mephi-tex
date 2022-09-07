@@ -33,7 +33,7 @@ language = "ru"
 # ones.
 extensions = [
     "myst_parser",
-    # "sphinxcontrib.mermaid",
+    "sphinxcontrib.mermaid",
     # "mathjax",
 ]
 
