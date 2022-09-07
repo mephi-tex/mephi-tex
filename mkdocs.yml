@@ -1,4 +1,5 @@
 site_name: MEPhI Docs
+theme: alabaster
 
 markdown_extensions:
   - pymdownx.arithmatex:
