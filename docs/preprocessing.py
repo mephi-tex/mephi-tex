@@ -35,3 +35,31 @@ def fix_preambles():
             text = START + preamble + END + "\n" + text
 
         file.write_text(text, "utf-8")
+
+
+LITERATURE = """# {name}
+
+Веб-просмотр:
+
+<a href="https://github.com/0dminnimda/mephi-docs/blob/main/docs/_static/literature/{name}.pdf">Здесь</a> можно найти запасной веб-просмотр, на случай, если этот не работает <br>
+Также можно <a href="../_static/literature/{name}.pdf">скачать PDF</a>
+
+<object data="../_static/literature/{name}.pdf" type="application/pdf" width="960vw%" height="720vw%">
+    <iframe src="../_static/literature/{name}.pdf" width="960vw%" height="720vw%" style="border: none;">
+        У-упс, этот браузер не поддерживает встроенные PDF 😅
+    </iframe>
+</object>
+"""
+
+
+def generate_literature():
+    gen_path = Path("literature")
+
+    for file in Path.cwd().glob("./_static/literature/*.pdf"):
+        gen_file = gen_path / file.with_suffix(".md").name
+        gen_file.write_text(LITERATURE.format(name=file.stem), "utf-8")
+
+
+def run_all():
+    fix_preambles()
+    generate_literature()
