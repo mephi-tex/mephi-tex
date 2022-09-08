@@ -5,3 +5,19 @@
 mjx-stretchy-h>mjx-ext {
     font-weight: 600
 }
+
+.mermaid svg {
+    /* max-width: 100%; */
+    /* height: auto; */
+    width: 600.0px;
+}
+
+/* svg[id^="m"][width][height][viewBox] {
+    width: 400px;
+    height: auto;
+} */
+
+
+/* svg#graphDiv {
+    max-width: none !important;
+} */
