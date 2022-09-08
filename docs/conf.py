@@ -55,6 +55,8 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
+mermaid_init_js = "mermaid.initialize({startOnLoad:true, flowchart: {useMaxWidth:false}});"
+
 # latex_elements = {
 #     "preamble": r"\input{preamble.sty}",
 #     # "preamble": Path("preamble.sty").read_text(),
