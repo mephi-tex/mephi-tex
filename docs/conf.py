@@ -16,7 +16,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 
-from fix_preambles import fix_preambles   # noqa
+from preprocessing import fix_preambles   # noqa
 fix_preambles()
 
 # -- Project information -----------------------------------------------------
