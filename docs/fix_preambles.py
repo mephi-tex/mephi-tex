@@ -23,7 +23,7 @@ def get_preamble():
 def fix_preambles():
     preamble = get_preamble()
 
-    for file in Path.cwd().glob("./**/*.md"):
+    for file in Path.cwd().glob("./!(literature)/**/*.md"):
         text = file.read_text("utf-8")
 
         s, e = get_macros_pos(text)
