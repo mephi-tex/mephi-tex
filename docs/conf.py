@@ -36,7 +36,6 @@ language = "ru"
 extensions = [
     "myst_parser",
     "sphinxcontrib.mermaid",
-    "sphinxcontrib.pdfembed",
     # "mathjax",
 ]
 

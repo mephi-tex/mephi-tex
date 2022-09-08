@@ -1,4 +1,3 @@
 sphinx
 sphinxcontrib-mermaid
 myst-parser[linkify]
-git+https://github.com/SuperKogito/sphinxcontrib-pdfembed.git
