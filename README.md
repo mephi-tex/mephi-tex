@@ -1,5 +1,5 @@
 <div align="center">
-<img alt="MEPhI Tex" src="https://raw.githubusercontent.com/mephi-tex/mephi-tex/main/cs/_static/images/logo_mifi_wide.png">
+<img alt="MEPhI Tex" src="https://raw.githubusercontent.com/mephi-tex/mephi-tex/main/docs/_static/images/logo_mifi_wide.png">
 </div>
 
 <h1 align="center">MEPhI Docs</h1>
