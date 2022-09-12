@@ -19,7 +19,7 @@ def get_macros_pos(string):
 def get_preamble():
     text = Path("./preamble.sty").read_text("utf-8")
     s, e = get_macros_pos(text)
-    return "\n".join([f"${line}$" if line else "" for line in text[s: e].split("\n")])
+    return "\n".join([f"${line}$" if line else "" for line in text[s:e].split("\n")])
 
 
 def fix_preambles(md_roots):
@@ -34,23 +34,23 @@ def fix_preambles(md_roots):
         text = file.read_text("utf-8")
 
         s, e = get_macros_pos(text)
-        macros = text[s: e]
+        macros = text[s:e]
 
         if macros:
             if macros != preamble:
-                print(prompt, "Updating preamble in", file, " "*last_size, end="\r")
+                print(prompt, "Updating preamble in", file, " " * last_size, end="\r")
             else:
-                print(prompt, "Skipping preamble in", file, " "*last_size, end="\r")
+                print(prompt, "Skipping preamble in", file, " " * last_size, end="\r")
             text = text[:s] + preamble + text[e:]
         else:
-            print(prompt, "Creating preamble in", file, " "*last_size, end="\r")
+            print(prompt, "Creating preamble in", file, " " * last_size, end="\r")
             text = START + preamble + END + "\n" + text
 
         time.sleep(0.075)  # make it visible ;)
         file.write_text(text, "utf-8")
         last_size = len(str(file))
 
-    print(prompt, "done", " "*(last_size+20))
+    print(prompt, "done", " " * (last_size + 20))
 
 
 LITERATURE = """# {name}
