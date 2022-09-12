@@ -1,3 +1,4 @@
+from itertools import chain
 from pathlib import Path
 import time
 
@@ -21,16 +22,14 @@ def get_preamble():
     return "\n".join([f"${line}$" if line else "" for line in text[s: e].split("\n")])
 
 
-def fix_preambles():
+def fix_preambles(md_roots):
     prompt = "fixing preambles..."
     print(prompt, end="\r")
 
     preamble = get_preamble()
+    glob = Path.cwd().glob
 
-    for file in Path.cwd().glob("**/*.md"):
-        if "literature" in file.parts:
-            continue
-
+    for file in chain(*(glob(root + "/**/*.md") for root in md_roots)):
         text = file.read_text("utf-8")
 
         s, e = get_macros_pos(text)
@@ -75,6 +74,6 @@ def generate_literature():
         gen_file.write_text(LITERATURE.format(name=file.stem), "utf-8")
 
 
-def run_all():
-    fix_preambles()
+def run_all(md_roots):
+    fix_preambles(md_roots)
     generate_literature()
