@@ -52,10 +52,10 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 - Множество $A$ называется ограниченным сверху, если $\exists M : \forall x \in A \Rightarrow x \leq M$
 
 ***Определение***
- -Множество $A$ называется ограниченным снизу, если $\exists m : \forall x \in A \Rightarrow x \geq m$
+- Множество $A$ называется ограниченным снизу, если $\exists m : \forall x \in A \Rightarrow x \geq m$
 
 ***Определение***
--Множество $A$ называется ограниченным снизу, если $\exists M, m : \forall x \in A \Rightarrow  m \leq x \leq M$
+- Множество $A$ называется ограниченным снизу, если $\exists M, m : \forall x \in A \Rightarrow  m \leq x \leq M$
 
 
 ***Определение***

@@ -17,7 +17,7 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 from preprocessing import run_all   # noqa
-run_all()
+run_all(["IVT", "IVT_evening"])
 
 # -- Project information -----------------------------------------------------
 
