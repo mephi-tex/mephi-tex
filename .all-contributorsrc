@@ -1,0 +1,15 @@
+{
+  "files": [
+    "docs/index.rst"
+  ],
+  "imageSize": 100,
+  "badgeTemplate": "<!-- I don't want it -->",
+  "commit": false,
+  "contributors": [],
+  "contributorsPerLine": 7,
+  "projectName": "mephi-tex",
+  "projectOwner": "mephi-tex",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
