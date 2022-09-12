@@ -21,6 +21,9 @@
 
    IVT_evening/index.rst
 
+Список контрибьюторов:
+`av3nator <https://github.com/av3nator>`_
+`0dminnimda <https://github.com/0dminnimda>`_
 
 .. Индексы и таблицы
 .. =================
