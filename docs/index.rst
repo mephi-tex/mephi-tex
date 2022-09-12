@@ -21,9 +21,11 @@
 
    IVT_evening/index.rst
 
-Список контрибьюторов:
-`av3nator <https://github.com/av3nator>`_
-`0dminnimda <https://github.com/0dminnimda>`_
+
+Огромное спасибо контрибьюторам ❤️
+----------------------------------
+
+Без их стараний этого сайта не было бы ...
 
 .. raw:: html
    :file: contributors.md
