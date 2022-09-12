@@ -106,9 +106,16 @@ google rtd object
 </object>
 
 google rtd iframe
-<iframe src="http://docs.google.com/gview?url=https://mephi-tex.readthedocs.io/ru/latest/_static/literature/{name}.pdf&embedded=true" style="width:100%; height:1000px;" frameborder="0">
+<iframe src="http://docs.google.com/gview?url=https://mephi-tex.readthedocs.io/ru/latest/_static/literature/{name}.pdf&embedded=true" style="width:150%; height:1000px;" frameborder="0">
     У-упс, этот браузер не поддерживает встроенные PDF 😅
 </iframe>
+
+pdfobject
+<div id="example1" style="width:150%; height:1000px;" frameborder="0">hello?</div>
+<script src="../_static/javascript/pdfobject.js"></script>
+<script>PDFObject.embed("../_static/literature/{name}.pdf", "#example1", {{
+   fallbackLink: 'У-упс, этот браузер не поддерживает встроенные PDF 😅'
+}});</script>
 """
 """
     <iframe src="../_static/literature/{name}.pdf" style="width:150%; height:1000px; border: none;">
