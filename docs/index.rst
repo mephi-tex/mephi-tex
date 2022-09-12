@@ -8,7 +8,6 @@
 
 **С любовью к Б22-513!**
 
-test
 
 .. toctree::
    :maxdepth: 2
