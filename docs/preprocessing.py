@@ -1,4 +1,5 @@
 from pathlib import Path
+import time
 
 MACROS = "<!-- Macros: {} -->\n"
 START = MACROS.format("start")
@@ -21,20 +22,34 @@ def get_preamble():
 
 
 def fix_preambles():
+    prompt = "fixing preambles..."
+    print(prompt, end="\r")
+
     preamble = get_preamble()
 
-    for file in Path.cwd().glob("./!(literature)/**/*.md"):
+    for file in Path.cwd().glob("**/*.md"):
+        if "literature" in file.parts:
+            continue
+
         text = file.read_text("utf-8")
 
         s, e = get_macros_pos(text)
         macros = text[s: e]
 
         if macros:
+            if macros != preamble:
+                print(prompt, "Updating preamble in", file, end="\r")
+            else:
+                print(prompt, "Skipping preamble in", file, end="\r")
             text = text[:s] + preamble + text[e:]
         else:
+            print(prompt, "Creating preamble in", file, end="\r")
             text = START + preamble + END + "\n" + text
 
+        time.sleep(0.075)  # make it visible ;)
         file.write_text(text, "utf-8")
+
+    print(prompt, "done", end="\r")
 
 
 LITERATURE = """# {name}
