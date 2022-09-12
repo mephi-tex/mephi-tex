@@ -30,6 +30,17 @@
 .. raw:: html
    :file: contributors.md
 
+Хотите внести свой вклад в проект?
+----------------------------------
+
+Проект использует github `github.com/mephi-tex/mephi-tex <https://github.com/mephi-tex/mephi-tex>`_
+
+При нахождении опечатки можно создать issue или исправить её самостоятельно в pull request'e.
+
+А если вы хотите добавлять документы для других направлений, свяжитесь с авторами проекта.
+
+.. https://docs.aiohttp.org/en/stable/contributing.html
+
 .. Индексы и таблицы
 .. =================
 
