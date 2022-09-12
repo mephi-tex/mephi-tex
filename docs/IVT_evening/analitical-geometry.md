@@ -284,8 +284,8 @@ $\cos{\alpha}^2 + \cos{\beta}^2 + \cos{\gamma}^2 = 1$
 1. $\vec{a} = X_{1}\vec{i} + Y_{1}\vec{j} + Z_{1}\vec{k}$
 2. $\vec{b} = X_{2}\vec{i} + Y_{2}\vec{j} + Z_{2}\vec{k}$
 3. $\vec{c} = X_{3}\vec{i} + Y_{3}\vec{j} + Z_{3}\vec{k}$
-Получим :
 
+Получим :
 $ \begin{equation*}
             (\vec{a}, \vec{b}, \vec{c}) = ([\vec{a}, \vec{b}], \vec{c}) \Rightarrow (\vec{a}, \vec{b}, \vec{c}) = 
             \begin{vmatrix}
@@ -294,8 +294,9 @@ $ \begin{equation*}
             X_{3}  & Y_{3} & Z_{3} 
             \end{vmatrix}
         \end{equation*}$
-        
+
 ***Упражнение***
+
 - $\textbf{С помощью смешанного произведения легко доказываются свойства векторного произвдения}$
 1.  Тривиально
 2. Умножим скалярно обе части на $\vec{b}$. $([\vec{a} + \vec{b}, \vec{c}], \vec{b}) = ([\vec{a}, \vec{c}], \vec{b}) + \underbrace{([\vec{b}, \vec{c}], \vec{b})}_{0}$. Поскольку $\{[\vec{a} + \vec{b}, \vec{c}], \vec{a}, \vec{b}\} \perp \vec{c}$, значит они компланарны $\Rightarrow$ один из них - линейная комбинация двух других $\Rightarrow S_{[\vec{a} + \vec{b}, \vec{c}]} = S_{[\vec{a}, \vec{c}]} + S_{[\vec{b}, \vec{c}]}$.
