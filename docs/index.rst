@@ -11,9 +11,15 @@
 
 .. toctree::
    :maxdepth: 2
-   :caption: Содержание:
+   :caption: ИВТ:
 
-   2022/index.rst
+   IVT/index.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: ИВТ (Вечерний факультет):
+
+   IVT_evening/index.rst
 
 
 .. Индексы и таблицы
