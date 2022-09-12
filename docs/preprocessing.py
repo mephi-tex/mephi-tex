@@ -29,6 +29,7 @@ def fix_preambles(md_roots):
     preamble = get_preamble()
     glob = Path.cwd().glob
 
+    last_size = 0
     for file in chain(*(glob(root + "/**/*.md") for root in md_roots)):
         text = file.read_text("utf-8")
 
@@ -37,18 +38,19 @@ def fix_preambles(md_roots):
 
         if macros:
             if macros != preamble:
-                print(prompt, "Updating preamble in", file, end="\r")
+                print(prompt, "Updating preamble in", file, " "*last_size, end="\r")
             else:
-                print(prompt, "Skipping preamble in", file, end="\r")
+                print(prompt, "Skipping preamble in", file, " "*last_size, end="\r")
             text = text[:s] + preamble + text[e:]
         else:
-            print(prompt, "Creating preamble in", file, end="\r")
+            print(prompt, "Creating preamble in", file, " "*last_size, end="\r")
             text = START + preamble + END + "\n" + text
 
         time.sleep(0.075)  # make it visible ;)
         file.write_text(text, "utf-8")
+        last_size = len(str(file))
 
-    print(prompt, "done", end="\r")
+    print(prompt, "done", " "*(last_size+20))
 
 
 LITERATURE = """# {name}
