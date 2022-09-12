@@ -62,34 +62,52 @@ LITERATURE = """# {name}
 
 object
 <object data="../_static/literature/{name}.pdf" type="application/pdf" style="width:150%; height:1000px;">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
 </object>
 
 iframe
 <iframe src="../_static/literature/{name}.pdf" style="width:150%; height:1000px; border: none;">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
 </iframe>
 
 gh object
 <object data="https://github.com/0dminnimda/mephi-docs/blob/main/docs/_static/literature/{name}.pdf" type="application/pdf" style="width:150%; height:1000px;">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
 </object>
 
 gh iframe
 <iframe src="https://github.com/0dminnimda/mephi-docs/blob/main/docs/_static/literature/{name}.pdf" style="width:150%; height:1000px; border: none;">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
 </iframe>
 
-rdt object
+rtd object
 <object data="https://mephi-tex.readthedocs.io/ru/latest/_static/literature/{name}.pdf" type="application/pdf" style="width:150%; height:1000px;">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
 </object>
 
-rdt iframe
+rtd iframe
 <iframe src="https://mephi-tex.readthedocs.io/ru/latest/_static/literature/{name}.pdf" style="width:150%; height:1000px; border: none;">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
 </iframe>
 
 google object
 <object data="http://docs.google.com/gview?url=https://github.com/mephi-tex/mephi-tex/blob/main/docs/_static/literature/{name}.pdf?raw=true&embedded=true" type="application/pdf" style="width:150%; height:1000px;">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
 </object>
 
 google iframe
 <iframe src="http://docs.google.com/gview?url=https://github.com/mephi-tex/mephi-tex/blob/main/docs/_static/literature/{name}.pdf?raw=true&embedded=true" style="width:150%; height:1000px;" frameborder="0">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
+</iframe>
+
+google rtd object
+<object data="http://docs.google.com/gview?url=https://mephi-tex.readthedocs.io/ru/latest/_static/literature/{name}.pdf&embedded=true" type="application/pdf" style="width:150%; height:1000px;">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
+</object>
+
+google rtd iframe
+<iframe src="http://docs.google.com/gview?url=https://mephi-tex.readthedocs.io/ru/latest/_static/literature/{name}.pdf&embedded=true" style="width:100%; height:1000px;" frameborder="0">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
 </iframe>
 """
 """
