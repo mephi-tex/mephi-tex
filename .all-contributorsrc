@@ -5,7 +5,18 @@
   "imageSize": 100,
   "badgeTemplate": "<!-- I don't want it -->",
   "commit": false,
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "av3nator",
+      "name": "Nikita Rudenkiy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20580124?v=4",
+      "profile": "https://github.com/av3nator",
+      "contributions": [
+        "doc",
+        "design"
+      ]
+    }
+  ],
   "contributorsPerLine": 7,
   "projectName": "mephi-tex",
   "projectOwner": "mephi-tex",
