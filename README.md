@@ -6,6 +6,6 @@
 
 Репозиторий создан для публикации материалов для студентов МИФИ.
 
-Документы предлагаются к просмотру на сайте [mephi-tex.readthedocs.io](https://mephi-tex.readthedocs.io/ru/latest/).
+Документы предлагаются к просмотру на сайте [mephi-tex.rtfd.io](https://mephi-tex.rtfd.io/ru/latest/).
 
 Актуальные новости публикуются в Telegram-канале [@mephitex](https://t.me/mephitex).
