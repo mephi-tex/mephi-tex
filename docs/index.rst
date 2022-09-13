@@ -21,9 +21,25 @@
 
    IVT_evening/index.rst
 
-Список контрибьюторов:
-`av3nator <https://github.com/av3nator>`_
-`0dminnimda <https://github.com/0dminnimda>`_
+
+Огромное спасибо контрибьюторам ❤️
+----------------------------------
+
+Без их стараний этого сайта не было бы ...
+
+.. raw:: html
+   :file: contributors.md
+
+Хотите внести свой вклад в проект?
+----------------------------------
+
+Проект использует github `github.com/mephi-tex/mephi-tex <https://github.com/mephi-tex/mephi-tex>`_
+
+При нахождении опечатки можно создать issue или исправить её самостоятельно в pull request'e.
+
+А если вы хотите добавлять документы для других направлений, свяжитесь с авторами проекта.
+
+.. https://docs.aiohttp.org/en/stable/contributing.html
 
 .. Индексы и таблицы
 .. =================
@@ -31,19 +47,3 @@
 .. * :ref:`genindex`
 .. * :ref:`modindex`
 .. * :ref:`search`
-
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<!-- I don't want it -->
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-

@@ -1,5 +1,6 @@
 <!-- Macros: start -->
 $\def\ident{\Longleftrightarrow}$
+$\def\thus{\Rightarrow}$
 $\newcommand{\braket}[1]{\langle #1 \rangle}$
 $\newcommand{\block}[2]{\begin{#1} #2 \end{#1}}$
 $\newcommand{\cases}[1]{\block{cases}{#1}}$
@@ -195,7 +196,7 @@ $\cos{\alpha}^2 + \cos{\beta}^2 + \cos{\gamma}^2 = 1$
 - $(\vec{b}, \vec{c}) = |c|pr_{\vec{b}}{\vec{a}}$
 - $(\vec{a} + \vec{b}, \vec{c}) = |c|pr_{\vec{c}}{\vec{a} + \vec{b}} = |c|(pr_{\vec{c}}{\vec{a}} + pr_{\vec{c}}{\vec{b}})$
 
-***Геометрические свойства ***
+***Геометрические свойства***
 1. $\vec{a} \perp \vec{b} \Rightarrow (\vec{a}, \vec{b}) = 0$. Стоит заметить что обратно не следует в том случае, если $\vec{a} = \vec{0}$ или $\vec{b} = \vec{0}$
 2. $\phi < 90 \Rightarrow (\vec{a}, \vec{b}) > 0$  $\textbf{Вытекает из определения скаляного произведения}$     
 3. $\phi > 90 \Rightarrow (\vec{a}, \vec{b}) < 0 $  $\textbf{Вытекает из определения скаляного произведения}$
