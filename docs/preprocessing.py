@@ -145,4 +145,4 @@ def generate_literature():
 
 def run_all(md_roots):
     fix_preambles(md_roots)
-    generate_literature()
+    # generate_literature()
