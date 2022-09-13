@@ -1,7 +1,6 @@
 {
   "files": [
-    "docs/index.rst",
-    "docs/contributors.md"
+    "docs/index.md"
   ],
   "imageSize": 100,
   "badgeTemplate": "<!-- I don't want it -->",
