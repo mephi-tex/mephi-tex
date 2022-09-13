@@ -116,8 +116,14 @@ pdfobject
 <script>PDFObject.embed("../_static/literature/{name}.pdf", "#example1", {{
    fallbackLink: 'У-упс, этот браузер не поддерживает встроенные PDF 😅'
 }});</script>
+
+.
+<iframe src="http://docs.google.com/gview?url=https://mephi-tex.rtfd.io/ru/latest/_static/literature/{name}.pdf" style="width:150%; height:1000px;" frameborder="0">
+    У-упс, этот браузер не поддерживает встроенные PDF 😅
+</iframe>
 """
 """
+https://github.com/afragen/embed-pdf-viewer
     <iframe src="../_static/literature/{name}.pdf" style="width:150%; height:1000px; border: none;">
         У-упс, этот браузер не поддерживает встроенные PDF 😅
     </iframe>
