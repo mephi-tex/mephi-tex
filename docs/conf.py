@@ -103,6 +103,12 @@ html_theme = "alabaster"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-html_css_files = [
-    "stylesheets/extra.css",
-]
+# html_css_files = [
+#     # "/stylesheets/extra.css",
+#     # "/mobile-viewer/viewer.css",
+# ]
+
+
+# html_js_files = [
+#     "/mobile-viewer/viewer.js",
+# ]
