@@ -166,11 +166,11 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
 1. Доказать, что $inf(-X) = - sup(X)$. Доказательство: $(\forall x \in X: x \leq M) \wedge (\forall \epsilon > 0 : \exists x' \in X: x' > M - \epsilon ) \Rightarrow M =sup{X}$. Рассмотрим множество ${-X}$. $(\forall (-x) : -x \geq -M = m) \wedge (\forall \epsilon > 0 : \exists -x' \in -X: -x' < \underbrace{-M}_{m} + \epsilon = m + \epsilon \Rightarrow m = -M)$
 2. Доказать, что $sup{X + Y} = sup{X} + \sup{Y}$
-    1. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M - \frac{\epsilon}{2} \Rightarrow M_{1} = sup{X}$
-    2. $ (\forall y \in X : y \leq M) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M - \frac{\epsilon}{2} \Rightarrow M_2 = sup{X}$
-    3. $ (\forall x + y \in X + Y : x + y \leq M) \wedge (\forall \epsilon > 0 \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = sup{X}$
+    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M_{1} - \frac{\epsilon}{2} \Rightarrow M_{1} = sup{X}$
+    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M_{2} - \frac{\epsilon}{2} \Rightarrow M_2 = sup{X}$
+    3. $ (\forall x + y \in X + Y : x + y \leq M_{1} + M_{2}) \wedge (\forall \epsilon > 0, \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = sup{X}$
 
 3. Доказать, что $sup{XY} = sup{X} \cdot \sup{Y}$
-    1. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M - \epsilon_{1}) \Rightarrow M_{1} = sup{X}$
-    2. $ (\forall y \in X : y \leq M) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M - \epsilon_{2}) \Rightarrow M_2 = sup{X}$
-    3. $ (\forall x \cdot y \in XY : xy \leq M) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \Rightarrow M_{1}M_{2} = sup{X}$
+    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M_{1} - \epsilon_{1}) \Rightarrow M_{1} = sup{X}$
+    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M_{2} - \epsilon_{2}) \Rightarrow M_2 = sup{X}$
+    3. $ (\forall x \cdot y \in XY : xy \leq M_{1}M_{2}) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \Rightarrow M_{1}M_{2} = sup{X}$
