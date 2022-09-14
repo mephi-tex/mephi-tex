@@ -3472,6 +3472,9 @@ function webViewerInitialized() {
   file = params.get("file") ?? _app_options.AppOptions.get("defaultUrl");
   validateFileURL(file);
   const fileInput = appConfig.openFileInput;
+  console.log('"', file, '"');
+  console.log(fileInput);
+  console.log('a', fileInput.value, 'a');
   fileInput.value = null;
   fileInput.addEventListener("change", function (evt) {
     const {
