@@ -4,6 +4,6 @@
 .. toctree::
    :glob:
    :maxdepth: 3
-   :caption: Аналитическая геометрия:
+   :caption: Содержание:
 
    *

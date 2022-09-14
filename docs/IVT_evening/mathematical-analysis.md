@@ -11,21 +11,20 @@ $\newcommand{\pmat}[1]{\wrapmat{pmatrix}{#1}}$
 $\newcommand{\upline}[1]{\overline{#1}}$
 $\newcommand{\dnline}[1]{\underline{#1}}$
 <!-- Macros: end -->
-
-# Математический анализ
-
 ```{contents} Математический анализ
 ---
 depth: 3
 ```
-
+# Математический анализ
 Преподаватель - Михайлов Владислав Дмитриевич
 
-## Литература
+# Литература
 
 - [Демидович Б. П. - "Сборник задач и упражнений по Математическому Анализу"](https://docs.google.com/gview?url=https://mephi-tex.rtfd.io/ru/latest/_static/literature/БП_ДЕМИДОВИЧ_СБОРНИК_ЗАДАЧ_И_УПРАЖНЕНИЙ_ПО_МАТЕМАТИЧЕСКОМУ_АНАЛИЗУ.pdf)
 
-## Числовые Множества. Вещественные числа.
+## Лекция 07.09.2022
+
+### Числовые Множества. Вещественные числа.
 
  ***Определение***
 
@@ -44,7 +43,7 @@ depth: 3
 $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а следовательно $m$ - четное. $m = 2k$, $4k^2 = 2n^2$, $2k^2 = n^2$ - следовательно: $n^2$ - четное. Получим противоречие, т.к. $\dfrac{2n^2}{2k^2}$ - сократимая дробь.
 
 
-## Сравнение вещественных чисел, их сумма и произведение
+### Сравнение вещественных чисел, их сумма и произведение
 
 ***Определение***
 - Сравниваем поразрядно $a_{0}, b_{0}$, затем $a_{1}, b_{1}$ и т.д.
@@ -52,7 +51,7 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 - По аналогии сумма и произведение: $a_{0} \dot b_{0}$, затем $a_{1}\dot b_{1}$ и т.д.
 
 
-## Множества. Инфимум и Супремум.
+### Множества. Инфимум и Супремум.
 Рассмотрим произвольное числовое множество $A$, состоящее из чисел $x \in A$. 
 
 ***Определение***
@@ -101,7 +100,7 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 - $A = \{1, \dfrac{1}{2},\dfrac{1}{3}, ... \dfrac{1}{n}, ...\}$. $sup{A} = 1, inf{A} = 0$
 
 
-## Числовая последовательность.
+### Числовая последовательность.
 
 ***Определение***
 
@@ -126,3 +125,51 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
 ***Определение***
    - Если для любой пары соседних членов последовательности выполняется $x_{k + 1} \geq x_{k}$, то последовательность неубывающая, если $x_{k + 1} > x_{k}$, то строго возрастающая. Аналогично для невозрастающей и строго убывающей.
+
+## Семинар 13.02.2022
+***Разбор домашней работы***
+1. $n = 1$ : $1^3 = 1^2$ - верно
+	$1^n + \dots n^3 = (1 + \dots + n) ^2$
+	$1^3 + \dots + n^3 + (n + 1)^3 = (1 + \dots + n^2) + (n + 1)^3$
+	$1^3 + \dots + n^3 = (\frac{(1 + n)n}{2})^2 + (n + 1)^3$
+	$1^3 + \dots + n^3 = \frac{(n + 1)n^2(n^2 + 4n + 4)}{2}$
+	$1^3 + \dots + n^3 = (\frac{(n + 1)(n + 2)}{2})^2$ 
+	$1^3 + \dots + n^3 = (1 + \dots + n + (n + 1))^2$
+
+2. $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n} < \frac{1}{\sqrt{2n + 1}}$ 
+	$n = 1: \frac{1}{2} < \frac{1}{\sqrt{3}}$
+	$\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n} < \frac{1}{\sqrt{2n + 1}}$
+	$\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n}  \cdot \frac{2n + 1}{2n + 2} < \frac{1}{\sqrt{2n + 3}}$
+	$ \frac{1}{\sqrt{2n + 3}}  \geq \frac{1}{\sqrt{2n + 2}} \cdot \frac{2n + 1}{\sqrt{2n + 2}}$
+	$ (\sqrt{2n + 3})^2  \geq (2n + 3) \dots $
+
+3. Начертить график. $y = arctg{\frac{1}{x}}$
+
+4. Начертить график $y = log_{3}{(2 - 3x)}$
+
+***Повтор определений с лекции***
+
+### Точная верхняя грань ограниченного сверху множества
+***Определение точной верхней грани***
+1. $M = sup{X} $ - наименьшая из всех верхних граней
+
+2. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = sup{X}$
+
+3. $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = sup{X} $
+### Точная нижняя грань ограниченного сверху множества
+1. $m = inf(X)$ - наибольшая из всех нижних граней $X$
+2. $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf(X)$
+3. $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m = inf{X}$
+
+***Задачи на семинаре***
+
+1. Доказать, что $inf(-X) = - sup(X)$. Доказательство: $(\forall x \in X: x \leq M) \wedge (\forall \epsilon > 0 : \exists x' \in X: x' > M - \epsilon ) \Rightarrow M =sup{X}$. Рассмотрим множество ${-X}$. $(\forall (-x) : -x \geq -M = m) \wedge (\forall \epsilon > 0 : \exists -x' \in -X: -x' < \underbrace{-M}_{m} + \epsilon = m + \epsilon \Rightarrow m = -M)$
+2. Доказать, что $sup{X + Y} = sup{X} + \sup{Y}$
+    1. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M - \frac{\epsilon}{2} \Rightarrow M_{1} = sup{X}$
+    2. $ (\forall y \in X : y \leq M) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M - \frac{\epsilon}{2} \Rightarrow M_2 = sup{X}$
+    3. $ (\forall x + y \in X + Y : xy \leq M) \wedge (\forall \epsilon > 0 \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = sup{X}$
+
+3. Доказать, что $sup{XY} = sup{X} \cdot \sup{Y}$
+    1. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M - \epsilon_{1}) \Rightarrow M_{1} = sup{X}$
+    2. $ (\forall y \in X : y \leq M) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M - \epsilon_{2}) \Rightarrow M_2 = sup{X}$
+    3. $ (\forall x \cdot y \in XY : xy \leq M) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \Rightarrow M_{1}M_{2} = sup{X}$
