@@ -128,20 +128,18 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
 ## Семинар 13.02.2022
 ***Разбор домашней работы***
-1. $n = 1$ : $1^3 = 1^2$ - верно
-	$1^n + \dots n^3 = (1 + \dots + n) ^2$
-	$1^3 + \dots + n^3 + (n + 1)^3 = (1 + \dots + n^2) + (n + 1)^3$
-	$1^3 + \dots + n^3 = (\frac{(1 + n)n}{2})^2 + (n + 1)^3$
-	$1^3 + \dots + n^3 = \frac{(n + 1)n^2(n^2 + 4n + 4)}{2}$
-	$1^3 + \dots + n^3 = (\frac{(n + 1)(n + 2)}{2})^2$ 
-	$1^3 + \dots + n^3 = (1 + \dots + n + (n + 1))^2$
-
-2. $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n} < \frac{1}{\sqrt{2n + 1}}$ 
-	$n = 1: \frac{1}{2} < \frac{1}{\sqrt{3}}$
-	$\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n} < \frac{1}{\sqrt{2n + 1}}$
-	$\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n}  \cdot \frac{2n + 1}{2n + 2} < \frac{1}{\sqrt{2n + 3}}$
-	$ \frac{1}{\sqrt{2n + 3}}  \geq \frac{1}{\sqrt{2n + 2}} \cdot \frac{2n + 1}{\sqrt{2n + 2}}$
-	$ (\sqrt{2n + 3})^2  \geq (2n + 3) \dots $
+** Доказать по индукции :**  
+- $1^3 + \dots + n^3 = (1 + \dots + n)^2$
+- $n = 1$ : $1^3 = 1^2$ - верно $\\$ 
+- $1^n + \dots n^3 = (1 + \dots + n) ^2$
+- $1^3 + \dots + n^3 = (\frac{(1 + n)n}{2})^2 + (n + 1)^3$
+- $1^3 + \dots + n^3 + (n + 1)^3 = (1 + \dots + n + (n + 1))^2$
+**Доказать по индукции: ** 
+- $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n} < \frac{1}{\sqrt{2n + 1}}$ 
+- $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n} < \frac{1}{\sqrt{2n + 1}}$
+- $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n}  \cdot \frac{2n + 1}{2n + 2} < \frac{1}{\sqrt{2n + 3}}$
+- $ \frac{1}{\sqrt{2n + 3}}  \geq \frac{1}{\sqrt{2n + 2}} \cdot \frac{2n + 1}{\sqrt{2n + 2}}$
+- $ (\sqrt{2n + 3})^2  \geq (2n + 3) \dots $
 
 3. Начертить график. $y = arctg{\frac{1}{x}}$
 
@@ -167,7 +165,7 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 2. Доказать, что $sup{X + Y} = sup{X} + \sup{Y}$
     1. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M - \frac{\epsilon}{2} \Rightarrow M_{1} = sup{X}$
     2. $ (\forall y \in X : y \leq M) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M - \frac{\epsilon}{2} \Rightarrow M_2 = sup{X}$
-    3. $ (\forall x + y \in X + Y : xy \leq M) \wedge (\forall \epsilon > 0 \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = sup{X}$
+    3. $ (\forall x + y \in X + Y : x + y \leq M) \wedge (\forall \epsilon > 0 \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = sup{X}$
 
 3. Доказать, что $sup{XY} = sup{X} \cdot \sup{Y}$
     1. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M - \epsilon_{1}) \Rightarrow M_{1} = sup{X}$
