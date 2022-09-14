@@ -27,10 +27,10 @@ def fix_preambles(md_roots):
     print(prompt, end="\r")
 
     preamble = get_preamble()
-    glob = Path.cwd().glob
+    roots = (Path.cwd() / root for root in md_roots)
 
     last_size = 0
-    for file in chain(*(glob(root + "/**/*.md") for root in md_roots)):
+    for file in chain(*(root.glob("**/*.md") for root in roots)):
         text = file.read_text("utf-8")
 
         s, e = get_macros_pos(text)
