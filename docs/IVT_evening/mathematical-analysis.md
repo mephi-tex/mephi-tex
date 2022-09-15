@@ -75,17 +75,23 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 ***Теорема***
 - Всякое ограниченное сверху множество имеет точную верхнюю грань, а всякое ограниченное снизу имеет точную нижнюю грань.
 
-
 ***Определение точной верхней грани***
-- $(\forall x \in A \Rightarrow x \leq M) \wedge (\forall x < M , \exists x' \in A : x < x' \leq M) \Rightarrow M = sup{A}$
 
+$(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = sup{X} $
 
 ***Определение точной нижней грани***
-- $(\forall x \in A \Rightarrow x \geq m) \wedge (\forall \epsilon > 0, \exists x' \in A \Rightarrow m \leq x' < m + \epsilon) \Rightarrow m = inf{A}$
+- $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m = inf{X}$
+
+***Альтернативное определение точной нижней грани***
+- $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf(X)$
+
+***Альтернативное определение точной верхней грани***
+- $(\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = sup{X}$
 
 ***Упражнение***
 Докажем, что всякое ограниченное сверху множество имеет $sup$. 
 Доказательство : Рассмотрим два случая
+
 1. Рассматриваемое множество не лишено неотрицательных чисел
 
 2. Рассматриваемое множество содержит только отрицательные числа
@@ -126,6 +132,135 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
    - Если для любой пары соседних членов последовательности выполняется $x_{k + 1} \geq x_{k}$, то последовательность неубывающая, если $x_{k + 1} > x_{k}$, то строго возрастающая. Аналогично для невозрастающей и строго убывающей.
 
+
+## Лекция 14.09.2022
+
+
+### Числовые последовательности
+Пусть имеем для бесконечной последовательности $\{1, 2, 3, \dots , n, \dots \}$ набор соответсвующих чисел $\{x_{1}, x_{2}, x_{3}, \dots , x_{n}, \dots \}$. Получим последовательность.
+
+***Способы задания последовательностей: ***
+1. Перечислением
+2. Графически
+3. Рекуррентно
+
+***Примеры: ***
+1. $\{1, \frac{1}{2}, \frac{1}{3}, \dots, \frac{1}{n}, \dots\}$
+
+2. $\{-1, 1, -1, \dots, (-1)^n, \dots \}$
+
+3. $x_{n} = \frac{1 + (-1)^n}{2}$ - Формула общего члена
+
+4. Натуральный ряд - $\{1, 2, 3, 4, \dots\}$
+
+5. $x_{n} = 1^{(-1)^n}$
+
+6. $x_{n} = - n^2$
+
+***Определение***
+- Последовательность называется ограниченной сверху $\Leftrightarrow \exists M: \forall n : x_{n} \leq M$
+
+***Определение***
+- Последовательность называется ограниченной снизу $\Leftrightarrow \exists m: \forall n : x_{n} \geq m$
+
+***Определение***
+- Последовательность называется ограниченной $\Leftrightarrow \exists m,M : \forall n :  m \leq x_{n} \leq M$ или в эквивалентной форме :  $\exists k , \forall n :  |x_{n}| \leq k$
+
+***Определение***
+
+- $\forall m, \exists n : |x_{n}| > m \Leftrightarrow$ последовательность не ограничена. (не является ограниченной сверху или снизу)
+
+### Бесконечно большая и малая последовательность
+
+***Определение***
+
+- $\{x_{n}\}$ называется бесконечно большой $\Leftrightarrow \forall A, \exists N_{0}: \forall n > N_{0} \rightarrow |x_{n}| > A$.
+
+***Пример***
+- $\{1, -2, 3, -4, \dots, (-1)^{n+1} \cdot n, \dots\}$ (В отличие от неограниченной последовательности, члены бесконечно большой последовательности по модулю больше любого наперед заданного числа A, начиная с какого - то номера.)
+
+***Определение***
+
+- $\{x_{n}\}$ называется бесконечно малой $\Leftrightarrow \forall A, \exists N_{0}: \forall n > N_{0} \rightarrow |x_{n}| < A$.
+
+***Теорема***
+
+- Если $\{x_{n}\}$ - б. б. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена бесконечно малая последовательность: $\{ \frac{1}{x_{n}} \}$. Доказательство : Действительно, т.к. $\{x_{n}\}$ - б. б. , то, начиная с $n > N_{0}: |x_{n}| > A$, где $A$ - любое число. Тогда для этих номеров: $\frac{1}{x_{n}} < \frac{1}{A}$. Если взять произвольное $\epsilon > 0$ и $A = \frac{1}{\epsilon}$, то $|\frac{1}{x_{n}}| , \epsilon$, а это и есть определение бесконечно малой последовательности. Справедливо и обратное: Если $\{ \frac{1}{x_{n}} \}$ - б. м. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена $\{x_{n}\}$ - б. б.
+
+### Монотонные последовательности
+***Определение***
+- Последовательность $\{x_{n}\}$ называется возрастающей, если $\forall n : x_{n + 1} \geq x_{n}$ и строго возрастающей, если $x_{n + 1} > x_{n}$. (Иногда говорят: неубывающая, строго возрастающая). 
+
+***Определение***
+- Последовательность $\{x_{n}\}$ называется убывающей, если $\forall n : x_{n + 1} \leq x_{n}$ и строго убывающей, если $x_{n + 1} < x_{n}$. (Иногда говорят: невозрастающая, строго убывающая). 
+
+### Предел числовой последовательности
+
+***Формальное определение предела числовой последовательности***
+
+- Если последовательность приближается к числу, то это число и есть ее предел.
+
+***Примеры***
+1. $x_{n} = \frac{1}{n}, \lim\limits_{n \rightarrow \infty}{\frac{1}{n}} = 0$
+2. $x_{n} = \frac{n - 1}{n}, \lim\limits_{n \rightarrow \infty}{\frac{n - 1}{n}} = 1$
+
+
+***Определение предела числовой последовательности***
+- Число $A$ называется пределом $\{x_{n}\}$ $\Leftrightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon}  \Rightarrow |x_{n} - A| < \epsilon)$
+
+***Упражнение***
+- С помощью определения докажем (1) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $\lim\limits_{n \rightarrow \infty}{\frac{1}{n}} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\frac{1}{n}| < \epsilon \Rightarrow \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon}$
+- С помощью определения докажем (2) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $\lim\limits_{n \rightarrow \infty}{\frac{1}{n}} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\frac{n - 1}{n} - 1| < \epsilon \Rightarrow \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon}$
+
+### Свойства пределов
+
+***Теорема***
+
+**Последовательность, имеющая предел, называется сходящейся, иначе расходящейся.**
+
+1. Всякая сходящаяся последовательность имеет единственный предел.
+- Доказательство: Пусть $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A$. Докажем единственность от противного. Предположим, что $\exists  \lim\limits_{n \rightarrow \infty}{x_{n}} = B$ и $A > B$. Т. к. , $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + A< x_{n}  < \frac{A - B}{2} + A \Rightarrow   \frac{A + B}{2} < x_{n}  < \frac{3A - B}{2} $.
+- Т. к. $ \lim\limits_{n \rightarrow \infty}{x_{n}} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\frac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - B < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + B< x_{n}  < \frac{A - B}{2} + B \Rightarrow   \frac{3B - A}{2} < x_{n}  < \frac{A + B}{2} $. Получим $\frac{A + B}{2} > x_{n} > \frac{A + B}{2}$. Противоречие.
+
+***Теорема***
+
+**Сходящаяся последовательность ограничена**
+
+- Доказательство: $\{x_{n}\}$ - сход. , $\Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Это было бы доказательством ограниченности, если бы было верно для всех $n > 0$. Но до $N_{\epsilon$ - конечное число членов. Если взять $M = \max(|x_{1}|, |x_{2}|, |x_{3}|, \dots, |x_{N_{\epsilon} - 1}|, A - \epsilon, A + \epsilon )$, то $\forall n: |x_{n}| \leq M $
+
+***Теорема***
+
+**$\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м. **
+
+- Доказательство: Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \frac{\epsilon}{|k|} \Rightarrow |x_{n}| < \frac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \frac{\epsilon}{|k|} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{k x_{n}} = 0$
+
+***Следствие***
+
+Если последовательность состоит из одного и того же члена $x_{n} = \{C, C, C, C,  \dots \}$, то $\lim\limits_{n \rightarrow \infty}{x_{n}} = C$.
+
+***Свойства пределов, выражаемые неравенствами***
+
+1. $(\forall n > N: x_{n} \geq y_{n}) \wedge (\lim\limits_{n \rightarrow \infty}{x_{n}} = A, \lim\limits_{n \rightarrow \infty}{y_{n}} = B) \Rightarrow A > B$
+- Доказательство: 
+  1. В качестве $\epsilon$ возьмем $\frac{A - B}{2}$. $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \Rightarrow |x_{n} - A| < \frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + A < x_{n}  < \frac{A - B}{2} + A \Rightarrow  \frac{3A - B}{2} < x_{n}  < \frac{A + B}{2} $
+  2. $\forall n > N_{\epsilon_{2}} : |y_{n} - B| < \frac{B - A}{2} \Rightarrow \frac{B - A}{2} < y_{n} < \frac{3B - A}{2}$
+  3. Получим $x_{n} < \frac{A + B}{2} < y_{n}$. Противоречие.
+2. $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}) \Rightarrow \{y_{n}\}$ - сходится, причем $\lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{y_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}$ 
+- Доказательство : 
+  1. Действительно : $1)  (\forall \epsilon > 0, \exists n > N_{1} : |x_{n} - A| < \epsilon) \\ 2) (\forall \epsilon > 0, \exists n > N_{2} : |z_{n} - A| < \epsilon) \\  \Rightarrow N = \max(N_{1}, N_{2}) \Rightarrow  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \Rightarrow |y_{n} - A| < \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{y_{n}} = A$
+
+***Арифметические свойства пределов сходящихся  последовательностей***
+1. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A; \lim\limits_{n \rightarrow \infty}{y_{n}} = B \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$
+2. $\lim\limits_{n \rightarrow \infty}{x_{n}y_{n}} = AB$
+3. $\lim\limits_{n \rightarrow \infty}{\frac{x_{n}}{y_{n}}} = \frac{A}{B}$
+- Докажем $(1)$
+  1. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \frac{\epsilon}{2}$
+  2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \frac{\epsilon}{2}$
+  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \frac{\epsilon}{2} +  \frac{\epsilon}{2} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$
+- Докажем $(2)$ 
+  1. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon$
+  2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon$
+  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда $\forall n > N : |x_{n}y_{n} - A B| = |(x_{n} - A + A)(y_{n} - B + B)| \leq |x_{n}y_{n} - AB| + \underbrace{|x_{n} - A|y_{n}}_{< \frac{\epsilon}{2}} + \underbrace{|y_{n} - B|x_{n}}_{< \frac{\epsilon}{2}} + \dots  \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n}y_{n})} = A + B$
 ## Семинар 13.02.2022
 ***Разбор домашней работы***
 Доказать по индукции : 
@@ -133,7 +268,7 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 - $1^3 + \dots + n^3 = (1 + \dots + n)^2$
 - $n = 1$ : $1^3 = 1^2$ - верно $\\$ 
 - $1^n + \dots n^3 = (1 + \dots + n) ^2$
-- $1^3 + \dots + n^3 = (\frac{(1 + n)n}{2})^2 + (n + 1)^3$
+- $1^3 + \dots + n^3 + (n + 1)^3 = (\frac{(1 + n)n}{2})^2 + (n + 1)^3$
 - $1^3 + \dots + n^3 + (n + 1)^3 = (1 + \dots + n + (n + 1))^2$
 
 Доказать по индукции:
@@ -152,6 +287,7 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
 ### Точная верхняя грань ограниченного сверху множества
 ***Определение точной верхней грани***
+
 1. $M = sup{X} $ - наименьшая из всех верхних граней
 
 2. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = sup{X}$
@@ -166,8 +302,8 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
 1. Доказать, что $inf(-X) = - sup(X)$. Доказательство: $(\forall x \in X: x \leq M) \wedge (\forall \epsilon > 0 : \exists x' \in X: x' > M - \epsilon ) \Rightarrow M =sup{X}$. Рассмотрим множество ${-X}$. $(\forall (-x) : -x \geq -M = m) \wedge (\forall \epsilon > 0 : \exists -x' \in -X: -x' < \underbrace{-M}_{m} + \epsilon = m + \epsilon \Rightarrow m = -M)$
 2. Доказать, что $sup{X + Y} = sup{X} + \sup{Y}$
-    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M_{1} - \frac{\epsilon}{2} \Rightarrow M_{1} = sup{X}$
-    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M_{2} - \frac{\epsilon}{2} \Rightarrow M_2 = sup{X}$
+    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M_{1} - \frac{\epsilon}{2} \Rightarrow M_{1} = sup{X}$
+    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon > 0 \exists y' \in X: y' > M_{2} - \frac{\epsilon}{2} \Rightarrow M_2 = sup{X}$
     3. $ (\forall x + y \in X + Y : x + y \leq M_{1} + M_{2}) \wedge (\forall \epsilon > 0, \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = sup{X}$
 
 3. Доказать, что $sup{XY} = sup{X} \cdot \sup{Y}$
