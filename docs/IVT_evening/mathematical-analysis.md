@@ -139,12 +139,14 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 ### Числовые последовательности
 Пусть имеем для бесконечной последовательности $\{1, 2, 3, \dots , n, \dots \}$ набор соответсвующих чисел $\{x_{1}, x_{2}, x_{3}, \dots , x_{n}, \dots \}$. Получим последовательность.
 
-***Способы задания последовательностей: ***
+***Способы задания последовательностей***
+
 1. Перечислением
 2. Графически
 3. Рекуррентно
 
-***Примеры: ***
+***Примеры***
+
 1. $\{1, \frac{1}{2}, \frac{1}{3}, \dots, \frac{1}{n}, \dots\}$
 
 2. $\{-1, 1, -1, \dots, (-1)^n, \dots \}$
@@ -157,7 +159,7 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 
 6. $x_{n} = - n^2$
 
-***Определение***
+
 - Последовательность называется ограниченной сверху $\Leftrightarrow \exists M: \forall n : x_{n} \leq M$
 
 ***Определение***
@@ -226,11 +228,11 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 
 **Сходящаяся последовательность ограничена**
 
-- Доказательство: $\{x_{n}\}$ - сход. , $\Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Это было бы доказательством ограниченности, если бы было верно для всех $n > 0$. Но до $N_{\epsilon$ - конечное число членов. Если взять $M = \max(|x_{1}|, |x_{2}|, |x_{3}|, \dots, |x_{N_{\epsilon} - 1}|, A - \epsilon, A + \epsilon )$, то $\forall n: |x_{n}| \leq M $
+- Доказательство: $\{x_{n}\}$ - сход. , $\Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Это было бы доказательством ограниченности, если бы было верно для всех $n > 0$. Но до $N_{\epsilon}$ - конечное число членов. Если взять $M = \max(|x_{1}|, |x_{2}|, |x_{3}|, \dots, |x_{N_{\epsilon} - 1}|, A - \epsilon, A + \epsilon )$, то $\forall n: |x_{n}| \leq M $
 
 ***Теорема***
 
-**$\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м. **
+$\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.
 
 - Доказательство: Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \frac{\epsilon}{|k|} \Rightarrow |x_{n}| < \frac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \frac{\epsilon}{|k|} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{k x_{n}} = 0$
 
