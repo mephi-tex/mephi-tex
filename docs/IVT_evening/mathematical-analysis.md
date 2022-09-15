@@ -249,7 +249,10 @@ $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.
   3. Получим $x_{n} < \frac{A + B}{2} < y_{n}$. Противоречие.
 2. $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}) \Rightarrow \{y_{n}\}$ - сходится, причем $\lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{y_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}$ 
 - Доказательство : 
-  1. Действительно : $1)  (\forall \epsilon > 0, \exists n > N_{1} : |x_{n} - A| < \epsilon) \\ 2) (\forall \epsilon > 0, \exists n > N_{2} : |z_{n} - A| < \epsilon) \\  \Rightarrow N = \max(N_{1}, N_{2}) \Rightarrow  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \Rightarrow |y_{n} - A| < \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{y_{n}} = A$
+  - Действительно :
+   - $(\forall \epsilon > 0, \exists n > N_{1} : |x_{n} - A| < \epsilon)$
+   - $(\forall \epsilon > 0, \exists n > N_{2} : |z_{n} - A| < \epsilon)$
+   - $N = \max(N_{1}, N_{2}) \Rightarrow  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \Rightarrow |y_{n} - A| < \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{y_{n}} = A$
 
 ***Арифметические свойства пределов сходящихся  последовательностей***
 1. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A; \lim\limits_{n \rightarrow \infty}{y_{n}} = B \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$
