@@ -259,12 +259,12 @@ $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.
 2. $\lim\limits_{n \rightarrow \infty}{x_{n}y_{n}} = AB$
 3. $\lim\limits_{n \rightarrow \infty}{\frac{x_{n}}{y_{n}}} = \frac{A}{B}$
 - Докажем $(1)$
-  1. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \frac{\epsilon}{2}$
-  2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \frac{\epsilon}{2}$
-  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \frac{\epsilon}{2} +  \frac{\epsilon}{2} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$
+  1. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \frac{\epsilon}{2})$
+  2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \frac{\epsilon}{2})$
+  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда: $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \frac{\epsilon}{2} +  \frac{\epsilon}{2} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$
 - Докажем $(2)$ 
-  1. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon$
-  2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon$
+  1. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon)$
+  2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon)$
   3. Возьмем $N = \max(N_{1}, N_{2})$, тогда $\forall n > N : |x_{n}y_{n} - A B| = |(x_{n} - A + A)(y_{n} - B + B)| \leq |x_{n}y_{n} - AB| + \underbrace{|x_{n} - A|y_{n}}_{< \frac{\epsilon}{2}} + \underbrace{|y_{n} - B|x_{n}}_{< \frac{\epsilon}{2}} + \dots  \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n}y_{n})} = A + B$
 ## Семинар 13.02.2022
 ***Разбор домашней работы***
