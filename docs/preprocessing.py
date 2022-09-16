@@ -1,6 +1,5 @@
 from itertools import chain
 from pathlib import Path
-import time
 
 MACROS = "<!-- Macros: {} -->\n"
 START = MACROS.format("start")
@@ -46,7 +45,6 @@ def fix_preambles(md_roots):
             print(prompt, "Creating preamble in", file, " " * last_size, end="\r")
             text = START + preamble + END + "\n" + text
 
-        time.sleep(0.075)  # make it visible ;)
         file.write_text(text, "utf-8")
         last_size = len(str(file))
 
