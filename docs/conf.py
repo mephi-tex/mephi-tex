@@ -100,7 +100,7 @@ source_suffix = {
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "alabaster"
+html_theme = "sphinx_book_theme"  # try insegel, but it needs to be changed
 
 html_logo = "_static/images/logo_mifi.png"
 
