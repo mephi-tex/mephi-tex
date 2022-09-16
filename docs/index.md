@@ -41,6 +41,7 @@ IVT_evening/index.rst
     <tr>
       <td align="center"><a href="https://github.com/0dminnimda"><img src="https://avatars.githubusercontent.com/u/52697657?v=4?s=100" width="100px;" alt=""/><br /><sub><b>0dminnimda</b></sub></a><br /><a href="https://github.com/mephi-tex/mephi-tex/commits?author=0dminnimda" title="Documentation">📖</a> <a href="#design-0dminnimda" title="Design">🎨</a></td>
       <td align="center"><a href="https://github.com/av3nator"><img src="https://avatars.githubusercontent.com/u/20580124?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nikita Rudenkiy</b></sub></a><br /><a href="https://github.com/mephi-tex/mephi-tex/commits?author=av3nator" title="Documentation">📖</a> <a href="#design-av3nator" title="Design">🎨</a></td>
+      <td align="center"><a href="https://extroot.ru/"><img src="https://avatars.githubusercontent.com/u/51322026?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Pavel Pakhmutov</b></sub></a><br /><a href="https://github.com/mephi-tex/mephi-tex/commits?author=extroot" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
