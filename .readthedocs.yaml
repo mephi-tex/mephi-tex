@@ -14,7 +14,7 @@ build:
 python:
   install:
     - requirements: requirements.txt
-    - method: setuptools  # python ./setup.py
+    - method: pip  # runs setup.py
       path: .
   system_packages: true
 
