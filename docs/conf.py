@@ -110,8 +110,7 @@ html_logo = "_static/images/logo_mifi.png"
 html_static_path = ["_static"]
 
 # html_css_files = [
-#     # "/stylesheets/extra.css",
-#     # "/mobile-viewer/viewer.css",
+#     "stylesheets/extra.css",
 # ]
 
 
