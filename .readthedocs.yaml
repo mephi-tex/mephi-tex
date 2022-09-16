@@ -1,0 +1,27 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+# See https://docs.readthedocs.io/en/stable/config-file/v2.html for details
+
+# Required
+version: 2
+
+# Set the versions of the tools
+build:
+  os: ubuntu-20.04
+  tools:
+    python: "3.9"
+
+python:
+  install:
+    - requirements: requirements.txt
+    - method: setuptools  # python ./setup.py
+      path: .
+  system_packages: true
+
+sphinx:
+  builder: html
+  configuration: docs/conf.py
+
+# Build the docs in additional formats
+formats:
+  - pdf
