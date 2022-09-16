@@ -14,9 +14,11 @@ from pathlib import Path
 
 import os
 import sys
-sys.path.insert(0, os.path.abspath('.'))
 
-from preprocessing import run_all   # noqa
+sys.path.insert(0, os.path.abspath("."))
+
+from preprocessing import run_all  # noqa
+
 run_all(["IVT", "IVT_evening"])
 
 # -- Project information -----------------------------------------------------
@@ -55,7 +57,9 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
-mermaid_init_js = "mermaid.initialize({startOnLoad:true, flowchart: {useMaxWidth:false}});"
+mermaid_init_js = (
+    "mermaid.initialize({startOnLoad:true, flowchart: {useMaxWidth:false}});"
+)
 
 # latex_elements = {
 #     "preamble": r"\input{preamble.sty}",
@@ -112,5 +116,4 @@ html_static_path = ["_static"]
 
 
 # html_js_files = [
-#     "/mobile-viewer/viewer.js",
 # ]
