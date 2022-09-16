@@ -98,11 +98,6 @@ source_suffix = {
 #
 html_theme = "alabaster"
 
-html_theme_options = {
-    "logo_only": True,
-    "display_version": False,
-}
-
 html_logo = "_static/images/logo_mifi.png"
 
 # Add any paths that contain custom static files (such as style sheets) here,
