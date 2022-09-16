@@ -1,3 +1,4 @@
 sphinx
 sphinxcontrib-mermaid
 myst-parser[linkify]
+sphinx-book-theme
