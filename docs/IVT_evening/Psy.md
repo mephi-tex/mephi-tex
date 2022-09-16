@@ -11,7 +11,10 @@ $\newcommand{\pmat}[1]{\wrapmat{pmatrix}{#1}}$
 $\newcommand{\upline}[1]{\overline{#1}}$
 $\newcommand{\dnline}[1]{\underline{#1}}$
 <!-- Macros: end -->
-
+```{contents} Психология коммуникаций в академической среде
+---
+depth: 3
+```
 # Психология коммуникаций в академической среде
 
 ## Лекция 16.09.2022
