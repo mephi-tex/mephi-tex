@@ -52,6 +52,8 @@ IVT_evening/index.rst
 
 ## Хотите внести свой вклад в проект?
 
+Загляните в [`CONTRIBUTING.md`](https://github.com/mephi-tex/mephi-tex/blob/main/CONTRIBUTING.md)!
+
 Проект распологается в [github.com/mephi-tex/mephi-tex](https://github.com/mephi-tex/mephi-tex)
 
 При нахождении опечатки можно создать issue или исправить её самостоятельно в pull request'e.
