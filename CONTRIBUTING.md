@@ -68,6 +68,6 @@ make html
     <img src="https://i.imgur.com/e3ZbQrW.png" height="150"/>
 
 - Если необходимо быстро найти обозначение какого-то математического символа, можно использовать [detexify](https://detexify.kirelabs.org/classify.html), [этот](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols) и [этот](http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf) ресурсы.
-=======
+
 - Если необходимо быстро найти обозначение какого-то математического символа, можно использовать [detexify](https://detexify.kirelabs.org/classify.html), [этот](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols) и [этот](http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf) ресурсы.
 
