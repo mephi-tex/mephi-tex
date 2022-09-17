@@ -8,9 +8,9 @@
 
 Не бойтесь! Я сейчас вам всё расскажу! Всё насколько же просто, как посчитать до `5`!
 
-1) [~~форкни~~ вилкани](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) 🍴
-2) [создай ветку](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch-via-the-branches-overview) 🌿
-3) [склонируй](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) 🔽
+1) [~~форкни~~ вилкани репозиторий](https://docs.github.com/en/get-started/quickstart/fork-a-repo#forking-a-repository) 🍴
+2) [создай новую ветку](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-and-deleting-branches-within-your-repository#creating-a-branch-via-the-branches-overview) 🌿
+3) [склонируй репозиторий](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository) 🔽
 4) поменяй что-нибудь ➕
 5) [~~сделай pull request (pr)~~ запроси вытягивание](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request#creating-the-pull-request) 🤝
 
