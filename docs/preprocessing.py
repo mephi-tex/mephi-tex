@@ -18,7 +18,12 @@ def get_macros_pos(string):
 def get_preamble():
     text = Path("./preamble.sty").read_text("utf-8")
     s, e = get_macros_pos(text)
-    return "\n".join([f"${line}$" if line else "" for line in text[s:e].split("\n")])
+    lines = (
+        f"${line}$"
+        for line in text[s:e].split("\n")
+        if line and not line.startswith("%")
+    )
+    return "\n".join(lines) + "\n"
 
 
 def fix_preambles(md_roots):
