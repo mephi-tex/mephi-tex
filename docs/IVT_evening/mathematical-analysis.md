@@ -1,25 +1,20 @@
 <!-- Macros: start -->
-$\def\ident{\Longleftrightarrow}$
-$\def\thus{\Rightarrow}$
-$\newcommand{\braket}[1]{\langle #1 \rangle}$
 $\newcommand{\block}[2]{\begin{#1} #2 \end{#1}}$
 $\newcommand{\cases}[1]{\block{cases}{#1}}$
-$\newcommand{\wrapmat}[2]{\block{#1}{#2}}$
-$\newcommand{\mat}[1]{\wrapmat{Vmatrix}{#1}}$
-$\newcommand{\det}[1]{\wrapmat{vmatrix}{#1}}$
-$\newcommand{\pmat}[1]{\wrapmat{pmatrix}{#1}}$
+$\def\ident{\Longleftrightarrow}$
+$\def\thus{\Rightarrow}$
+$\newcommand{\set}[1]{ \left \{ #1 \right \} }$
+$\newcommand{\brakets}[1]{ \left \( #1 \right \) }$
+$\newcommand{\sharpbrakets}[1]{\left \langle #1 \right \rangle}$
+$\newcommand{\mat}[1]{\block{Vmatrix}{#1}}$
+$\newcommand{\det}[1]{\block{vmatrix}{#1}}$
+$\newcommand{\pmat}[1]{\block{pmatrix}{#1}}$
 $\newcommand{\upline}[1]{\overline{#1}}$
 $\newcommand{\dnline}[1]{\underline{#1}}$
-
-
-$%% Красивые <= и >=$
 $\renewcommand{\geq}{\geqslant}$
 $\renewcommand{\leq}{\leqslant}$
-
-$%% Более привычные греческие буквы$
 $\renewcommand{\phi}{\varphi}$
 $\renewcommand{\epsilon}{\varepsilon}$
-
 $\newcommand{\NN}{\mathbb{N}}$
 $\newcommand{\ZZ}{\mathbb{Z}}$
 $\newcommand{\RR}{\mathbb{R}}$
@@ -27,26 +22,15 @@ $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\FF}{\mathbb{F}}$
 $\newcommand{\QQ}{\mathbb{Q}}$
 $\newcommand{\EE}{\mathbb{E}}$
-
-$%% Жоские буквы для базисов$
 $\newcommand\E{\mathbbold{e}}$
 $\newcommand\F{\mathbbold{f}}$
 $\newcommand\G{\mathbbold{g}}$
-
-
-$% \int = \int\limits$
 $\renewcommand{\int}{\intop}$
-
-
 $\newcommand{\ans}[1]{\textbf{Ответ}: #1.}$
-
-$% norm command$
-$\newcommand{\norm}[1]{\left\lVert#1\right\rVert}$
-
+$\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}$
 $\newcommand{\ord}[1]{\operatorname{ord}(#1)}$
 $\renewcommand{\gcd}{\text{НОД}}$
 $\newcommand{\lcm}{\text{НОК}}$
-
 <!-- Macros: end -->
 ```{contents} Математический анализ
 ---
