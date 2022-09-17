@@ -10,6 +10,43 @@ $\newcommand{\det}[1]{\wrapmat{vmatrix}{#1}}$
 $\newcommand{\pmat}[1]{\wrapmat{pmatrix}{#1}}$
 $\newcommand{\upline}[1]{\overline{#1}}$
 $\newcommand{\dnline}[1]{\underline{#1}}$
+
+
+$%% Красивые <= и >=$
+$\renewcommand{\geq}{\geqslant}$
+$\renewcommand{\leq}{\leqslant}$
+
+$%% Более привычные греческие буквы$
+$\renewcommand{\phi}{\varphi}$
+$\renewcommand{\epsilon}{\varepsilon}$
+
+$\newcommand{\NN}{\mathbb{N}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\FF}{\mathbb{F}}$
+$\newcommand{\QQ}{\mathbb{Q}}$
+$\newcommand{\EE}{\mathbb{E}}$
+
+$%% Жоские буквы для базисов$
+$\newcommand\E{\mathbbold{e}}$
+$\newcommand\F{\mathbbold{f}}$
+$\newcommand\G{\mathbbold{g}}$
+
+
+$% \int = \int\limits$
+$\renewcommand{\int}{\intop}$
+
+
+$\newcommand{\ans}[1]{\textbf{Ответ}: #1.}$
+
+$% norm command$
+$\newcommand{\norm}[1]{\left\lVert#1\right\rVert}$
+
+$\newcommand{\ord}[1]{\operatorname{ord}(#1)}$
+$\renewcommand{\gcd}{\text{НОД}}$
+$\newcommand{\lcm}{\text{НОК}}$
+
 <!-- Macros: end -->
 ```{contents} Математический анализ
 ---
@@ -28,10 +65,10 @@ depth: 3
 
  ***Определение***
 
-- $\mathbb{N}$ - Множество натуральных чисел
-- $\mathbb{Z}$ - Множество целых чисел
-- $\mathbb{Q}$ - Множество рациональных чисел 
-- $\mathbb{R}$ - Множество вещественных чисел
+- $\NN$ - Множество натуральных чисел
+- $\ZZ$ - Множество целых чисел
+- $\QQ$ - Множество рациональных чисел 
+- $\RR$ - Множество вещественных чисел
 
 
 ***Упражнение***
@@ -65,11 +102,11 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
 
 ***Определение***
-- Наименьшая граница из всех верхних граней называется точной верхней гранью $(sup{A})$
+- Наименьшая граница из всех верхних граней называется точной верхней гранью $(\sup{A})$
 
 
 ***Определение***
-Наибольшая граница из всех нижних граней называется точной нижней гранью $(inf{A})$
+Наибольшая граница из всех нижних граней называется точной нижней гранью $(\inf{A})$
 
 
 ***Теорема***
@@ -77,33 +114,34 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
 ***Определение точной верхней грани***
 
-$(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = sup{X} $
+$(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = \sup{X} $
 
 ***Определение точной нижней грани***
-- $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m = inf{X}$
+- $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m =\inf{X}$
 
 ***Альтернативное определение точной нижней грани***
-- $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf(X)$
+- $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = \inf{X}$
 
 ***Альтернативное определение точной верхней грани***
-- $(\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = sup{X}$
+- $(\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = \sup{X}$
 
 ***Упражнение***
-Докажем, что всякое ограниченное сверху множество имеет $sup$. 
+Докажем, что всякое ограниченное сверху множество имеет $\sup$. 
 Доказательство : Рассмотрим два случая
 
 1. Рассматриваемое множество не лишено неотрицательных чисел
 
 2. Рассматриваемое множество содержит только отрицательные числа
 
-- Пусть $(1)$, тогда точная верхняя грань больше или равна нуля. Т.к. множество ограничено сверху, то его целые части не превышают этой грани. Отберем из множества те числа, у которых наибольшая целая часть $\overline{x_{0}}$, остальные числа отбросим. Среди оставшихся отберем те, у которых наибольший следующий разряд, т.е $\overline{x_{0}},\overline{x_{1}}$. И т.д. до бесконечности. Получаем число - бесконечную, вообще говоря, непериодическую десятичную дробь. $\overline{x_{0}}\overline{x_{1}}\overline{x_{2}} ... \overline{x_{n}} ... = \overline{x} (sup)$
+- Пусть $(1)$, тогда точная верхняя грань больше или равна нуля. Т.к. множество ограничено сверху, то его целые части не превышают этой грани. Отберем из множества те числа, у которых наибольшая целая часть $\overline{x_{0}}$, остальные числа отбросим. Среди оставшихся отберем те, у которых наибольший следующий разряд, т.е $\overline{x_{0}},\overline{x_{1}}$. И т.д. до бесконечности. Получаем число - бесконечную, вообще говоря, непериодическую десятичную дробь. $\overline{x_{0}}\overline{x_{1}}\overline{x_{2}} ... \overline{x_{n}} ... = \overline{x} (\sup)$
 
-- Докажем, что таким образом получим точную верхнюю грань данного множества. Действительно по первой части определения $sup$ : $\forall x \in A \Rightarrow x \leq \overline{x}$. Но это и есть $sup$ по характеру построения числа $\overline{x}$, так как на каждой позиции для построения $\overline{x}$ бралось наибольшее число. Теперь докажем вторую часть определения $sup$. $\forall x < \overline{x}, \exists x' \in A: x' > x$. Действительно, берем произвольное число (не обязательно из множества $A$) , $x < \overline{x}$, т.к. $x < \overline{x}$ на каком - то знаке из $\overline{x_{0}},\overline{x_{1}}, ... ,\overline{x_{n}}, ... $. Докажем, что $\exists x' \in A$ , т.ч. $x' > x$. Т.к. $x' \in A$, то $x_{0}' \leq \overline{x_{0}}$, а если они равны, то $x_{1}' < \overline{x_{1}}$ и т.д. до позиции с номером $n$. Получим, что в элементах нашего множества есть число, у которого на $n$ - ом месте стоит $\overline{x_{n}}$, но $\overline{x_{n}} > x_{n} \Rightarrow x_{n}' > x_{n}$
+- Докажем, что таким образом получим точную верхнюю грань данного множества. Действительно по первой части определения $\sup$ : $\forall x \in A \Rightarrow x \leq \overline{x}$. Но это и есть $\sup$ по характеру построения числа $\overline{x}$, так как на каждой позиции для построения $\overline{x}$ бралось наибольшее число. Теперь докажем вторую часть определения $\sup$. $\forall x < \overline{x}, \exists x' \in A: x' > x$. Действительно, берем произвольное число (не обязательно из множества $A$) , $x < \overline{x}$, т.к. $x < \overline{x}$ на каком - то знаке из $\overline{x_{0}},\overline{x_{1}}, ... ,\overline{x_{n}}, ... $. Докажем, что $\exists x' \in A$ , т.ч. $x' > x$. Т.к. $x' \in A$, то $x_{0}' \leq \overline{x_{0}}$, а если они равны, то $x_{1}' < \overline{x_{1}}$ и т.д. до позиции с номером $n$. Получим, что в элементах нашего множества есть число, у которого на $n$ - ом месте стоит $\overline{x_{n}}$, но $\overline{x_{n}} > x_{n} \Rightarrow x_{n}' > x_{n}$
 
-- Докажем для пункта $(2)$. Если все числа множества $A$ - отрицательные, то $\forall x \in A: x = -|x|$, тогда отбрасываем все числа у которых наименьшая целая часть модуля $\overline{x_{0}}$, затем у которых $\overline{x_{0}}, \overline{x_{1}}$ и т.д. до бесконечности. Получаем бесконечную десятичную непериодическую дробь. Поставим перед числом знак $(-)$, получим $sup$.
+- Докажем для пункта $(2)$. Если все числа множества $A$ - отрицательные, то $\forall x \in A: x = -|x|$, тогда отбрасываем все числа у которых наименьшая целая часть модуля $\overline{x_{0}}$, затем у которых $\overline{x_{0}}, \overline{x_{1}}$ и т.д. до бесконечности. Получаем бесконечную десятичную непериодическую дробь. Поставим перед числом знак $(-)$, получим $\sup$.
+
 ***Пример***
 
-- $A = \{1, \dfrac{1}{2},\dfrac{1}{3}, ... \dfrac{1}{n}, ...\}$. $sup{A} = 1, inf{A} = 0$
+- $A = \{1, \dfrac{1}{2},\dfrac{1}{3}, ... \dfrac{1}{n}, ...\}$. $\sup{A} = 1, \inf{A} = 0$
 
 
 ### Числовая последовательность.
@@ -113,7 +151,8 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 - Рассмотрим упорядоченный набор натуральных чисел$\{1, 2, 3, ..., n, ...\}$ и каждому из этих натуральных чисел поставим в соответствие числа: $x_{1}, x_{2}, x_{3}, ... , x_{n}, ...$. Это и есть числовая последовательность.
 
 
-***Обозначение*** - $\{x_{n}\}$
+***Обозначение***
+- $\{x_{n}\}$
 
 ***Свойства***
 
@@ -293,25 +332,26 @@ $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.
 ### Точная верхняя грань ограниченного сверху множества
 ***Определение точной верхней грани***
 
-1. $M = sup{X} $ - наименьшая из всех верхних граней
+1. $M = \sup{X} $ - наименьшая из всех верхних граней
 
-2. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = sup{X}$
+2. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = \sup{X}$
 
-3. $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = sup{X} $
+3. $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = \sup{X} $
 ### Точная нижняя грань ограниченного сверху множества
-1. $m = inf(X)$ - наибольшая из всех нижних граней $X$
-2. $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf(X)$
-3. $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m = inf{X}$
+1. $m = \inf{X}$ - наибольшая из всех нижних граней $X$
+2. $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf{X})$
+3. $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m = \inf{X}$
 
 ***Задачи на семинаре***
 
-1. Доказать, что $inf(-X) = - sup(X)$. Доказательство: $(\forall x \in X: x \leq M) \wedge (\forall \epsilon > 0 : \exists x' \in X: x' > M - \epsilon ) \Rightarrow M =sup{X}$. Рассмотрим множество ${-X}$. $(\forall (-x) : -x \geq -M = m) \wedge (\forall \epsilon > 0 : \exists -x' \in -X: -x' < \underbrace{-M}_{m} + \epsilon = m + \epsilon \Rightarrow m = -M)$
-2. Доказать, что $sup{X + Y} = sup{X} + \sup{Y}$
-    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M_{1} - \frac{\epsilon}{2} \Rightarrow M_{1} = sup{X}$
-    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon > 0 \exists y' \in X: y' > M_{2} - \frac{\epsilon}{2} \Rightarrow M_2 = sup{X}$
-    3. $ (\forall x + y \in X + Y : x + y \leq M_{1} + M_{2}) \wedge (\forall \epsilon > 0, \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = sup{X}$
+1. Доказать, что $inf(-X) = - \sup{X}$. Доказательство: $(\forall x \in X: x \leq M) \wedge (\forall \epsilon > 0 : \exists x' \in X: x' > M - \epsilon ) \Rightarrow M =\sup{X}$. Рассмотрим множество ${-X}$. $(\forall (-x) : -x \geq -M = m) \wedge (\forall \epsilon > 0 : \exists -x' \in -X: -x' < \underbrace{-M}_{m} + \epsilon = m + \epsilon \Rightarrow m = -M)$
 
-3. Доказать, что $sup{XY} = sup{X} \cdot \sup{Y}$
-    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M_{1} - \epsilon_{1}) \Rightarrow M_{1} = sup{X}$
-    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M_{2} - \epsilon_{2}) \Rightarrow M_2 = sup{X}$
-    3. $ (\forall x \cdot y \in XY : xy \leq M_{1}M_{2}) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \Rightarrow M_{1}M_{2} = sup{X}$
+2. Доказать, что $\sup(X + Y) = \sup{X} + \\sup{Y}$
+    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M_{1} - \frac{\epsilon}{2} \Rightarrow M_{1} = \sup{X}$
+    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon > 0 \exists y' \in X: y' > M_{2} - \frac{\epsilon}{2} \Rightarrow M_2 = \sup{X}$
+    3. $ (\forall x + y \in X + Y : x + y \leq M_{1} + M_{2}) \wedge (\forall \epsilon > 0, \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = \sup{X}$
+
+3. Доказать, что $\sup{XY} = \sup{X} \cdot \sup{Y}$
+    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M_{1} - \epsilon_{1}) \Rightarrow M_{1} = \sup{X}$
+    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in X: y' > M_{2} - \epsilon_{2}) \Rightarrow M_2 = \sup{X}$
+    3. $ (\forall x \cdot y \in XY : xy \leq M_{1}M_{2}) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \Rightarrow M_{1}M_{2} = \sup{X}$
