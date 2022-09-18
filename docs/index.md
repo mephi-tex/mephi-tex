@@ -7,6 +7,8 @@
 
 **С любовью к Б22-513!**
 
+Актуальные новости публикуются в Telegram-канале [@mephitex](https://t.me/mephitex)
+
 ```{toctree}
 ---
 glob:
