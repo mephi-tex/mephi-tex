@@ -12,6 +12,7 @@ $\newcommand{\bigbkets}[1]{\left \langle #1 \right \rangle}$
 $\newcommand{\mat}[1]{\block{Vmatrix}{#1}}$
 $\newcommand{\det}[1]{\block{vmatrix}{#1}}$
 $\newcommand{\pmat}[1]{\block{pmatrix}{#1}}$
+$\newcommand{\emat}[1]{\block{matrix}{#1}}$
 $\renewcommand{\geq}{\geqslant}$
 $\renewcommand{\leq}{\leqslant}$
 $\newcommand{\upline}[1]{\overline{#1}}$
