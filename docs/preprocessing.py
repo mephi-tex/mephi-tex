@@ -61,6 +61,30 @@ def fix_preambles(md_roots):
     print(prompt, "done", " " * (last_size + 20))
 
 
+def fix_line_endings(md_roots):
+    prompt = "fixing line endings..."
+    print(prompt, end="\r")
+
+    last_size = 0
+    for file in get_mds(md_roots):
+        text = file.read_text("utf-8")
+
+        result = ""
+        for line in text.split("\n"):
+            if line:
+                if not line.endswith("  "):
+                    line += "  "
+            result += line + "\n"
+        result = result[:-1]
+
+        print(prompt, file, " " * last_size, end="\r")
+
+        file.write_text(result, "utf-8")
+        last_size = len(str(file))
+
+    print(prompt, "done", " " * (last_size + 20))
+
+
 LITERATURE = """# {name}
 
 Веб-просмотр:
@@ -152,5 +176,6 @@ def generate_literature():
 
 
 def run_all(md_roots):
+    fix_line_endings(md_roots)
     fix_preambles(md_roots)
     # generate_literature()
