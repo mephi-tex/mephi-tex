@@ -109,7 +109,7 @@ make html
     $$
 
   - `\pmat{4 & 2}`
-   
+
     $$
     \begin{pmatrix}
     4 & 2
