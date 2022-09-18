@@ -1,7 +1,7 @@
 from itertools import chain
 from pathlib import Path
 
-MACROS = "<!-- Macros: {} -->\n"
+MACROS = "<!-- Macros: {} -->"
 START = MACROS.format("start")
 END = MACROS.format("end")
 
@@ -23,7 +23,7 @@ def get_preamble():
         for line in text[s:e].split("\n")
         if line and not line.startswith("%")
     )
-    return "\n".join(lines) + "\n"
+    return "\n" + "\n".join(lines) + "\n"
 
 
 def fix_preambles(md_roots):
