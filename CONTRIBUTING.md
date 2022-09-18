@@ -91,7 +91,38 @@ make html
 
 - Вместо `tan`, `cos`, `tg`, `sup`, `lim` используйте `\tan`, `\cos`, `\tg`, `\sup`, `\lim` и так далее
 
-- Для матриц используйте `\mat{6 \\ 9}` $\begin{Vmatrix} 6 \\ 9 \end{Vmatrix}$ , `\det{3 \\ 14}` $\begin{vmatrix} 3 \\ 14 \end{vmatrix}$ , `\pmat{4 \\ 2}` $\begin{pmatrix} 4 \\ 2 \end{pmatrix}$ ,  `\emat{x \\ 0}` $\begin{matrix} x \\ 0 \end{matrix}$
+- Для матриц используйте:
+  - `\mat{6 & 9}`
+
+    $$
+    \begin{Vmatrix}
+    6 & 9
+    \end{Vmatrix}
+    $$
+
+  - `\det{3 & 14}`  
+
+    $$
+    \begin{vmatrix}
+    3 & 14
+    \end{vmatrix}
+    $$
+
+  - `\pmat{4 & 2}`
+   
+    $$
+    \begin{pmatrix}
+    4 & 2
+    \end{pmatrix}
+    $$
+
+  - `\emat{x & 0}`
+  
+    $$
+    \begin{matrix}
+    x & 0
+    \end{matrix}
+    $$
 
 - И в целом, если вам надо написать `\begin{X} ... \end{X}` рекомендуем писать `\block{X}{...}`, это легче читается и редактируется
 
