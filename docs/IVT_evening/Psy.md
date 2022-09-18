@@ -3,9 +3,12 @@ $\newcommand{\block}[2]{\begin{#1} #2 \end{#1}}$
 $\newcommand{\cases}[1]{\block{cases}{#1}}$
 $\def\ident{\Longleftrightarrow}$
 $\def\thus{\Rightarrow}$
-$\newcommand{\set}[1]{ \left \{ #1 \right \} }$
-$\newcommand{\brakets}[1]{ \left \( #1 \right \) }$
-$\newcommand{\sharpbrakets}[1]{\left \langle #1 \right \rangle}$
+$\newcommand{\set}[1]{ \{ #1 \} }$
+$\newcommand{\bigset}[1]{ \left \{ #1 \right \} }$
+$\newcommand{\bracs}[1]{ ( #1 ) }$
+$\newcommand{\bigbracs}[1]{ \left ( #1 \right ) }$
+$\newcommand{\bkets}[1]{\langle #1 \rangle}$
+$\newcommand{\bigbkets}[1]{\left \langle #1 \right \rangle}$
 $\newcommand{\mat}[1]{\block{Vmatrix}{#1}}$
 $\newcommand{\det}[1]{\block{vmatrix}{#1}}$
 $\newcommand{\pmat}[1]{\block{pmatrix}{#1}}$
@@ -20,6 +23,7 @@ $\renewcommand{\epsilon}{\varepsilon}$
 $\def\alp{\alpha}$
 $\def\lam{\lambda}$
 $\def\gam{\gamma}$
+$\def\eps{\epsilon}$
 $\newcommand{\NN}{\mathbb{N}}$
 $\newcommand{\ZZ}{\mathbb{Z}}$
 $\newcommand{\RR}{\mathbb{R}}$
