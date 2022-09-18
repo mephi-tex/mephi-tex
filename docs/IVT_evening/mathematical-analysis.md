@@ -19,6 +19,7 @@ $\renewcommand{\phi}{\varphi}$
 $\renewcommand{\epsilon}{\varepsilon}$
 $\def\alp{\alpha}$
 $\def\lam{\lambda}$
+$\def\gam{\gamma}$
 $\newcommand{\NN}{\mathbb{N}}$
 $\newcommand{\ZZ}{\mathbb{Z}}$
 $\newcommand{\RR}{\mathbb{R}}$
