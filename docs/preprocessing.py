@@ -1,6 +1,12 @@
 from itertools import chain
 from pathlib import Path
 
+
+def get_mds(md_roots):
+    roots = (Path.cwd() / root for root in md_roots)
+    return chain(*(root.glob("**/*.md") for root in roots))
+
+
 MACROS = "<!-- Macros: {} -->"
 START = MACROS.format("start")
 END = MACROS.format("end")
@@ -31,10 +37,9 @@ def fix_preambles(md_roots):
     print(prompt, end="\r")
 
     preamble = get_preamble()
-    roots = (Path.cwd() / root for root in md_roots)
 
     last_size = 0
-    for file in chain(*(root.glob("**/*.md") for root in roots)):
+    for file in get_mds(md_roots):
         text = file.read_text("utf-8")
 
         s, e = get_macros_pos(text)
