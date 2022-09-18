@@ -91,7 +91,7 @@ make html
 
 - Вместо `tan`, `cos`, `tg`, `sup`, `lim` используйте `\tan`, `\cos`, `\tg`, `\sup`, `\lim` и так далее
 
-- Для матриц используйте `\mat`, `\det`, `\pmat` (разные скобки) - `\mat{a & b \\ c & d}`
+- Для матриц используйте `\mat{6 \\ 9}` $\begin{Vmatrix} 6 \\ 9 \end{Vmatrix}$ , `\det{3 \\ 14}` $\begin{vmatrix} 3 \\ 14 \end{vmatrix}$ , `\pmat{4 \\ 2}` $\begin{pmatrix} 4 \\ 2 \end{pmatrix}$
 
 - И в целом, если вам надо написать `\begin{X} ... \end{X}` рекомендуем писать `\block{X}{...}`, это легче читается и редактируется
 
@@ -129,3 +129,4 @@ make html
   - $\mathbb{N, Z, R, ...}$ - `\NN, \ZZ, \RR, ...`
   - $\intop$ - `\int`
   - $\left \lVert ... \right \rVert$ - `\norm{...}`
+  - и др.
