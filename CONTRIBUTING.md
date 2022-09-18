@@ -120,4 +120,12 @@ make html
 
 - Если необходимо быстро найти обозначение какого-то математического символа, можно использовать [detexify](https://detexify.kirelabs.org/classify.html), [этот](https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols) и [этот](http://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf) ресурсы.
 
-- Дополнительные сокращения определены в [preamble.sty](docs/preamble.sty)
+- Дополнительные сокращения (для удобства) - определены в [preamble.sty](docs/preamble.sty):
+  - $\exists$ - `\ex`
+  - $\exists!$ - `\exo`
+  - $\geqslant$ - `\geq`
+  - $\leqslant$ - `\leq`
+  - $\Longrightarrow$ - `\thus`
+  - $\mathbb{N, Z, R, ...}$ - `\NN, \ZZ, \RR, ...`
+  - $\intop$ - `\int`
+  - $\left \lVert ... \right \rVert$ - `\norm{...}`
