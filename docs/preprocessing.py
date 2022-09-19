@@ -85,6 +85,37 @@ def fix_line_endings(md_roots):
     print(prompt, "done", " " * (last_size + 20))
 
 
+USUAL_MAP = {
+    "<=": r"\leq",
+    ">=": r"\geq",
+    "-->": chr(0),
+    "<->": r"\leftrightarrow",
+    "->": r"\rightarrow",
+    "<-": r"\leftarrow",
+    "<=>": r"\ident",
+    chr(0): "-->",
+}
+
+
+def fix_usual_repr(md_roots):
+    prompt = "fixing susual representations..."
+    print(prompt, end="\r")
+
+    last_size = 0
+    for file in get_mds(md_roots):
+        text = file.read_text("utf-8")
+
+        for pattern, repl in USUAL_MAP.items():
+            text = text.replace(pattern, repl)
+
+        print(prompt, file, " " * last_size, end="\r")
+
+        file.write_text(text, "utf-8")
+        last_size = len(str(file))
+
+    print(prompt, "done", " " * (last_size + 20))
+
+
 LITERATURE = """# {name}
 
 Веб-просмотр:
@@ -178,4 +209,9 @@ def generate_literature():
 def run_all(md_roots):
     fix_line_endings(md_roots)
     fix_preambles(md_roots)
+    fix_usual_repr(md_roots)
     # generate_literature()
+
+
+if __name__ == "__main__":
+    run_all(["IVT", "IVT_evening"])
