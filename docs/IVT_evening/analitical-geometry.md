@@ -1,6 +1,8 @@
 <!-- Macros: start -->
 $\newcommand{\block}[2]{\begin{#1} #2 \end{#1}}$
 $\newcommand{\cases}[1]{\block{cases}{#1}}$
+$\newcommand{\up}[2]{\stackrel{#1}{#2}}$
+$\def\dn#1#2{\mathrel{\mathop{#2}\limits_{#1}}}$
 $\def\ident{\Longleftrightarrow}$
 $\def\thus{\Rightarrow}$
 $\newcommand{\set}[1]{ \{ #1 \} }$
