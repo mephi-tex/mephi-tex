@@ -162,4 +162,6 @@ make html
   - $\mathbb{N, Z, R, ...}$ - `\NN, \ZZ, \RR, ...`
   - $\intop$ - `\int`
   - $\left \lVert ... \right \rVert$ - `\norm{...}`
+  - $\stackrel {text} \longrightarrow$ - `\up {text} \longrightarrow`
+  - $\mathrel{\mathop{\Longleftrightarrow}\limits_{text}}$ - `\dn {text} \Longleftrightarrow`
   - и др.
