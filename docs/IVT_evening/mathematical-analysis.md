@@ -47,7 +47,7 @@ $\newcommand{\lcm}{\text{НОК}}$
 ```{contents} Математический анализ  
 ---  
 depth: 3  
-```  
+```
 # Математический анализ  
 Преподаватель - Михайлов Владислав Дмитриевич  
 
@@ -68,12 +68,9 @@ depth: 3
 
 
 ***Упражнение***  
-Доказать, что $(\dfrac{m}{n})^2 \neq 2$, где $\dfrac{m}{n}$ - несократимая дробь.  
-
-
-***Доказательство***  
-Предположим, что $(\dfrac{m}{n})^2 = 2$, тогда :  
-$m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а следовательно $m$ - четное. $m = 2k$, $4k^2 = 2n^2$, $2k^2 = n^2$ - следовательно: $n^2$ - четное. Получим противоречие, т.к. $\dfrac{2n^2}{2k^2}$ - сократимая дробь.  
+- Доказать, что $(\dfrac{m}{n})^2 \neq 2$, где $\dfrac{m}{n}$ - несократимая дробь.  
+	- Доказательство : Предположим, что $(\dfrac{m}{n})^2 = 2$, тогда :  
+	$m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а следовательно $m$ - четное. $m = 2k$, $4k^2 = 2n^2$, $2k^2 = n^2$ - следовательно: $n^2$ - четное. Получим противоречие, т.к. $\dfrac{2n^2}{2k^2}$ - сократимая дробь.  
 
 
 ### Сравнение вещественных чисел, их сумма и произведение  
@@ -100,9 +97,9 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 ***Определение***  
 - Наименьшая граница из всех верхних граней называется точной верхней гранью $(\sup{A})$  
 
-
 ***Определение***  
-Наибольшая граница из всех нижних граней называется точной нижней гранью $(\inf{A})$  
+
+- Наибольшая граница из всех нижних граней называется точной нижней гранью $(\inf{A})$  
 
 
 ***Теорема***  
@@ -110,7 +107,7 @@ $m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а сл
 
 ***Определение точной верхней грани***  
 
-$(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = \sup{X} $  
+- $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = \sup{X} $  
 
 ***Определение точной нижней грани***  
 - $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m =\inf{X}$  
@@ -122,18 +119,19 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 - $(\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = \sup{X}$  
 
 ***Упражнение***  
-Докажем, что всякое ограниченное сверху множество имеет $\sup$.   
-Доказательство : Рассмотрим два случая  
 
-1. Рассматриваемое множество не лишено неотрицательных чисел  
+- Докажем, что всякое ограниченное сверху множество имеет $\sup$.   
+  - Доказательство : Рассмотрим два случая:
 
-2. Рассматриваемое множество содержит только отрицательные числа  
+	1. Рассматриваемое множество не лишено неотрицательных чисел  
 
-- Пусть $(1)$, тогда точная верхняя грань больше или равна нуля. Т.к. множество ограничено сверху, то его целые части не превышают этой грани. Отберем из множества те числа, у которых наибольшая целая часть $\overline{x_{0}}$, остальные числа отбросим. Среди оставшихся отберем те, у которых наибольший следующий разряд, т.е $\overline{x_{0}},\overline{x_{1}}$. И т.д. до бесконечности. Получаем число - бесконечную, вообще говоря, непериодическую десятичную дробь. $\overline{x_{0}}\overline{x_{1}}\overline{x_{2}} ... \overline{x_{n}} ... = \overline{x} (\sup)$  
+	2. Рассматриваемое множество содержит только отрицательные числа  
 
-- Докажем, что таким образом получим точную верхнюю грань данного множества. Действительно по первой части определения $\sup$ : $\forall x \in A \Rightarrow x \leq \overline{x}$. Но это и есть $\sup$ по характеру построения числа $\overline{x}$, так как на каждой позиции для построения $\overline{x}$ бралось наибольшее число. Теперь докажем вторую часть определения $\sup$. $\forall x < \overline{x}, \exists x' \in A: x' > x$. Действительно, берем произвольное число (не обязательно из множества $A$) , $x < \overline{x}$, т.к. $x < \overline{x}$ на каком - то знаке из $\overline{x_{0}},\overline{x_{1}}, ... ,\overline{x_{n}}, ... $. Докажем, что $\exists x' \in A$ , т.ч. $x' > x$. Т.к. $x' \in A$, то $x_{0}' \leq \overline{x_{0}}$, а если они равны, то $x_{1}' < \overline{x_{1}}$ и т.д. до позиции с номером $n$. Получим, что в элементах нашего множества есть число, у которого на $n$ - ом месте стоит $\overline{x_{n}}$, но $\overline{x_{n}} > x_{n} \Rightarrow x_{n}' > x_{n}$  
+	- Пусть $(1)$, тогда точная верхняя грань больше или равна нуля. Т.к. множество ограничено сверху, то его целые части не превышают этой грани. Отберем из множества те числа, у которых наибольшая целая часть $\overline{x_{0}}$, остальные числа отбросим. Среди оставшихся отберем те, у которых наибольший следующий разряд, т.е $\overline{x_{0}},\overline{x_{1}}$. И т.д. до бесконечности. Получаем число - бесконечную, вообще говоря, непериодическую десятичную дробь. $\overline{x_{0}}\overline{x_{1}}\overline{x_{2}} ... \overline{x_{n}} ... = \overline{x} (\sup)$  
 
-- Докажем для пункта $(2)$. Если все числа множества $A$ - отрицательные, то $\forall x \in A: x = -|x|$, тогда отбрасываем все числа у которых наименьшая целая часть модуля $\overline{x_{0}}$, затем у которых $\overline{x_{0}}, \overline{x_{1}}$ и т.д. до бесконечности. Получаем бесконечную десятичную непериодическую дробь. Поставим перед числом знак $(-)$, получим $\sup$.  
+	- Докажем, что таким образом получим точную верхнюю грань данного множества. Действительно по первой части определения $\sup$ : $\forall x \in A \Rightarrow x \leq \overline{x}$. Но это и есть $\sup$ по характеру построения числа $\overline{x}$, так как на каждой позиции для построения $\overline{x}$ бралось наибольшее число. Теперь докажем вторую часть определения $\sup$. $\forall x < \overline{x}, \exists x' \in A: x' > x$. Действительно, берем произвольное число (не обязательно из множества $A$) , $x < \overline{x}$, т.к. $x < \overline{x}$ на каком - то знаке из $\overline{x_{0}},\overline{x_{1}}, ... ,\overline{x_{n}}, ... $. Докажем, что $\exists x' \in A$ , т.ч. $x' > x$. Т.к. $x' \in A$, то $x_{0}' \leq \overline{x_{0}}$, а если они равны, то $x_{1}' < \overline{x_{1}}$ и т.д. до позиции с номером $n$. Получим, что в элементах нашего множества есть число, у которого на $n$ - ом месте стоит $\overline{x_{n}}$, но $\overline{x_{n}} > x_{n} \Rightarrow x_{n}' > x_{n}$  
+
+	- Докажем для пункта $(2)$. Если все числа множества $A$ - отрицательные, то $\forall x \in A: x = -|x|$, тогда отбрасываем все числа у которых наименьшая целая часть модуля $\overline{x_{0}}$, затем у которых $\overline{x_{0}}, \overline{x_{1}}$ и т.д. до бесконечности. Получаем бесконечную десятичную непериодическую дробь. Поставим перед числом знак $(-)$, получим $\sup$.  
 
 ***Пример***  
 
@@ -152,7 +150,7 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 
 ***Свойства***  
 
-Последовательность $\{x_{n}\}$ бывает ограниченной сверху, снизу и просто ограниченной.  
+- Последовательность $\{x_{n}\}$ бывает ограниченной сверху, снизу и просто ограниченной.  
 
  1.  $\forall n: x_{n} \leq M$  
  2.  $\forall n: x_{n} \geq m$  
@@ -172,7 +170,7 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 
 
 ### Числовые последовательности  
-Пусть имеем для бесконечной последовательности $\{1, 2, 3, \dots , n, \dots \}$ набор соответсвующих чисел $\{x_{1}, x_{2}, x_{3}, \dots , x_{n}, \dots \}$. Получим последовательность.  
+- Пусть имеем для бесконечной последовательности $\{1, 2, 3, \dots , n, \dots \}$ набор соответсвующих чисел $\{x_{1}, x_{2}, x_{3}, \dots , x_{n}, \dots \}$. Получим последовательность.  
 
 ***Способы задания последовательностей***  
 
@@ -222,7 +220,8 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 
 ***Теорема***  
 
-- Если $\{x_{n}\}$ - б. б. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена бесконечно малая последовательность: $\{ \frac{1}{x_{n}} \}$. Доказательство : Действительно, т.к. $\{x_{n}\}$ - б. б. , то, начиная с $n > N_{0}: |x_{n}| > A$, где $A$ - любое число. Тогда для этих номеров: $\frac{1}{x_{n}} < \frac{1}{A}$. Если взять произвольное $\epsilon > 0$ и $A = \frac{1}{\epsilon}$, то $|\frac{1}{x_{n}}| , \epsilon$, а это и есть определение бесконечно малой последовательности. Справедливо и обратное: Если $\{ \frac{1}{x_{n}} \}$ - б. м. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена $\{x_{n}\}$ - б. б.  
+- Если $\{x_{n}\}$ - б. б. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена бесконечно малая последовательность: $\{ \frac{1}{x_{n}} \}$.
+	- Доказательство : Действительно, т.к. $\{x_{n}\}$ - б. б. , то, начиная с $n > N_{0}: |x_{n}| > A$, где $A$ - любое число. Тогда для этих номеров: $\frac{1}{x_{n}} < \frac{1}{A}$. Если взять произвольное $\epsilon > 0$ и $A = \frac{1}{\epsilon}$, то $|\frac{1}{x_{n}}| , \epsilon$, а это и есть определение бесконечно малой последовательности. Справедливо и обратное: Если $\{ \frac{1}{x_{n}} \}$ - б. м. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена $\{x_{n}\}$ - б. б.  
 
 ### Монотонные последовательности  
 ***Определение***  
@@ -255,9 +254,9 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 
 **Последовательность, имеющая предел, называется сходящейся, иначе расходящейся.**  
 
-1. Всякая сходящаяся последовательность имеет единственный предел.  
-- Доказательство: Пусть $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A$. Докажем единственность от противного. Предположим, что $\exists  \lim\limits_{n \rightarrow \infty}{x_{n}} = B$ и $A > B$. Т. к. , $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + A< x_{n}  < \frac{A - B}{2} + A \Rightarrow   \frac{A + B}{2} < x_{n}  < \frac{3A - B}{2} $.  
-- Т. к. $ \lim\limits_{n \rightarrow \infty}{x_{n}} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\frac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - B < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + B< x_{n}  < \frac{A - B}{2} + B \Rightarrow   \frac{3B - A}{2} < x_{n}  < \frac{A + B}{2} $. Получим $\frac{A + B}{2} > x_{n} > \frac{A + B}{2}$. Противоречие.  
+- Всякая сходящаяся последовательность имеет единственный предел.  
+	- Доказательство: Пусть $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A$. Докажем единственность от противного. Предположим, что $\exists  \lim\limits_{n \rightarrow \infty}{x_{n}} = B$ и $A > B$. Т. к. , $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + A< x_{n}  < \frac{A - B}{2} + A \Rightarrow   \frac{A + B}{2} < x_{n}  < \frac{3A - B}{2} $.  
+	- Т. к. $ \lim\limits_{n \rightarrow \infty}{x_{n}} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\frac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - B < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + B< x_{n}  < \frac{A - B}{2} + B \Rightarrow   \frac{3B - A}{2} < x_{n}  < \frac{A + B}{2} $. Получим $\frac{A + B}{2} > x_{n} > \frac{A + B}{2}$. Противоречие.  
 
 ***Теорема***  
 
@@ -267,9 +266,9 @@ $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) 
 
 ***Теорема***  
 
-$\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.  
+- $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.  
 
-- Доказательство: Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \frac{\epsilon}{|k|} \Rightarrow |x_{n}| < \frac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \frac{\epsilon}{|k|} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{k x_{n}} = 0$  
+	- Доказательство: Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \frac{\epsilon}{|k|} \Rightarrow |x_{n}| < \frac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \frac{\epsilon}{|k|} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{k x_{n}} = 0$  
 
 ***Следствие***  
 
@@ -277,17 +276,17 @@ $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.
 
 ***Свойства пределов, выражаемые неравенствами***  
 
-1. $(\forall n > N: x_{n} \geq y_{n}) \wedge (\lim\limits_{n \rightarrow \infty}{x_{n}} = A, \lim\limits_{n \rightarrow \infty}{y_{n}} = B) \Rightarrow A > B$  
-- Доказательство:   
-  1. В качестве $\epsilon$ возьмем $\frac{A - B}{2}$. $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \Rightarrow |x_{n} - A| < \frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + A < x_{n}  < \frac{A - B}{2} + A \Rightarrow  \frac{3A - B}{2} < x_{n}  < \frac{A + B}{2} $  
-  2. $\forall n > N_{\epsilon_{2}} : |y_{n} - B| < \frac{B - A}{2} \Rightarrow \frac{B - A}{2} < y_{n} < \frac{3B - A}{2}$  
-  3. Получим $x_{n} < \frac{A + B}{2} < y_{n}$. Противоречие.  
-2. $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}) \Rightarrow \{y_{n}\}$ - сходится, причем $\lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{y_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}$   
-- Доказательство :   
-  - Действительно :  
-   - $(\forall \epsilon > 0, \exists n > N_{1} : |x_{n} - A| < \epsilon)$  
-   - $(\forall \epsilon > 0, \exists n > N_{2} : |z_{n} - A| < \epsilon)$  
-   - $N = \max(N_{1}, N_{2}) \Rightarrow  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \Rightarrow |y_{n} - A| < \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{y_{n}} = A$  
+- $(\forall n > N: x_{n} \geq y_{n}) \wedge (\lim\limits_{n \rightarrow \infty}{x_{n}} = A, \lim\limits_{n \rightarrow \infty}{y_{n}} = B) \Rightarrow A > B$  
+	- Доказательство:   
+  	1. В качестве $\epsilon$ возьмем $\frac{A - B}{2}$. $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \Rightarrow |x_{n} - A| < \frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + A < x_{n}  < \frac{A - B}{2} + A \Rightarrow  \frac{3A - B}{2} < x_{n}  < \frac{A + B}{2} $  
+  	2. $\forall n > N_{\epsilon_{2}} : |y_{n} - B| < \frac{B - A}{2} \Rightarrow \frac{B - A}{2} < y_{n} < \frac{3B - A}{2}$  
+  	3. Получим $x_{n} < \frac{A + B}{2} < y_{n}$. Противоречие.  
+- $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}) \Rightarrow \{y_{n}\}$ - сходится, причем $\lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{y_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}$   
+	- Доказательство :   
+   1. Действительно :  
+   2. $(\forall \epsilon > 0, \exists n > N_{1} : |x_{n} - A| < \epsilon)$  
+   3. $(\forall \epsilon > 0, \exists n > N_{2} : |z_{n} - A| < \epsilon)$  
+   4. $N = \max(N_{1}, N_{2}) \Rightarrow  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \Rightarrow |y_{n} - A| < \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{y_{n}} = A$  
 
 ***Арифметические свойства пределов сходящихся  последовательностей***  
 1. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A; \lim\limits_{n \rightarrow \infty}{y_{n}} = B \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$  
