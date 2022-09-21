@@ -39,6 +39,7 @@ $\newcommand\F{\mathbbold{f}}$
 $\newcommand\G{\mathbbold{g}}$
 $\renewcommand{\int}{\intop}$
 $\newcommand{\ans}[1]{\textbf{Ответ}: #1.}$
+$\newcommand{\proj}[2]{\text{пр.}_{#1}{#2}}$
 $\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}$
 $\newcommand{\ord}[1]{\operatorname{ord}(#1)}$
 $\renewcommand{\gcd}{\text{НОД}}$
