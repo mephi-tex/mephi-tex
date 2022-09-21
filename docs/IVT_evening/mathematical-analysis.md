@@ -39,6 +39,7 @@ $\newcommand\F{\mathbbold{f}}$
 $\newcommand\G{\mathbbold{g}}$
 $\renewcommand{\int}{\intop}$
 $\newcommand{\ans}[1]{\textbf{Ответ}: #1.}$
+$\newcommand{\proj}[2]{\text{пр.}_{#1}{#2}}$
 $\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}$
 $\newcommand{\ord}[1]{\operatorname{ord}(#1)}$
 $\renewcommand{\gcd}{\text{НОД}}$
@@ -47,7 +48,7 @@ $\newcommand{\lcm}{\text{НОК}}$
 ```{contents} Математический анализ  
 ---  
 depth: 3  
-```
+```  
 # Математический анализ  
 Преподаватель - Михайлов Владислав Дмитриевич  
 
@@ -121,7 +122,7 @@ depth: 3
 ***Упражнение***  
 
 - Докажем, что всякое ограниченное сверху множество имеет $\sup$.   
-  - Доказательство : Рассмотрим два случая:
+  - Доказательство : Рассмотрим два случая:  
 
 	1. Рассматриваемое множество не лишено неотрицательных чисел  
 
@@ -220,7 +221,7 @@ depth: 3
 
 ***Теорема***  
 
-- Если $\{x_{n}\}$ - б. б. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена бесконечно малая последовательность: $\{ \frac{1}{x_{n}} \}$.
+- Если $\{x_{n}\}$ - б. б. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена бесконечно малая последовательность: $\{ \frac{1}{x_{n}} \}$.  
 	- Доказательство : Действительно, т.к. $\{x_{n}\}$ - б. б. , то, начиная с $n > N_{0}: |x_{n}| > A$, где $A$ - любое число. Тогда для этих номеров: $\frac{1}{x_{n}} < \frac{1}{A}$. Если взять произвольное $\epsilon > 0$ и $A = \frac{1}{\epsilon}$, то $|\frac{1}{x_{n}}| , \epsilon$, а это и есть определение бесконечно малой последовательности. Справедливо и обратное: Если $\{ \frac{1}{x_{n}} \}$ - б. м. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена $\{x_{n}\}$ - б. б.  
 
 ### Монотонные последовательности  
@@ -351,64 +352,64 @@ depth: 3
     2. $ (\forall y \in Y : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in Y: y' > M_{2} - \epsilon_{2}) \Rightarrow M_2 = \sup{Y}$  
     3. $ (\forall x \cdot y \in XY : xy \leq M_{1}M_{2}) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \Rightarrow M_{1}M_{2} = \sup{XY}$  
 
-## Семинар 20.09.2022 
+## Семинар 20.09.2022   
 
-***Задачи на семинаре из Демидовича*** 
+***Задачи на семинаре из Демидовича***   
 
-### 43
-- Доказать, что последовательность $x_{n} = \lg(\lg{n})$ имеет бесконечный предел при $n \rightarrow \infty$ (т.е. являются бесконечно большими), определив для всякого $E > 0$ число $N = N(E)$ такое, что $|x_{n}| > E$ при $n > N$
-	- Доказательство:
-		- $|\lg(\lg{n})| > E$
-		- $|10^{\lg(\lg{n})}| > 10 ^{E}$
-		- $|\lg| > 10^{E}$ 
-		- $n > 10^{{10}^{E}}$
-### 44 
-- Показать, что $x_{n} = n^{{-1}^n}$ $n = (1, 2 , \dots)$ не ограничена, однако не является бесконечно большой при $n \rightarrow \infty$
-	- Последовательность не ограничена, так как ее члены чередуются: $a_{2n} > 1$,  $a_{n} \leq 1$
-	- У нее отсутствует предел, по той же причине, поэтому она не является бесконечно большой.
+### 43  
+- Доказать, что последовательность $x_{n} = \lg(\lg{n})$ имеет бесконечный предел при $n \rightarrow \infty$ (т.е. являются бесконечно большими), определив для всякого $E > 0$ число $N = N(E)$ такое, что $|x_{n}| > E$ при $n > N$  
+	- Доказательство:  
+		- $|\lg(\lg{n})| > E$  
+		- $|10^{\lg(\lg{n})}| > 10 ^{E}$  
+		- $|\lg| > 10^{E}$   
+		- $n > 10^{{10}^{E}}$  
+### 44   
+- Показать, что $x_{n} = n^{{-1}^n}$ $n = (1, 2 , \dots)$ не ограничена, однако не является бесконечно большой при $n \rightarrow \infty$  
+	- Последовательность не ограничена, так как ее члены чередуются: $a_{2n} > 1$,  $a_{n} \leq 1$  
+	- У нее отсутствует предел, по той же причине, поэтому она не является бесконечно большой.  
 
-***Вычислить пределы:***
+***Вычислить пределы:***  
 
-### 56
+### 56  
 
-- $\lim\limits_{n \rightarrow \infty}{\left [\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1 - \frac{1}{2} + \frac{1}{2}  - \frac{1}{ 3} + \dots + \frac{1}{n} - \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1- \frac{1}{n(n + 1)}  \right ]} = 1 $
+- $\lim\limits_{n \rightarrow \infty}{\left [\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1 - \frac{1}{2} + \frac{1}{2}  - \frac{1}{ 3} + \dots + \frac{1}{n} - \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1- \frac{1}{n(n + 1)}  \right ]} = 1 $  
 
-***Доказать равенства:***
+***Доказать равенства:***  
 
-### 58
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$
-	- Рассмотрим представление $2^{n} = (1 + 1)^{n} = 1 + n + \frac{n(n-1)}{2!} + \dots > \frac{n(n - 1)}{2}$
-	- $\frac{n}{2^{n}} < \frac{2n}{n(n - 1)} = \frac{2}{(n - 1)} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$
+### 58  
+- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$  
+	- Рассмотрим представление $2^{n} = (1 + 1)^{n} = 1 + n + \frac{n(n-1)}{2!} + \dots > \frac{n(n - 1)}{2}$  
+	- $\frac{n}{2^{n}} < \frac{2n}{n(n - 1)} = \frac{2}{(n - 1)} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$  
 
-### 60
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$
-	- Рассмотрим представление $a = (1 + \alpha)^{n} = 1 + n\alpha + \frac{n(n-1)}{2!}\alpha + \dots  \frac{n(n - 1)}{2}\alpha^2 + \dots \frac{n(n - 1) \dots (n - k)}{(k + 1)!}$
-	- $\frac{n^{k}}{a^{n}} < \frac{n^{k}(k + 1)!}{n(n - 1)(n - 2) \dots (n - k) \cdot \alpha^{k + 1}} = \frac{1}{n} \cdot \frac{(k + 1)!}{(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots (1 - \frac{k}{n}) \cdot \alpha^{k + 1}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$
+### 60  
+- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$  
+	- Рассмотрим представление $a = (1 + \alpha)^{n} = 1 + n\alpha + \frac{n(n-1)}{2!}\alpha + \dots  \frac{n(n - 1)}{2}\alpha^2 + \dots \frac{n(n - 1) \dots (n - k)}{(k + 1)!}$  
+	- $\frac{n^{k}}{a^{n}} < \frac{n^{k}(k + 1)!}{n(n - 1)(n - 2) \dots (n - k) \cdot \alpha^{k + 1}} = \frac{1}{n} \cdot \frac{(k + 1)!}{(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots (1 - \frac{k}{n}) \cdot \alpha^{k + 1}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$  
 
-### 61
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$
-	- $\frac{a^{n}}{n!} = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n } = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n_{0}} \cdot \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} = M  \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} < M (\frac{a}{n_{0} + 1})^{n - n_{0}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$
+### 61  
+- $\lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$  
+	- $\frac{a^{n}}{n!} = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n } = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n_{0}} \cdot \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} = M  \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} < M (\frac{a}{n_{0} + 1})^{n - n_{0}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$  
 
-### 65
-- $\lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$
-	- $(\sqrt[n]{n})^{n} = (1 + \alpha_{n})^{n}$
-	- $n = (1 + \alpha_{n})^{n} = 1 + n\alpha_{n} + \frac{n(n-1)}{2}\alpha_{n}^{2} + \dots > \frac{n(n-1)}{2}\alpha_{n}^2$
-	- $n > \frac{n(n-1)}{2}\alpha_{n}^2$
-	- $1 > \frac{n - 1}{2}\alpha_{n}^2$ 
-	- $\alpha_{n}^2 < \frac{2}{n -1}$
-	- $\alpha_{n} < \frac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$
+### 65  
+- $\lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$  
+	- $(\sqrt[n]{n})^{n} = (1 + \alpha_{n})^{n}$  
+	- $n = (1 + \alpha_{n})^{n} = 1 + n\alpha_{n} + \frac{n(n-1)}{2}\alpha_{n}^{2} + \dots > \frac{n(n-1)}{2}\alpha_{n}^2$  
+	- $n > \frac{n(n-1)}{2}\alpha_{n}^2$  
+	- $1 > \frac{n - 1}{2}\alpha_{n}^2$   
+	- $\alpha_{n}^2 < \frac{2}{n -1}$  
+	- $\alpha_{n} < \frac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$  
 
-### 77
-- Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей: $x_{n} = p_{0} + \frac{p_{1}}{10} + \dots +  \frac{p_{n}}{10^{n}} $ $(n = 1, 2, \dots)$, где $p_{i}(i = 0, 1, 2, \dots)$ - целые неотрицательные числа, не превышающие $9$, начиная с $p_{i}$.
-	- Последовательность возрастает и ограничена снизу и сверху. $\implies$ она сходится.
+### 77  
+- Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей: $x_{n} = p_{0} + \frac{p_{1}}{10} + \dots +  \frac{p_{n}}{10^{n}} $ $(n = 1, 2, \dots)$, где $p_{i}(i = 0, 1, 2, \dots)$ - целые неотрицательные числа, не превышающие $9$, начиная с $p_{i}$.  
+	- Последовательность возрастает и ограничена снизу и сверху. $\implies$ она сходится.  
 
-### Задание 1
-- Сформулировать определение последовательности, неограниченной сверху
-	- Для любого $M$ найдется такой номер $N > n$, что $x_{n} > M$
-### Задание 2
-- Верно ли: $(x_{n} + y_{n}) \rightarrow A \implies x_{n} \rightarrow B, y_{n} \rightarrow C$
-	- Нет, например, при : $x_{n} = n, y_{n} = -n$
+### Задание 1  
+- Сформулировать определение последовательности, неограниченной сверху  
+	- Для любого $M$ найдется такой номер $N > n$, что $x_{n} > M$  
+### Задание 2  
+- Верно ли: $(x_{n} + y_{n}) \rightarrow A \implies x_{n} \rightarrow B, y_{n} \rightarrow C$  
+	- Нет, например, при : $x_{n} = n, y_{n} = -n$  
 
-### Задание 3
-- Верно ли: $(kx_{n}) \rightarrow A \implies x_{n} \rightarrow B$
-	- Верно, домножение последовательности на константу не влияет на сходимость.
+### Задание 3  
+- Верно ли: $(kx_{n}) \rightarrow A \implies x_{n} \rightarrow B$  
+	- Верно, домножение последовательности на константу не влияет на сходимость.  
