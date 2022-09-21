@@ -407,7 +407,7 @@ depth: 3
 	- Для любого $M$ найдется такой номер $N > n$, что $x_{n} > M$
 ### Задание 2
 - Верно ли: $(x_{n} + y_{n}) \rightarrow A \implies x_{n} \rightarrow B, y_{n} \rightarrow C$
-	Нет, например, при : $x_{n} = n, y_{n} = -n$
+	- Нет, например, при : $x_{n} = n, y_{n} = -n$
 
 ### Задание 3
 - Верно ли: $(kx_{n}) \rightarrow A \implies x_{n} \rightarrow B$
