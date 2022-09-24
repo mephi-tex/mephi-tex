@@ -48,7 +48,7 @@ $\newcommand{\lcm}{\text{НОК}}$
 ```{contents} Математический анализ  
 ---  
 depth: 3  
-```
+```  
 # Математический анализ  
 Преподаватель - Михайлов Владислав Дмитриевич  
 
@@ -256,29 +256,29 @@ depth: 3
 **Последовательность, имеющая предел, называется сходящейся, иначе расходящейся.**  
 
 - Всякая сходящаяся последовательность имеет единственный предел.  
-	- Доказательство:
-		- Пусть $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A$. Докажем единственность от противного. Предположим, что $\exists  \lim\limits_{n \rightarrow \infty}{x_{n}} = B$ и $A > B$. Т. к. , $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\frac{A - B}{2} \Rightarrow$
-	
-		1. $ -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} $
-		2. $-\frac{A - B}{2} + A< x_{n}  < \frac{A - B}{2} + A$
+	- Доказательство:  
+		- Пусть $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A$. Докажем единственность от противного. Предположим, что $\exists  \lim\limits_{n \rightarrow \infty}{x_{n}} = B$ и $A > B$. Т. к. , $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\frac{A - B}{2} \Rightarrow$  
+	  
+		1. $ -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} $  
+		2. $-\frac{A - B}{2} + A< x_{n}  < \frac{A - B}{2} + A$  
 		3. $\frac{A + B}{2} < x_{n}  < \frac{3A - B}{2} $.  
-	
-	- Т. к. $ \lim\limits_{n \rightarrow \infty}{x_{n}} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\frac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \frac{A - B}{2} \Rightarrow$
-		1. $-\frac{A - B}{2} < x_{n} - B < \frac{A - B}{2}$
-		2. $-\frac{A - B}{2} + B< x_{n}  < \frac{A - B}{2} + B$
-		3. $\frac{3B - A}{2} < x_{n}  < \frac{A + B}{2} $.
+	  
+	- Т. к. $ \lim\limits_{n \rightarrow \infty}{x_{n}} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\frac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \frac{A - B}{2} \Rightarrow$  
+		1. $-\frac{A - B}{2} < x_{n} - B < \frac{A - B}{2}$  
+		2. $-\frac{A - B}{2} + B< x_{n}  < \frac{A - B}{2} + B$  
+		3. $\frac{3B - A}{2} < x_{n}  < \frac{A + B}{2} $.  
 	- Получим $\frac{A + B}{2} > x_{n} > \frac{A + B}{2}$. Противоречие.  
 
 ***Теорема***  
 
-- Сходящаяся последовательность ограничена
+- Сходящаяся последовательность ограничена  
 	- Доказательство: $\{x_{n}\}$ - сход. , $\Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Это было бы доказательством ограниченности, если бы было верно для всех $n > 0$. Но до $N_{\epsilon}$ - конечное число членов. Если взять $M = \max(|x_{1}|, |x_{2}|, |x_{3}|, \dots, |x_{N_{\epsilon} - 1}|, A - \epsilon, A + \epsilon )$, то $\forall n: |x_{n}| \leq M $  
 
 ***Теорема***  
 
 - $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.  
 
-	- Доказательство: 
+	- Доказательство:   
 		- Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \frac{\epsilon}{|k|} \Rightarrow |x_{n}| < \frac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \frac{\epsilon}{|k|} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{k x_{n}} = 0$  
 
 ***Следствие***  
@@ -312,67 +312,67 @@ depth: 3
   2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon)$  
   3. Возьмем $N = \max(N_{1}, N_{2})$, тогда $\forall n > N : |x_{n}y_{n} - A B| = |(x_{n} - A + A)(y_{n} - B + B)| \leq |x_{n}y_{n} - AB| + \underbrace{|x_{n} - A|y_{n}}_{< \frac{\epsilon}{2}} + \underbrace{|y_{n} - B|x_{n}}_{< \frac{\epsilon}{2}} + \dots  \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n}y_{n})} = A + B$  
 
-## Лекция 21.09.2022
+## Лекция 21.09.2022  
 
-### Подпоследовательность
+### Подпоследовательность  
 
-***Определение подпоследовательности***
-- Пусть задана $\{x_{n}\}$. Возьмем $N_{1}, N_{2} > N_{1}, N_{3} > N_{2}, \dots, N_{k} > N_{k - 1}, \dots $. Получим подпоследовательность $\{x_{n_{k}}\}$.
+***Определение подпоследовательности***  
+- Пусть задана $\{x_{n}\}$. Возьмем $N_{1}, N_{2} > N_{1}, N_{3} > N_{2}, \dots, N_{k} > N_{k - 1}, \dots $. Получим подпоследовательность $\{x_{n_{k}}\}$.  
 
-***Утверждение***
+***Утверждение***  
 
- - $\lim\limits_{n \rightarrow \infty}{x_{n}} = a \implies$ любая подпоследовательность $x_{n_{k}}$ тоже сходится, причем к тому же пределу.
+ - $\lim\limits_{n \rightarrow \infty}{x_{n}} = a \implies$ любая подпоследовательность $x_{n_{k}}$ тоже сходится, причем к тому же пределу.  
 	- Доказательство: Действительно: $\lim\limits_{n \rightarrow \infty}{x_{n}} = a \implies (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon} \implies |x_{n} - a| < \epsilon)$. Т.к при $N_{k} > N_{\epsilon}$ члены подпоследовательности входят в число членов $\{x_{n}\} \implies |x_{n_{k}} - a| < \epsilon $  
 
-***Пример***
-1. $x_{n} = \frac{1 + (1)^{n}}{2}$
-	- $\{x_{2k}\} \rightarrow 1$
-	- $\{x_{2k + 1\} \rightarrow 0}$
-2. $\{x_{n}\} = 1 + \sin{\frac{\pi n}{2}}$
-	- $\{x_{2k}\} = (1 + \sin{\pi k}) \rightarrow 1$
-	- $\{x_{4k + 1}\} = (1 + \sin{\frac{\pi}{2}}) \rightarrow 2$
-	- $\{x_{4k + 3}\} = (1 + \sin{\frac{3 \pi}{2}}) \rightarrow 0$
-3. $x_{n} = n^{(-1)^{n}}$
-	- $\{x_{2k}\} \rightarrow \infty$
-	- $\{x_{2k + 1}\} \rightarrow 0$
+***Пример***  
+1. $x_{n} = \frac{1 + (1)^{n}}{2}$  
+	- $\{x_{2k}\} \rightarrow 1$  
+	- $\{x_{2k + 1\} \rightarrow 0}$  
+2. $\{x_{n}\} = 1 + \sin{\frac{\pi n}{2}}$  
+	- $\{x_{2k}\} = (1 + \sin{\pi k}) \rightarrow 1$  
+	- $\{x_{4k + 1}\} = (1 + \sin{\frac{\pi}{2}}) \rightarrow 2$  
+	- $\{x_{4k + 3}\} = (1 + \sin{\frac{3 \pi}{2}}) \rightarrow 0$  
+3. $x_{n} = n^{(-1)^{n}}$  
+	- $\{x_{2k}\} \rightarrow \infty$  
+	- $\{x_{2k + 1}\} \rightarrow 0$  
 
-***Определение предельной точки последовательности***
+***Определение предельной точки последовательности***  
 
-- $X_{0}$ называется предельной точкой $\{x_{n}\}$, если в любой сколь угодно малой окрестности точки содержится бесконечное число членов $\{x_{n}\}$.
+- $X_{0}$ называется предельной точкой $\{x_{n}\}$, если в любой сколь угодно малой окрестности точки содержится бесконечное число членов $\{x_{n}\}$.  
 
-### Теорема о сходящейся подпоследовательности
-- Если $\{x_{n}\}$ имеет предельную точку, то в ней содержится сходящаяся подпоследовательность, которая имеет своим пределом эту точку.
-	- Доказательство: Действительно: 
-		- Так как в $\{x_{n}\}$ имеется предельная точка $a$, то $\forall \epsilon > 0$ в $\epsilon$ - окрестности точки $a$ содержится бесконечное число членов $\{x_{n}\}$. Возьмем $\epsilon_{1} = 1$ в окрестности точки $a$, возьмем $\overline{X_{1}}$ в этой окрестности. Далее возьмем $\epsilon_{2} = \frac{1}{2}$ и точку $\overline{X_{2}}$ из $\epsilon_{2}$ - окрестности и т. д.  Для $\epsilon_{n} = \frac{1}{n}$ возьмем $\overline{X_{n}}$ из $\epsilon_{n}$ - окрестности. Получим $\{\overline{x_{n}}\}$.
-		- Докажем, что $\lim\limits_{n \rightarrow \infty}{\overline{x_{n}}} = a$. $\forall \epsilon > 0$ посмотрим номера $\overline{x_{n}}$ , которые вошли в окрестность размера $\frac{1}{n}$, где $\frac{1}{n} < \epsilon$. Т. к. в нее вошла точка $x_{n}$, то в нее войдут и все дальнейшие $\overline{x_{n'}}$. Т. к. они все входят в меньшие окрестности. ч. т. д.
+### Теорема о сходящейся подпоследовательности  
+- Если $\{x_{n}\}$ имеет предельную точку, то в ней содержится сходящаяся подпоследовательность, которая имеет своим пределом эту точку.  
+	- Доказательство: Действительно:   
+		- Так как в $\{x_{n}\}$ имеется предельная точка $a$, то $\forall \epsilon > 0$ в $\epsilon$ - окрестности точки $a$ содержится бесконечное число членов $\{x_{n}\}$. Возьмем $\epsilon_{1} = 1$ в окрестности точки $a$, возьмем $\overline{X_{1}}$ в этой окрестности. Далее возьмем $\epsilon_{2} = \frac{1}{2}$ и точку $\overline{X_{2}}$ из $\epsilon_{2}$ - окрестности и т. д.  Для $\epsilon_{n} = \frac{1}{n}$ возьмем $\overline{X_{n}}$ из $\epsilon_{n}$ - окрестности. Получим $\{\overline{x_{n}}\}$.  
+		- Докажем, что $\lim\limits_{n \rightarrow \infty}{\overline{x_{n}}} = a$. $\forall \epsilon > 0$ посмотрим номера $\overline{x_{n}}$ , которые вошли в окрестность размера $\frac{1}{n}$, где $\frac{1}{n} < \epsilon$. Т. к. в нее вошла точка $x_{n}$, то в нее войдут и все дальнейшие $\overline{x_{n'}}$. Т. к. они все входят в меньшие окрестности. ч. т. д.  
 
-### Теорема Больцано - Вейерштрасса
-- Во всякой ограниченной последовательности содержится сходящаяся  подпоследовательность.
-	- Докажем, что у ограниченной последовательности существует предельная точка
-		1. Пусть имеется $\{x_{n}\}$ -  ограниченная $\implies \exists m, M : m \leq x_{n} \leq M$.
-		2. Рассмотрим $\{X\}$, состоящее из чисел $x$, таких, что на числовой прямой они правее любой точки $x_{n} \in\{X_{n}\}$. Такое множество не пусто, т. к. по крайней мере в нем содержится $M$.
-		3. $\{X\}$ - ограничено снизу числом, меньшим или равным $m \implies \exists \inf{X} = \overline{x}$
-		4. Докажем, что $\overline{x}$ - предельная точка $\{x_{n}\}$. $\overline{x} = \inf{X} \implies (\forall x \in X: x \geq m) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < \overline{x} + \epsilon) \implies $ левее $\overline{x} + \epsilon$ и правее  $\overline{x} - \epsilon$ содержится $\infty$ членов последовательности. Т. е. в $\epsilon$ - окрестности числа $\overline{x}$ содержится также $\infty$ членов. $\implies$ это и есть предельная точка. ч. т. д.
+### Теорема Больцано - Вейерштрасса  
+- Во всякой ограниченной последовательности содержится сходящаяся  подпоследовательность.  
+	- Докажем, что у ограниченной последовательности существует предельная точка  
+		1. Пусть имеется $\{x_{n}\}$ -  ограниченная $\implies \exists m, M : m \leq x_{n} \leq M$.  
+		2. Рассмотрим $\{X\}$, состоящее из чисел $x$, таких, что на числовой прямой они правее любой точки $x_{n} \in\{X_{n}\}$. Такое множество не пусто, т. к. по крайней мере в нем содержится $M$.  
+		3. $\{X\}$ - ограничено снизу числом, меньшим или равным $m \implies \exists \inf{X} = \overline{x}$  
+		4. Докажем, что $\overline{x}$ - предельная точка $\{x_{n}\}$. $\overline{x} = \inf{X} \implies (\forall x \in X: x \geq m) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < \overline{x} + \epsilon) \implies $ левее $\overline{x} + \epsilon$ и правее  $\overline{x} - \epsilon$ содержится $\infty$ членов последовательности. Т. е. в $\epsilon$ - окрестности числа $\overline{x}$ содержится также $\infty$ членов. $\implies$ это и есть предельная точка. ч. т. д.  
 
-### Критерий Коши сходимости последовательности
+### Критерий Коши сходимости последовательности  
 
-***Определение фундаментальной последовательности***
+***Определение фундаментальной последовательности***  
 
-- $x_{n} $ - фундаментальная $\Longleftrightarrow$ $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$.
+- $x_{n} $ - фундаментальная $\Longleftrightarrow$ $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$.  
 
-***Теорема***
-- Последовательность $\{x_{n}\}$ сходится $\Longleftrightarrow$ она фундаментальная.
-	- Необходимость $(\implies)$: $\{x_{n}\}$ - сходится. Доказать : $\{x_{n}\}$ - фундаментальная. Доказательство: $\lim\limits_{n \rightarrow \infty}{\{x_{n}\}} = a$. Рассмотрим $|x_{n + p} - x_{n}|$. $|x_{n + p} - x_{n}| = |x_{n + p} - x_{n} - a + a| = |x_{n + p} - a - (x_{n} - a)| \leq \underbrace{|x_{n + p} - a|}_{\leq \frac{\epsilon}{2}} + \underbrace{|x_{n} - a|}_{\leq \frac{\epsilon}{2}} < \eps$
-	- Достаточность $(\Longleftarrow)$ : $\{x_{n}\}$ - фундаментальная. Докажем, что $\{x_{n}\}$ - сходится. Доказательство:
-		- $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$. Перепишем в виде $-\eps < x_{n + p} - x_{n} < \eps$ (начиная с некоторого номера). До этого промежутка лишь конечное число членов $\implies$ $\{x_{n}\}$ - ограничена, тогда по Т. Больцано - Вейерштрасса в $\{x_{n}\}$ существует $\{x_{n_{k}}\}$. $\lim\limits_{n \rightarrow \infty}{x_{n_{k}}} = a$.
-		- Докажем, что $\lim\limits_{n \rightarrow \infty}{x_{n_{k}}} = a$. Рассмотрим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = |x_{n} - x_{n_{k}}| + |x_{n_{k}} - a|$. Возьмем $N_{k}: (|x_{n_{k}} - a| < \frac{\eps}{2}, |x_{n} - x_{n_{k}}| < \frac{\eps}{2})$. Получим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = \underbrace{|x_{n} - x_{n_{k}}|}_{< \frac{\eps}{2}} + \underbrace{|x_{n_{k}} - a|}_{\frac{\eps}{2}} < \eps$
+***Теорема***  
+- Последовательность $\{x_{n}\}$ сходится $\Longleftrightarrow$ она фундаментальная.  
+	- Необходимость $(\implies)$: $\{x_{n}\}$ - сходится. Доказать : $\{x_{n}\}$ - фундаментальная. Доказательство: $\lim\limits_{n \rightarrow \infty}{\{x_{n}\}} = a$. Рассмотрим $|x_{n + p} - x_{n}|$. $|x_{n + p} - x_{n}| = |x_{n + p} - x_{n} - a + a| = |x_{n + p} - a - (x_{n} - a)| \leq \underbrace{|x_{n + p} - a|}_{\leq \frac{\epsilon}{2}} + \underbrace{|x_{n} - a|}_{\leq \frac{\epsilon}{2}} < \eps$  
+	- Достаточность $(\Longleftarrow)$ : $\{x_{n}\}$ - фундаментальная. Докажем, что $\{x_{n}\}$ - сходится. Доказательство:  
+		- $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$. Перепишем в виде $-\eps < x_{n + p} - x_{n} < \eps$ (начиная с некоторого номера). До этого промежутка лишь конечное число членов $\implies$ $\{x_{n}\}$ - ограничена, тогда по Т. Больцано - Вейерштрасса в $\{x_{n}\}$ существует $\{x_{n_{k}}\}$. $\lim\limits_{n \rightarrow \infty}{x_{n_{k}}} = a$.  
+		- Докажем, что $\lim\limits_{n \rightarrow \infty}{x_{n_{k}}} = a$. Рассмотрим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = |x_{n} - x_{n_{k}}| + |x_{n_{k}} - a|$. Возьмем $N_{k}: (|x_{n_{k}} - a| < \frac{\eps}{2}, |x_{n} - x_{n_{k}}| < \frac{\eps}{2})$. Получим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = \underbrace{|x_{n} - x_{n_{k}}|}_{< \frac{\eps}{2}} + \underbrace{|x_{n_{k}} - a|}_{\frac{\eps}{2}} < \eps$  
 
-***Пример***
-- $\{x_{n}\} = 1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n}$.
-	- Докажем с помощью критерия Коши, что $x_{n}$ - расходится. Т. е. $(\exists \epsilon_{0} > 0, \forall N_{\epsilon}, \exists n > N_{\epsilon}) \wedge (\exists p \in \NN : |x_{n + p} - x_{n}| < \epsilon_{0})$. Оценим : $|x_{n + p} - x_{n}| = |1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n} + \frac{1}{n + 1} \dots \frac{1}{n + p} - (1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n})| = |\frac{1}{n + 1} + \frac{1}{n + 2} + \dots + \frac{1}{n + p}| \geq \frac{p}{n + p}$ Возьмем $p=n \implies \frac{p}{n + p} = \frac{n}{2n} = \frac{1}{2} = \epsilon_{0} \implies \{x_{n}\}$ - расходится. ч. т. д.
-- $\{x_{n}\} = \frac{\cos{x}}{1^{2}} + \frac{\cos{2x}}{2^{2}} + \dots + \frac{\cos{nx}}{n^{2}}$.
-	- Докажем сходимость $\{x_{n}\}$.
-		- Рассмотрим $|x_{n + p} - x_{n}| = |\frac{\cos(n + 1)x}{(n + 1)^{2}} + \frac{\cos(n + 2)x}{(n + 2)^{2}} + \dots + \frac{\cos(n + p)x}{(n + p)^{2}}| < \frac{p}{(n + 1)^2} < \epsilon$
+***Пример***  
+- $\{x_{n}\} = 1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n}$.  
+	- Докажем с помощью критерия Коши, что $x_{n}$ - расходится. Т. е. $(\exists \epsilon_{0} > 0, \forall N_{\epsilon}, \exists n > N_{\epsilon}) \wedge (\exists p \in \NN : |x_{n + p} - x_{n}| < \epsilon_{0})$. Оценим : $|x_{n + p} - x_{n}| = |1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n} + \frac{1}{n + 1} \dots \frac{1}{n + p} - (1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n})| = |\frac{1}{n + 1} + \frac{1}{n + 2} + \dots + \frac{1}{n + p}| \geq \frac{p}{n + p}$ Возьмем $p=n \implies \frac{p}{n + p} = \frac{n}{2n} = \frac{1}{2} = \epsilon_{0} \implies \{x_{n}\}$ - расходится. ч. т. д.  
+- $\{x_{n}\} = \frac{\cos{x}}{1^{2}} + \frac{\cos{2x}}{2^{2}} + \dots + \frac{\cos{nx}}{n^{2}}$.  
+	- Докажем сходимость $\{x_{n}\}$.  
+		- Рассмотрим $|x_{n + p} - x_{n}| = |\frac{\cos(n + 1)x}{(n + 1)^{2}} + \frac{\cos(n + 2)x}{(n + 2)^{2}} + \dots + \frac{\cos(n + p)x}{(n + p)^{2}}| < \frac{p}{(n + 1)^2} < \epsilon$  
 
 ## Семинар 13.09.2022  
 ***Разбор домашней работы***  
@@ -425,64 +425,64 @@ depth: 3
     2. $ (\forall y \in Y : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in Y: y' > M_{2} - \epsilon_{2}) \Rightarrow M_2 = \sup{Y}$  
     3. $ (\forall x \cdot y \in XY : xy \leq M_{1}M_{2}) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \Rightarrow M_{1}M_{2} = \sup{XY}$  
 
-## Семинар 20.09.2022 
+## Семинар 20.09.2022   
 
-***Задачи на семинаре из Демидовича*** 
+***Задачи на семинаре из Демидовича***   
 
-### 43
-- Доказать, что последовательность $x_{n} = \lg(\lg{n})$ имеет бесконечный предел при $n \rightarrow \infty$ (т.е. являются бесконечно большими), определив для всякого $E > 0$ число $N = N(E)$ такое, что $|x_{n}| > E$ при $n > N$
-	- Доказательство:
-		- $|\lg(\lg{n})| > E$
-		- $|10^{\lg(\lg{n})}| > 10 ^{E}$
-		- $|\lg| > 10^{E}$ 
-		- $n > 10^{{10}^{E}}$
-### 44 
-- Показать, что $x_{n} = n^{(-1)^n}$ $n = (1, 2 , \dots)$ не ограничена, однако не является бесконечно большой при $n \rightarrow \infty$
-	- Последовательность не ограничена, так как ее члены чередуются: $a_{2k} > 1$,  $a_{2k + 1} \leq 1$
-	- У нее отсутствует предел, по той же причине, поэтому она не является бесконечно большой.
+### 43  
+- Доказать, что последовательность $x_{n} = \lg(\lg{n})$ имеет бесконечный предел при $n \rightarrow \infty$ (т.е. являются бесконечно большими), определив для всякого $E > 0$ число $N = N(E)$ такое, что $|x_{n}| > E$ при $n > N$  
+	- Доказательство:  
+		- $|\lg(\lg{n})| > E$  
+		- $|10^{\lg(\lg{n})}| > 10 ^{E}$  
+		- $|\lg| > 10^{E}$   
+		- $n > 10^{{10}^{E}}$  
+### 44   
+- Показать, что $x_{n} = n^{(-1)^n}$ $n = (1, 2 , \dots)$ не ограничена, однако не является бесконечно большой при $n \rightarrow \infty$  
+	- Последовательность не ограничена, так как ее члены чередуются: $a_{2k} > 1$,  $a_{2k + 1} \leq 1$  
+	- У нее отсутствует предел, по той же причине, поэтому она не является бесконечно большой.  
 
-***Вычислить пределы:***
+***Вычислить пределы:***  
 
-### 56
+### 56  
 
-- $\lim\limits_{n \rightarrow \infty}{\left [\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1 - \frac{1}{2} + \frac{1}{2}  - \frac{1}{ 3} + \dots + \frac{1}{n} - \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1- \frac{1}{n(n + 1)}  \right ]} = 1 $
+- $\lim\limits_{n \rightarrow \infty}{\left [\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1 - \frac{1}{2} + \frac{1}{2}  - \frac{1}{ 3} + \dots + \frac{1}{n} - \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1- \frac{1}{n(n + 1)}  \right ]} = 1 $  
 
-***Доказать равенства:***
+***Доказать равенства:***  
 
-### 58
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$
-	- Рассмотрим представление $2^{n} = (1 + 1)^{n} = 1 + n + \frac{n(n-1)}{2!} + \dots > \frac{n(n - 1)}{2}$
-	- $\frac{n}{2^{n}} < \frac{2n}{n(n - 1)} = \frac{2}{(n - 1)} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$
+### 58  
+- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$  
+	- Рассмотрим представление $2^{n} = (1 + 1)^{n} = 1 + n + \frac{n(n-1)}{2!} + \dots > \frac{n(n - 1)}{2}$  
+	- $\frac{n}{2^{n}} < \frac{2n}{n(n - 1)} = \frac{2}{(n - 1)} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$  
 
-### 60
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$
-	- Рассмотрим представление $a = (1 + \alpha)^{n} = 1 + n\alpha + \frac{n(n-1)}{2!}\alpha + \dots  \frac{n(n - 1)}{2}\alpha^2 + \dots \frac{n(n - 1) \dots (n - k)}{(k + 1)!}$
-	- $\frac{n^{k}}{a^{n}} < \frac{n^{k}(k + 1)!}{n(n - 1)(n - 2) \dots (n - k) \cdot \alpha^{k + 1}} = \frac{1}{n} \cdot \frac{(k + 1)!}{(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots (1 - \frac{k}{n}) \cdot \alpha^{k + 1}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$
+### 60  
+- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$  
+	- Рассмотрим представление $a = (1 + \alpha)^{n} = 1 + n\alpha + \frac{n(n-1)}{2!}\alpha + \dots  \frac{n(n - 1)}{2}\alpha^2 + \dots \frac{n(n - 1) \dots (n - k)}{(k + 1)!}$  
+	- $\frac{n^{k}}{a^{n}} < \frac{n^{k}(k + 1)!}{n(n - 1)(n - 2) \dots (n - k) \cdot \alpha^{k + 1}} = \frac{1}{n} \cdot \frac{(k + 1)!}{(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots (1 - \frac{k}{n}) \cdot \alpha^{k + 1}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$  
 
-### 61
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$
-	- $\frac{a^{n}}{n!} = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n } = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n_{0}} \cdot \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} = M  \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} < M (\frac{a}{n_{0} + 1})^{n - n_{0}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$
+### 61  
+- $\lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$  
+	- $\frac{a^{n}}{n!} = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n } = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n_{0}} \cdot \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} = M  \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} < M (\frac{a}{n_{0} + 1})^{n - n_{0}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$  
 
-### 65
-- $\lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$
-	- $(\sqrt[n]{n})^{n} = (1 + \alpha_{n})^{n}$
-	- $n = (1 + \alpha_{n})^{n} = 1 + n\alpha_{n} + \frac{n(n-1)}{2}\alpha_{n}^{2} + \dots > \frac{n(n-1)}{2}\alpha_{n}^2$
-	- $n > \frac{n(n-1)}{2}\alpha_{n}^2$
-	- $1 > \frac{n - 1}{2}\alpha_{n}^2$ 
-	- $\alpha_{n}^2 < \frac{2}{n -1}$
-	- $\alpha_{n} < \frac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$
+### 65  
+- $\lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$  
+	- $(\sqrt[n]{n})^{n} = (1 + \alpha_{n})^{n}$  
+	- $n = (1 + \alpha_{n})^{n} = 1 + n\alpha_{n} + \frac{n(n-1)}{2}\alpha_{n}^{2} + \dots > \frac{n(n-1)}{2}\alpha_{n}^2$  
+	- $n > \frac{n(n-1)}{2}\alpha_{n}^2$  
+	- $1 > \frac{n - 1}{2}\alpha_{n}^2$   
+	- $\alpha_{n}^2 < \frac{2}{n -1}$  
+	- $\alpha_{n} < \frac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$  
 
-### 77
-- Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей: $x_{n} = p_{0} + \frac{p_{1}}{10} + \dots +  \frac{p_{n}}{10^{n}} $ $(n = 1, 2, \dots)$, где $p_{i}(i = 0, 1, 2, \dots)$ - целые неотрицательные числа, не превышающие $9$, начиная с $p_{i}$.
-	- Последовательность возрастает и ограничена снизу и сверху. $\implies$ она сходится.
+### 77  
+- Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей: $x_{n} = p_{0} + \frac{p_{1}}{10} + \dots +  \frac{p_{n}}{10^{n}} $ $(n = 1, 2, \dots)$, где $p_{i}(i = 0, 1, 2, \dots)$ - целые неотрицательные числа, не превышающие $9$, начиная с $p_{i}$.  
+	- Последовательность возрастает и ограничена снизу и сверху. $\implies$ она сходится.  
 
-### Задание 1
-- Сформулировать определение последовательности, неограниченной сверху
-	- Для любого $M$ найдется такой номер $N > n$, что $x_{n} > M$
-### Задание 2
-- Верно ли: $(x_{n} + y_{n}) \rightarrow A \implies x_{n} \rightarrow B, y_{n} \rightarrow C$
-	- Нет, например, при : $x_{n} = n, y_{n} = -n$
+### Задание 1  
+- Сформулировать определение последовательности, неограниченной сверху  
+	- Для любого $M$ найдется такой номер $N > n$, что $x_{n} > M$  
+### Задание 2  
+- Верно ли: $(x_{n} + y_{n}) \rightarrow A \implies x_{n} \rightarrow B, y_{n} \rightarrow C$  
+	- Нет, например, при : $x_{n} = n, y_{n} = -n$  
 
-### Задание 3
-- Верно ли: $\{ kx_{n}\} \rightarrow A \implies \{x_{n}\} \rightarrow B$
-	- Верно, домножение последовательности на константу не влияет на сходимость. (см. лекция 2)
+### Задание 3  
+- Верно ли: $\{ kx_{n}\} \rightarrow A \implies \{x_{n}\} \rightarrow B$  
+	- Верно, домножение последовательности на константу не влияет на сходимость. (см. лекция 2)  
