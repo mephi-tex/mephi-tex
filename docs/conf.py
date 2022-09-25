@@ -101,6 +101,7 @@ source_suffix = {
 # a list of builtin themes.
 #
 html_theme = "sphinx_book_theme"  # try insegel, but it needs to be changed
+html_title = project
 
 html_logo = "_static/images/logo_mifi.png"
 
