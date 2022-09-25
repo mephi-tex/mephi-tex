@@ -411,11 +411,11 @@ depth: 3
 ### Каноническое уравнение прямой    
 
 - Через точку $M_{0}(x_{0}, y_{0})$ проведем прямую, параллельную данному вектору $\vec{a} = (\ell, m)$. Этот вектор назывется направляющим вектором прямой $\ell$.    
-![image4](angem_pictures/angem4.jpg)   
+  ![image4](angem_pictures/angem4.jpg)   
   
 - Условием принадлежности точки данной прямой является коллинеарность векторов $\vec{M_{0}M}$ и $\vec{a}$.  
 
-***Каноническое уравнение прямой** *
+***Каноническое уравнение прямой***
 
 - Так как коллинеарные векторы отличаются на константу, то $\vec{M_{0}M} = \lambda \vec{a}$:  
 - $\begin{equation*}  
@@ -450,7 +450,7 @@ depth: 3
 - $pr_{\vec{n}(\vec{OM})} = \frac{(\vec{OM}, \vec{n})}{|\vec{n}|} =(\vec{OM}, \vec{n}) = x\cos{\phi} + y\sin{\phi} = p \implies x\cos{\phi} + y\sin{\phi} - p = 0$  
 
 ***Нормальное уравнение прямой из ее общего уравнения***  
-- $\implies x\cos{\phi} + y\sin{\phi} - p = 0$  
+- $x\cos{\phi} + y\sin{\phi} - p = 0$  
 - $Ax + By + C = 0$ $|(\cdot \frac{1}{\sqrt{A^2 + B^2}})$  
 - $\frac{A}{\sqrt{A^2 + B^2}}x + \frac{B}{\sqrt{A^2 + B^2}}y + \frac{C}{\sqrt{A^2 + B^2}} = 0 \implies (\frac{A}{\sqrt{A^2 + B^2}})^2 + (\frac{B}{\sqrt{A^2 + B^2}})^{2} + (\frac{C}{\sqrt{A^2 + B^2}})^2 = 1$  
 
