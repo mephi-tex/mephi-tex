@@ -27,6 +27,7 @@ $\def\alp{\alpha}$
 $\def\lam{\lambda}$
 $\def\gam{\gamma}$
 $\def\eps{\epsilon}$
+$\def\sig{\sigma}$
 $\newcommand{\NN}{\mathbb{N}}$
 $\newcommand{\ZZ}{\mathbb{Z}}$
 $\newcommand{\RR}{\mathbb{R}}$
@@ -34,10 +35,13 @@ $\newcommand{\CC}{\mathbb{C}}$
 $\newcommand{\FF}{\mathbb{F}}$
 $\newcommand{\QQ}{\mathbb{Q}}$
 $\newcommand{\EE}{\mathbb{E}}$
+$\newcommand{\UU}{\mathcal{U}}$
 $\newcommand\E{\mathbbold{e}}$
 $\newcommand\F{\mathbbold{f}}$
 $\newcommand\G{\mathbbold{g}}$
 $\renewcommand{\int}{\intop}$
+$\def\inf{\infty}$
+$\newcommand{\lim}[2]{\dn{{#1}\rightarrow{#2}}{lim}}$
 $\newcommand{\ans}[1]{\textbf{Ответ}: #1.}$
 $\newcommand{\proj}[2]{\text{пр.}_{#1}{#2}}$
 $\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}$
