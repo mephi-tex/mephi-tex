@@ -2,7 +2,7 @@
 $\newcommand{\block}[2]{\begin{#1} #2 \end{#1}}$
 $\newcommand{\cases}[1]{\block{cases}{#1}}$
 $\newcommand{\up}[2]{\stackrel{#1}{#2}}$
-$\def\dn#1#2{\mathrel{\mathop{#2}\limits_{#1}}}$
+$\def\dn#1#2{\mathrel{\mathop{#2}_{#1}}}$
 $\def\ident{\Longleftrightarrow}$
 $\def\thus{\Rightarrow}$
 $\newcommand{\set}[1]{ \{ #1 \} }$
@@ -100,7 +100,7 @@ depth: 3
 
 ***Определение***  
 
-- Наибольшая граница из всех нижних граней называется точной нижней гранью $(\inf{A})$  
+- Наибольшая граница из всех нижних граней называется точной нижней гранью $(inf{A})$  
 
 
 ***Теорема***  
@@ -111,10 +111,10 @@ depth: 3
 - $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = \sup{X} $  
 
 ***Определение точной нижней грани***  
-- $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m =\inf{X}$  
+- $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m =inf{X}$  
 
 ***Альтернативное определение точной нижней грани***  
-- $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = \inf{X}$  
+- $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf{X}$  
 
 ***Альтернативное определение точной верхней грани***  
 - $(\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = \sup{X}$  
@@ -136,7 +136,7 @@ depth: 3
 
 ***Пример***  
 
-- $A = \{1, \dfrac{1}{2},\dfrac{1}{3}, ... \dfrac{1}{n}, ...\}$. $\sup{A} = 1, \inf{A} = 0$  
+- $A = \{1, \dfrac{1}{2},\dfrac{1}{3}, ... \dfrac{1}{n}, ...\}$. $\sup{A} = 1, inf{A} = 0$  
 
 
 ### Числовая последовательность.  
@@ -238,16 +238,16 @@ depth: 3
 - Если последовательность приближается к числу, то это число и есть ее предел.  
 
 ***Примеры***  
-1. $x_{n} = \frac{1}{n}, \lim\limits_{n \rightarrow \infty}{\frac{1}{n}} = 0$  
-2. $x_{n} = \frac{n - 1}{n}, \lim\limits_{n \rightarrow \infty}{\frac{n - 1}{n}} = 1$  
+1. $x_{n} = \frac{1}{n}, \lim_{n \rightarrow \infty}{\frac{1}{n}} = 0$  
+2. $x_{n} = \frac{n - 1}{n}, \lim_{n \rightarrow \infty}{\frac{n - 1}{n}} = 1$  
 
 
 ***Определение предела числовой последовательности***  
 - Число $A$ называется пределом $\{x_{n}\}$ $\Leftrightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon}  \Rightarrow |x_{n} - A| < \epsilon)$  
 
 ***Упражнение***  
-- С помощью определения докажем (1) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $\lim\limits_{n \rightarrow \infty}{\frac{1}{n}} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\frac{1}{n}| < \epsilon \Rightarrow \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon}$  
-- С помощью определения докажем (2) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $\lim\limits_{n \rightarrow \infty}{\frac{1}{n}} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\frac{n - 1}{n} - 1| < \epsilon \Rightarrow \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon}$  
+- С помощью определения докажем (1) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $\lim_{n \rightarrow \infty}{\frac{1}{n}} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\frac{1}{n}| < \epsilon \Rightarrow \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon}$  
+- С помощью определения докажем (2) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $\lim_{n \rightarrow \infty}{\frac{1}{n}} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\frac{n - 1}{n} - 1| < \epsilon \Rightarrow \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon}$  
 
 ### Свойства пределов  
 
@@ -257,13 +257,13 @@ depth: 3
 
 - Всякая сходящаяся последовательность имеет единственный предел.  
 	- Доказательство:  
-		- Пусть $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A$. Докажем единственность от противного. Предположим, что $\exists  \lim\limits_{n \rightarrow \infty}{x_{n}} = B$ и $A > B$. Т. к. , $ \lim\limits_{n \rightarrow \infty}{x_{n}} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\frac{A - B}{2} \Rightarrow$  
+		- Пусть $ \lim_{n \rightarrow \infty}{x_{n}} = A$. Докажем единственность от противного. Предположим, что $\exists  \lim_{n \rightarrow \infty}{x_{n}} = B$ и $A > B$. Т. к. , $ \lim_{n \rightarrow \infty}{x_{n}} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\frac{A - B}{2} \Rightarrow$  
 	  
 		1. $ -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} $  
 		2. $-\frac{A - B}{2} + A< x_{n}  < \frac{A - B}{2} + A$  
 		3. $\frac{A + B}{2} < x_{n}  < \frac{3A - B}{2} $.  
 	  
-	- Т. к. $ \lim\limits_{n \rightarrow \infty}{x_{n}} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\frac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \frac{A - B}{2} \Rightarrow$  
+	- Т. к. $ \lim_{n \rightarrow \infty}{x_{n}} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\frac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \frac{A - B}{2} \Rightarrow$  
 		1. $-\frac{A - B}{2} < x_{n} - B < \frac{A - B}{2}$  
 		2. $-\frac{A - B}{2} + B< x_{n}  < \frac{A - B}{2} + B$  
 		3. $\frac{3B - A}{2} < x_{n}  < \frac{A + B}{2} $.  
@@ -279,38 +279,39 @@ depth: 3
 - $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.  
 
 	- Доказательство:   
-		- Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \frac{\epsilon}{|k|} \Rightarrow |x_{n}| < \frac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \frac{\epsilon}{|k|} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{k x_{n}} = 0$  
+		- Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \frac{\epsilon}{|k|} \Rightarrow |x_{n}| < \frac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \frac{\epsilon}{|k|} = \epsilon \Rightarrow \lim_{n \rightarrow \infty}{k x_{n}} = 0$  
 
 ***Следствие***  
 
-Если последовательность состоит из одного и того же члена $x_{n} = \{C, C, C, C,  \dots \}$, то $\lim\limits_{n \rightarrow \infty}{x_{n}} = C$.  
+Если последовательность состоит из одного и того же члена $x_{n} = \{C, C, C, C,  \dots \}$, то $\lim_{n \rightarrow \infty}{x_{n}} = C$.  
 
 ***Свойства пределов, выражаемые неравенствами***  
 
-- $(\forall n > N: x_{n} \geq y_{n}) \wedge (\lim\limits_{n \rightarrow \infty}{x_{n}} = A, \lim\limits_{n \rightarrow \infty}{y_{n}} = B) \Rightarrow A > B$  
+- $(\forall n > N: x_{n} \geq y_{n}) \wedge (\lim_{n \rightarrow \infty}{x_{n}} = A, \lim_{n \rightarrow \infty}{y_{n}} = B) \Rightarrow A > B$  
 	- Доказательство:   
 		- В качестве $\epsilon$ возьмем $\frac{A - B}{2}$. $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \Rightarrow |x_{n} - A| < \frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + A < x_{n}  < \frac{A - B}{2} + A \Rightarrow  \frac{3A - B}{2} < x_{n}  < \frac{A + B}{2} $  
 		- $\forall n > N_{\epsilon_{2}} : |y_{n} - B| < \frac{B - A}{2} \Rightarrow \frac{B - A}{2} < y_{n} < \frac{3B - A}{2}$  
 		- Получим $x_{n} < \frac{A + B}{2} < y_{n}$. Противоречие.  
-- $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}) \Rightarrow \{y_{n}\}$ - сходится, причем $\lim\limits_{n \rightarrow \infty}{x_{n}} = \lim\limits_{n \rightarrow \infty}{y_{n}} = \lim\limits_{n \rightarrow \infty}{z_{n}}$   
+- $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim_{n \rightarrow \infty}{x_{n}} = \lim_{n \rightarrow \infty}{z_{n}}) \Rightarrow \{y_{n}\}$ - сходится, причем $\lim_{n \rightarrow \infty}{x_{n}} = \lim_{n \rightarrow \infty}{y_{n}} = \lim_{n \rightarrow \infty}{z_{n}}$   
 	- Доказательство :   
 		- Действительно :  
 		- $(\forall \epsilon > 0, \exists n > N_{1} : |x_{n} - A| < \epsilon)$  
 		- $(\forall \epsilon > 0, \exists n > N_{2} : |z_{n} - A| < \epsilon)$  
-		- $N = \max(N_{1}, N_{2}) \Rightarrow  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \Rightarrow |y_{n} - A| < \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{y_{n}} = A$  
+		- $N = \max(N_{1}, N_{2}) \Rightarrow  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \Rightarrow |y_{n} - A| < \epsilon \Rightarrow \lim_{n \rightarrow \infty}{y_{n}} = A$  
 
 ***Арифметические свойства пределов сходящихся  последовательностей***  
-1. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A; \lim\limits_{n \rightarrow \infty}{y_{n}} = B \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$  
-2. $\lim\limits_{n \rightarrow \infty}{x_{n}y_{n}} = AB$  
-3. $\lim\limits_{n \rightarrow \infty}{\frac{x_{n}}{y_{n}}} = \frac{A}{B}$  
+
+1. $\lim_{n \rightarrow \infty}{x_{n}} = A; \lim_{n \rightarrow \infty}{y_{n}} = B \Rightarrow \lim_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$  
+2. $\lim_{n \rightarrow \infty}{x_{n}y_{n}} = AB$  
+3. $\lim_{n \rightarrow \infty}{\frac{x_{n}}{y_{n}}} = \frac{A}{B}$  
 - Докажем $(1)$  
-  1. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \frac{\epsilon}{2})$  
-  2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \frac{\epsilon}{2})$  
-  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда: $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \frac{\epsilon}{2} +  \frac{\epsilon}{2} = \epsilon \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$  
+  1. Т. к. $\lim_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \frac{\epsilon}{2})$  
+  2. Т. к. $\lim_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \frac{\epsilon}{2})$  
+  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда: $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \frac{\epsilon}{2} +  \frac{\epsilon}{2} = \epsilon \Rightarrow \lim_{n \rightarrow \infty}{(x_{n} + y_{n})} = A + B$  
 - Докажем $(2)$   
-  1. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon)$  
-  2. Т. к. $\lim\limits_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon)$  
-  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда $\forall n > N : |x_{n}y_{n} - A B| = |(x_{n} - A + A)(y_{n} - B + B)| \leq |x_{n}y_{n} - AB| + \underbrace{|x_{n} - A|y_{n}}_{< \frac{\epsilon}{2}} + \underbrace{|y_{n} - B|x_{n}}_{< \frac{\epsilon}{2}} + \dots  \Rightarrow \lim\limits_{n \rightarrow \infty}{(x_{n}y_{n})} = A + B$  
+  1. Т. к. $\lim_{n \rightarrow \infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon)$  
+  2. Т. к. $\lim_{n \rightarrow \infty}{x_{n}} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon)$  
+  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда $\forall n > N : |x_{n}y_{n} - A B| = |(x_{n} - A + A)(y_{n} - B + B)| \leq |x_{n}y_{n} - AB| + \underbrace{|x_{n} - A|y_{n}}_{< \frac{\epsilon}{2}} + \underbrace{|y_{n} - B|x_{n}}_{< \frac{\epsilon}{2}} + \dots  \Rightarrow \lim_{n \rightarrow \infty}{(x_{n}y_{n})} = A + B$  
 
 ## Лекция 21.09.2022  
 
@@ -321,8 +322,8 @@ depth: 3
 
 ***Утверждение***  
 
- - $\lim\limits_{n \rightarrow \infty}{x_{n}} = a \implies$ любая подпоследовательность $x_{n_{k}}$ тоже сходится, причем к тому же пределу.  
-	- Доказательство: Действительно: $\lim\limits_{n \rightarrow \infty}{x_{n}} = a \implies (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon} \implies |x_{n} - a| < \epsilon)$. Т.к при $N_{k} > N_{\epsilon}$ члены подпоследовательности входят в число членов $\{x_{n}\} \implies |x_{n_{k}} - a| < \epsilon $  
+ - $\lim_{n \rightarrow \infty}{x_{n}} = a \implies$ любая подпоследовательность $x_{n_{k}}$ тоже сходится, причем к тому же пределу.  
+	- Доказательство: Действительно: $\lim_{n \rightarrow \infty}{x_{n}} = a \implies (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon} \implies |x_{n} - a| < \epsilon)$. Т.к при $N_{k} > N_{\epsilon}$ члены подпоследовательности входят в число членов $\{x_{n}\} \implies |x_{n_{k}} - a| < \epsilon $  
 
 ***Пример***  
 1. $x_{n} = \frac{1 + (1)^{n}}{2}$  
@@ -344,15 +345,15 @@ depth: 3
 - Если $\{x_{n}\}$ имеет предельную точку, то в ней содержится сходящаяся подпоследовательность, которая имеет своим пределом эту точку.  
 	- Доказательство: Действительно:   
 		- Так как в $\{x_{n}\}$ имеется предельная точка $a$, то $\forall \epsilon > 0$ в $\epsilon$ - окрестности точки $a$ содержится бесконечное число членов $\{x_{n}\}$. Возьмем $\epsilon_{1} = 1$ в окрестности точки $a$, возьмем $\overline{X_{1}}$ в этой окрестности. Далее возьмем $\epsilon_{2} = \frac{1}{2}$ и точку $\overline{X_{2}}$ из $\epsilon_{2}$ - окрестности и т. д.  Для $\epsilon_{n} = \frac{1}{n}$ возьмем $\overline{X_{n}}$ из $\epsilon_{n}$ - окрестности. Получим $\{\overline{x_{n}}\}$.  
-		- Докажем, что $\lim\limits{n \rightarrow \infty}{\overline{x_{n}}} = a$. $\forall \epsilon > 0$ посмотрим номера $\overline{x_{n}}$ , которые вошли в окрестность размера $\frac{1}{n}$, где $\frac{1}{n} < \epsilon$. Т. к. в нее вошла точка $x_{n}$, то в нее войдут и все дальнейшие $\overline{x_{n'}}$. Т. к. они все входят в меньшие окрестности. ч. т. д.  
+		- Докажем, что $\lim{n \rightarrow \infty}{\overline{x_{n}}} = a$. $\forall \epsilon > 0$ посмотрим номера $\overline{x_{n}}$ , которые вошли в окрестность размера $\frac{1}{n}$, где $\frac{1}{n} < \epsilon$. Т. к. в нее вошла точка $x_{n}$, то в нее войдут и все дальнейшие $\overline{x_{n'}}$. Т. к. они все входят в меньшие окрестности. ч. т. д.  
 
 ### Теорема Больцано - Вейерштрасса  
 - Во всякой ограниченной последовательности содержится сходящаяся  подпоследовательность.  
 	- Докажем, что у ограниченной последовательности существует предельная точка  
 		1. Пусть имеется $\{x_{n}\}$ -  ограниченная $\implies \exists m, M : m \leq x_{n} \leq M$.  
 		2. Рассмотрим $\{X\}$, состоящее из чисел $x$, таких, что на числовой прямой они правее любой точки $x_{n} \in\{X_{n}\}$. Такое множество не пусто, т. к. по крайней мере в нем содержится $M$.  
-		3. $\{X\}$ - ограничено снизу числом, меньшим или равным $m \implies \exists  \overline{x} = \inf{x}$  
-		4. Докажем, что $\overline{x}$ - предельная точка $\{x_{n}\}$. $\overline{x} = \inf{X} \implies (\forall x \in X: x \geq m) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < \overline{x} + \epsilon) \implies $ левее $\overline{x} + \epsilon$ и правее  $\overline{x} - \epsilon$ содержится $\infty$ членов последовательности. Т. е. в $\epsilon$ - окрестности числа $\overline{x}$ содержится также $\infty$ членов. $\implies$ это и есть предельная точка. ч. т. д.  
+		3. $\{X\}$ - ограничено снизу числом, меньшим или равным $m \implies \exists  \overline{x} = inf{x}$  
+		4. Докажем, что $\overline{x}$ - предельная точка $\{x_{n}\}$. $\overline{x} = inf{X} \implies (\forall x \in X: x \geq m) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < \overline{x} + \epsilon) \implies $ левее $\overline{x} + \epsilon$ и правее  $\overline{x} - \epsilon$ содержится $\infty$ членов последовательности. Т. е. в $\epsilon$ - окрестности числа $\overline{x}$ содержится также $\infty$ членов. $\implies$ это и есть предельная точка. ч. т. д.  
 
 ### Критерий Коши сходимости последовательности  
 
@@ -362,10 +363,10 @@ depth: 3
 
 ***Теорема***  
 - Последовательность $\{x_{n}\}$ сходится $\Longleftrightarrow$ она фундаментальная.  
-	- Необходимость $(\implies)$: $\{x_{n}\}$ - сходится. Доказать : $\{x_{n}\}$ - фундаментальная. Доказательство: $\lim_\limits{n \rightarrow \infty}{\{x_{n}\}} = a$. Рассмотрим $|x_{n + p} - x_{n}|$. $|x_{n + p} - x_{n}| = |x_{n + p} - x_{n} - a + a| = |x_{n + p} - a - (x_{n} - a)| \leq \underbrace{|x_{n + p} - a|}_{\leq \frac{\epsilon}{2}} + \underbrace{|x_{n} - a|}_{\leq \frac{\epsilon}{2}} < \eps$  
+	- Необходимость $(\implies)$: $\{x_{n}\}$ - сходится. Доказать : $\{x_{n}\}$ - фундаментальная. Доказательство: $\lim_{n \rightarrow \infty}{\{x_{n}\}} = a$. Рассмотрим $|x_{n + p} - x_{n}|$. $|x_{n + p} - x_{n}| = |x_{n + p} - x_{n} - a + a| = |x_{n + p} - a - (x_{n} - a)| \leq \underbrace{|x_{n + p} - a|}_{\leq \frac{\epsilon}{2}} + \underbrace{|x_{n} - a|}_{\leq \frac{\epsilon}{2}} < \eps$  
 	- Достаточность $(\Longleftarrow)$ : $\{x_{n}\}$ - фундаментальная. Докажем, что $\{x_{n}\}$ - сходится. Доказательство:  
-		- $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$. Перепишем в виде $-\eps < x_{n + p} - x_{n} < \eps$ (начиная с некоторого номера). До этого промежутка лишь конечное число членов $\implies$ $\{x_{n}\}$ - ограничена, тогда по Т. Больцано - Вейерштрасса в $\{x_{n}\}$ существует $\{x_{n_{k}}\}$. $\lim\limits{n \rightarrow \infty}{x_{n_{k}}} = a$.  
-		- Докажем, что $\lim\limits{n \rightarrow \infty}{x_{n_{k}}} = a$. Рассмотрим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = |x_{n} - x_{n_{k}}| + |x_{n_{k}} - a|$. Возьмем $N_{k}: (|x_{n_{k}} - a| < \frac{\eps}{2}, |x_{n} - x_{n_{k}}| < \frac{\eps}{2})$. Получим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = \underbrace{|x_{n} - x_{n_{k}}|}_{< \frac{\eps}{2}} + \underbrace{|x_{n_{k}} - a|}_{\frac{\eps}{2}} < \eps$  
+		- $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$. Перепишем в виде $-\eps < x_{n + p} - x_{n} < \eps$ (начиная с некоторого номера). До этого промежутка лишь конечное число членов $\implies$ $\{x_{n}\}$ - ограничена, тогда по Т. Больцано - Вейерштрасса в $\{x_{n}\}$ существует $\{x_{n_{k}}\}$. $\lim_{n \rightarrow \infty}{x_{n_{k}}} = a$.  
+		- Докажем, что $\lim_{n \rightarrow \infty}{x_{n_{k}}} = a$. Рассмотрим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = |x_{n} - x_{n_{k}}| + |x_{n_{k}} - a|$. Возьмем $N_{k}: (|x_{n_{k}} - a| < \frac{\eps}{2}, |x_{n} - x_{n_{k}}| < \frac{\eps}{2})$. Получим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = \underbrace{|x_{n} - x_{n_{k}}|}_{< \frac{\eps}{2}} + \underbrace{|x_{n_{k}} - a|}_{\frac{\eps}{2}} < \eps$  
 
 ***Пример***  
 - $\{x_{n}\} = 1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n}$.  
@@ -407,9 +408,9 @@ depth: 3
 
 3. $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = \sup{X} $  
 ### Точная нижняя грань ограниченного сверху множества  
-1. $m = \inf{X}$ - наибольшая из всех нижних граней $X$  
+1. $m = inf{X}$ - наибольшая из всех нижних граней $X$  
 2. $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf{X})$  
-3. $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m = \inf{X}$  
+3. $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m = inf{X}$  
 
 ***Задачи на семинаре***  
 
@@ -445,32 +446,32 @@ depth: 3
 
 ### 56  
 
-- $\lim\limits_{n \rightarrow \infty}{\left [\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1 - \frac{1}{2} + \frac{1}{2}  - \frac{1}{ 3} + \dots + \frac{1}{n} - \frac{1}{n(n + 1)}  \right ]} = \lim\limits_{n \rightarrow \infty}{\left [1- \frac{1}{n(n + 1)}  \right ]} = 1 $  
+- $\lim_{n \rightarrow \infty}{\left [\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n + 1)}  \right ]} = \lim_{n \rightarrow \infty}{\left [1 - \frac{1}{2} + \frac{1}{2}  - \frac{1}{ 3} + \dots + \frac{1}{n} - \frac{1}{n(n + 1)}  \right ]} = \lim_{n \rightarrow \infty}{\left [1- \frac{1}{n(n + 1)}  \right ]} = 1 $  
 
 ***Доказать равенства:***  
 
 ### 58  
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$  
+- $\lim_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$  
 	- Рассмотрим представление $2^{n} = (1 + 1)^{n} = 1 + n + \frac{n(n-1)}{2!} + \dots > \frac{n(n - 1)}{2}$  
-	- $\frac{n}{2^{n}} < \frac{2n}{n(n - 1)} = \frac{2}{(n - 1)} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$  
+	- $\frac{n}{2^{n}} < \frac{2n}{n(n - 1)} = \frac{2}{(n - 1)} \implies \lim_{n \rightarrow \infty}{\left[\frac{n}{2^{n}} \right]} = 0$  
 
 ### 60  
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$  
+- $\lim_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$  
 	- Рассмотрим представление $a = (1 + \alpha)^{n} = 1 + n\alpha + \frac{n(n-1)}{2!}\alpha + \dots  \frac{n(n - 1)}{2}\alpha^2 + \dots \frac{n(n - 1) \dots (n - k)}{(k + 1)!}$  
-	- $\frac{n^{k}}{a^{n}} < \frac{n^{k}(k + 1)!}{n(n - 1)(n - 2) \dots (n - k) \cdot \alpha^{k + 1}} = \frac{1}{n} \cdot \frac{(k + 1)!}{(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots (1 - \frac{k}{n}) \cdot \alpha^{k + 1}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$  
+	- $\frac{n^{k}}{a^{n}} < \frac{n^{k}(k + 1)!}{n(n - 1)(n - 2) \dots (n - k) \cdot \alpha^{k + 1}} = \frac{1}{n} \cdot \frac{(k + 1)!}{(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots (1 - \frac{k}{n}) \cdot \alpha^{k + 1}} \implies \lim_{n \rightarrow \infty}{\left[\frac{n^{k}}{a^{n}} \right]} = 0$  
 
 ### 61  
-- $\lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$  
-	- $\frac{a^{n}}{n!} = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n } = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n_{0}} \cdot \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} = M  \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} < M (\frac{a}{n_{0} + 1})^{n - n_{0}} \implies \lim\limits_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$  
+- $\lim_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$  
+	- $\frac{a^{n}}{n!} = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n } = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n_{0}} \cdot \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} = M  \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} < M (\frac{a}{n_{0} + 1})^{n - n_{0}} \implies \lim_{n \rightarrow \infty}{\left[\frac{a^{n}}{n!} \right]} = 0$  
 
 ### 65  
-- $\lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$  
+- $\lim_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$  
 	- $(\sqrt[n]{n})^{n} = (1 + \alpha_{n})^{n}$  
 	- $n = (1 + \alpha_{n})^{n} = 1 + n\alpha_{n} + \frac{n(n-1)}{2}\alpha_{n}^{2} + \dots > \frac{n(n-1)}{2}\alpha_{n}^2$  
 	- $n > \frac{n(n-1)}{2}\alpha_{n}^2$  
 	- $1 > \frac{n - 1}{2}\alpha_{n}^2$   
 	- $\alpha_{n}^2 < \frac{2}{n -1}$  
-	- $\alpha_{n} < \frac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim\limits_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$  
+	- $\alpha_{n} < \frac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim_{n \rightarrow \infty}{\left [\sqrt[n]{n} \right]} = 1$  
 
 ### 77  
 - Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей: $x_{n} = p_{0} + \frac{p_{1}}{10} + \dots +  \frac{p_{n}}{10^{n}} $ $(n = 1, 2, \dots)$, где $p_{i}(i = 0, 1, 2, \dots)$ - целые неотрицательные числа, не превышающие $9$, начиная с $p_{i}$.  
