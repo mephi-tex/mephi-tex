@@ -334,7 +334,7 @@ depth: 3
 ***Пример***  
 1. $x_{n} = \frac{1 + (1)^{n}}{2}$  
 	- $\{x_{2k}\} \rightarrow 1$  
-	- $\{x_{2k + 1\} \rightarrow 0}$  
+	- $\{ x_{2k + 1} \} \rightarrow 0$  
 2. $\{x_{n}\} = 1 + \sin{\frac{\pi n}{2}}$  
 	- $\{x_{2k}\} = (1 + \sin{\pi k}) \rightarrow 1$  
 	- $\{x_{4k + 1}\} = (1 + \sin{\frac{\pi}{2}}) \rightarrow 2$  
@@ -391,8 +391,7 @@ depth: 3
 	- $X$ - область определения $f$
 	- $Y$ - область значений $f$
 - Примеры: 
-	- Функция Дирихле  $f(x) =
-	  \begin{equation*}
+	- Функция Дирихле  $f(x) = \begin{equation*}
 	   \begin{cases}
 	    0, x \in \RR \backslash \QQ \\
 	    1, x \in \QQ
