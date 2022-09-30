@@ -392,10 +392,10 @@ depth: 3
 	- $Y$ - область значений $f$
 - Примеры: 
 	- Функция Дирихле  $f(x) = \begin{equation*}
-	   \begin{cases}
-	    0, x \in \RR \backslash \QQ \\
-	    1, x \in \QQ
-	   \end{cases}
+	  \begin{cases}
+	   0, x \in \RR \backslash \QQ \\
+	   1, x \in \QQ
+	  \end{cases}
 	  \end{equation*}$
 	- $y = x^{2}$
 		- $x \in (-\infty; +\infty), y \in [0; +\infty)$
