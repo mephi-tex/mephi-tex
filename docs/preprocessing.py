@@ -100,7 +100,7 @@ USUAL_MAP = {
 
 
 def fix_usual_repr(md_roots):
-    prompt = "fixing susual representations..."
+    prompt = "fixing usual representations..."
     size = print_over(0, prompt)
 
     for file in get_mds(md_roots):
