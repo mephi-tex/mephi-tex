@@ -66,6 +66,9 @@ def fix_preambles(md_roots):
 
 
 def fix_line_endings(md_roots):
+    IGNORE_START = "<!-- start-ignore: fix_line_endings -->"
+    IGNORE_END = "<!-- end-ignore: fix_line_endings -->"
+
     prompt = "fixing line endings..."
     size = print_over(0, prompt)
 
@@ -74,8 +77,13 @@ def fix_line_endings(md_roots):
         text = file.read_text("utf-8")
 
         result = ""
+        ignores = False
         for line in text.split("\n"):
-            if line:
+            if line == IGNORE_START:
+                ignores = True
+            elif line == IGNORE_END:
+                ignores = False
+            elif not ignores and line:
                 if not line.endswith("  "):
                     line += "  "
             result += line + "\n"
