@@ -7,6 +7,12 @@ def get_mds(md_roots):
     return chain(*(root.glob("**/*.md") for root in roots))
 
 
+def print_over(previous_size, *args):
+    output = " ".join((str(arg) for arg in args))
+    print(output + " " * (previous_size - len(output)), end="\r")
+    return len(output)
+
+
 MACROS = "<!-- Macros: {} -->"
 START = MACROS.format("start")
 END = MACROS.format("end")
@@ -34,11 +40,9 @@ def get_preamble():
 
 def fix_preambles(md_roots):
     prompt = "fixing preambles..."
-    print(prompt, end="\r")
+    size = print_over(0, prompt)
 
     preamble = get_preamble()
-
-    last_size = 0
     for file in get_mds(md_roots):
         text = file.read_text("utf-8")
 
@@ -47,26 +51,26 @@ def fix_preambles(md_roots):
 
         if macros:
             if macros != preamble:
-                print(prompt, "Updating preamble in", file, " " * last_size, end="\r")
+                size = print_over(size, prompt, "Updating preamble in", file)
             else:
-                print(prompt, "Skipping preamble in", file, " " * last_size, end="\r")
+                size = print_over(size, prompt, "Skipping preamble in", file)
             text = text[:s] + preamble + text[e:]
         else:
-            print(prompt, "Creating preamble in", file, " " * last_size, end="\r")
+            size = print_over(size, prompt, "Creating preamble in", file)
             text = START + preamble + END + "\n" + text
 
         file.write_text(text, "utf-8")
-        last_size = len(str(file))
 
-    print(prompt, "done", " " * (last_size + 20))
+    print_over(size, prompt, "done")
+    print()
 
 
 def fix_line_endings(md_roots):
     prompt = "fixing line endings..."
-    print(prompt, end="\r")
+    size = print_over(0, prompt)
 
-    last_size = 0
     for file in get_mds(md_roots):
+        size = print_over(size, prompt, file)
         text = file.read_text("utf-8")
 
         result = ""
@@ -77,12 +81,10 @@ def fix_line_endings(md_roots):
             result += line + "\n"
         result = result[:-1]
 
-        print(prompt, file, " " * last_size, end="\r")
-
         file.write_text(result, "utf-8")
-        last_size = len(str(file))
 
-    print(prompt, "done", " " * (last_size + 20))
+    print_over(size, prompt, "done")
+    print()
 
 
 USUAL_MAP = {
@@ -99,21 +101,19 @@ USUAL_MAP = {
 
 def fix_usual_repr(md_roots):
     prompt = "fixing susual representations..."
-    print(prompt, end="\r")
+    size = print_over(0, prompt)
 
-    last_size = 0
     for file in get_mds(md_roots):
+        size = print_over(size, prompt, file)
         text = file.read_text("utf-8")
 
         for pattern, repl in USUAL_MAP.items():
             text = text.replace(pattern, repl)
 
-        print(prompt, file, " " * last_size, end="\r")
-
         file.write_text(text, "utf-8")
-        last_size = len(str(file))
 
-    print(prompt, "done", " " * (last_size + 20))
+    print_over(size, prompt, "done")
+    print()
 
 
 LITERATURE = """# {name}
