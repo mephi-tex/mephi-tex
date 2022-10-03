@@ -53,7 +53,7 @@ $\newcommand{\lcm}{\text{НОК}}$
 ```{contents} Математический анализ  
 ---  
 depth: 3  
-```
+```  
 # Математический анализ  
 Преподаватель - Михайлов Владислав Дмитриевич  
 
@@ -381,83 +381,83 @@ depth: 3
 	- Докажем сходимость $\{x_{n}\}$.  
 		- Рассмотрим $|x_{n + p} - x_{n}| = |\frac{\cos(n + 1)x}{(n + 1)^{2}} + \frac{\cos(n + 2)x}{(n + 2)^{2}} + \dots + \frac{\cos(n + p)x}{(n + p)^{2}}| < \frac{p}{(n + 1)^2} < \epsilon$  
 
-## Лекция 28.09.2022
+## Лекция 28.09.2022  
 
-### Понятие функции на числовом множесте
-- Пусть на числовом множестве $X$ каждому числу $x \in X$ по какому - либо закону поставлено в соответствие число $y \in Y$. Тогда на $X$ задана функция $y = f(x)$.
-	- $f$ - характеристика функции
-	- $x$ - аргумент
-	- $y$ - значение
-	- $X$ - область определения $f$
-	- $Y$ - область значений $f$
-- Примеры: 
-	- Функция Дирихле  $f(x) = \begin{equation*}
-	  \begin{cases}
-	   0, x \in \RR \backslash \QQ \\
-	   1, x \in \QQ
-	  \end{cases}
-	  \end{equation*}$
-	- $y = x^{2}$
-		- $x \in (-\infty; +\infty), y \in [0; +\infty)$
-	- $y = \sqrt{1 - x^{2}}$
-	- $y = sgn(x) = \begin{equation*}
-	   \begin{cases}
-	    1, x > 0 \\
-	    0, x = 0 \\
-	    -1, x < 0
-	   \end{cases}
-	  \end{equation*}$
-	- $f(x) = [x]$ (целая часть, не превосходящая x)
-	- $f(x) = x - [x]$
+### Понятие функции на числовом множесте  
+- Пусть на числовом множестве $X$ каждому числу $x \in X$ по какому - либо закону поставлено в соответствие число $y \in Y$. Тогда на $X$ задана функция $y = f(x)$.  
+	- $f$ - характеристика функции  
+	- $x$ - аргумент  
+	- $y$ - значение  
+	- $X$ - область определения $f$  
+	- $Y$ - область значений $f$  
+- Примеры:   
+	- Функция Дирихле  $f(x) = \begin{equation*}  
+	  \begin{cases}  
+	   0, x \in \RR \backslash \QQ \\  
+	   1, x \in \QQ  
+	  \end{cases}  
+	  \end{equation*}$  
+	- $y = x^{2}$  
+		- $x \in (-\infty; +\infty), y \in [0; +\infty)$  
+	- $y = \sqrt{1 - x^{2}}$  
+	- $y = sgn(x) = \begin{equation*}  
+	   \begin{cases}  
+	    1, x > 0 \\  
+	    0, x = 0 \\  
+	    -1, x < 0  
+	   \end{cases}  
+	  \end{equation*}$  
+	- $f(x) = [x]$ (целая часть, не превосходящая x)  
+	- $f(x) = x - [x]$  
 
-### Ограниченные и неограниченные функции
-- Функция называется ограниченной на $[a;b] \Longleftrightarrow (\forall x \in [a;b], \exists m, M : m \leq f(x) \leq M)$.
+### Ограниченные и неограниченные функции  
+- Функция называется ограниченной на $[a;b] \Longleftrightarrow (\forall x \in [a;b], \exists m, M : m \leq f(x) \leq M)$.  
 
-### Монотонные функции
-- Функция называется неубывающей на $[a;b] \Longleftrightarrow (\forall x_{1}, x_{2} \in [a;b] : x_{2} > x_{1} \implies f(x_{2}) \geq f(x_{1}))$.
-- Функция называется невозрастающей на $[a;b] \Longleftrightarrow (\forall x_{1}, x_{2} \in [a;b] : x_{2} > x_{1} \implies f(x_{2}) \leq f(x_{1}))$.
+### Монотонные функции  
+- Функция называется неубывающей на $[a;b] \Longleftrightarrow (\forall x_{1}, x_{2} \in [a;b] : x_{2} > x_{1} \implies f(x_{2}) \geq f(x_{1}))$.  
+- Функция называется невозрастающей на $[a;b] \Longleftrightarrow (\forall x_{1}, x_{2} \in [a;b] : x_{2} > x_{1} \implies f(x_{2}) \leq f(x_{1}))$.  
 
-### Предел функции в точке по Коши
-- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \epsilon > 0, \exists \delta > 0: \forall x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon)$.
+### Предел функции в точке по Коши  
+- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \epsilon > 0, \exists \delta > 0: \forall x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon)$.  
 
-### Предел функции в точке по Гейне
-- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{1}, x_{2}, \dots, x_{n}, \dots\} \in X: \lim{n}{\infty} x_{n} = x_{0} \implies \lim{n}{\infty} f(x_{n}) = A)$.
+### Предел функции в точке по Гейне  
+- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{1}, x_{2}, \dots, x_{n}, \dots\} \in X: \lim{n}{\infty} x_{n} = x_{0} \implies \lim{n}{\infty} f(x_{n}) = A)$.  
 
-### Доказательство эквивалентности определения предела по Коши и Гейне
-- $(К \implies Г)$
-	- $\forall \epsilon > 0, \exists \delta > 0: \forall x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Возьмем произвольную $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \in X, x_{n} \neq x_{0}, \lim{n}{\infty} = x_{0}$, то есть $\forall \delta, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - x_{0}| < \delta$. Что есть в определении по Коши: $0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Получим определение сходимости $f(x_{n})$, т.к. $x_{n}$ - произвольная.
- - $(Г \implies К)$
-	- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{n}\} : x_{n} \in X, x_{n} \neq x_{0} \implies \lim{n}{\infty} x_{n} = x_{0}, \{f(x_{0}), f(x_{1}), \dots, f(x_{n}), \dots\} \implies \lim{n}{\infty} f(x_{n}) = A)$ . Докажем от противного: Пусть $Г \;\not\!\!\!\implies К$. Тогда $\exists \epsilon_{0} \forall \delta > 0, \exists x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| \geq \epsilon_{0}$. Пусть $\delta_{1} = 1$, тогда $\forall \delta > 0$ найдется $x_{1}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{1}) - A| \geq \epsilon_{0}$. Пусть $\delta_{2} = \frac{1}{2}$, тогда $\forall \delta > 0$ найдется $x_{2}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{2}) - A| \geq \epsilon_{0}$. И так далее  $\delta_{n} = \frac{1}{n}$, тогда $\forall \delta > 0$ найдется $x_{n}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{n}) - A| \geq \epsilon_{0}$. Получим: $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \rightarrow x_{0}, \{f(x_{1}),f(x_{2}), \dots, f(x_{n)}, \dots\} \;\not\rightarrow A$
+### Доказательство эквивалентности определения предела по Коши и Гейне  
+- $(К \implies Г)$  
+	- $\forall \epsilon > 0, \exists \delta > 0: \forall x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Возьмем произвольную $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \in X, x_{n} \neq x_{0}, \lim{n}{\infty} = x_{0}$, то есть $\forall \delta, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - x_{0}| < \delta$. Что есть в определении по Коши: $0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Получим определение сходимости $f(x_{n})$, т.к. $x_{n}$ - произвольная.  
+ - $(Г \implies К)$  
+	- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{n}\} : x_{n} \in X, x_{n} \neq x_{0} \implies \lim{n}{\infty} x_{n} = x_{0}, \{f(x_{0}), f(x_{1}), \dots, f(x_{n}), \dots\} \implies \lim{n}{\infty} f(x_{n}) = A)$ . Докажем от противного: Пусть $Г \;\not\!\!\!\implies К$. Тогда $\exists \epsilon_{0} \forall \delta > 0, \exists x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| \geq \epsilon_{0}$. Пусть $\delta_{1} = 1$, тогда $\forall \delta > 0$ найдется $x_{1}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{1}) - A| \geq \epsilon_{0}$. Пусть $\delta_{2} = \frac{1}{2}$, тогда $\forall \delta > 0$ найдется $x_{2}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{2}) - A| \geq \epsilon_{0}$. И так далее  $\delta_{n} = \frac{1}{n}$, тогда $\forall \delta > 0$ найдется $x_{n}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{n}) - A| \geq \epsilon_{0}$. Получим: $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \rightarrow x_{0}, \{f(x_{1}),f(x_{2}), \dots, f(x_{n)}, \dots\} \;\not\rightarrow A$  
 
-### Примеры доказательств, используя $\eps - \delta$
-- $y = x^{3}$
-	- $\lim{x}{0} x^{3} = 0$
-	- $\forall \epsilon > 0, \exists \delta > 0: |x - 0| < \delta \implies |f(x) - 0| < \epsilon$
-	- $|x| < \delta \wedge |f(x)| < \epsilon$
-	- $|f(x)| < \epsilon$ 
-	- $|x^{3}| < \epsilon$
-	- $|x| < \delta \implies |x| < \sqrt[\uproot{3}p]{\epsilon} \implies \delta = \sqrt[\uproot{3}p]{\epsilon} \implies |f(x) - A| < \epsilon$
-- $f(x) = \sin{\frac{1}{x}}$
-	- Докажем, что в $x_{0} = 0$ функция не имеет предела. 
-		- Возьмем $\frac{1}{x} = \pi k, x_{k} = \frac{1}{\pi k} \rightarrow 0 \implies f(x_{k}) = \sin{\pi k} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$
-		- Возьмем $\frac{1}{x_{k}} = (\frac{\pi}{2} + 2\pi k), x_{k} = (\frac{2}{\pi + \pi k}) \implies \begin{equation*}
-	   \begin{cases}
-	    x_{k} \rightarrow 0 \\
-	    f(x_{k}) \equiv 1 \\
-	    \end{cases}
-	    \end{equation*} \implies \lim{k}{\infty} f(x_{k}) = 1$
+### Примеры доказательств, используя $\eps - \delta$  
+- $y = x^{3}$  
+	- $\lim{x}{0} x^{3} = 0$  
+	- $\forall \epsilon > 0, \exists \delta > 0: |x - 0| < \delta \implies |f(x) - 0| < \epsilon$  
+	- $|x| < \delta \wedge |f(x)| < \epsilon$  
+	- $|f(x)| < \epsilon$   
+	- $|x^{3}| < \epsilon$  
+	- $|x| < \delta \implies |x| < \sqrt[\uproot{3}p]{\epsilon} \implies \delta = \sqrt[\uproot{3}p]{\epsilon} \implies |f(x) - A| < \epsilon$  
+- $f(x) = \sin{\frac{1}{x}}$  
+	- Докажем, что в $x_{0} = 0$ функция не имеет предела.   
+		- Возьмем $\frac{1}{x} = \pi k, x_{k} = \frac{1}{\pi k} \rightarrow 0 \implies f(x_{k}) = \sin{\pi k} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
+		- Возьмем $\frac{1}{x_{k}} = (\frac{\pi}{2} + 2\pi k), x_{k} = (\frac{2}{\pi + \pi k}) \implies \begin{equation*}  
+	   \begin{cases}  
+	    x_{k} \rightarrow 0 \\  
+	    f(x_{k}) \equiv 1 \\  
+	    \end{cases}  
+	    \end{equation*} \implies \lim{k}{\infty} f(x_{k}) = 1$  
 
-### Непрерывные и разрывные функции
-- $f$ - непрерывна в $x_{0} \Longleftrightarrow f(x_{0}) = \lim{x}{x_{0}} f(x)$ 
-- Функция, непрерывная в каждой точке $[a;b]$ называется непрерывной на $[a;b]$.
-	- $p(x) = a_{n}x^{n} + a_{n - 1}x^{n - 1} + \dots + a_{1}x_{1} + a_{0}$
-	- $x^{k}$ - непрерывна в любой $x_{0}$.
-	- Возьмем алгебраическую дробь $\frac{P(x)}{Q(x)}$
-	- По свойству пределов $\lim{x}{x_{0}} \frac{P(x)}{Q(x)} = \frac{\lim{x}{x_{0}}P(x)}{\lim{x}{x_{0}} Q(x)} $, кроме точек, в которых знаменатель равен $0$.
-- Пример:
-	- Доказать непрерывность $y = \cos{x}$ в любой токе числовой оси.
-	- Возьмем $x_{0}$, докажем, что $\exists \lim{x}{x_{0}} \cos{x} = \cos{x_{0}}$.
-	- Доказательство по Коши: $\forall \epsilon > 0: |\cos{x} - \cos{x_{0}| = |2 \sin{\frac{x - x_{0}}{2}}} \sin{\frac{x + x_{0}}{2} }| \leq 2|\sin{\frac{x - x_{0}}{2} }| \leq 2 \frac{|x - x_{0}|}{2}$. При $|x - x_{0}| < \delta, |cos{x} - cos{x_{0}}| < \epsilon \implies \delta = \epsilon$
+### Непрерывные и разрывные функции  
+- $f$ - непрерывна в $x_{0} \Longleftrightarrow f(x_{0}) = \lim{x}{x_{0}} f(x)$   
+- Функция, непрерывная в каждой точке $[a;b]$ называется непрерывной на $[a;b]$.  
+	- $p(x) = a_{n}x^{n} + a_{n - 1}x^{n - 1} + \dots + a_{1}x_{1} + a_{0}$  
+	- $x^{k}$ - непрерывна в любой $x_{0}$.  
+	- Возьмем алгебраическую дробь $\frac{P(x)}{Q(x)}$  
+	- По свойству пределов $\lim{x}{x_{0}} \frac{P(x)}{Q(x)} = \frac{\lim{x}{x_{0}}P(x)}{\lim{x}{x_{0}} Q(x)} $, кроме точек, в которых знаменатель равен $0$.  
+- Пример:  
+	- Доказать непрерывность $y = \cos{x}$ в любой токе числовой оси.  
+	- Возьмем $x_{0}$, докажем, что $\exists \lim{x}{x_{0}} \cos{x} = \cos{x_{0}}$.  
+	- Доказательство по Коши: $\forall \epsilon > 0: |\cos{x} - \cos{x_{0}| = |2 \sin{\frac{x - x_{0}}{2}}} \sin{\frac{x + x_{0}}{2} }| \leq 2|\sin{\frac{x - x_{0}}{2} }| \leq 2 \frac{|x - x_{0}|}{2}$. При $|x - x_{0}| < \delta, |cos{x} - cos{x_{0}}| < \epsilon \implies \delta = \epsilon$  
 
 
 
