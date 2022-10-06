@@ -459,6 +459,87 @@ depth: 3
 	- Возьмем $x_{0}$, докажем, что $\exists \lim{x}{x_{0}} \cos{x} = \cos{x_{0}}$.  
 	- Доказательство по Коши: $\forall \epsilon > 0: |\cos{x} - \cos{x_{0}| = |2 \sin{\frac{x - x_{0}}{2}}} \sin{\frac{x + x_{0}}{2} }| \leq 2|\sin{\frac{x - x_{0}}{2} }| \leq 2 \frac{|x - x_{0}|}{2}$. При $|x - x_{0}| < \delta, |cos{x} - cos{x_{0}}| < \epsilon \implies \delta = \epsilon$  
 
+## Лекция 06.10.2022
+
+### Непрерывность сложной функции
+
+***Определение сложной функции (композиции)***
+
+- $y = f(x), x = \phi(t)$
+	- $f(\phi(t)) = \digamma(t)$
+
+***Теорема о непрерывности сложной функции***
+- $f$ - определена в окрестности $x = a$, $f$ - непрерывна в $a$, $x$ - функция независимой переменной $t, x = \phi(t)$, $\phi$ - непрерывна в $\alpha$, $\phi(a) = a \Longleftrightarrow f(\phi(t))$ - непрерывна в $t = \alpha$ 
+
+***Доказательство***
+
+- $\digamma(t)$ - непрерывна в $t = \alpha \Longleftrightarrow \exists \lim{t}{\alpha} \digamma(t) = \digamma(\alpha)$. Так как $x = \phi(t)$ - непрерывна по условию теоремы $\implies \forall \{t_{n}\} : \lim{n}{\infty} t_{n} = \alpha, \{\phi(t_{n})\} \xrightarrow[n \to \infty]{} \phi(\alpha) = a$. При этом : $\lim{n}{\infty} f(x_{n}) = f(a)$ в силу непрерывности $f$. $(\digamma(t) = f(\phi(t))) \wedge \{\digamma(t_{n})\} = \{f(\phi(t_{n}))\} \xrightarrow[n \to \infty]{} f(\phi(\alpha)) = f(a) = \digamma(\alpha)$
+
+### Односторонние пределы
+- $\lim{x}{a + 0} f(x) = b \Longleftrightarrow \forall \eps > 0, \exists \delta > 0, \forall x \in X: a < x < a + \delta \implies |f(x) - b| < \eps$
+- $\lim{x}{a - 0} f(x) = b \Longleftrightarrow \forall \eps > 0, \exists \delta > 0, \forall x \in X: a - \delta< x  < a \implies |f(x) - b| < \eps$
+
+### Классификация точек разрыва
+- Устранимая точка разрыва
+	-  Существует конечные пределы этой функции слева и справа, они равны
+- Точка разрыва 1 - ого рода
+	- Существуют конечные пределы слева и справа в точке, но они не равны друг другу
+- Точка разрыва 2 - ого рода
+	- Все остальные точки
+
+***Примеры***
+
+- $\lim{x}{1} \frac{x^{2} - x - 2}{x^{2} + x - 3} = \frac{0}{0}$. Рассмотрим выколотую окрестность $\mathring{U}(1)$. $f(x) = \frac{x + 2}{x + 3} \implies \lim{x}{\to 1} f(x) = \frac{3}{4}$, $x = 1$ - Устранимая точка разрыва
+- $f(x) = \frac{1}{1 + 2^{\frac{1}{x}}}$. $f$ - не определена в $x = 0$.
+	- $\lim{x}{0 + 0} f(x) = 0$
+	- $\lim{x}{0 - 0} f(x) = 1$
+	- $\lim{x}{\infty} f(x) = \frac{1}{2}$
+	Имеем точку разрыва 1 ого рода
+- $f(x) = \frac{1}{x}$. В $x = 0$, $f$ - не определена. $0$ - точка разрыва 2ого рода.
+- $f(x) = \sin(\frac{1}{x})$. В $x = 0$ ,$f$ - не определена. Но определена в $\mathring{U}(0)$.
+$\lim{x}{0} f(x)=$ ?
+- Докажем, что предела в $x = 0$ не существует.
+	- Действительно : 
+	- $x_{n} = \frac{1}{\pi n};\{x_{n}\} \xrightarrow[n \to \infty]{} 0; \lim{n}{\infty} f(x_{n}) = \lim{n}{\infty} \sin{(\pi n)} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$
+	- $x_{n} = \frac{2}{\pi(4n + 1)}; \{x_{n}\} \xrightarrow[n \to \infty]{} 0; f(x_{n}) = \sin{(\frac{\pi}{2} (4n + 1))} = \sin{(\frac{\pi}{2})} \equiv 1 \implies \lim{n}{\infty} f(x_{n}) = 1$
+	- Получим, $f(x)$ - не существует в $x = 0$
+
+### Замечательные пределы
+1. $\lim{x}{0} \frac{\sin{(x)}}{x} = 1$ (первый замечательный предел)
+2. $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = e$ (второй замечательный предел)
+3. $\lim{x}{\infty} (1 + \frac{1}{x})^{x} = e$ ($x$ - произвольное)
+4. $\lim{t}{0} (1 + t)^{\frac{1}{t}} = e$ $(x = \frac{1}{t})$
+5. $\lim{t}{0} \ln{(1 + t)}^{\frac{1}{t}} = \ln{(e)} = 1 \implies \lim{t}{0} \frac{ln{(1 + t)}}{t} = 1$
+
+- Докажем $(1)$
+-  Рассмотрим $\lim{x}{ 0 + 0} \frac{\sin{(x)}}{x} \stackrel{\text{?}}{=} 1$
+	![image1](matan_pictures/matan1.jpg)  
+	- $\sin{(\alpha)} = y(A)$
+	- $\cos{(\alpha)} = y(A)$
+	- $S_{OAA'} < S_{OAB'} < S_{OBB'}$
+	- $\frac{1}{2}\cos{(x)}\sin{(x)} < \frac{1}{2} \cdot 1 \cdot x < \frac{1}{2} \cdot 1 \cdot \tan{(x)}$
+	- $\cos{(x)}\sin{(x)} <  x < \tan{(x)}$
+	- $\cos{(x)} <  \frac{x}{\sin{(x)}} < \frac{1}{\cos{(x)}}$
+	- $\cos{(0)} \xrightarrow[n \to 0]{} 1 \implies \lim{x}{0 + 0} \frac{\sin{x}}{x} = 1$
+-  Рассмотрим $\lim{x}{ 0 - 0} \frac{\sin{(x)}}{x}$
+	- Так как $f(-x) = f(x) \implies \lim{x}{0 + 0} \frac{\sin{(x)}}{x} = \lim{x}{0 - 0} \frac{\sin(x)}{x} = \lim{x}{0} \frac{sin(x)}{x} = 1$
+
+- Докажем $(2)$
+- $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = 1^{\infty}$
+- Докажем, что $\exists \lim{n}{\infty} f(x_{n})$. Воспользуемся Теоремой о возрастающей, ограниченной последовательности:
+	- Ограниченность : $2 < (1 + \frac{1}{n})^{n} = 1 + n \cdot \frac{1}{n} + \frac{n(n- 1)}{2!} \cdot \frac{1}{n^{2}} + \dots = 2 + \frac{1}{2!}(1 - \frac{1}{n}) + \frac{1}{3!}(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots \leq 2 + \frac{1}{2!} + \frac{1}{3!} + \dots < 2 + \frac{1}{2} + \frac{1}{2^{2}} + \dots < 2 + \frac{0.5}{1 - 0.5} = 3$
+	- Возрастание: $x_{n + 1} = (1 + \frac{1}{n + 1})^{n + 1} = 1 + (n + 1) \cdot \frac{1}{n + 1} + \frac{n(n - 1)}{2!} - \frac{1}{(n + 1)^{2}} + \dots \implies x_{n + 1} > x_{n}$, так как каждое слагаемое уменьшается и число слагаемых $n + 1$.
+- $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = 2.718 \dots = e \sim 2.7$
+
+***Определение***
+
+- $\lim{x}{x_{0}} \frac{f(x)}{g(x)} = 1 \Longleftrightarrow f(x) \sim  g(x)$ ($f$ эквивалентна $g$ в $x_{0}$)
+
+### Эквивалентные функции в точке
+1. $\lim{x}{x_{0}} \frac{\sin(x)}{x} = 1 \Longleftrightarrow \sin{(x)} \sim x$
+2. $\lim{x}{x_{0}} \frac{\ln{(1 + x)}}{x} = 1 \Longleftrightarrow \ln{(1 + x)} \sim x$
+3. $\lim{x}{0} \frac{e^{x} - 1}{x} = 1 \Longleftrightarrow e^{x} \sim x$
+4. $\lim{x}{0} \frac{\sqrt[n]{(1 + x)} - 1}{x} = \frac{1}{n} \Longleftrightarrow \sqrt[n]{(1 + x)} \sim \frac{x}{n}$
 
 
 
