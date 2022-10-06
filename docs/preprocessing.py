@@ -96,13 +96,13 @@ def fix_line_endings(md_roots):
 
 
 USUAL_MAP = {
-    "<=": r"\leq",
-    ">=": r"\geq",
+    "<=": r"\leq ",
+    ">=": r"\geq ",
     "-->": chr(0),
-    "<->": r"\leftrightarrow",
-    "->": r"\rightarrow",
-    "<-": r"\leftarrow",
-    "<=>": r"\ident",
+    "<->": r"\leftrightarrow ",
+    "->": r"\rightarrow ",
+    "<-": r"\leftarrow ",
+    "<=>": r"\ident ",
     chr(0): "-->",
 }
 
@@ -116,6 +116,8 @@ def fix_usual_repr(md_roots):
         text = file.read_text("utf-8")
 
         for pattern, repl in USUAL_MAP.items():
+            if pattern.startswith("\\"):  # latex command
+                text = text.replace(pattern + " ", repl)
             text = text.replace(pattern, repl)
 
         file.write_text(text, "utf-8")
