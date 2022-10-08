@@ -560,7 +560,7 @@ depth: 3
 - Необходимое и достаточное условие принадлежности $M(x, y, z)$ искомой плоскости: $pr_{\vec{n}}{\vec{OM}} = p$
 - $\frac{(\vec{OM}, \vec{n})}{|\vec{n}|} = p \implies (\vec{OM}, \vec{n}) = p \ (|\vec{n}| = 1)$
 - $x\cos{\alpha} + y\cos{\beta} + z\cos{\gamma} = p$
-- $x\cos{\alpha} + y\cos{\beta} + z\cos{\gamma} - p = 0$ - Нормальное уравнение прямой
+- $x\cos{\alpha} + y\cos{\beta} + z\cos{\gamma} - p = 0$ - Нормальное уравнение плоскости
 
 ### Перевод из общего уравнение плоскости в нормальное
 - $Ax + By + Cz + D = 0 \ |\cdot (\frac{1}{\sqrt{A^{2} + B^{2} + C^{2}}}) $ (Если свободный член $< 0, $ то $| \cdot (- \frac{1}{\sqrt{A^{2} + B^{2} + C^{2}}})$
