@@ -703,7 +703,7 @@ $\lim{x}{0} f(x)=$ ?
 
 ### Задание 1  
 - Сформулировать определение последовательности, неограниченной сверху  
-	- Для любого $M$ найдется такой номер $N > n$, что $x_{n} > M$  
+	- $\forall  \ M  \ ,\exists \ N \in \NN \ ,  \forall n > N : x_{n} > M$  
 ### Задание 2  
 - Верно ли: $(x_{n} + y_{n}) \rightarrow A \implies x_{n} \rightarrow B, y_{n} \rightarrow C$  
 	- Нет, например, при : $x_{n} = n, y_{n} = -n$  
@@ -711,3 +711,82 @@ $\lim{x}{0} f(x)=$ ?
 ### Задание 3  
 - Верно ли: $\{ kx_{n}\} \rightarrow A \implies \{x_{n}\} \rightarrow B$  
 	- Верно, домножение последовательности на константу не влияет на сходимость. (см. лекция 2)  
+
+## Семинар 27.09.2022
+
+### 80
+- Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей:
+	- $x_{n} =(1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})$
+	1. Покажем, что $x_{n}$ - возрастает:
+	- $x_{n + 1} > x_{n}$
+	- $(1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})(1 + \frac{1}{2^{n + 1}}) < (1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})$
+	- $1 + \frac{1}{2^{n + 1}} > 1$
+	- $\frac{1}{2^{n + 1}} > 0 \implies $ $x_{n} \uparrow$
+	2. Ограничение снизу: 
+	- Оценим: $(\underbrace{((1 + \frac{1}{2^{n}})^{2^{n}})}_{e})^{\frac{1}{2^{n}}} = e^{\frac{1}{2^{n}}} < e^{(\frac{1}{2} + \frac{1}{4} + \dots+ \frac{1}{2^{n}})} = e^{\frac{\frac{1}{2}}{1 - \frac{1}{2}}} = e$
+
+### 85 
+- Пользуясь критерием Коши, доказать сходимость следующих последовательностей:
+	- $x_{n} = 1 + \frac{1}{2^{2}} + \frac{1}{3^{2}} + \dots + \frac{1}{n^{2}}$
+		- Критерий Коши: $x_{n} $ - фундаментальная $\Longleftrightarrow$ $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon} \ , \forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$
+	- Запишем последнюю часть определения и подставим туда частичную сумму:
+	- $|\frac{1}{(n + 1)^{2}} + \frac{1}{(n + 2)^{2}} + \dots + \frac{1}{(n + p)^{2}}| < |\frac{1}{n} - \frac{1}{n + 1} + \dots - \frac{1}{n + p - 1} + \frac{1}{n + p - 1} - \frac{1}{n + p}| = \frac{1}{n} - \frac{1}{n + p} < \eps$
+	- $\frac{1}{n} - \frac{1}{n + p} < \frac{1}{n} < \eps$
+	- $\frac{1}{n} < \eps$
+	- $n > \frac{1}{\eps}$
+	- $N_{\eps} = \lceil{\frac{1}{\eps}} \rceil$
+	- $\forall n > N_{\epsilon} \ , \forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon$
+
+## Семинар 04.10.2022
+### 404
+- Сформулировать с помощью неравенств следующие утверждения и привести соответствующие примеры:
+	- $\lim{x}{-\infty} f(x) = b \Longleftrightarrow \forall \eps > 0 \ ,\exists E > 0, \ \forall x \in X : x < - E \implies |f(x) - b| < \eps$
+
+### 405
+- $\lim{x}{a - 0} f(x) = \infty \Longleftrightarrow \forall E > 0 \ ,\exists \delta > 0, \ \forall x \in X :  a - \delta < x < a \implies |f(x)| > E$
+
+### 407
+- $\lim{x}{a} f(x) = b - 0 \Longleftrightarrow \forall \eps > 0 \ ,\exists \delta > 0, \ \forall x \in X :  |a  - x| < \delta \implies b - \eps < f(x) < \eps$
+
+## Семинар 11.10.2022
+
+### 471 
+- $\lim{x}{0} \frac{\sin{(5x)}x}{x} = \lim{x}{0} \frac{5\sin{(5x)}x}{5x} = 5$
+
+### 474
+- $\lim{x}{0} \frac{1 - \cos{x}}{x^{2}} = \lim{x}{0} \frac{2\sin^{2}{\frac{x}{2}}}{x^{2}} = \frac{1}{2}$
+
+### 479 
+- $\lim{x}{\frac{\pi}{4}} \tan{(2x)} \tan{(\frac{\pi}{4} - x)} = \lim{x}{\frac{\pi}{4}} (\frac{2\tan{x}}{1 - \tan^{2}{x}})(\frac{\tan{\frac{\pi}{4} - \tan{x}}}{1 - \tan{\frac{\pi}{4}}\tan{x}})= \lim{x}{\frac{\pi}{4}} \frac{2\tan{(x)}}{(1 - \tan{x})^{2}} = \frac{1}{2}$
+
+### 482 
+- $\lim{x}{a} \frac{\sin{x} - \sin{a}}{x - a} = \frac{2\sin{(\frac{x - a}{2})}\cos{(\frac{x + a}{2})}}{x - a} = \cos{a}$
+
+### 506
+- $\lim{x}{0} (\frac{1 + x}{2 + x}) ^ {\frac{1 - \sqrt{x}}{1 - x}} = \frac{1}{2}$
+- $\lim{x}{1} (\frac{1 + x}{2 + x}) ^ {\frac{1 - \sqrt{x}}{1 - x}} = \lim{x}{1} (\frac{1 + x}{2 + x}) ^ {\frac{(1 - x)(1 + x)}{1 - x}} = \frac{1}{4}$
+### 514
+- $\lim{x}{0} \sqrt[x]{1 - 2x} = \lim{x}{0} ((1 + (- 2x))^{\frac{1}{-2x}})^{-2} = e^{-2}$
+### 517
+- $\lim{x}{0} (1 + x^{2})^{ctg{(2x)}} =  \ \lim{x}{0} ((1 + x^{2})^{\frac{1}{x^{2}}})^{ctg{(2x)}x^{2}} = \ \lim{x}{0} ((1 + x^{2})^{\frac{1}{x^{2}}})^{ctg{(2x)}x^{2}} = \ \lim{x}{0} e^{ctg{(2x)}x^{2}} = e^{0} = 1$
+
+### 521 
+- $\lim{x}{0} \frac{\cos{x}}{\cos{2x}}^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{\cos{x}}{\cos{2x}} - 1)^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{\cos{x} - \cos{2x}}{\cos{2x}})^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{\cos{2x}})^{\frac{1}{x^{2}}} = \ \lim{x}{0} ((1 + \frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{\cos{2x}})^{\frac{\cos{2x}}{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}})^{\frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{x^{2}\cos{2x}}} = \ e^{\frac{3}{2}}$
+
+### 531 
+- $\lim{x}{a} \frac{\ln{x} - \ln{a}}{x - a} = \lim{x}{a} \frac{\frac{x}{a} - 1 + 1}{x - a}  = \lim{x}{a} \frac{1 + \frac{x}{a} - 1}{x - a} = \frac{\frac{x}{a}}{x - a} = \frac{1}{a}$
+
+### 541
+- $\lim{x}{0} \frac{a^{x} - 1}{x} = \lim{x}{0} \frac{e^{\ln{x}} - 1}{x} =  \lim{x}{0} \frac{(e^{\ln{x}} - 1)\ln{a}}{x \ln{a}} = \ln{a} $
+
+### 595
+- $\lim{x}{1 - 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 - 0]{} + \infty \implies arctg{(+ \infty)} = \frac{\pi}{2}$
+
+- $\lim{x}{1 + 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 + 0]{} + \frac{1}{-0} \implies arctg{(+ \infty)} = - \frac{\pi}{2}$
+
+### 596
+- $\lim{x}{- 0} \frac{1}{1 + \underbrace{e^{\frac{1}{x}} }_{e^{\frac{1}{-0}} = -\infty} }  = 1 $
+- $\lim{x}{+ 0} \frac{1}{1 + \underbrace{e^{\frac{1}{x}}}_{\infty}}  = 0$
+
+### 597 
+- $\lim{x}{- \infty} \frac{\ln{(1 + \underbrace{e^{x} }_{0}) }}{x} = \frac{e^{x}}{x} = 0$
