@@ -782,7 +782,7 @@ $\lim{x}{0} f(x)=$ ?
 ### 595
 - $\lim{x}{1 - 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 - 0]{} + \infty \implies arctg{(+ \infty)} = \frac{\pi}{2}$
 
-- $\lim{x}{1 + 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 + 0]{} + \frac{1}{-0} \implies arctg{(+ \infty)} = - \frac{\pi}{2}$
+- $\lim{x}{1 + 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 + 0]{} + \frac{1}{-0} \implies arctg{(- \infty)} = - \frac{\pi}{2}$
 
 ### 596
 - $\lim{x}{- 0} \frac{1}{1 + \underbrace{e^{\frac{1}{x}} }_{e^{\frac{1}{-0}} = -\infty} }  = 1 $
