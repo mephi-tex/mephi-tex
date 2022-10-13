@@ -561,9 +561,9 @@ $\lim{x}{0} f(x)=$ ?
 ***Пример***
 
 - $a_{n} = 1 + \cos{(\frac{\pi n}{3})}$
-	- $\{a_{3k}\} = 1 + (-1)^{k} \rightarrow (2 \or 0)$ 
-	- $\{a_{3k + 1}\} \rightarrow (\frac{1}{2} \or \frac{7}{6})$ 
-	- $\{a_{3k + 2}\} \rightarrow (\frac{1}{2} \or \frac{3}{2})$ 
+	- $\{a_{3k}\} = 1 + (-1)^{k} \rightarrow (2 , 0)$ 
+	- $\{a_{3k + 1}\} \rightarrow (\frac{1}{2} , \frac{7}{6})$ 
+	- $\{a_{3k + 2}\} \rightarrow (\frac{1}{2} , \frac{3}{2})$ 
 	- $\implies \overline{\lim{n}{\infty}} a_{n} = 2, \ \underline{\lim{n}{\infty}} a_{n} = 0$
 
 ### Раскрытие неопределенностей
