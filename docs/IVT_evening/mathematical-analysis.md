@@ -535,9 +535,9 @@ $\lim{x}{0} f(x)=$ ?
 
 - $\lim{x}{x_{0}} \frac{f(x)}{g(x)} = 1 \Longleftrightarrow f(x) \sim  g(x)$ ($f$ эквивалентна $g$ в $x_{0}$)
 
-### Эквивалентные функции в точке
-1. $\lim{x}{x_{0}} \frac{\sin(x)}{x} = 1 \Longleftrightarrow \sin{(x)} \sim x$
-2. $\lim{x}{x_{0}} \frac{\ln{(1 + x)}}{x} = 1 \Longleftrightarrow \ln{(1 + x)} \sim x$
+### Эквивалентные бесконечно малые величины
+1. $\lim{x}{0} \frac{\sin(x)}{x} = 1 \Longleftrightarrow \sin{(x)} \sim x$
+2. $\lim{x}{0} \frac{\ln{(1 + x)}}{x} = 1 \Longleftrightarrow \ln{(1 + x)} \sim x$
 3. $\lim{x}{0} \frac{e^{x} - 1}{x} = 1 \Longleftrightarrow e^{x} \sim x$
 4. $\lim{x}{0} \frac{\sqrt[n]{(1 + x)} - 1}{x} = \frac{1}{n} \Longleftrightarrow \sqrt[n]{(1 + x)} \sim \frac{x}{n}$
 
