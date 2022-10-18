@@ -220,7 +220,21 @@ def run_all(md_roots):
     fix_line_endings(md_roots)
     fix_preambles(md_roots)
     fix_usual_repr(md_roots)
+def fix_mermaid_code():
+    """
+    Files need to be kept in that way so Obsidian will also render them properly
+    """
+
+    for file in Path(__file__).parent.glob("**/*.md"):
+        text = file.read_text("utf-8")
+        file.write_text(text.replace("```mermaid", "```{mermaid}"), "utf-8")
+
+
     # generate_literature()
+
+
+def preprocess_for_server():
+    fix_mermaid_code()
 
 
 if __name__ == "__main__":
