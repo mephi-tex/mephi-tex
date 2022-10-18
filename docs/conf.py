@@ -8,7 +8,7 @@ from pathlib import Path
 
 # -- Preprocess files --------------------------------------------------------
 
-from .preprocessing import preprocess_locally
+from docs.preprocessing import preprocess_locally
 
 preprocess_locally()
 
