@@ -111,11 +111,11 @@ USUAL_MAP = {
 }
 
 
-def fix_usual_repr(md_roots):
+def fix_usual_repr():
     prompt = "fixing usual representations..."
     size = print_over(0, prompt)
 
-    for file in get_mds(md_roots):
+    for file in get_mds():
         size = print_over(size, prompt, file)
         text = file.read_text("utf-8")
 
