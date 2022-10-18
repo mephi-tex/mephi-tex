@@ -231,13 +231,14 @@ def fix_mermaid_code():
 
 
 def preprocess_locally():
-    fix_line_endings()
+    # fix_line_endings()
     fix_preambles()
     fix_usual_repr()
     # generate_literature()
 
 
 def preprocess_for_server():
+    fix_line_endings()
     fix_mermaid_code()
 
 
