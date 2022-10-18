@@ -130,6 +130,35 @@ def fix_usual_repr():
     print()
 
 
+def remove_private_parts():
+    REMOVE_START = "<!-- start-private -->"
+    REMOVE_END = "<!-- end-private -->"
+
+    prompt = "removing private parts..."
+    size = print_over(0, prompt)
+
+    for file in get_mds():
+        size = print_over(size, prompt, file)
+        text = file.read_text("utf-8")
+
+        result = ""
+        removes = False
+        for line in text.split("\n"):
+            if line == REMOVE_START:
+                removes = True
+            elif line == REMOVE_END:
+                removes = False
+
+            if not removes:
+                result += line + "\n"
+        result = result[:-1]
+
+        file.write_text(result, "utf-8")
+
+    print_over(size, prompt, "done")
+    print()
+
+
 LITERATURE = """# {name}
 
 Веб-просмотр:
@@ -238,6 +267,7 @@ def preprocess_locally():
 
 
 def preprocess_for_server():
+    remove_private_parts()
     fix_line_endings()
     fix_mermaid_code()
 
