@@ -53,7 +53,7 @@ $\newcommand{\lcm}{\text{НОК}}$
 ```{contents} Математический анализ  
 ---  
 depth: 3  
-```
+```  
 # Математический анализ  
 Преподаватель - Михайлов Владислав Дмитриевич  
 
@@ -459,89 +459,145 @@ depth: 3
 	- Возьмем $x_{0}$, докажем, что $\exists \lim{x}{x_{0}} \cos{x} = \cos{x_{0}}$.  
 	- Доказательство по Коши: $\forall \epsilon > 0: |\cos{x} - \cos{x_{0}| = |2 \sin{\frac{x - x_{0}}{2}}} \sin{\frac{x + x_{0}}{2} }| \leq 2|\sin{\frac{x - x_{0}}{2} }| \leq 2 \frac{|x - x_{0}|}{2}$. При $|x - x_{0}| < \delta, |cos{x} - cos{x_{0}}| < \epsilon \implies \delta = \epsilon$  
 
-## Лекция 06.10.2022
+## Лекция 06.10.2022  
 
-### Непрерывность сложной функции
+### Непрерывность сложной функции  
 
-***Определение сложной функции (композиции)***
+***Определение сложной функции (композиции)***  
 
-- $y = f(x), x = \phi(t)$
-	- $f(\phi(t)) = \digamma(t)$
+- $y = f(x), x = \phi(t)$  
+	- $f(\phi(t)) = \digamma(t)$  
 
-***Теорема о непрерывности сложной функции***
-- $f$ - определена в окрестности $x = a$, $f$ - непрерывна в $a$, $x$ - функция независимой переменной $t, x = \phi(t)$, $\phi$ - непрерывна в $\alpha$, $\Longleftrightarrow f(\phi(t))$ - непрерывна в $t = \alpha$ 
+***Теорема о непрерывности сложной функции***  
+- $f$ - определена в окрестности $x = a$, $f$ - непрерывна в $a$, $x$ - функция независимой переменной $t, x = \phi(t)$, $\phi$ - непрерывна в $\alpha$, $\Longleftrightarrow f(\phi(t))$ - непрерывна в $t = \alpha$   
 
-***Доказательство***
+***Доказательство***  
 
-- $\digamma(t)$ - непрерывна в $t = \alpha \Longleftrightarrow \exists \lim{t}{\alpha} \digamma(t) = \digamma(\alpha)$. Так как $x = \phi(t)$ - непрерывна по условию теоремы $\implies \forall \{t_{n}\} : \lim{n}{\infty} t_{n} = \alpha, \{\phi(t_{n})\} \xrightarrow[n \to \infty]{} \phi(\alpha) = a$. При этом : $\lim{n}{\infty} f(x_{n}) = f(a)$ в силу непрерывности $f$. $(\digamma(t) = f(\phi(t))) \wedge \{\digamma(t_{n})\} = \{f(\phi(t_{n}))\} \xrightarrow[n \to \infty]{} f(\phi(\alpha)) = f(a) = \digamma(\alpha)$
+- $\digamma(t)$ - непрерывна в $t = \alpha \Longleftrightarrow \exists \lim{t}{\alpha} \digamma(t) = \digamma(\alpha)$. Так как $x = \phi(t)$ - непрерывна по условию теоремы $\implies \forall \{t_{n}\} : \lim{n}{\infty} t_{n} = \alpha, \{\phi(t_{n})\} \xrightarrow[n \to \infty]{} \phi(\alpha) = a$. При этом : $\lim{n}{\infty} f(x_{n}) = f(a)$ в силу непрерывности $f$. $(\digamma(t) = f(\phi(t))) \wedge \{\digamma(t_{n})\} = \{f(\phi(t_{n}))\} \xrightarrow[n \to \infty]{} f(\phi(\alpha)) = f(a) = \digamma(\alpha)$  
 
-### Односторонние пределы
-- $\lim{x}{a + 0} f(x) = b \Longleftrightarrow \forall \eps > 0, \exists \delta > 0, \forall x \in X: a < x < a + \delta \implies |f(x) - b| < \eps$
-- $\lim{x}{a - 0} f(x) = b \Longleftrightarrow \forall \eps > 0, \exists \delta > 0, \forall x \in X: a - \delta< x  < a \implies |f(x) - b| < \eps$
+### Односторонние пределы  
+- $\lim{x}{a + 0} f(x) = b \Longleftrightarrow \forall \eps > 0, \exists \delta > 0, \forall x \in X: a < x < a + \delta \implies |f(x) - b| < \eps$  
+- $\lim{x}{a - 0} f(x) = b \Longleftrightarrow \forall \eps > 0, \exists \delta > 0, \forall x \in X: a - \delta< x  < a \implies |f(x) - b| < \eps$  
 
-### Классификация точек разрыва
-- Устранимая точка разрыва
-	-  Существует конечные пределы этой функции слева и справа, они равны
-- Точка разрыва 1 - ого рода
-	- Существуют конечные пределы слева и справа в точке, но они не равны друг другу
-- Точка разрыва 2 - ого рода
-	- Все остальные точки
+### Классификация точек разрыва  
+- Устранимая точка разрыва  
+	-  Существует конечные пределы этой функции слева и справа, они равны  
+- Точка разрыва 1 - ого рода  
+	- Существуют конечные пределы слева и справа в точке, но они не равны друг другу  
+- Точка разрыва 2 - ого рода  
+	- Все остальные точки  
 
-***Примеры***
+***Примеры***  
 
-- $\lim{x}{1} \frac{x^{2} - x - 2}{x^{2} + x - 3} = \frac{0}{0}$. Рассмотрим выколотую окрестность $\mathring{U}(1)$. $f(x) = \frac{x + 2}{x + 3} \implies \lim{x}{\to 1} f(x) = \frac{3}{4}$, $x = 1$ - Устранимая точка разрыва
-- $f(x) = \frac{1}{1 + 2^{\frac{1}{x}}}$. $f$ - не определена в $x = 0$.
-	- $\lim{x}{0 + 0} f(x) = 0$
-	- $\lim{x}{0 - 0} f(x) = 1$
-	- $\lim{x}{\infty} f(x) = \frac{1}{2}$
-	Имеем точку разрыва 1 ого рода
-- $f(x) = \frac{1}{x}$. В $x = 0$, $f$ - не определена. $0$ - точка разрыва 2ого рода.
-- $f(x) = \sin(\frac{1}{x})$. В $x = 0$ ,$f$ - не определена. Но определена в $\mathring{U}(0)$.
-$\lim{x}{0} f(x)=$ ?
-- Докажем, что предела в $x = 0$ не существует.
-	- Действительно : 
-	- $x_{n} = \frac{1}{\pi n};\{x_{n}\} \xrightarrow[n \to \infty]{} 0; \lim{n}{\infty} f(x_{n}) = \lim{n}{\infty} \sin{(\pi n)} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$
-	- $x_{n} = \frac{2}{\pi(4n + 1)}; \{x_{n}\} \xrightarrow[n \to \infty]{} 0; f(x_{n}) = \sin{(\frac{\pi}{2} (4n + 1))} = \sin{(\frac{\pi}{2})} \equiv 1 \implies \lim{n}{\infty} f(x_{n}) = 1$
-	- Получим, $f(x)$ - не существует в $x = 0$
+- $\lim{x}{1} \frac{x^{2} - x - 2}{x^{2} + x - 3} = \frac{0}{0}$. Рассмотрим выколотую окрестность $\mathring{U}(1)$. $f(x) = \frac{x + 2}{x + 3} \implies \lim{x}{\to 1} f(x) = \frac{3}{4}$, $x = 1$ - Устранимая точка разрыва  
+- $f(x) = \frac{1}{1 + 2^{\frac{1}{x}}}$. $f$ - не определена в $x = 0$.  
+	- $\lim{x}{0 + 0} f(x) = 0$  
+	- $\lim{x}{0 - 0} f(x) = 1$  
+	- $\lim{x}{\infty} f(x) = \frac{1}{2}$  
+	Имеем точку разрыва 1 ого рода  
+- $f(x) = \frac{1}{x}$. В $x = 0$, $f$ - не определена. $0$ - точка разрыва 2ого рода.  
+- $f(x) = \sin(\frac{1}{x})$. В $x = 0$ ,$f$ - не определена. Но определена в $\mathring{U}(0)$.  
+$\lim{x}{0} f(x)=$ ?  
+- Докажем, что предела в $x = 0$ не существует.  
+	- Действительно :   
+	- $x_{n} = \frac{1}{\pi n};\{x_{n}\} \xrightarrow[n \to \infty]{} 0; \lim{n}{\infty} f(x_{n}) = \lim{n}{\infty} \sin{(\pi n)} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
+	- $x_{n} = \frac{2}{\pi(4n + 1)}; \{x_{n}\} \xrightarrow[n \to \infty]{} 0; f(x_{n}) = \sin{(\frac{\pi}{2} (4n + 1))} = \sin{(\frac{\pi}{2})} \equiv 1 \implies \lim{n}{\infty} f(x_{n}) = 1$  
+	- Получим, $f(x)$ - не существует в $x = 0$  
 
-### Замечательные пределы
-1. $\lim{x}{0} \frac{\sin{(x)}}{x} = 1$ (первый замечательный предел)
-2. $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = e$ (второй замечательный предел)
-3. $\lim{x}{\infty} (1 + \frac{1}{x})^{x} = e$ ($x$ - произвольное)
-4. $\lim{t}{0} (1 + t)^{\frac{1}{t}} = e$ $(x = \frac{1}{t})$
-5. $\lim{t}{0} \ln{(1 + t)}^{\frac{1}{t}} = \ln{(e)} = 1 \implies \lim{t}{0} \frac{ln{(1 + t)}}{t} = 1$
+### Замечательные пределы  
+1. $\lim{x}{0} \frac{\sin{(x)}}{x} = 1$ (первый замечательный предел)  
+2. $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = e$ (второй замечательный предел)  
+3. $\lim{x}{\infty} (1 + \frac{1}{x})^{x} = e$ ($x$ - произвольное)  
+4. $\lim{t}{0} (1 + t)^{\frac{1}{t}} = e$ $(x = \frac{1}{t})$  
+5. $\lim{t}{0} \ln{(1 + t)}^{\frac{1}{t}} = \ln{(e)} = 1 \implies \lim{t}{0} \frac{ln{(1 + t)}}{t} = 1$  
+6. $\lim{x}{0}  \frac{1 - \cos{x} }{x^{2} } = \ \lim{x}{0}\ \frac{2\sin^{2}{(\frac{x}{2})}}{x^{2} } = \ \lim{x}{0} \frac{\frac{1}{2}\sin{(\frac{x}{2}) \sin{(\frac{x}{2}) } }}{\frac{1}{2}\frac{x^{2}}{2} } = \  \lim{x}{0}\ \frac{1}{2} \underbrace{\frac{\sin{(\frac{x}{2}) \sin{(\frac{x}{2}) } }}{\frac{x}{2} \frac{x}{2}}}_{1} = \frac{1}{2}$  
+7. $\lim{x}{0} \frac{\sqrt[n]{1 \ + \ x} \ - \ 1}{x} = \ \lim{x}{0} \frac{(\sqrt[n]{1 \ + \ x} \ -\  1)((\sqrt[\leftroot{-15} \uproot{7} n - 1]{1 \ + \ x} \ - \  1)^{(n - 1)}) \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ +\  x} \ -\  1)^{(n - 2)} \ + \ \dots \ + \ (\sqrt[n]{1 \ + \ x} \ - \  1)}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \ \lim{x}{0} \frac{1 \ + \ x \ - \  1}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \lim{x}{0} \frac{1}{1 \ + 1 \ + \ \dots + \ 1} = \ \frac{1}{n}$  
 
-- Докажем $(1)$
--  Рассмотрим $\lim{x}{ 0 + 0} \frac{\sin{(x)}}{x} \stackrel{\text{?}}{=} 1$
+- Докажем $(1)$  
+-  Рассмотрим $\lim{x}{ 0 + 0} \frac{\sin{(x)}}{x} \stackrel{\text{?}}{=} 1$  
 	![image1](matan_pictures/matan1.jpg)  
-	- $\sin{(\alpha)} = y(A)$
-	- $\cos{(\alpha)} = y(A)$
-	- $S_{OAA'} < S_{OAB'} < S_{OBB'}$
-	- $\frac{1}{2}\cos{(x)}\sin{(x)} < \frac{1}{2} \cdot 1 \cdot x < \frac{1}{2} \cdot 1 \cdot \tan{(x)}$
-	- $\cos{(x)}\sin{(x)} <  x < \tan{(x)}$
-	- $\cos{(x)} <  \frac{x}{\sin{(x)}} < \frac{1}{\cos{(x)}}$
-	- $\cos{(0)} \xrightarrow[n \to 0]{} 1 \implies \lim{x}{0 + 0} \frac{\sin{x}}{x} = 1$
--  Рассмотрим $\lim{x}{ 0 - 0} \frac{\sin{(x)}}{x}$
-	- Так как $f(-x) = f(x) \implies \lim{x}{0 + 0} \frac{\sin{(x)}}{x} = \lim{x}{0 - 0} \frac{\sin(x)}{x} = \lim{x}{0} \frac{sin(x)}{x} = 1$
+	- $\sin{(\alpha)} = y(A)$  
+	- $\cos{(\alpha)} = y(A)$  
+	- $S_{OAA'} < S_{OAB'} < S_{OBB'}$  
+	- $\frac{1}{2}\cos{(x)}\sin{(x)} < \frac{1}{2} \cdot 1 \cdot x < \frac{1}{2} \cdot 1 \cdot \tan{(x)}$  
+	- $\cos{(x)}\sin{(x)} <  x < \tan{(x)}$  
+	- $\cos{(x)} <  \frac{x}{\sin{(x)}} < \frac{1}{\cos{(x)}}$  
+	- $\cos{(0)} \xrightarrow[n \to 0]{} 1 \implies \lim{x}{0 + 0} \frac{\sin{x}}{x} = 1$  
+-  Рассмотрим $\lim{x}{ 0 - 0} \frac{\sin{(x)}}{x}$  
+	- Так как $f(-x) = f(x) \implies \lim{x}{0 + 0} \frac{\sin{(x)}}{x} = \lim{x}{0 - 0} \frac{\sin(x)}{x} = \lim{x}{0} \frac{sin(x)}{x} = 1$  
+- Докажем $(2)$  
+- $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = 1^{\infty}$  
+- Докажем, что $\exists \lim{n}{\infty} f(x_{n})$. Воспользуемся Теоремой о возрастающей, ограниченной последовательности:  
+	- Ограниченность : $2 < (1 + \frac{1}{n})^{n} = 1 + n \cdot \frac{1}{n} + \frac{n(n- 1)}{2!} \cdot \frac{1}{n^{2}} + \dots = 2 + \frac{1}{2!}(1 - \frac{1}{n}) + \frac{1}{3!}(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots \leq 2 + \frac{1}{2!} + \frac{1}{3!} + \dots < 2 + \frac{1}{2} + \frac{1}{2^{2}} + \dots < 2 + \frac{0.5}{1 - 0.5} = 3$  
+	- Возрастание: $x_{n + 1} = (1 + \frac{1}{n + 1})^{n + 1} = 1 + (n + 1) \cdot \frac{1}{n + 1} + \frac{n(n - 1)}{2!} - \frac{1}{(n + 1)^{2}} + \dots \implies x_{n + 1} > x_{n}$, так как каждое слагаемое уменьшается и число слагаемых $n + 1$  
 
-- Докажем $(2)$
-- $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = 1^{\infty}$
-- Докажем, что $\exists \lim{n}{\infty} f(x_{n})$. Воспользуемся Теоремой о возрастающей, ограниченной последовательности:
-	- Ограниченность : $2 < (1 + \frac{1}{n})^{n} = 1 + n \cdot \frac{1}{n} + \frac{n(n- 1)}{2!} \cdot \frac{1}{n^{2}} + \dots = 2 + \frac{1}{2!}(1 - \frac{1}{n}) + \frac{1}{3!}(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots \leq 2 + \frac{1}{2!} + \frac{1}{3!} + \dots < 2 + \frac{1}{2} + \frac{1}{2^{2}} + \dots < 2 + \frac{0.5}{1 - 0.5} = 3$
-	- Возрастание: $x_{n + 1} = (1 + \frac{1}{n + 1})^{n + 1} = 1 + (n + 1) \cdot \frac{1}{n + 1} + \frac{n(n - 1)}{2!} - \frac{1}{(n + 1)^{2}} + \dots \implies x_{n + 1} > x_{n}$, так как каждое слагаемое уменьшается и число слагаемых $n + 1$.
-- $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = 2.718 \dots = e \sim 2.7$
+***Определение эквивалентности функций в точке***  
 
-***Определение***
+- $\lim{x}{x_{0}} \frac{f(x)}{g(x)} = 1 \Longleftrightarrow f(x) \sim  g(x)$ ($f$ эквивалентна $g$ в $x_{0}$)  
 
-- $\lim{x}{x_{0}} \frac{f(x)}{g(x)} = 1 \Longleftrightarrow f(x) \sim  g(x)$ ($f$ эквивалентна $g$ в $x_{0}$)
+### Эквивалентные бесконечно малые величины  
+1. $\lim{x}{0} \frac{\sin(x)}{x} = 1 \Longleftrightarrow \sin{(x)} \sim x$  
+2. $\lim{x}{0} \frac{\ln{(1 + x)}}{x} = 1 \Longleftrightarrow \ln{(1 + x)} \sim x$  
+3. $\lim{x}{0} \frac{e^{x} - 1}{x} = 1 \Longleftrightarrow e^{x} \sim x$  
+4. $\lim{x}{0} \frac{\sqrt[n]{(1 + x)} - 1}{x} = \frac{1}{n} \Longleftrightarrow \sqrt[n]{(1 + x)} \sim \frac{x}{n}$  
 
-### Эквивалентные функции в точке
-1. $\lim{x}{x_{0}} \frac{\sin(x)}{x} = 1 \Longleftrightarrow \sin{(x)} \sim x$
-2. $\lim{x}{x_{0}} \frac{\ln{(1 + x)}}{x} = 1 \Longleftrightarrow \ln{(1 + x)} \sim x$
-3. $\lim{x}{0} \frac{e^{x} - 1}{x} = 1 \Longleftrightarrow e^{x} \sim x$
-4. $\lim{x}{0} \frac{\sqrt[n]{(1 + x)} - 1}{x} = \frac{1}{n} \Longleftrightarrow \sqrt[n]{(1 + x)} \sim \frac{x}{n}$
+## Лекция 13.10.2022  
+### Система стягивающихся отрезков  
+- Пусть имеем бесконечный набор точек, начал $(a_{1}, a_{2}, \dots, a_{n}, \dots)$ и концов $(b_{1}, b_{2}, \dots, b_{n}, \dots)$ системы вложенных друг в друга отрезков. $a_{1} < a_{2} <  \dots < a_{n} < b_{n} < b_{n - 1} <  \dots < b_{1}$. Причем $\lim{n}{\infty} (b_{n} - a_{n}) = 0$.  
 
+***Утверждение***  
+- Система стягивающихся отрезков имеет общую точку и притом только одну.  
 
+***Доказательство***  
+- Единственность:  
+	- Предположим, что существуют две общие точки $c < d$. Тогда $\forall \ (b_{n} - a_{n}) > d - c$, так как $\lim{n}{\infty} (b_{n} - a_{n}) = 0 \implies d = c$  
+- Существование:  
+	- Множество левых концов ограничено сверху $b_{n}$ и монотонно возрастает $\implies \exists \ \sup{(a_{n})}$. Аналогично $\exists \ inf(b_{n}) \implies \lim{n}{\infty} a_{n} = \lim{n}{\infty} b_{n} = c$  
+
+### Верхний и нижний пределы последовательности  
+- $\overline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \max(\lim{n}{\infty} \{a_{n}\})$  
+- $\underline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \min(\lim{n}{\infty} \{a_{n}\})$  
+
+***Пример***  
+
+- $a_{n} = 1 + \cos{(\frac{\pi n}{3})}$  
+	- $\{a_{3k}\} = 1 + (-1)^{k} \rightarrow (2 , 0)$   
+	- $\{a_{3k + 1}\} \rightarrow (\frac{1}{2} , \frac{7}{6})$   
+	- $\{a_{3k + 2}\} \rightarrow (\frac{1}{2} , \frac{3}{2})$   
+	- $\implies \overline{\lim{n}{\infty}} a_{n} = 2, \ \underline{\lim{n}{\infty}} a_{n} = 0$  
+
+### Раскрытие неопределенностей  
+- $\lim{x}{x_{0}} (u(x)^{v(x)}); \lim{x}{x_{0}} u(x) = 1; \lim{x}{x_{0}} v(x) = \infty \implies \lim{x}{x_{0}} (u(x)^{v(x)}) = \lim{x}{x_{0}} ((u(x) - 1 + 1)^{v(x)}) = \lim{x}{x_{0}} [\underbrace{(1 + \underbrace{(u - 1)}_{0})^{\frac{1}{u - 1}}))}_{e}]^{(u - 1)v} = e^{(u - 1)v}$  
+
+### Определение четности и нечетности функции  
+
+- $f$ определена на симметричном относительно начала координат промежутке $x \in (-a; a)$  
+
+- Четная:  
+	- $f(-x) = f(x)$ (график симметричен относительно $Oy$)  
+- Нечетная:  
+	- $f(-x) = - f(x)$  
+### Обзор основных элементарных функций  
+- $f(x) = x^{n}$ (степенная функция). Пусть $n \in \NN$, тогда $f$ определена на всей числовой оси, монотонно возрастает при $x \geq 0$. При $n$ - нечетном монотонна на всей числовой оси, непрерывна в любой точке. $f(-x) = f(x)$ при $n$ - четном, $f(-x) = - f(x)$ при $n$ - нечетном.  
+	- $f(x) = x$ (прямая линия). $f(-x) = - f(x)$  
+	- $f(x) = x^{2}$ (квадратичная функция, график: парабола). $f(-x) = f(x)$  
+	- $f(x) = x^{3}$ (кубическая функция, график: кубическая парабола). $f(-x) = f(x)$  
+	- $n \in \ZZ, \ n < 0 \implies f(x) = x^{(-n)} = \frac{1}{x^{n}}$   
+	- $n \in \QQ \implies f(x) = x^{(\frac{m}{n})}, \ m,n \in \NN. \ f(x) = \sqrt[n]{x^{m}}$   
+- $f(x) = a^{x}, \ x \in (- \infty, \infty)$  
+	- $a > 1 \implies f \uparrow$  
+	- $a < 1 \implies f \downarrow$  
+
+### Понятие обратной функции  
+- Пусть $ \exists f: y = f(x), \ y \in [c; d] \ , x \in (a;b)$. Если каждому $x \in (a;b)$ соответствует $y \in [c; d]$, причем каждому $y \in [c; d]$ отвечает $x \in (a;b) \ : y = f(x)$. Тогда $x = f^{-1}(y)$, $y \in [c:d]$. $f^{-1}$ называется обратной функцией для $f$.  
+
+***Свойства обратной функции***  
+- $f(f^{-1}(y)) = y$  
+- $f^{-1}(f(x)) = x$  
+- График обратной функции симметричен к исходной относительно биссектрисы первой и третьей четверти координатных плоскостей  
+- $y = a^{x}$, $x = \log_{a}(y)$ (логарифмическая функция, обратная к показательной)  
+- $y = x^{n}$, $x = \sqrt[n]{y}$  (обратная к степенной)  
+- Обратная функция существует только на промежутке монотонности  
 
 ## Семинар 13.09.2022  
 ***Разбор домашней работы***  
@@ -647,7 +703,7 @@ $\lim{x}{0} f(x)=$ ?
 
 ### Задание 1  
 - Сформулировать определение последовательности, неограниченной сверху  
-	- Для любого $M$ найдется такой номер $N > n$, что $x_{n} > M$  
+	- $\forall  \ M  \ ,\exists \ N \in \NN \ ,  \forall n > N : x_{n} > M$  
 ### Задание 2  
 - Верно ли: $(x_{n} + y_{n}) \rightarrow A \implies x_{n} \rightarrow B, y_{n} \rightarrow C$  
 	- Нет, например, при : $x_{n} = n, y_{n} = -n$  
@@ -655,3 +711,82 @@ $\lim{x}{0} f(x)=$ ?
 ### Задание 3  
 - Верно ли: $\{ kx_{n}\} \rightarrow A \implies \{x_{n}\} \rightarrow B$  
 	- Верно, домножение последовательности на константу не влияет на сходимость. (см. лекция 2)  
+
+## Семинар 27.09.2022  
+
+### 80  
+- Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей:  
+	- $x_{n} =(1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})$  
+	1. Покажем, что $x_{n}$ - возрастает:  
+	- $x_{n + 1} > x_{n}$  
+	- $(1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})(1 + \frac{1}{2^{n + 1}}) < (1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})$  
+	- $1 + \frac{1}{2^{n + 1}} > 1$  
+	- $\frac{1}{2^{n + 1}} > 0 \implies $ $x_{n} \uparrow$  
+	2. Ограничение снизу:   
+	- Оценим: $(\underbrace{((1 + \frac{1}{2^{n}})^{2^{n}})}_{e})^{\frac{1}{2^{n}}} = e^{\frac{1}{2^{n}}} < e^{(\frac{1}{2} + \frac{1}{4} + \dots+ \frac{1}{2^{n}})} = e^{\frac{\frac{1}{2}}{1 - \frac{1}{2}}} = e$  
+
+### 85   
+- Пользуясь критерием Коши, доказать сходимость следующих последовательностей:  
+	- $x_{n} = 1 + \frac{1}{2^{2}} + \frac{1}{3^{2}} + \dots + \frac{1}{n^{2}}$  
+		- Критерий Коши: $x_{n} $ - фундаментальная $\Longleftrightarrow$ $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon} \ , \forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$  
+	- Запишем последнюю часть определения и подставим туда частичную сумму:  
+	- $|\frac{1}{(n + 1)^{2}} + \frac{1}{(n + 2)^{2}} + \dots + \frac{1}{(n + p)^{2}}| < |\frac{1}{n} - \frac{1}{n + 1} + \dots - \frac{1}{n + p - 1} + \frac{1}{n + p - 1} - \frac{1}{n + p}| = \frac{1}{n} - \frac{1}{n + p} < \eps$  
+	- $\frac{1}{n} - \frac{1}{n + p} < \frac{1}{n} < \eps$  
+	- $\frac{1}{n} < \eps$  
+	- $n > \frac{1}{\eps}$  
+	- $N_{\eps} = \lceil{\frac{1}{\eps}} \rceil$  
+	- $\forall n > N_{\epsilon} \ , \forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon$  
+
+## Семинар 04.10.2022  
+### 404  
+- Сформулировать с помощью неравенств следующие утверждения и привести соответствующие примеры:  
+	- $\lim{x}{-\infty} f(x) = b \Longleftrightarrow \forall \eps > 0 \ ,\exists E > 0, \ \forall x \in X : x < - E \implies |f(x) - b| < \eps$  
+
+### 405  
+- $\lim{x}{a - 0} f(x) = \infty \Longleftrightarrow \forall E > 0 \ ,\exists \delta > 0, \ \forall x \in X :  a - \delta < x < a \implies |f(x)| > E$  
+
+### 407  
+- $\lim{x}{a} f(x) = b - 0 \Longleftrightarrow \forall \eps > 0 \ ,\exists \delta > 0, \ \forall x \in X :  |a  - x| < \delta \implies b - \eps < f(x) < \eps$  
+
+## Семинар 11.10.2022  
+
+### 471   
+- $\lim{x}{0} \frac{\sin{(5x)}x}{x} = \lim{x}{0} \frac{5\sin{(5x)}x}{5x} = 5$  
+
+### 474  
+- $\lim{x}{0} \frac{1 - \cos{x}}{x^{2}} = \lim{x}{0} \frac{2\sin^{2}{\frac{x}{2}}}{x^{2}} = \frac{1}{2}$  
+
+### 479   
+- $\lim{x}{\frac{\pi}{4}} \tan{(2x)} \tan{(\frac{\pi}{4} - x)} = \lim{x}{\frac{\pi}{4}} (\frac{2\tan{x}}{1 - \tan^{2}{x}})(\frac{\tan{\frac{\pi}{4} - \tan{x}}}{1 - \tan{\frac{\pi}{4}}\tan{x}})= \lim{x}{\frac{\pi}{4}} \frac{2\tan{(x)}}{(1 - \tan{x})^{2}} = \frac{1}{2}$  
+
+### 482   
+- $\lim{x}{a} \frac{\sin{x} - \sin{a}}{x - a} = \frac{2\sin{(\frac{x - a}{2})}\cos{(\frac{x + a}{2})}}{x - a} = \cos{a}$  
+
+### 506  
+- $\lim{x}{0} (\frac{1 + x}{2 + x}) ^ {\frac{1 - \sqrt{x}}{1 - x}} = \frac{1}{2}$  
+- $\lim{x}{1} (\frac{1 + x}{2 + x}) ^ {\frac{1 - \sqrt{x}}{1 - x}} = \lim{x}{1} (\frac{1 + x}{2 + x}) ^ {\frac{(1 - x)(1 + x)}{1 - x}} = \frac{1}{4}$  
+### 514  
+- $\lim{x}{0} \sqrt[x]{1 - 2x} = \lim{x}{0} ((1 + (- 2x))^{\frac{1}{-2x}})^{-2} = e^{-2}$  
+### 517  
+- $\lim{x}{0} (1 + x^{2})^{ctg{(2x)}} =  \ \lim{x}{0} ((1 + x^{2})^{\frac{1}{x^{2}}})^{ctg{(2x)}x^{2}} = \ \lim{x}{0} ((1 + x^{2})^{\frac{1}{x^{2}}})^{ctg{(2x)}x^{2}} = \ \lim{x}{0} e^{ctg{(2x)}x^{2}} = e^{0} = 1$  
+
+### 521   
+- $\lim{x}{0} \frac{\cos{x}}{\cos{2x}}^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{\cos{x}}{\cos{2x}} - 1)^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{\cos{x} - \cos{2x}}{\cos{2x}})^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{\cos{2x}})^{\frac{1}{x^{2}}} = \ \lim{x}{0} ((1 + \frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{\cos{2x}})^{\frac{\cos{2x}}{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}})^{\frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{x^{2}\cos{2x}}} = \ e^{\frac{3}{2}}$  
+
+### 531   
+- $\lim{x}{a} \frac{\ln{x} - \ln{a}}{x - a} = \lim{x}{a} \frac{\frac{x}{a} - 1 + 1}{x - a}  = \lim{x}{a} \frac{1 + \frac{x}{a} - 1}{x - a} = \frac{\frac{x}{a}}{x - a} = \frac{1}{a}$  
+
+### 541  
+- $\lim{x}{0} \frac{a^{x} - 1}{x} = \lim{x}{0} \frac{e^{\ln{x}} - 1}{x} =  \lim{x}{0} \frac{(e^{\ln{x}} - 1)\ln{a}}{x \ln{a}} = \ln{a} $  
+
+### 595  
+- $\lim{x}{1 - 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 - 0]{} + \infty \implies arctg{(+ \infty)} = \frac{\pi}{2}$  
+
+- $\lim{x}{1 + 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 + 0]{} + \frac{1}{-0} \implies arctg{(- \infty)} = - \frac{\pi}{2}$  
+
+### 596  
+- $\lim{x}{- 0} \frac{1}{1 + \underbrace{e^{\frac{1}{x}} }_{e^{\frac{1}{-0}} = -\infty} }  = 1 $  
+- $\lim{x}{+ 0} \frac{1}{1 + \underbrace{e^{\frac{1}{x}}}_{\infty}}  = 0$  
+
+### 597   
+- $\lim{x}{- \infty} \frac{\ln{(1 + \underbrace{e^{x} }_{0}) }}{x} = \frac{e^{x}}{x} = 0$  

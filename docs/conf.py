@@ -16,10 +16,13 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath("."))
+sys.path.insert(0, os.path.abspath("./.."))
 
-from preprocessing import run_all  # noqa
+# -- Preprocess files --------------------------------------------------------
 
-run_all(["IVT", "IVT_evening"])
+from docs.preprocessing import preprocess_locally  # noqa
+
+preprocess_locally()
 
 # -- Project information -----------------------------------------------------
 

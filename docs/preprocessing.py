@@ -2,8 +2,12 @@ from itertools import chain
 from pathlib import Path
 
 
-def get_mds(md_roots):
-    roots = (Path.cwd() / root for root in md_roots)
+# if you need to change them, import it and do whatever you like with it
+MD_ROOTS = ["IVT", "IVT_evening"]
+
+
+def get_mds():
+    roots = (Path(__file__).parent / root for root in MD_ROOTS)
     return chain(*(root.glob("**/*.md") for root in roots))
 
 
@@ -38,12 +42,12 @@ def get_preamble():
     return "\n" + "\n".join(lines) + "\n"
 
 
-def fix_preambles(md_roots):
+def fix_preambles():
     prompt = "fixing preambles..."
     size = print_over(0, prompt)
 
     preamble = get_preamble()
-    for file in get_mds(md_roots):
+    for file in get_mds():
         text = file.read_text("utf-8")
 
         s, e = get_macros_pos(text)
@@ -65,14 +69,14 @@ def fix_preambles(md_roots):
     print()
 
 
-def fix_line_endings(md_roots):
+def fix_line_endings():
     IGNORE_START = "<!-- start-ignore: fix_line_endings -->"
     IGNORE_END = "<!-- end-ignore: fix_line_endings -->"
 
     prompt = "fixing line endings..."
     size = print_over(0, prompt)
 
-    for file in get_mds(md_roots):
+    for file in get_mds():
         size = print_over(size, prompt, file)
         text = file.read_text("utf-8")
 
@@ -107,11 +111,11 @@ USUAL_MAP = {
 }
 
 
-def fix_usual_repr(md_roots):
+def fix_usual_repr():
     prompt = "fixing usual representations..."
     size = print_over(0, prompt)
 
-    for file in get_mds(md_roots):
+    for file in get_mds():
         size = print_over(size, prompt, file)
         text = file.read_text("utf-8")
 
@@ -121,6 +125,35 @@ def fix_usual_repr(md_roots):
             text = text.replace(pattern, repl)
 
         file.write_text(text, "utf-8")
+
+    print_over(size, prompt, "done")
+    print()
+
+
+def remove_private_parts():
+    REMOVE_START = "<!-- start-private -->"
+    REMOVE_END = "<!-- end-private -->"
+
+    prompt = "removing private parts..."
+    size = print_over(0, prompt)
+
+    for file in get_mds():
+        size = print_over(size, prompt, file)
+        text = file.read_text("utf-8")
+
+        result = ""
+        removes = False
+        for line in text.split("\n"):
+            if line == REMOVE_START:
+                removes = True
+            elif line == REMOVE_END:
+                removes = False
+
+            if not removes:
+                result += line + "\n"
+        result = result[:-1]
+
+        file.write_text(result, "utf-8")
 
     print_over(size, prompt, "done")
     print()
@@ -211,17 +244,33 @@ https://github.com/afragen/embed-pdf-viewer
 def generate_literature():
     gen_path = Path("literature")
 
-    for file in Path.cwd().glob("./_static/literature/*.pdf"):
+    for file in Path(__file__).parent.glob("./_static/literature/*.pdf"):
         gen_file = gen_path / file.with_suffix(".md").name
         gen_file.write_text(LITERATURE.format(name=file.stem), "utf-8")
 
 
-def run_all(md_roots):
-    fix_line_endings(md_roots)
-    fix_preambles(md_roots)
-    fix_usual_repr(md_roots)
+def fix_mermaid_code():
+    """
+    Files need to be kept in that way so Obsidian will also render them properly
+    """
+
+    for file in Path(__file__).parent.glob("**/*.md"):
+        text = file.read_text("utf-8")
+        file.write_text(text.replace("```mermaid", "```{mermaid}"), "utf-8")
+
+
+def preprocess_locally():
+    # fix_line_endings()
+    fix_preambles()
+    fix_usual_repr()
     # generate_literature()
 
 
+def preprocess_for_server():
+    remove_private_parts()
+    fix_line_endings()
+    fix_mermaid_code()
+
+
 if __name__ == "__main__":
-    run_all(["IVT", "IVT_evening"])
+    preprocess_locally()
