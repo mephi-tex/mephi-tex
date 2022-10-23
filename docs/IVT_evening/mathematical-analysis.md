@@ -934,8 +934,8 @@ $\lim{x}{0} f(x)=$ ?
 		- $|x + x^{2}\sin{x}| \leq |x| + |x^{2}||\sin{x}| \leq |x| + |x^{2}| < 2|x^{2}|$ 
 	- $\dfrac{\arctan{x}}{1 + x^{2}} = O(\dfrac{1}{x})$
 		- $\left |\dfrac{\arctan{x}}{1 + x^{2}} \right| \leq \left |\dfrac{\dfrac{\pi}{2}}{1 + x^{2}} \right| \leq \left| \dfrac{\pi}{2 + 2x^{2}} \right|$
-	- $\lim{x}{0} \sqrt{x + \sqrt{x + \sqrt{x}}} \sim \sqrt{x}$
-		- $\lim{x}{0} \left[ \dfrac{\sqrt{x + \sqrt{x + \sqrt{x}}}}{\sqrt{x}} = \dfrac{\sqrt{x + \sqrt{x^{2}(\dfrac{1}{x} + \dfrac{\sqrt{x}}{x^{2}})}}}{\sqrt{x}} = \sqrt{1 + \sqrt{(\dfrac{1}{x} + \dfrac{\sqrt{x}}{x^{2}})}} \right] = 1 $
+	- $\lim{x}{+\infty} \sqrt{x + \sqrt{x + \sqrt{x}}} \sim \sqrt{x}$
+		- $\lim{x}{+\infty} \left[ \dfrac{\sqrt{x + \sqrt{x + \sqrt{x}}}}{\sqrt{x}} = \dfrac{\sqrt{x + \sqrt{x^{2}(\dfrac{1}{x} + \dfrac{\sqrt{x}}{x^{2}})}}}{\sqrt{x}} = \sqrt{1 + \sqrt{(\dfrac{1}{x} + \dfrac{\sqrt{x}}{x^{2}})}} \right] = 1 $
 
 ### 653 
 - Пусть $x \rightarrow 0$. Выделить главный член и определить порядок малости относительно $x$.
