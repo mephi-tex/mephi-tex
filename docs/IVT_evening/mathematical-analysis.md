@@ -641,7 +641,7 @@ $\lim{x}{0} f(x)=$ ?
 	- $\alpha \cdot \gamma = o(\beta)$
 	- $ f \sim C \cdot (x - x_{0})^{m},  x \rightarrow x_{0} \implies (x - x_{0})^{m}$ - главный член $f$, причем $m$ - порядок малости.
 
-*** Пример*** 
+***Пример*** 
 
 - $f(x) = x^{3} - 3x + 2$
 	- $\lim{x}{1} f = 0 \implies f$ - б. м. в $x_{0} = 1$
