@@ -53,7 +53,7 @@ $\newcommand{\lcm}{\text{НОК}}$
 ```{contents} Математический анализ  
 ---  
 depth: 3  
-```  
+```
 # Математический анализ  
 Преподаватель - Михайлов Владислав Дмитриевич  
 
@@ -73,6 +73,7 @@ depth: 3
 - $\RR$ - Множество вещественных чисел  
 
 ***Упражнение***  
+
 - Доказать, что $(\dfrac{m}{n})^2 \neq 2$, где $\dfrac{m}{n}$ - несократимая дробь.  
 	- Доказательство : Предположим, что $(\dfrac{m}{n})^2 = 2$, тогда :  
 	$m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а следовательно $m$ - четное. $m = 2k$, $4k^2 = 2n^2$, $2k^2 = n^2$ - следовательно: $n^2$ - четное. Получим противоречие, т.к. $\dfrac{2n^2}{2k^2}$ - сократимая дробь.  
@@ -185,11 +186,11 @@ depth: 3
 
 ***Примеры***  
 
-1. $\{1, \frac{1}{2}, \frac{1}{3}, \dots, \frac{1}{n}, \dots\}$  
+1. $\{1, \dfrac{1}{2}, \dfrac{1}{3}, \dots, \dfrac{1}{n}, \dots\}$  
 
 2. $\{-1, 1, -1, \dots, (-1)^n, \dots \}$  
 
-3. $x_{n} = \frac{1 + (-1)^n}{2}$ - Формула общего члена  
+3. $x_{n} = \dfrac{1 + (-1)^n}{2}$ - Формула общего члена  
 
 4. Натуральный ряд - $\{1, 2, 3, 4, \dots\}$  
 
@@ -225,8 +226,8 @@ depth: 3
 
 ***Теорема***  
 
-- Если $\{x_{n}\}$ - б. б. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена бесконечно малая последовательность: $\{ \frac{1}{x_{n}} \}$.  
-	- Доказательство : Действительно, т.к. $\{x_{n}\}$ - б. б. , то, начиная с $n > N_{0}: |x_{n}| > A$, где $A$ - любое число. Тогда для этих номеров: $\frac{1}{x_{n}} < \frac{1}{A}$. Если взять произвольное $\epsilon > 0$ и $A = \frac{1}{\epsilon}$, то $|\frac{1}{x_{n}}| , \epsilon$, а это и есть определение бесконечно малой последовательности. Справедливо и обратное: Если $\{ \frac{1}{x_{n}} \}$ - б. м. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена $\{x_{n}\}$ - б. б.  
+- Если $\{x_{n}\}$ - б. б. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена бесконечно малая последовательность: $\{ \dfrac{1}{x_{n}} \}$.  
+	- Доказательство : Действительно, т.к. $\{x_{n}\}$ - б. б. , то, начиная с $n > N_{0}: |x_{n}| > A$, где $A$ - любое число. Тогда для этих номеров: $\dfrac{1}{x_{n}} < \dfrac{1}{A}$. Если взять произвольное $\epsilon > 0$ и $A = \dfrac{1}{\epsilon}$, то $|\dfrac{1}{x_{n}}| , \epsilon$, а это и есть определение бесконечно малой последовательности. Справедливо и обратное: Если $\{ \dfrac{1}{x_{n}} \}$ - б. м. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена $\{x_{n}\}$ - б. б.  
 
 ### Монотонные последовательности  
 ***Определение***  
@@ -243,16 +244,16 @@ depth: 3
 
 ***Примеры***  
 
-1. $x_{n} = \frac{1}{n}, \lim{n}{\infty} \frac{1}{n}  = 0$  
-2. $x_{n} = \frac{n - 1}{n}, \lim{n}{\infty} \frac{n - 1}{n}= 1$  
+1. $x_{n} = \dfrac{1}{n}, \lim{n}{\infty} \dfrac{1}{n}  = 0$  
+2. $x_{n} = \dfrac{n - 1}{n}, \lim{n}{\infty} \dfrac{n - 1}{n}= 1$  
 
 
 ***Определение предела числовой последовательности***  
 - Число $A$ называется пределом $\{x_{n}\}$ $\Leftrightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon}  \Rightarrow |x_{n} - A| < \epsilon)$  
 
 ***Упражнение***  
-- С помощью определения докажем (1) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $ \lim{n}{\infty} \frac{1}{n} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\frac{1}{n}| < \epsilon \Rightarrow \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon}$  
-- С помощью определения докажем (2) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $ \lim{n}{\infty} \frac{1}{n} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\frac{n - 1}{n} - 1| < \epsilon \Rightarrow \frac{1}{n} < \epsilon \Rightarrow n > \frac{1}{\epsilon}$  
+- С помощью определения докажем (1) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $ \lim{n}{\infty} \dfrac{1}{n} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\dfrac{1}{n}| < \epsilon \Rightarrow \dfrac{1}{n} < \epsilon \Rightarrow n > \dfrac{1}{\epsilon}$  
+- С помощью определения докажем (2) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $ \lim{n}{\infty} \dfrac{1}{n} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\dfrac{n - 1}{n} - 1| < \epsilon \Rightarrow \dfrac{1}{n} < \epsilon \Rightarrow n > \dfrac{1}{\epsilon}$  
 
 ### Свойства пределов  
 
@@ -262,17 +263,17 @@ depth: 3
 
 - Всякая сходящаяся последовательность имеет единственный предел.  
 	- Доказательство:  
-		- Пусть $  \lim{n}{\infty} x_{n} = A$. Докажем единственность от противного. Предположим, что $\exists   \lim{n}{\infty} x_{n} = B$ и $A > B$. Т. к. , $  \lim{n}{\infty} x_{n} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\frac{A - B}{2} \Rightarrow$  
+		- Пусть $  \lim{n}{\infty} x_{n} = A$. Докажем единственность от противного. Предположим, что $\exists   \lim{n}{\infty} x_{n} = B$ и $A > B$. Т. к. , $  \lim{n}{\infty} x_{n} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\dfrac{A - B}{2} \Rightarrow$  
 	  
-		1. $ -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} $  
-		2. $-\frac{A - B}{2} + A< x_{n}  < \frac{A - B}{2} + A$  
-		3. $\frac{A + B}{2} < x_{n}  < \frac{3A - B}{2} $.  
+		1. $ -\dfrac{A - B}{2} < x_{n} - A < \dfrac{A - B}{2} $  
+		2. $-\dfrac{A - B}{2} + A< x_{n}  < \dfrac{A - B}{2} + A$  
+		3. $\dfrac{A + B}{2} < x_{n}  < \dfrac{3A - B}{2} $.  
 	  
-	- Т. к. $ \lim{n}{\infty} x_{n} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\frac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \frac{A - B}{2} \Rightarrow$  
-		1. $-\frac{A - B}{2} < x_{n} - B < \frac{A - B}{2}$  
-		2. $-\frac{A - B}{2} + B< x_{n}  < \frac{A - B}{2} + B$  
-		3. $\frac{3B - A}{2} < x_{n}  < \frac{A + B}{2} $.  
-	- Получим $\frac{A + B}{2} > x_{n} > \frac{A + B}{2}$. Противоречие.  
+	- Т. к. $ \lim{n}{\infty} x_{n} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\dfrac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \dfrac{A - B}{2} \Rightarrow$  
+		1. $-\dfrac{A - B}{2} < x_{n} - B < \dfrac{A - B}{2}$  
+		2. $-\dfrac{A - B}{2} + B< x_{n}  < \dfrac{A - B}{2} + B$  
+		3. $\dfrac{3B - A}{2} < x_{n}  < \dfrac{A + B}{2} $.  
+	- Получим $\dfrac{A + B}{2} > x_{n} > \dfrac{A + B}{2}$. Противоречие.  
 
 ***Теорема***  
 
@@ -284,7 +285,7 @@ depth: 3
 - $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.  
 
 	- Доказательство:   
-		- Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \frac{\epsilon}{|k|} \Rightarrow |x_{n}| < \frac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \frac{\epsilon}{|k|} = \epsilon \Rightarrow \lim{n}{\infty} k x_{n} = 0$  
+		- Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \dfrac{\epsilon}{|k|} \Rightarrow |x_{n}| < \dfrac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \dfrac{\epsilon}{|k|} = \epsilon \Rightarrow \lim{n}{\infty} k x_{n} = 0$  
 
 ***Следствие***  
 
@@ -294,9 +295,9 @@ depth: 3
 
 - $(\forall n > N: x_{n} \geq y_{n}) \wedge ( \lim{n}{\infty} x_{n} = A,  \lim{n}{\infty} y_{n} = B) \Rightarrow A > B$  
 	- Доказательство:   
-		- В качестве $\epsilon$ возьмем $\frac{A - B}{2}$. $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \Rightarrow |x_{n} - A| < \frac{A - B}{2} \Rightarrow -\frac{A - B}{2} < x_{n} - A < \frac{A - B}{2} \Rightarrow   -\frac{A - B}{2} + A < x_{n}  < \frac{A - B}{2} + A \Rightarrow  \frac{3A - B}{2} < x_{n}  < \frac{A + B}{2} $  
-		- $\forall n > N_{\epsilon_{2}} : |y_{n} - B| < \frac{B - A}{2} \Rightarrow \frac{B - A}{2} < y_{n} < \frac{3B - A}{2}$  
-		- Получим $x_{n} < \frac{A + B}{2} < y_{n}$. Противоречие.  
+		- В качестве $\epsilon$ возьмем $\dfrac{A - B}{2}$. $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \Rightarrow |x_{n} - A| < \dfrac{A - B}{2} \Rightarrow -\dfrac{A - B}{2} < x_{n} - A < \dfrac{A - B}{2} \Rightarrow   -\dfrac{A - B}{2} + A < x_{n}  < \dfrac{A - B}{2} + A \Rightarrow  \dfrac{3A - B}{2} < x_{n}  < \dfrac{A + B}{2} $  
+		- $\forall n > N_{\epsilon_{2}} : |y_{n} - B| < \dfrac{B - A}{2} \Rightarrow \dfrac{B - A}{2} < y_{n} < \dfrac{3B - A}{2}$  
+		- Получим $x_{n} < \dfrac{A + B}{2} < y_{n}$. Противоречие.  
 - $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim{n}{\infty}{x_{n}} = \lim{n}{\infty}{z_{n}}) \Rightarrow \{y_{n}\}$ - сходится, причем $\lim{n}{\infty}{x_{n}} = \lim{n}{\infty}{y_{n}} = \lim{n}{\infty}{z_{n}}$   
 	- Доказательство :   
 		- Действительно :  
@@ -308,11 +309,11 @@ depth: 3
 
 1. $\lim{n}{\infty} x_{n} = A; \lim{n}{\infty}  y_{n} = B \Rightarrow  \lim{n}{\infty} (x_{n} + y_{n}) = A + B$  
 3. $ \lim{n}{\infty} x_{n}y_{n} = AB$  
-4. $ \lim{n}{\infty} \frac{x_{n}}{y_{n}} = \frac{A}{B}$  
+4. $ \lim{n}{\infty} \dfrac{x_{n}}{y_{n}} = \dfrac{A}{B}$  
 - Докажем $(1)$  
-  1. Т. к. $\lim{n}{\infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \frac{\epsilon}{2})$  
-  2. Т. к. $\lim{n}{\infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \frac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \frac{\epsilon}{2})$  
-  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда: $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \frac{\epsilon}{2} +  \frac{\epsilon}{2} = \epsilon \Rightarrow \lim{n}{\infty} (x_{n} + y_{n}) = A + B$  
+  1. Т. к. $\lim{n}{\infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \dfrac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \dfrac{\epsilon}{2})$  
+  2. Т. к. $\lim{n}{\infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \dfrac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \dfrac{\epsilon}{2})$  
+  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда: $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \dfrac{\epsilon}{2} +  \dfrac{\epsilon}{2} = \epsilon \Rightarrow \lim{n}{\infty} (x_{n} + y_{n}) = A + B$  
 - Докажем $(2)$   
   1. Т. к. $ \lim{n}{\infty} x_{n} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon)$  
   2. Т. к. $ \lim{n}{\infty} x_{n} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon)$  
@@ -332,13 +333,13 @@ depth: 3
 	- Доказательство: Действительно: $ \lim{n}{\infty} x_{n} = a \implies (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon} \implies |x_{n} - a| < \epsilon)$. Т.к при $N_{k} > N_{\epsilon}$ члены подпоследовательности входят в число членов $\{x_{n}\} \implies |x_{n_{k}} - a| < \epsilon $  
 
 ***Пример***  
-1. $x_{n} = \frac{1 + (1)^{n}}{2}$  
+1. $x_{n} = \dfrac{1 + (1)^{n}}{2}$  
 	- $\{x_{2k}\} \rightarrow 1$  
 	- $\{ x_{2k + 1} \} \rightarrow 0$  
-2. $\{x_{n}\} = 1 + \sin{\frac{\pi n}{2}}$  
+2. $\{x_{n}\} = 1 + \sin{\dfrac{\pi n}{2}}$  
 	- $\{x_{2k}\} = (1 + \sin{\pi k}) \rightarrow 1$  
-	- $\{x_{4k + 1}\} = (1 + \sin{\frac{\pi}{2}}) \rightarrow 2$  
-	- $\{x_{4k + 3}\} = (1 + \sin{\frac{3 \pi}{2}}) \rightarrow 0$  
+	- $\{x_{4k + 1}\} = (1 + \sin{\dfrac{\pi}{2}}) \rightarrow 2$  
+	- $\{x_{4k + 3}\} = (1 + \sin{\dfrac{3 \pi}{2}}) \rightarrow 0$  
 3. $x_{n} = n^{(-1)^{n}}$  
 	- $\{x_{2k}\} \rightarrow \infty$  
 	- $\{x_{2k + 1}\} \rightarrow 0$  
@@ -350,8 +351,8 @@ depth: 3
 ### Теорема о сходящейся подпоследовательности  
 - Если $\{x_{n}\}$ имеет предельную точку, то в ней содержится сходящаяся подпоследовательность, которая имеет своим пределом эту точку.  
 	- Доказательство: Действительно:   
-		- Так как в $\{x_{n}\}$ имеется предельная точка $a$, то $\forall \epsilon > 0$ в $\epsilon$ - окрестности точки $a$ содержится бесконечное число членов $\{x_{n}\}$. Возьмем $\epsilon_{1} = 1$ в окрестности точки $a$, возьмем $\overline{X_{1}}$ в этой окрестности. Далее возьмем $\epsilon_{2} = \frac{1}{2}$ и точку $\overline{X_{2}}$ из $\epsilon_{2}$ - окрестности и т. д.  Для $\epsilon_{n} = \frac{1}{n}$ возьмем $\overline{X_{n}}$ из $\epsilon_{n}$ - окрестности. Получим $\{\overline{x_{n}}\}$.  
-		- Докажем, что $ \lim{n}{\infty} \overline{x_{n}} = a$. $\forall \epsilon > 0$ посмотрим номера $\overline{x_{n}}$ , которые вошли в окрестность размера $\frac{1}{n}$, где $\frac{1}{n} < \epsilon$. Т. к. в нее вошла точка $x_{n}$, то в нее войдут и все дальнейшие $\overline{x_{n'}}$. Т. к. они все входят в меньшие окрестности. ч. т. д.  
+		- Так как в $\{x_{n}\}$ имеется предельная точка $a$, то $\forall \epsilon > 0$ в $\epsilon$ - окрестности точки $a$ содержится бесконечное число членов $\{x_{n}\}$. Возьмем $\epsilon_{1} = 1$ в окрестности точки $a$, возьмем $\overline{X_{1}}$ в этой окрестности. Далее возьмем $\epsilon_{2} = \dfrac{1}{2}$ и точку $\overline{X_{2}}$ из $\epsilon_{2}$ - окрестности и т. д.  Для $\epsilon_{n} = \dfrac{1}{n}$ возьмем $\overline{X_{n}}$ из $\epsilon_{n}$ - окрестности. Получим $\{\overline{x_{n}}\}$.  
+		- Докажем, что $ \lim{n}{\infty} \overline{x_{n}} = a$. $\forall \epsilon > 0$ посмотрим номера $\overline{x_{n}}$ , которые вошли в окрестность размера $\dfrac{1}{n}$, где $\dfrac{1}{n} < \epsilon$. Т. к. в нее вошла точка $x_{n}$, то в нее войдут и все дальнейшие $\overline{x_{n'}}$. Т. к. они все входят в меньшие окрестности. ч. т. д.  
 
 ### Теорема Больцано - Вейерштрасса  
 - Во всякой ограниченной последовательности содержится сходящаяся  подпоследовательность.  
@@ -369,17 +370,17 @@ depth: 3
 
 ***Теорема***  
 - Последовательность $\{x_{n}\}$ сходится $\implies$ она фундаментальная.  
-	- Необходимость $(\implies)$: $\{x_{n}\}$ - сходится. Доказать : $\{x_{n}\}$ - фундаментальная. Доказательство: $ \lim{n}{\infty} \{x_{n}\} = a$. Рассмотрим $|x_{n + p} - x_{n}|$. $|x_{n + p} - x_{n}| = |x_{n + p} - x_{n} - a + a| = |x_{n + p} - a - (x_{n} - a)| \leq \underbrace{|x_{n + p} - a|}_{\leq \frac{\epsilon}{2}} + \underbrace{|x_{n} - a|}_{\leq \frac{\epsilon}{2}} < \eps$  
+	- Необходимость $(\implies)$: $\{x_{n}\}$ - сходится. Доказать : $\{x_{n}\}$ - фундаментальная. Доказательство: $ \lim{n}{\infty} \{x_{n}\} = a$. Рассмотрим $|x_{n + p} - x_{n}|$. $|x_{n + p} - x_{n}| = |x_{n + p} - x_{n} - a + a| = |x_{n + p} - a - (x_{n} - a)| \leq \underbrace{|x_{n + p} - a|}_{\leq \dfrac{\epsilon}{2}} + \underbrace{|x_{n} - a|}_{\leq \dfrac{\epsilon}{2}} < \eps$  
 	- Достаточность $(\Longleftarrow)$ : $\{x_{n}\}$ - фундаментальная. Докажем, что $\{x_{n}\}$ - сходится. Доказательство:  
 		- $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$. Перепишем в виде $-\eps < x_{n + p} - x_{n} < \eps$ (начиная с некоторого номера). До этого промежутка лишь конечное число членов $\implies$ $\{x_{n}\}$ - ограничена, тогда по Т. Больцано - Вейерштрасса в $\{x_{n}\}$ существует $\{x_{n_{k}}\}$. $\lim{n}{\infty}{x_{n_{k}}} = a$.  
-		- Докажем, что $\lim{n}{\infty}{x_{n_{k}}} = a$. Рассмотрим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = |x_{n} - x_{n_{k}}| + |x_{n_{k}} - a|$. Возьмем $N_{k}: (|x_{n_{k}} - a| < \frac{\eps}{2}, |x_{n} - x_{n_{k}}| < \frac{\eps}{2})$. Получим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = \underbrace{|x_{n} - x_{n_{k}}|}_{< \frac{\eps}{2}} + \underbrace{|x_{n_{k}} - a|}_{\frac{\eps}{2}} < \eps$  
+		- Докажем, что $\lim{n}{\infty}{x_{n_{k}}} = a$. Рассмотрим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = |x_{n} - x_{n_{k}}| + |x_{n_{k}} - a|$. Возьмем $N_{k}: (|x_{n_{k}} - a| < \dfrac{\eps}{2}, |x_{n} - x_{n_{k}}| < \dfrac{\eps}{2})$. Получим $|x_{n} - a| = |x_{n} - x_{n_{k}} + x_{n_{k}} - a| = \underbrace{|x_{n} - x_{n_{k}}|}_{< \dfrac{\eps}{2}} + \underbrace{|x_{n_{k}} - a|}_{\dfrac{\eps}{2}} < \eps$  
 
 ***Пример***  
-- $\{x_{n}\} = 1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n}$.  
-	- Докажем с помощью критерия Коши, что $x_{n}$ - расходится. Т. е. $(\exists \epsilon_{0} > 0, \forall N_{\epsilon}, \exists n > N_{\epsilon}) \wedge (\exists p \in \NN : |x_{n + p} - x_{n}| < \epsilon_{0})$. Оценим : $|x_{n + p} - x_{n}| = |1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n} + \frac{1}{n + 1} \dots \frac{1}{n + p} - (1 + \frac{1}{2} + \frac{1}{3} + \dots + \frac{1}{n})| = |\frac{1}{n + 1} + \frac{1}{n + 2} + \dots + \frac{1}{n + p}| \geq \frac{p}{n + p}$ Возьмем $p=n \implies \frac{p}{n + p} = \frac{n}{2n} = \frac{1}{2} = \epsilon_{0} \implies \{x_{n}\}$ - расходится. ч. т. д.  
-- $\{x_{n}\} = \frac{\cos{x}}{1^{2}} + \frac{\cos{2x}}{2^{2}} + \dots + \frac{\cos{nx}}{n^{2}}$.  
+- $\{x_{n}\} = 1 + \dfrac{1}{2} + \dfrac{1}{3} + \dots + \dfrac{1}{n}$.  
+	- Докажем с помощью критерия Коши, что $x_{n}$ - расходится. Т. е. $(\exists \epsilon_{0} > 0, \forall N_{\epsilon}, \exists n > N_{\epsilon}) \wedge (\exists p \in \NN : |x_{n + p} - x_{n}| < \epsilon_{0})$. Оценим : $|x_{n + p} - x_{n}| = |1 + \dfrac{1}{2} + \dfrac{1}{3} + \dots + \dfrac{1}{n} + \dfrac{1}{n + 1} \dots \dfrac{1}{n + p} - (1 + \dfrac{1}{2} + \dfrac{1}{3} + \dots + \dfrac{1}{n})| = |\dfrac{1}{n + 1} + \dfrac{1}{n + 2} + \dots + \dfrac{1}{n + p}| \geq \dfrac{p}{n + p}$ Возьмем $p=n \implies \dfrac{p}{n + p} = \dfrac{n}{2n} = \dfrac{1}{2} = \epsilon_{0} \implies \{x_{n}\}$ - расходится. ч. т. д.  
+- $\{x_{n}\} = \dfrac{\cos{x}}{1^{2}} + \dfrac{\cos{2x}}{2^{2}} + \dots + \dfrac{\cos{nx}}{n^{2}}$.  
 	- Докажем сходимость $\{x_{n}\}$.  
-		- Рассмотрим $|x_{n + p} - x_{n}| = |\frac{\cos(n + 1)x}{(n + 1)^{2}} + \frac{\cos(n + 2)x}{(n + 2)^{2}} + \dots + \frac{\cos(n + p)x}{(n + p)^{2}}| < \frac{p}{(n + 1)^2} < \epsilon$  
+		- Рассмотрим $|x_{n + p} - x_{n}| = |\dfrac{\cos(n + 1)x}{(n + 1)^{2}} + \dfrac{\cos(n + 2)x}{(n + 2)^{2}} + \dots + \dfrac{\cos(n + p)x}{(n + p)^{2}}| < \dfrac{p}{(n + 1)^2} < \epsilon$  
 
 ## Лекция 28.09.2022  
 
@@ -427,7 +428,7 @@ depth: 3
 - $(К \implies Г)$  
 	- $\forall \epsilon > 0, \exists \delta > 0: \forall x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Возьмем произвольную $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \in X, x_{n} \neq x_{0}, \lim{n}{\infty} = x_{0}$, то есть $\forall \delta, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - x_{0}| < \delta$. Что есть в определении по Коши: $0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Получим определение сходимости $f(x_{n})$, т.к. $x_{n}$ - произвольная.  
  - $(Г \implies К)$  
-	- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{n}\} : x_{n} \in X, x_{n} \neq x_{0} \implies \lim{n}{\infty} x_{n} = x_{0}, \{f(x_{0}), f(x_{1}), \dots, f(x_{n}), \dots\} \implies \lim{n}{\infty} f(x_{n}) = A)$ . Докажем от противного: Пусть $Г \;\not\!\!\!\implies К$. Тогда $\exists \epsilon_{0} \forall \delta > 0, \exists x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| \geq \epsilon_{0}$. Пусть $\delta_{1} = 1$, тогда $\forall \delta > 0$ найдется $x_{1}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{1}) - A| \geq \epsilon_{0}$. Пусть $\delta_{2} = \frac{1}{2}$, тогда $\forall \delta > 0$ найдется $x_{2}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{2}) - A| \geq \epsilon_{0}$. И так далее  $\delta_{n} = \frac{1}{n}$, тогда $\forall \delta > 0$ найдется $x_{n}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{n}) - A| \geq \epsilon_{0}$. Получим: $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \rightarrow x_{0}, \{f(x_{1}),f(x_{2}), \dots, f(x_{n)}, \dots\} \;\not\rightarrow A$  
+	- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{n}\} : x_{n} \in X, x_{n} \neq x_{0} \implies \lim{n}{\infty} x_{n} = x_{0}, \{f(x_{0}), f(x_{1}), \dots, f(x_{n}), \dots\} \implies \lim{n}{\infty} f(x_{n}) = A)$ . Докажем от противного: Пусть $Г \;\not\!\!\!\implies К$. Тогда $\exists \epsilon_{0} \forall \delta > 0, \exists x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| \geq \epsilon_{0}$. Пусть $\delta_{1} = 1$, тогда $\forall \delta > 0$ найдется $x_{1}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{1}) - A| \geq \epsilon_{0}$. Пусть $\delta_{2} = \dfrac{1}{2}$, тогда $\forall \delta > 0$ найдется $x_{2}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{2}) - A| \geq \epsilon_{0}$. И так далее  $\delta_{n} = \dfrac{1}{n}$, тогда $\forall \delta > 0$ найдется $x_{n}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{n}) - A| \geq \epsilon_{0}$. Получим: $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \rightarrow x_{0}, \{f(x_{1}),f(x_{2}), \dots, f(x_{n)}, \dots\} \;\not\rightarrow A$  
 
 ### Примеры доказательств, используя $\eps - \delta$  
 - $y = x^{3}$  
@@ -437,10 +438,10 @@ depth: 3
 	- $|f(x)| < \epsilon$   
 	- $|x^{3}| < \epsilon$  
 	- $|x| < \delta \implies |x| < \sqrt[\uproot{3}p]{\epsilon} \implies \delta = \sqrt[\uproot{3}p]{\epsilon} \implies |f(x) - A| < \epsilon$  
-- $f(x) = \sin{\frac{1}{x}}$  
+- $f(x) = \sin{\dfrac{1}{x}}$  
 	- Докажем, что в $x_{0} = 0$ функция не имеет предела.   
-		- Возьмем $\frac{1}{x} = \pi k, x_{k} = \frac{1}{\pi k} \rightarrow 0 \implies f(x_{k}) = \sin{\pi k} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
-		- Возьмем $\frac{1}{x_{k}} = (\frac{\pi}{2} + 2\pi k), x_{k} = (\frac{2}{\pi + \pi k}) \implies \begin{equation*}  
+		- Возьмем $\dfrac{1}{x} = \pi k, x_{k} = \dfrac{1}{\pi k} \rightarrow 0 \implies f(x_{k}) = \sin{\pi k} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
+		- Возьмем $\dfrac{1}{x_{k}} = (\dfrac{\pi}{2} + 2\pi k), x_{k} = (\dfrac{2}{\pi + \pi k}) \implies \begin{equation*}  
 	   \begin{cases}  
 	    x_{k} \rightarrow 0 \\  
 	    f(x_{k}) \equiv 1 \\  
@@ -452,12 +453,12 @@ depth: 3
 - Функция, непрерывная в каждой точке $[a;b]$ называется непрерывной на $[a;b]$.  
 	- $p(x) = a_{n}x^{n} + a_{n - 1}x^{n - 1} + \dots + a_{1}x_{1} + a_{0}$  
 	- $x^{k}$ - непрерывна в любой $x_{0}$.  
-	- Возьмем алгебраическую дробь $\frac{P(x)}{Q(x)}$  
-	- По свойству пределов $\lim{x}{x_{0}} \frac{P(x)}{Q(x)} = \frac{\lim{x}{x_{0}}P(x)}{\lim{x}{x_{0}} Q(x)} $, кроме точек, в которых знаменатель равен $0$.  
+	- Возьмем алгебраическую дробь $\dfrac{P(x)}{Q(x)}$  
+	- По свойству пределов $\lim{x}{x_{0}} \dfrac{P(x)}{Q(x)} = \dfrac{\lim{x}{x_{0}}P(x)}{\lim{x}{x_{0}} Q(x)} $, кроме точек, в которых знаменатель равен $0$.  
 - Пример:  
 	- Доказать непрерывность $y = \cos{x}$ в любой токе числовой оси.  
 	- Возьмем $x_{0}$, докажем, что $\exists \lim{x}{x_{0}} \cos{x} = \cos{x_{0}}$.  
-	- Доказательство по Коши: $\forall \epsilon > 0: |\cos{x} - \cos{x_{0}| = |2 \sin{\frac{x - x_{0}}{2}}} \sin{\frac{x + x_{0}}{2} }| \leq 2|\sin{\frac{x - x_{0}}{2} }| \leq 2 \frac{|x - x_{0}|}{2}$. При $|x - x_{0}| < \delta, |cos{x} - cos{x_{0}}| < \epsilon \implies \delta = \epsilon$  
+	- Доказательство по Коши: $\forall \epsilon > 0: |\cos{x} - \cos{x_{0}| = |2 \sin{\dfrac{x - x_{0}}{2}}} \sin{\dfrac{x + x_{0}}{2} }| \leq 2|\sin{\dfrac{x - x_{0}}{2} }| \leq 2 \dfrac{|x - x_{0}|}{2}$. При $|x - x_{0}| < \delta, |cos{x} - cos{x_{0}}| < \epsilon \implies \delta = \epsilon$  
 
 ## Лекция 06.10.2022  
 
@@ -489,59 +490,59 @@ depth: 3
 
 ***Примеры***  
 
-- $\lim{x}{1} \frac{x^{2} - x - 2}{x^{2} + x - 3} = \frac{0}{0}$. Рассмотрим выколотую окрестность $\mathring{U}(1)$. $f(x) = \frac{x + 2}{x + 3} \implies \lim{x}{\to 1} f(x) = \frac{3}{4}$, $x = 1$ - Устранимая точка разрыва  
-- $f(x) = \frac{1}{1 + 2^{\frac{1}{x}}}$. $f$ - не определена в $x = 0$.  
+- $\lim{x}{1} \dfrac{x^{2} - x - 2}{x^{2} + x - 3} = \dfrac{0}{0}$. Рассмотрим выколотую окрестность $\mathring{U}(1)$. $f(x) = \dfrac{x + 2}{x + 3} \implies \lim{x}{\to 1} f(x) = \dfrac{3}{4}$, $x = 1$ - Устранимая точка разрыва  
+- $f(x) = \dfrac{1}{1 + 2^{\dfrac{1}{x}}}$. $f$ - не определена в $x = 0$.  
 	- $\lim{x}{0 + 0} f(x) = 0$  
 	- $\lim{x}{0 - 0} f(x) = 1$  
-	- $\lim{x}{\infty} f(x) = \frac{1}{2}$  
+	- $\lim{x}{\infty} f(x) = \dfrac{1}{2}$  
 	Имеем точку разрыва 1 ого рода  
-- $f(x) = \frac{1}{x}$. В $x = 0$, $f$ - не определена. $0$ - точка разрыва 2ого рода.  
-- $f(x) = \sin(\frac{1}{x})$. В $x = 0$ ,$f$ - не определена. Но определена в $\mathring{U}(0)$.  
+- $f(x) = \dfrac{1}{x}$. В $x = 0$, $f$ - не определена. $0$ - точка разрыва 2ого рода.  
+- $f(x) = \sin(\dfrac{1}{x})$. В $x = 0$ ,$f$ - не определена. Но определена в $\mathring{U}(0)$.  
 $\lim{x}{0} f(x)=$ ?  
 - Докажем, что предела в $x = 0$ не существует.  
 	- Действительно :   
-	- $x_{n} = \frac{1}{\pi n};\{x_{n}\} \xrightarrow[n \to \infty]{} 0; \lim{n}{\infty} f(x_{n}) = \lim{n}{\infty} \sin{(\pi n)} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
-	- $x_{n} = \frac{2}{\pi(4n + 1)}; \{x_{n}\} \xrightarrow[n \to \infty]{} 0; f(x_{n}) = \sin{(\frac{\pi}{2} (4n + 1))} = \sin{(\frac{\pi}{2})} \equiv 1 \implies \lim{n}{\infty} f(x_{n}) = 1$  
+	- $x_{n} = \dfrac{1}{\pi n};\{x_{n}\} \xrightarrow[n \to \infty]{} 0; \lim{n}{\infty} f(x_{n}) = \lim{n}{\infty} \sin{(\pi n)} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
+	- $x_{n} = \dfrac{2}{\pi(4n + 1)}; \{x_{n}\} \xrightarrow[n \to \infty]{} 0; f(x_{n}) = \sin{(\dfrac{\pi}{2} (4n + 1))} = \sin{(\dfrac{\pi}{2})} \equiv 1 \implies \lim{n}{\infty} f(x_{n}) = 1$  
 	- Получим, $f(x)$ - не существует в $x = 0$  
 
 ### Замечательные пределы  
-1. $\lim{x}{0} \frac{\sin{(x)}}{x} = 1$ (первый замечательный предел)  
-2. $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = e$ (второй замечательный предел)  
-3. $\lim{x}{\infty} (1 + \frac{1}{x})^{x} = e$ ($x$ - произвольное)  
-4. $\lim{t}{0} (1 + t)^{\frac{1}{t}} = e$ $(x = \frac{1}{t})$  
-5. $\lim{t}{0} \ln{(1 + t)}^{\frac{1}{t}} = \ln{(e)} = 1 \implies \lim{t}{0} \frac{ln{(1 + t)}}{t} = 1$  
-6. $\lim{x}{0}  \frac{1 - \cos{x} }{x^{2} } = \ \lim{x}{0}\ \frac{2\sin^{2}{(\frac{x}{2})}}{x^{2} } = \ \lim{x}{0} \frac{\frac{1}{2}\sin{(\frac{x}{2}) \sin{(\frac{x}{2}) } }}{\frac{1}{2}\frac{x^{2}}{2} } = \  \lim{x}{0}\ \frac{1}{2} \underbrace{\frac{\sin{(\frac{x}{2}) \sin{(\frac{x}{2}) } }}{\frac{x}{2} \frac{x}{2}}}_{1} = \frac{1}{2}$  
-7. $\lim{x}{0} \frac{\sqrt[n]{1 \ + \ x} \ - \ 1}{x} = \ \lim{x}{0} \frac{(\sqrt[n]{1 \ + \ x} \ -\  1)((\sqrt[\leftroot{-15} \uproot{7} n - 1]{1 \ + \ x} \ - \  1)^{(n - 1)}) \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ +\  x} \ -\  1)^{(n - 2)} \ + \ \dots \ + \ (\sqrt[n]{1 \ + \ x} \ - \  1)}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \ \lim{x}{0} \frac{1 \ + \ x \ - \  1}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \lim{x}{0} \frac{1}{1 \ + 1 \ + \ \dots + \ 1} = \ \frac{1}{n}$  
+1. $\lim{x}{0} \dfrac{\sin{(x)}}{x} = 1$ (первый замечательный предел)  
+2. $\lim{n}{\infty} (1 + \dfrac{1}{n})^{n} = e$ (второй замечательный предел)  
+3. $\lim{x}{\infty} (1 + \dfrac{1}{x})^{x} = e$ ($x$ - произвольное)  
+4. $\lim{t}{0} (1 + t)^{\dfrac{1}{t}} = e$ $(x = \dfrac{1}{t})$  
+5. $\lim{t}{0} \ln{(1 + t)}^{\dfrac{1}{t}} = \ln{(e)} = 1 \implies \lim{t}{0} \dfrac{ln{(1 + t)}}{t} = 1$  
+6. $\lim{x}{0}  \dfrac{1 - \cos{x} }{x^{2} } = \ \lim{x}{0}\ \dfrac{2\sin^{2}{(\dfrac{x}{2})}}{x^{2} } = \ \lim{x}{0} \dfrac{\dfrac{1}{2}\sin{(\dfrac{x}{2}) \sin{(\dfrac{x}{2}) } }}{\dfrac{1}{2}\dfrac{x^{2}}{2} } = \  \lim{x}{0}\ \dfrac{1}{2} \underbrace{\dfrac{\sin{(\dfrac{x}{2}) \sin{(\dfrac{x}{2}) } }}{\dfrac{x}{2} \dfrac{x}{2}}}_{1} = \dfrac{1}{2}$  
+7. $\lim{x}{0} \dfrac{\sqrt[n]{1 \ + \ x} \ - \ 1}{x} = \ \lim{x}{0} \dfrac{(\sqrt[n]{1 \ + \ x} \ -\  1)((\sqrt[\leftroot{-15} \uproot{7} n - 1]{1 \ + \ x} \ - \  1)^{(n - 1)}) \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ +\  x} \ -\  1)^{(n - 2)} \ + \ \dots \ + \ (\sqrt[n]{1 \ + \ x} \ - \  1)}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \ \lim{x}{0} \dfrac{1 \ + \ x \ - \  1}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \lim{x}{0} \dfrac{1}{1 \ + 1 \ + \ \dots + \ 1} = \ \dfrac{1}{n}$  
 
 - Докажем $(1)$  
--  Рассмотрим $\lim{x}{ 0 + 0} \frac{\sin{(x)}}{x} \stackrel{\text{?}}{=} 1$  
+-  Рассмотрим $\lim{x}{ 0 + 0} \dfrac{\sin{(x)}}{x} \stackrel{\text{?}}{=} 1$  
 	![image1](matan_pictures/matan1.jpg)  
 	- $\sin{(\alpha)} = y(A)$  
 	- $\cos{(\alpha)} = y(A)$  
 	- $S_{OAA'} < S_{OAB'} < S_{OBB'}$  
-	- $\frac{1}{2}\cos{(x)}\sin{(x)} < \frac{1}{2} \cdot 1 \cdot x < \frac{1}{2} \cdot 1 \cdot \tan{(x)}$  
+	- $\dfrac{1}{2}\cos{(x)}\sin{(x)} < \dfrac{1}{2} \cdot 1 \cdot x < \dfrac{1}{2} \cdot 1 \cdot \tan{(x)}$  
 	- $\cos{(x)}\sin{(x)} <  x < \tan{(x)}$  
-	- $\cos{(x)} <  \frac{x}{\sin{(x)}} < \frac{1}{\cos{(x)}}$  
-	- $\cos{(0)} \xrightarrow[n \to 0]{} 1 \implies \lim{x}{0 + 0} \frac{\sin{x}}{x} = 1$  
--  Рассмотрим $\lim{x}{ 0 - 0} \frac{\sin{(x)}}{x}$  
-	- Так как $f(-x) = f(x) \implies \lim{x}{0 + 0} \frac{\sin{(x)}}{x} = \lim{x}{0 - 0} \frac{\sin(x)}{x} = \lim{x}{0} \frac{sin(x)}{x} = 1$  
+	- $\cos{(x)} <  \dfrac{x}{\sin{(x)}} < \dfrac{1}{\cos{(x)}}$  
+	- $\cos{(0)} \xrightarrow[n \to 0]{} 1 \implies \lim{x}{0 + 0} \dfrac{\sin{x}}{x} = 1$  
+-  Рассмотрим $\lim{x}{ 0 - 0} \dfrac{\sin{(x)}}{x}$  
+	- Так как $f(-x) = f(x) \implies \lim{x}{0 + 0} \dfrac{\sin{(x)}}{x} = \lim{x}{0 - 0} \dfrac{\sin(x)}{x} = \lim{x}{0} \dfrac{sin(x)}{x} = 1$  
 - Докажем $(2)$  
-- $\lim{n}{\infty} (1 + \frac{1}{n})^{n} = 1^{\infty}$  
+- $\lim{n}{\infty} (1 + \dfrac{1}{n})^{n} = 1^{\infty}$  
 - Докажем, что $\exists \lim{n}{\infty} f(x_{n})$. Воспользуемся Теоремой о возрастающей, ограниченной последовательности:  
-	- Ограниченность : $2 < (1 + \frac{1}{n})^{n} = 1 + n \cdot \frac{1}{n} + \frac{n(n- 1)}{2!} \cdot \frac{1}{n^{2}} + \dots = 2 + \frac{1}{2!}(1 - \frac{1}{n}) + \frac{1}{3!}(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots \leq 2 + \frac{1}{2!} + \frac{1}{3!} + \dots < 2 + \frac{1}{2} + \frac{1}{2^{2}} + \dots < 2 + \frac{0.5}{1 - 0.5} = 3$  
-	- Возрастание: $x_{n + 1} = (1 + \frac{1}{n + 1})^{n + 1} = 1 + (n + 1) \cdot \frac{1}{n + 1} + \frac{n(n - 1)}{2!} - \frac{1}{(n + 1)^{2}} + \dots \implies x_{n + 1} > x_{n}$, так как каждое слагаемое уменьшается и число слагаемых $n + 1$  
+	- Ограниченность : $2 < (1 + \dfrac{1}{n})^{n} = 1 + n \cdot \dfrac{1}{n} + \dfrac{n(n- 1)}{2!} \cdot \dfrac{1}{n^{2}} + \dots = 2 + \dfrac{1}{2!}(1 - \dfrac{1}{n}) + \dfrac{1}{3!}(1 - \dfrac{1}{n})(1 - \dfrac{2}{n}) \dots \leq 2 + \dfrac{1}{2!} + \dfrac{1}{3!} + \dots < 2 + \dfrac{1}{2} + \dfrac{1}{2^{2}} + \dots < 2 + \dfrac{0.5}{1 - 0.5} = 3$  
+	- Возрастание: $x_{n + 1} = (1 + \dfrac{1}{n + 1})^{n + 1} = 1 + (n + 1) \cdot \dfrac{1}{n + 1} + \dfrac{n(n - 1)}{2!} - \dfrac{1}{(n + 1)^{2}} + \dots \implies x_{n + 1} > x_{n}$, так как каждое слагаемое уменьшается и число слагаемых $n + 1$  
 
 ***Определение эквивалентности функций в точке***  
 
-- $\lim{x}{x_{0}} \frac{f(x)}{g(x)} = 1 \Longleftrightarrow f(x) \sim  g(x)$ ($f$ эквивалентна $g$ в $x_{0}$)  
+- $\lim{x}{x_{0}} \dfrac{f(x)}{g(x)} = 1 \Longleftrightarrow f(x) \sim  g(x)$ ($f$ эквивалентна $g$ в $x_{0}$)  
 
 ### Эквивалентные бесконечно малые величины  
-1. $\lim{x}{0} \frac{\sin(x)}{x} = 1 \Longleftrightarrow \sin{(x)} \sim x$  
-2. $\lim{x}{0} \frac{\ln{(1 + x)}}{x} = 1 \Longleftrightarrow \ln{(1 + x)} \sim x$  
-3. $\lim{x}{0} \frac{e^{x} - 1}{x} = 1 \Longleftrightarrow e^{x} \sim x$  
-4. $\lim{x}{0} \frac{\sqrt[n]{(1 + x)} - 1}{x} = \frac{1}{n} \Longleftrightarrow \sqrt[n]{(1 + x)} \sim \frac{x}{n}$  
+1. $\lim{x}{0} \dfrac{\sin(x)}{x} = 1 \Longleftrightarrow \sin{(x)} \sim x$  
+2. $\lim{x}{0} \dfrac{\ln{(1 + x)}}{x} = 1 \Longleftrightarrow \ln{(1 + x)} \sim x$  
+3. $\lim{x}{0} \dfrac{e^{x} - 1}{x} = 1 \Longleftrightarrow e^{x} \sim x$  
+4. $\lim{x}{0} \dfrac{\sqrt[n]{(1 + x)} - 1}{x} = \dfrac{1}{n} \Longleftrightarrow \sqrt[n]{(1 + x)} \sim \dfrac{x}{n}$  
 
-## Лекция 13.10.2022  
+## Лекция 12.10.2022  
 ### Система стягивающихся отрезков  
 - Пусть имеем бесконечный набор точек, начал $(a_{1}, a_{2}, \dots, a_{n}, \dots)$ и концов $(b_{1}, b_{2}, \dots, b_{n}, \dots)$ системы вложенных друг в друга отрезков. $a_{1} < a_{2} <  \dots < a_{n} < b_{n} < b_{n - 1} <  \dots < b_{1}$. Причем $\lim{n}{\infty} (b_{n} - a_{n}) = 0$.  
 
@@ -560,14 +561,14 @@ $\lim{x}{0} f(x)=$ ?
 
 ***Пример***  
 
-- $a_{n} = 1 + \cos{(\frac{\pi n}{3})}$  
+- $a_{n} = 1 + \cos{(\dfrac{\pi n}{3})}$  
 	- $\{a_{3k}\} = 1 + (-1)^{k} \rightarrow (2 , 0)$   
-	- $\{a_{3k + 1}\} \rightarrow (\frac{1}{2} , \frac{7}{6})$   
-	- $\{a_{3k + 2}\} \rightarrow (\frac{1}{2} , \frac{3}{2})$   
+	- $\{a_{3k + 1}\} \rightarrow (\dfrac{1}{2} , \dfrac{7}{6})$   
+	- $\{a_{3k + 2}\} \rightarrow (\dfrac{1}{2} , \dfrac{3}{2})$   
 	- $\implies \overline{\lim{n}{\infty}} a_{n} = 2, \ \underline{\lim{n}{\infty}} a_{n} = 0$  
 
 ### Раскрытие неопределенностей  
-- $\lim{x}{x_{0}} (u(x)^{v(x)}); \lim{x}{x_{0}} u(x) = 1; \lim{x}{x_{0}} v(x) = \infty \implies \lim{x}{x_{0}} (u(x)^{v(x)}) = \lim{x}{x_{0}} ((u(x) - 1 + 1)^{v(x)}) = \lim{x}{x_{0}} [\underbrace{(1 + \underbrace{(u - 1)}_{0})^{\frac{1}{u - 1}}))}_{e}]^{(u - 1)v} = e^{(u - 1)v}$  
+- $\lim{x}{x_{0}} (u(x)^{v(x)}); \lim{x}{x_{0}} u(x) = 1; \lim{x}{x_{0}} v(x) = \infty \implies \lim{x}{x_{0}} (u(x)^{v(x)}) = \lim{x}{x_{0}} ((u(x) - 1 + 1)^{v(x)}) = \lim{x}{x_{0}} [\underbrace{(1 + \underbrace{(u - 1)}_{0})^{\dfrac{1}{u - 1}}))}_{e}]^{(u - 1)v} = e^{(u - 1)v}$  
 
 ### Определение четности и нечетности функции  
 
@@ -582,8 +583,8 @@ $\lim{x}{0} f(x)=$ ?
 	- $f(x) = x$ (прямая линия). $f(-x) = - f(x)$  
 	- $f(x) = x^{2}$ (квадратичная функция, график: парабола). $f(-x) = f(x)$  
 	- $f(x) = x^{3}$ (кубическая функция, график: кубическая парабола). $f(-x) = f(x)$  
-	- $n \in \ZZ, \ n < 0 \implies f(x) = x^{(-n)} = \frac{1}{x^{n}}$   
-	- $n \in \QQ \implies f(x) = x^{(\frac{m}{n})}, \ m,n \in \NN. \ f(x) = \sqrt[n]{x^{m}}$   
+	- $n \in \ZZ, \ n < 0 \implies f(x) = x^{(-n)} = \dfrac{1}{x^{n}}$   
+	- $n \in \QQ \implies f(x) = x^{(\dfrac{m}{n})}, \ m,n \in \NN. \ f(x) = \sqrt[n]{x^{m}}$   
 - $f(x) = a^{x}, \ x \in (- \infty, \infty)$  
 	- $a > 1 \implies f \uparrow$  
 	- $a < 1 \implies f \downarrow$  
@@ -596,9 +597,131 @@ $\lim{x}{0} f(x)=$ ?
 - $f^{-1}(f(x)) = x$  
 - График обратной функции симметричен к исходной относительно биссектрисы первой и третьей четверти координатных плоскостей  
 - $y = a^{x}$, $x = \log_{a}(y)$ (логарифмическая функция, обратная к показательной)  
-- $y = x^{n}$, $x = \sqrt[n]{y}$  (обратная к степенной)  
+- $y = x^{n}$, $x = \sqrt[n]{y}$  (корень $n$ - ой степени, функция, обратная к степенной)  
 - Обратная функция существует только на промежутке монотонности  
 
+## Лекция 19.10.2022 
+
+### Сравнение бесконечно малых функций
+
+***Определение***
+- $\alpha(x_{0})$ - бесконечно малая в окрестности точки $x_{0}$ $\Longleftrightarrow \exists \lim{x}{x_{0}} \alpha(x) = 0$
+
+- Пусть две функции $\alpha(x), \beta(x)$ определены на одном и том же множестве и являются бесконечно малыми в окрестности $x_{0}$. Тогда $\lim{x}{x_{0}} \dfrac{\alpha(x)}{\beta(x)} = 0 \rightarrow \alpha(x)$ - бесконечно малая более высокого порядка малости, по сравнению с $\beta(x)$ в окрестности $x_{0}$,  $\alpha(x) = o(\beta(x))$. Если в качестве функции сравнения $\beta(x)$ берется $(x - x_{0})^{m}$ и $\lim{x}{x_{0}} \dfrac{\alpha(x)}{ (x - x_{0})^{m} } = C  \neq 0 \implies \alpha(x)$ имеет в точке $x_{0}$ порядок малости $m$.
+
+- Если $\alpha(x), \beta(x)$ - б. м. :
+	- $\lim{x}{x_{0}} \dfrac{\alpha(x)}{\beta(x)} = 0 \implies \alpha(x) = o(\beta(x))$
+	- $\lim{x}{x_{0}} \dfrac{\alpha(x)}{\beta(x)} = C \neq 0 \implies \alpha(x), \beta(x)$ - б. м. одинакового порядка малости
+	- $\lim{x}{x_{0}} \dfrac{\alpha(x)}{\beta(x)} = 1 \implies \alpha(x) \sim \beta(x), x \rightarrow x_{0}$
+
+***Примеры***
+
+1.
+
+-  $\alpha(x) = \dfrac{1}{3}x^{4} - 2x^{3} - x \  (x \rightarrow x_{0})$
+- $\beta(x) = 2x^{4} + 3x^{2} + 2x \  (x \rightarrow x_{0})$
+	- $\lim{x}{0} \dfrac{\alpha(x)}{\beta(x)} = - \dfrac{1}{2} \implies \alpha(x), \beta(x)$ - б. м. одинакового порядка малости
+
+2.
+
+-  $\alpha(x) = 1 - \cos{3x}$
+- $\beta(x) = \sin{x}$
+	- $\lim{x}{0} \dfrac{\alpha(x)}{\beta(x)} = 0 \implies \alpha(x) = o(\beta(x))$
+
+3.
+
+-  $\alpha(x) = 1 - \cos{3x}$
+- $\beta(x) = x$
+	- $\lim{x}{0} \dfrac{1 - \cos{3x}}{x} = \dfrac{9}{2}x \implies \alpha(x)$ имеет порядок малости $2$.
+
+### Свойства бесконечно малых величин 
+- Пусть :  $\alpha = o(\beta), \ \gamma = o(\beta)$, тогда : 
+	- $o(\gamma) + o(\beta) = o(\beta)$
+	- $o(\beta) \pm o(\beta) = o(\beta)$
+	- $\alpha \cdot \gamma = o(\beta)$
+	- $ f \sim C \cdot (x - x_{0})^{m},  x \rightarrow x_{0} \implies (x - x_{0})^{m}$ - главный член $f$, причем $m$ - порядок малости.
+
+*** Пример*** 
+
+- $f(x) = x^{3} - 3x + 2$
+	- $\lim{x}{1} f = 0 \implies f$ - б. м. в $x_{0} = 1$
+	- Определим порядок малости и главный член $f$
+	- $f(x) = (x - 1)^{2}(x - 2)$
+	- $\lim{x}{1} \dfrac{f(x)}{C \cdot (x - 1)^{m}} = 1 \implies m = 2, \ C = 3 \implies$ главный член имеет вид : $3(x - 1)^{2} + o((x - 1)^{2})$
+
+### Сравнение бесконечно больших функций
+
+***Определение***
+
+- $A(x)$ - б. б. справа в $x_{0}$ $\Longleftrightarrow \exists \lim{x}{x_{0}} A(x) = + \infty \Longleftrightarrow (\forall E > 0, \ \forall \{x_{n}\} \in X, \ \exists N_{E}: \ \forall n > N_{E} \implies A(x_{n}) > E, \ x_{n} > x_{0})$
+- $A(x)$ - б. б. слева в $x_{0}$ $\Longleftrightarrow \exists \lim{x}{x_{0}} A(x) = + \infty \Longleftrightarrow (\forall E > 0, \ \forall \{x_{n}\} \in X, \ \exists N_{E}: \ \forall n > N_{E} \implies A(x_{n}) > E, \ x_{n} < x_{0})$
+
+- Пусть две функции $A(x), B(x)$ определены на одном и том же множестве и являются бесконечно большими в окрестности $x_{0}$. Если в качестве функции сравнения $B(x)$ берется $(x - x_{0})^{m}$ и $\lim{x}{x_{0}} \dfrac{\alpha(x)}{ (x - x_{0})^{m} } = C  \neq 0 \implies \alpha(x)$ имеет в точке $x_{0}$ порядок роста $m$.
+
+- Если $A(x), B(x)$ - б. б.  :
+	- $\lim{x}{x_{0}} \dfrac{A(x)}{B(x)} = C \neq 0 \implies A(x), B(x)$ - б. б. одинакового порядка роста.
+
+### Производная и дифференциал
+
+***Определение***
+
+- Возьмем $x \in X, \ y = f(x)$. Дадим числу $x$ приращение $\Delta x$. Пусть в $x$ $f$ имеет значение $f(x)$, тогда в $x + \Delta x$ она будет иметь значение $f(x + \Delta x)$. $\Delta y = \Delta f = f(x + \Delta x) - f(x)$ - приращение $f$, вызванное приращением $\Delta x$. Составим отношение $\dfrac{\Delta y}{\Delta x}$. Получим: $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} = y'(x)$.
+
+***Пример***
+
+- $y = f(x) = x^{n}$
+	- $\Delta y = \Delta f = (x + \Delta x)^{n} - x^{n}$
+	- $\lim{\Delta x}{0} \left[ \dfrac{\Delta y}{\Delta x} = \dfrac{(x + \Delta x)^{n} - x^{n}}{\Delta x} = \dfrac{x^{n} + nx^{n - 1}\Delta x + \dfrac{n(n - 1)}{2}x^{n - 2}\Delta x^{2} + \dots + \Delta x^{n} - x^{n}}{\Delta x} = \dfrac{nx^{n - 1}\Delta x + \dfrac{n(n - 1)}{2}x^{n - 2}\Delta x^{2} + \dots + \Delta x^{n}}{\Delta x}\right] = nx^{n - 1}$
+
+### Арифметические свойства производной
+- Пусть $\exists f'(x), g'(x)$ в $x$. Тогда :
+	1. $(f \pm g)' = f' \pm g'$ 
+	2. $(Cf)' = Cf'$
+	3. $(f \cdot g)' = f'g + fg'$
+	4. $(\dfrac{f}{g})' = \dfrac{gf' - g'f}{g^{2}}, \ $ если $g(x) \neq 0$
+
+- Докажем $(3)$:
+	- $\Delta u = u(x + \Delta x) - u(x)$
+	
+	- $\Delta v = v(x + \Delta x) - v(x)$
+	
+	- $(uv)' = \lim {\Delta x}{0} \left[ \dfrac{\Delta (uv)}{\Delta x}  = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x + \Delta x) + u(x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x) - u(x)}{\Delta x}v(x + \Delta x) + \dfrac{v(x + \Delta x) - v(x)}{\Delta x}u(x)  \right] = u'v + uv'$
+
+- Докажем $(5)$:
+	- Докажем : $\left( \dfrac{1}{v} \right)' = - \dfrac{v'}{v^{2}}$
+	
+	- $\Delta \left( \dfrac{1}{v} \right) =  \dfrac{1}{v(x + \Delta x)} -  \dfrac{1}{v} = \dfrac{v(x) - v(x + \Delta x)}{v(x + \Delta x)v(x)} = - \dfrac{\Delta v}{v(x + \Delta x) v}$
+	
+	- $\left(\dfrac{1}{v}\right)' = - \lim{\Delta x}{0} \dfrac{\Delta v}{v(x + \Delta x) v} = - \dfrac{v'}{v^{2}}$
+	
+	- $\left(\dfrac{u}{v}\right)' = \left(u \cdot \dfrac{1}{v}\right)' = u' \cdot \dfrac{1}{v} + u \cdot \left( \dfrac{1}{v}\right)' = \dfrac{u'}{v} + u\left( - \dfrac{v'}{v^{2}}\right) = \dfrac{vu' - v'u}{v^{2}}$
+
+***Примеры***
+
+- $y = \sin{x}$
+	- $\Delta y = \sin{(x + \Delta x)} - \sin{x} = 2 \sin{\dfrac{x + \Delta x - x}{2}} \cos{\dfrac{x + \Delta x + x}{2}} = 2\sin{\dfrac{\Delta x}{2}} \cos{(x + \dfrac{\Delta x}{2})} $
+	- $(\sin{x})' = \lim{\Delta x}{0}\left[ \dfrac{2\sin{\dfrac{\Delta x}{2}}\cos{(x + \dfrac{\Delta x}{2})}}{\Delta x}\right] = \cos{x}$
+- $y = \cos{x}$
+	- $(\cos{x})' = (\sin{(\dfrac{\pi}{2} - x)})' = -\cos{(\dfrac{\pi}{2} - x)} = -\sin{x}$
+
+### Производная сложной функции
+- Пусть $y = f(x), \ \exists f'(x), \ x = \phi(t), \ \exists \phi'(t) = x' \implies y = f(\phi(t)) = \digamma(t) $
+- $\lim{\Delta x}{0} \left[ \dfrac{\Delta y}{\Delta x} \cdot \dfrac{\Delta x}{\Delta t} \right] = f'(x) \cdot \phi'(t) = f(\phi(t))' = f'(\phi(t)) \cdot \phi'(t)$
+
+***Пример***
+
+- $f(x) = \sin{x}, \ x = 3t^{2}$
+	- $\digamma(t) = \sin{(3t^{2})}$
+	- $\digamma'(t) = \cos{(3t^{2})} \cdot 6t$
+
+### Производная обратной функции
+- $y = f(x), \ x = f^{-1}(y)$
+	- $\lim{\Delta x}{0} \left[ \dfrac{\Delta y}{\Delta x} = \dfrac{1}{\dfrac{\Delta x}{\Delta y}} \right] = \dfrac{1}{(f^{-1}(y))'}  = \dfrac{1}{x'(y)}$ 
+
+***Пример***
+
+- $y = \arcsin{x}, \ x = \sin{y}$
+	- $(\arcsin{x})' = \dfrac{1}{(\sin{y})'} = \dfrac{1}{\cos{y}} = \dfrac{1}{\sqrt{1 - \sin^{2}y}} = \dfrac{1}{\sqrt{1 - x^{2}}}$ 
 ## Семинар 13.09.2022  
 ***Разбор домашней работы***  
 Доказать по индукции :   
@@ -606,18 +729,18 @@ $\lim{x}{0} f(x)=$ ?
 - $1^3 + \dots + n^3 = (1 + \dots + n)^2$  
 - $n = 1$ : $1^3 = 1^2$ - верно $\\$   
 - $1^n + \dots n^3 = (1 + \dots + n) ^2$  
-- $1^3 + \dots + n^3 + (n + 1)^3 = (\frac{(1 + n)n}{2})^2 + (n + 1)^3$  
+- $1^3 + \dots + n^3 + (n + 1)^3 = (\dfrac{(1 + n)n}{2})^2 + (n + 1)^3$  
 - $1^3 + \dots + n^3 + (n + 1)^3 = (1 + \dots + n + (n + 1))^2$  
 
 Доказать по индукции:  
 
-- $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n} < \frac{1}{\sqrt{2n + 1}}$   
-- $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n} < \frac{1}{\sqrt{2n + 1}}$  
-- $\frac{1}{2} \cdot \frac{3}{4} \cdot \frac{2n - 1}{2n}  \cdot \frac{2n + 1}{2n + 2} < \frac{1}{\sqrt{2n + 3}}$  
-- $ \frac{1}{\sqrt{2n + 3}}  \geq \frac{1}{\sqrt{2n + 2}} \cdot \frac{2n + 1}{\sqrt{2n + 2}}$  
+- $\dfrac{1}{2} \cdot \dfrac{3}{4} \cdot \dfrac{2n - 1}{2n} < \dfrac{1}{\sqrt{2n + 1}}$   
+- $\dfrac{1}{2} \cdot \dfrac{3}{4} \cdot \dfrac{2n - 1}{2n} < \dfrac{1}{\sqrt{2n + 1}}$  
+- $\dfrac{1}{2} \cdot \dfrac{3}{4} \cdot \dfrac{2n - 1}{2n}  \cdot \dfrac{2n + 1}{2n + 2} < \dfrac{1}{\sqrt{2n + 3}}$  
+- $ \dfrac{1}{\sqrt{2n + 3}}  \geq \dfrac{1}{\sqrt{2n + 2}} \cdot \dfrac{2n + 1}{\sqrt{2n + 2}}$  
 - $ (\sqrt{2n + 3})^2  \geq (2n + 3) \dots $  
 
-3. Начертить график. $y = arctg{\frac{1}{x}}$  
+3. Начертить график. $y = arctg{\dfrac{1}{x}}$  
 
 4. Начертить график $y = log_{3}{(2 - 3x)}$  
 
@@ -641,8 +764,8 @@ $\lim{x}{0} f(x)=$ ?
 1. Доказать, что $inf(-X) = - \sup{X}$. Доказательство: $(\forall x \in X: x \leq M) \wedge (\forall \epsilon > 0 : \exists x' \in X: x' > M - \epsilon ) \Rightarrow M =\sup{X}$. Рассмотрим множество ${-X}$. $(\forall (-x) : -x \geq -M = m) \wedge (\forall \epsilon > 0 : \exists -x' \in -X: -x' < \underbrace{-M}_{m} + \epsilon = m + \epsilon \Rightarrow m = -M)$  
 
 2. Доказать, что $\sup{(X + Y)} = \sup{X} + \sup{Y}$  
-    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M_{1} - \frac{\epsilon}{2} \Rightarrow M_{1} = \sup{X}$  
-    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon > 0 \exists y' \in X: y' > M_{2} - \frac{\epsilon}{2} \Rightarrow M_2 = \sup{Y}$  
+    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M_{1} - \dfrac{\epsilon}{2} \Rightarrow M_{1} = \sup{X}$  
+    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon > 0 \exists y' \in X: y' > M_{2} - \dfrac{\epsilon}{2} \Rightarrow M_2 = \sup{Y}$  
     3. $ (\forall x + y \in X + Y : x + y \leq M_{1} + M_{2}) \wedge (\forall \epsilon > 0, \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = \sup{(X + Y)}$  
 
 3. Доказать, что $\sup{(XY)} = \sup{X} \cdot \sup{Y}$  
@@ -670,35 +793,35 @@ $\lim{x}{0} f(x)=$ ?
 
 ### 56  
 
-- $ \lim{n}{\infty} \left [\frac{1}{1 \cdot 2} + \frac{1}{2 \cdot 3} + \dots + \frac{1}{n(n + 1)}  \right ] =  \lim{n}{\infty} \left [1 - \frac{1}{2} + \frac{1}{2}  - \frac{1}{ 3} + \dots + \frac{1}{n} - \frac{1}{n(n + 1)}  \right ] =  \lim{n}{\infty} \left [1- \frac{1}{n(n + 1)}  \right ] = 1 $  
+- $ \lim{n}{\infty} \left [\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dots + \dfrac{1}{n(n + 1)}  \right ] =  \lim{n}{\infty} \left [1 - \dfrac{1}{2} + \dfrac{1}{2}  - \dfrac{1}{ 3} + \dots + \dfrac{1}{n} - \dfrac{1}{n(n + 1)}  \right ] =  \lim{n}{\infty} \left [1- \dfrac{1}{n(n + 1)}  \right ] = 1 $  
 
 ***Доказать равенства:***  
 
 ### 58  
-- $ \lim{n}{\infty} \left[\frac{n}{2^{n}} \right] = 0$  
-	- Рассмотрим представление $2^{n} = (1 + 1)^{n} = 1 + n + \frac{n(n-1)}{2!} + \dots > \frac{n(n - 1)}{2}$  
-	- $\frac{n}{2^{n}} < \frac{2n}{n(n - 1)} = \frac{2}{(n - 1)} \implies  \lim{n}{\infty} \left[\frac{n}{2^{n}} \right] = 0$  
+- $ \lim{n}{\infty} \left[\dfrac{n}{2^{n}} \right] = 0$  
+	- Рассмотрим представление $2^{n} = (1 + 1)^{n} = 1 + n + \dfrac{n(n-1)}{2!} + \dots > \dfrac{n(n - 1)}{2}$  
+	- $\dfrac{n}{2^{n}} < \dfrac{2n}{n(n - 1)} = \dfrac{2}{(n - 1)} \implies  \lim{n}{\infty} \left[\dfrac{n}{2^{n}} \right] = 0$  
 
 ### 60  
-- $\lim{n}{\infty} \left[\frac{n^{k}}{a^{n}} \right] = 0$  
-	- Рассмотрим представление $a = (1 + \alpha)^{n} = 1 + n\alpha + \frac{n(n-1)}{2!}\alpha + \dots  \frac{n(n - 1)}{2}\alpha^2 + \dots \frac{n(n - 1) \dots (n - k)}{(k + 1)!}$  
-	- $\frac{n^{k}}{a^{n}} < \frac{n^{k}(k + 1)!}{n(n - 1)(n - 2) \dots (n - k) \cdot \alpha^{k + 1}} = \frac{1}{n} \cdot \frac{(k + 1)!}{(1 - \frac{1}{n})(1 - \frac{2}{n}) \dots (1 - \frac{k}{n}) \cdot \alpha^{k + 1}} \implies \lim{n}{\infty} \left[\frac{n^{k}}{a^{n}} \right] = 0$  
+- $\lim{n}{\infty} \left[\dfrac{n^{k}}{a^{n}} \right] = 0$  
+	- Рассмотрим представление $a = (1 + \alpha)^{n} = 1 + n\alpha + \dfrac{n(n-1)}{2!}\alpha + \dots  \dfrac{n(n - 1)}{2}\alpha^2 + \dots \dfrac{n(n - 1) \dots (n - k)}{(k + 1)!}$  
+	- $\dfrac{n^{k}}{a^{n}} < \dfrac{n^{k}(k + 1)!}{n(n - 1)(n - 2) \dots (n - k) \cdot \alpha^{k + 1}} = \dfrac{1}{n} \cdot \dfrac{(k + 1)!}{(1 - \dfrac{1}{n})(1 - \dfrac{2}{n}) \dots (1 - \dfrac{k}{n}) \cdot \alpha^{k + 1}} \implies \lim{n}{\infty} \left[\dfrac{n^{k}}{a^{n}} \right] = 0$  
 
 ### 61  
-- $\lim{n}{\infty} \left[\frac{a^{n}}{n!} \right] = 0$  
-	- $\frac{a^{n}}{n!} = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n } = \frac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n_{0}} \cdot \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} = M  \frac{a}{n_{0} + 1} \cdot  \frac{a}{n_{0} + 2} \cdot \dots \cdot  \frac{a}{n} < M (\frac{a}{n_{0} + 1})^{n - n_{0}} \implies \lim{n}{\infty}  \left[\frac{a^{n}}{n!} \right] = 0$  
+- $\lim{n}{\infty} \left[\dfrac{a^{n}}{n!} \right] = 0$  
+	- $\dfrac{a^{n}}{n!} = \dfrac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n } = \dfrac{a \cdot a \cdot \dots \cdot a}{1 \cdot 2 \cdot 3 \cdot \dots \cdot n_{0}} \cdot \dfrac{a}{n_{0} + 1} \cdot  \dfrac{a}{n_{0} + 2} \cdot \dots \cdot  \dfrac{a}{n} = M  \dfrac{a}{n_{0} + 1} \cdot  \dfrac{a}{n_{0} + 2} \cdot \dots \cdot  \dfrac{a}{n} < M (\dfrac{a}{n_{0} + 1})^{n - n_{0}} \implies \lim{n}{\infty}  \left[\dfrac{a^{n}}{n!} \right] = 0$  
 
 ### 65  
 - $\lim{n}{\infty} \left [\sqrt[n]{n} \right] = 1$  
 	- $(\sqrt[n]{n})^{n} = (1 + \alpha_{n})^{n}$  
-	- $n = (1 + \alpha_{n})^{n} = 1 + n\alpha_{n} + \frac{n(n-1)}{2}\alpha_{n}^{2} + \dots > \frac{n(n-1)}{2}\alpha_{n}^2$  
-	- $n > \frac{n(n-1)}{2}\alpha_{n}^2$  
-	- $1 > \frac{n - 1}{2}\alpha_{n}^2$   
-	- $\alpha_{n}^2 < \frac{2}{n -1}$  
-	- $\alpha_{n} < \frac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim{n}{\infty} \left [\sqrt[n]{n} \right] = 1$  
+	- $n = (1 + \alpha_{n})^{n} = 1 + n\alpha_{n} + \dfrac{n(n-1)}{2}\alpha_{n}^{2} + \dots > \dfrac{n(n-1)}{2}\alpha_{n}^2$  
+	- $n > \dfrac{n(n-1)}{2}\alpha_{n}^2$  
+	- $1 > \dfrac{n - 1}{2}\alpha_{n}^2$   
+	- $\alpha_{n}^2 < \dfrac{2}{n -1}$  
+	- $\alpha_{n} < \dfrac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim{n}{\infty} \left [\sqrt[n]{n} \right] = 1$  
 
 ### 77  
-- Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей: $x_{n} = p_{0} + \frac{p_{1}}{10} + \dots +  \frac{p_{n}}{10^{n}} $ $(n = 1, 2, \dots)$, где $p_{i}(i = 0, 1, 2, \dots)$ - целые неотрицательные числа, не превышающие $9$, начиная с $p_{i}$.  
+- Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей: $x_{n} = p_{0} + \dfrac{p_{1}}{10} + \dots +  \dfrac{p_{n}}{10^{n}} $ $(n = 1, 2, \dots)$, где $p_{i}(i = 0, 1, 2, \dots)$ - целые неотрицательные числа, не превышающие $9$, начиная с $p_{i}$.  
 	- Последовательность возрастает и ограничена снизу и сверху. $\implies$ она сходится.  
 
 ### Задание 1  
@@ -716,25 +839,25 @@ $\lim{x}{0} f(x)=$ ?
 
 ### 80  
 - Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей:  
-	- $x_{n} =(1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})$  
+	- $x_{n} =(1 + \dfrac{1}{2})(1 + \dfrac{1}{4}) \dots  (1 + \dfrac{1}{2^{n}})$  
 	1. Покажем, что $x_{n}$ - возрастает:  
 	- $x_{n + 1} > x_{n}$  
-	- $(1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})(1 + \frac{1}{2^{n + 1}}) < (1 + \frac{1}{2})(1 + \frac{1}{4}) \dots  (1 + \frac{1}{2^{n}})$  
-	- $1 + \frac{1}{2^{n + 1}} > 1$  
-	- $\frac{1}{2^{n + 1}} > 0 \implies $ $x_{n} \uparrow$  
+	- $(1 + \dfrac{1}{2})(1 + \dfrac{1}{4}) \dots  (1 + \dfrac{1}{2^{n}})(1 + \dfrac{1}{2^{n + 1}}) < (1 + \dfrac{1}{2})(1 + \dfrac{1}{4}) \dots  (1 + \dfrac{1}{2^{n}})$  
+	- $1 + \dfrac{1}{2^{n + 1}} > 1$  
+	- $\dfrac{1}{2^{n + 1}} > 0 \implies $ $x_{n} \uparrow$  
 	2. Ограничение снизу:   
-	- Оценим: $(\underbrace{((1 + \frac{1}{2^{n}})^{2^{n}})}_{e})^{\frac{1}{2^{n}}} = e^{\frac{1}{2^{n}}} < e^{(\frac{1}{2} + \frac{1}{4} + \dots+ \frac{1}{2^{n}})} = e^{\frac{\frac{1}{2}}{1 - \frac{1}{2}}} = e$  
+	- Оценим: $(\underbrace{((1 + \dfrac{1}{2^{n}})^{2^{n}})}_{e})^{\dfrac{1}{2^{n}}} = e^{\dfrac{1}{2^{n}}} < e^{(\dfrac{1}{2} + \dfrac{1}{4} + \dots+ \dfrac{1}{2^{n}})} = e^{\dfrac{\dfrac{1}{2}}{1 - \dfrac{1}{2}}} = e$  
 
 ### 85   
 - Пользуясь критерием Коши, доказать сходимость следующих последовательностей:  
-	- $x_{n} = 1 + \frac{1}{2^{2}} + \frac{1}{3^{2}} + \dots + \frac{1}{n^{2}}$  
+	- $x_{n} = 1 + \dfrac{1}{2^{2}} + \dfrac{1}{3^{2}} + \dots + \dfrac{1}{n^{2}}$  
 		- Критерий Коши: $x_{n} $ - фундаментальная $\Longleftrightarrow$ $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon} \ , \forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$  
 	- Запишем последнюю часть определения и подставим туда частичную сумму:  
-	- $|\frac{1}{(n + 1)^{2}} + \frac{1}{(n + 2)^{2}} + \dots + \frac{1}{(n + p)^{2}}| < |\frac{1}{n} - \frac{1}{n + 1} + \dots - \frac{1}{n + p - 1} + \frac{1}{n + p - 1} - \frac{1}{n + p}| = \frac{1}{n} - \frac{1}{n + p} < \eps$  
-	- $\frac{1}{n} - \frac{1}{n + p} < \frac{1}{n} < \eps$  
-	- $\frac{1}{n} < \eps$  
-	- $n > \frac{1}{\eps}$  
-	- $N_{\eps} = \lceil{\frac{1}{\eps}} \rceil$  
+	- $|\dfrac{1}{(n + 1)^{2}} + \dfrac{1}{(n + 2)^{2}} + \dots + \dfrac{1}{(n + p)^{2}}| < |\dfrac{1}{n} - \dfrac{1}{n + 1} + \dots - \dfrac{1}{n + p - 1} + \dfrac{1}{n + p - 1} - \dfrac{1}{n + p}| = \dfrac{1}{n} - \dfrac{1}{n + p} < \eps$  
+	- $\dfrac{1}{n} - \dfrac{1}{n + p} < \dfrac{1}{n} < \eps$  
+	- $\dfrac{1}{n} < \eps$  
+	- $n > \dfrac{1}{\eps}$  
+	- $N_{\eps} = \lceil{\dfrac{1}{\eps}} \rceil$  
 	- $\forall n > N_{\epsilon} \ , \forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon$  
 
 ## Семинар 04.10.2022  
@@ -751,42 +874,42 @@ $\lim{x}{0} f(x)=$ ?
 ## Семинар 11.10.2022  
 
 ### 471   
-- $\lim{x}{0} \frac{\sin{(5x)}x}{x} = \lim{x}{0} \frac{5\sin{(5x)}x}{5x} = 5$  
+- $\lim{x}{0} \dfrac{\sin{(5x)}x}{x} = \lim{x}{0} \dfrac{5\sin{(5x)}x}{5x} = 5$  
 
 ### 474  
-- $\lim{x}{0} \frac{1 - \cos{x}}{x^{2}} = \lim{x}{0} \frac{2\sin^{2}{\frac{x}{2}}}{x^{2}} = \frac{1}{2}$  
+- $\lim{x}{0} \dfrac{1 - \cos{x}}{x^{2}} = \lim{x}{0} \dfrac{2\sin^{2}{\dfrac{x}{2}}}{x^{2}} = \dfrac{1}{2}$  
 
 ### 479   
-- $\lim{x}{\frac{\pi}{4}} \tan{(2x)} \tan{(\frac{\pi}{4} - x)} = \lim{x}{\frac{\pi}{4}} (\frac{2\tan{x}}{1 - \tan^{2}{x}})(\frac{\tan{\frac{\pi}{4} - \tan{x}}}{1 - \tan{\frac{\pi}{4}}\tan{x}})= \lim{x}{\frac{\pi}{4}} \frac{2\tan{(x)}}{(1 - \tan{x})^{2}} = \frac{1}{2}$  
+- $\lim{x}{\dfrac{\pi}{4}} \tan{(2x)} \tan{(\dfrac{\pi}{4} - x)} = \lim{x}{\dfrac{\pi}{4}} (\dfrac{2\tan{x}}{1 - \tan^{2}{x}})(\dfrac{\tan{\dfrac{\pi}{4} - \tan{x}}}{1 - \tan{\dfrac{\pi}{4}}\tan{x}})= \lim{x}{\dfrac{\pi}{4}} \dfrac{2\tan{(x)}}{(1 - \tan{x})^{2}} = \dfrac{1}{2}$  
 
 ### 482   
-- $\lim{x}{a} \frac{\sin{x} - \sin{a}}{x - a} = \frac{2\sin{(\frac{x - a}{2})}\cos{(\frac{x + a}{2})}}{x - a} = \cos{a}$  
+- $\lim{x}{a} \dfrac{\sin{x} - \sin{a}}{x - a} = \dfrac{2\sin{(\dfrac{x - a}{2})}\cos{(\dfrac{x + a}{2})}}{x - a} = \cos{a}$  
 
 ### 506  
-- $\lim{x}{0} (\frac{1 + x}{2 + x}) ^ {\frac{1 - \sqrt{x}}{1 - x}} = \frac{1}{2}$  
-- $\lim{x}{1} (\frac{1 + x}{2 + x}) ^ {\frac{1 - \sqrt{x}}{1 - x}} = \lim{x}{1} (\frac{1 + x}{2 + x}) ^ {\frac{(1 - x)(1 + x)}{1 - x}} = \frac{1}{4}$  
+- $\lim{x}{0} (\dfrac{1 + x}{2 + x}) ^ {\dfrac{1 - \sqrt{x}}{1 - x}} = \dfrac{1}{2}$  
+- $\lim{x}{1} (\dfrac{1 + x}{2 + x}) ^ {\dfrac{1 - \sqrt{x}}{1 - x}} = \lim{x}{1} (\dfrac{1 + x}{2 + x}) ^ {\dfrac{(1 - x)(1 + x)}{1 - x}} = \dfrac{1}{4}$  
 ### 514  
-- $\lim{x}{0} \sqrt[x]{1 - 2x} = \lim{x}{0} ((1 + (- 2x))^{\frac{1}{-2x}})^{-2} = e^{-2}$  
+- $\lim{x}{0} \sqrt[x]{1 - 2x} = \lim{x}{0} ((1 + (- 2x))^{\dfrac{1}{-2x}})^{-2} = e^{-2}$  
 ### 517  
-- $\lim{x}{0} (1 + x^{2})^{ctg{(2x)}} =  \ \lim{x}{0} ((1 + x^{2})^{\frac{1}{x^{2}}})^{ctg{(2x)}x^{2}} = \ \lim{x}{0} ((1 + x^{2})^{\frac{1}{x^{2}}})^{ctg{(2x)}x^{2}} = \ \lim{x}{0} e^{ctg{(2x)}x^{2}} = e^{0} = 1$  
+- $\lim{x}{0} (1 + x^{2})^{ctg{(2x)}} =  \ \lim{x}{0} ((1 + x^{2})^{\dfrac{1}{x^{2}}})^{ctg{(2x)}x^{2}} = \ \lim{x}{0} ((1 + x^{2})^{\dfrac{1}{x^{2}}})^{ctg{(2x)}x^{2}} = \ \lim{x}{0} e^{ctg{(2x)}x^{2}} = e^{0} = 1$  
 
 ### 521   
-- $\lim{x}{0} \frac{\cos{x}}{\cos{2x}}^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{\cos{x}}{\cos{2x}} - 1)^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{\cos{x} - \cos{2x}}{\cos{2x}})^{\frac{1}{x^{2}}} = \lim{x}{0} (1 + \frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{\cos{2x}})^{\frac{1}{x^{2}}} = \ \lim{x}{0} ((1 + \frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{\cos{2x}})^{\frac{\cos{2x}}{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}})^{\frac{2\sin{\frac{3x}{2}\sin{\frac{x}{2}}}}{x^{2}\cos{2x}}} = \ e^{\frac{3}{2}}$  
+- $\lim{x}{0} \dfrac{\cos{x}}{\cos{2x}}^{\dfrac{1}{x^{2}}} = \lim{x}{0} (1 + \dfrac{\cos{x}}{\cos{2x}} - 1)^{\dfrac{1}{x^{2}}} = \lim{x}{0} (1 + \dfrac{\cos{x} - \cos{2x}}{\cos{2x}})^{\dfrac{1}{x^{2}}} = \lim{x}{0} (1 + \dfrac{2\sin{\dfrac{3x}{2}\sin{\dfrac{x}{2}}}}{\cos{2x}})^{\dfrac{1}{x^{2}}} = \ \lim{x}{0} ((1 + \dfrac{2\sin{\dfrac{3x}{2}\sin{\dfrac{x}{2}}}}{\cos{2x}})^{\dfrac{\cos{2x}}{2\sin{\dfrac{3x}{2}\sin{\dfrac{x}{2}}}}})^{\dfrac{2\sin{\dfrac{3x}{2}\sin{\dfrac{x}{2}}}}{x^{2}\cos{2x}}} = \ e^{\dfrac{3}{2}}$  
 
 ### 531   
-- $\lim{x}{a} \frac{\ln{x} - \ln{a}}{x - a} = \lim{x}{a} \frac{\frac{x}{a} - 1 + 1}{x - a}  = \lim{x}{a} \frac{1 + \frac{x}{a} - 1}{x - a} = \frac{\frac{x}{a}}{x - a} = \frac{1}{a}$  
+- $\lim{x}{a} \dfrac{\ln{x} - \ln{a}}{x - a} = \lim{x}{a} \dfrac{\dfrac{x}{a} - 1 + 1}{x - a}  = \lim{x}{a} \dfrac{1 + \dfrac{x}{a} - 1}{x - a} = \dfrac{\dfrac{x}{a}}{x - a} = \dfrac{1}{a}$  
 
 ### 541  
-- $\lim{x}{0} \frac{a^{x} - 1}{x} = \lim{x}{0} \frac{e^{\ln{x}} - 1}{x} =  \lim{x}{0} \frac{(e^{\ln{x}} - 1)\ln{a}}{x \ln{a}} = \ln{a} $  
+- $\lim{x}{0} \dfrac{a^{x} - 1}{x} = \lim{x}{0} \dfrac{e^{\ln{x}} - 1}{x} =  \lim{x}{0} \dfrac{(e^{\ln{x}} - 1)\ln{a}}{x \ln{a}} = \ln{a} $  
 
 ### 595  
-- $\lim{x}{1 - 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 - 0]{} + \infty \implies arctg{(+ \infty)} = \frac{\pi}{2}$  
+- $\lim{x}{1 - 0} arctg{\dfrac{1}{1 - x}}, \  \dfrac{1}{1 - x}  \xrightarrow[x \to 1 - 0]{} + \infty \implies arctg{(+ \infty)} = \dfrac{\pi}{2}$  
 
-- $\lim{x}{1 + 0} arctg{\frac{1}{1 - x}}, \  \frac{1}{1 - x}  \xrightarrow[x \to 1 + 0]{} + \frac{1}{-0} \implies arctg{(- \infty)} = - \frac{\pi}{2}$  
+- $\lim{x}{1 + 0} arctg{\dfrac{1}{1 - x}}, \  \dfrac{1}{1 - x}  \xrightarrow[x \to 1 + 0]{} + \dfrac{1}{-0} \implies arctg{(- \infty)} = - \dfrac{\pi}{2}$  
 
 ### 596  
-- $\lim{x}{- 0} \frac{1}{1 + \underbrace{e^{\frac{1}{x}} }_{e^{\frac{1}{-0}} = -\infty} }  = 1 $  
-- $\lim{x}{+ 0} \frac{1}{1 + \underbrace{e^{\frac{1}{x}}}_{\infty}}  = 0$  
+- $\lim{x}{- 0} \dfrac{1}{1 + \underbrace{e^{\dfrac{1}{x}} }_{e^{\dfrac{1}{-0}} = -\infty} }  = 1 $  
+- $\lim{x}{+ 0} \dfrac{1}{1 + \underbrace{e^{\dfrac{1}{x}}}_{\infty}}  = 0$  
 
 ### 597   
-- $\lim{x}{- \infty} \frac{\ln{(1 + \underbrace{e^{x} }_{0}) }}{x} = \frac{e^{x}}{x} = 0$  
+- $\lim{x}{- \infty} \dfrac{\ln{(1 + \underbrace{e^{x} }_{0}) }}{x} = \dfrac{e^{x}}{x} = 0$  
