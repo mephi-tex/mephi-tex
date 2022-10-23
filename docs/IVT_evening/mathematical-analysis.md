@@ -913,3 +913,38 @@ $\lim{x}{0} f(x)=$ ?
 
 ### 597   
 - $\lim{x}{- \infty} \dfrac{\ln{(1 + \underbrace{e^{x} }_{0}) }}{x} = \dfrac{e^{x}}{x} = 0$  
+
+## Семинар 18.10.2022
+- $|\phi(x)| \leq A|\psi(x)| \implies \phi(x) = O(\psi(x)), \ x \rightarrow x_{0}$
+
+### 650
+- Пусть $x \rightarrow 0$. Доказать неравенства:
+	- $2x - x^{2} = O(x)$ 
+		- $|2x - x^{2}| \leq |2x| \leq 2|x|$
+	- $x\sin{\dfrac{1}{x}} = O(|x|)$
+		- $|x\sin{\dfrac{1}{x}}| \leq |x|$
+	- $\lim{x}{0} \sqrt{x + \sqrt{x + \sqrt{x}}} \sim \sqrt[8]{x}$ 
+		- $\lim{x}{0} \left[ \dfrac{\sqrt{x + \sqrt{x + \sqrt{x}}}}{\sqrt[8]{x}} = \dfrac{\sqrt{x + \sqrt{\sqrt{x}(1 + \sqrt{x})}}}{\sqrt[8]{x}} = \dfrac{\sqrt{x + \sqrt[4]{x}}}{\sqrt[8]{x}} = \dfrac{\sqrt[8]{x}}{\sqrt[8]{x}}\right] = 1 $
+
+### 651 
+- Пусть  $x \rightarrow +\infty$. Доказать неравенства:
+	- $2x^{3} - 3x^{2} + 1 = O(x^{3})$ 
+		- $|2x^{3} - 3x^{2} + 1| \leq 2 |x^{3}|$
+	- $x + x^{2}\sin{x} = O(x^{2})$
+		- $|x + x^{2}\sin{x}| \leq |x| + |x^{2}||\sin{x}| \leq |x| + |x^{2}| < 2|x^{2}|$ 
+	- $\dfrac{\arctan{x}}{1 + x^{2}} = O(\dfrac{1}{x})$
+		- $\left |\dfrac{\arctan{x}}{1 + x^{2}} \right| \leq \left |\dfrac{\dfrac{\pi}{2}}{1 + x^{2}} \right| \leq \left| \dfrac{\pi}{2 + 2x^{2}} \right|$
+	- $\lim{x}{0} \sqrt{x + \sqrt{x + \sqrt{x}}} \sim \sqrt{x}$
+		- $\lim{x}{0} \left[ \dfrac{\sqrt{x + \sqrt{x + \sqrt{x}}}}{\sqrt{x}} = \dfrac{\sqrt{x + \sqrt{x^{2}(\dfrac{1}{x} + \dfrac{\sqrt{x}}{x^{2}})}}}{\sqrt{x}} = \sqrt{1 + \sqrt{(\dfrac{1}{x} + \dfrac{\sqrt{x}}{x^{2}})}} \right] = 1 $
+
+### 653 
+- Пусть $x \rightarrow 0$. Выделить главный член и определить порядок малости относительно $x$.
+	- $2x - 3x^{2} + x^{5} \sim Cx^{n}$
+		- $\lim{x}{0} \left[ \dfrac{2x - 3x^{2} + x^{5}}{Cx^{n}} = \dfrac{x(2 - 3x + x^{4})}{Cx} \right] = \dfrac{2}{C} = 1 \implies m = 1; \ C = 2$
+	- $\sqrt{1 - 2x} - \sqrt[3]{1 - 3x}$
+		- $\dfrac{(\sqrt{1 - 2x})^{6} - (\sqrt[3]{1 - 3x})^{6}}{\sqrt[6]{1 - 6x + 12x^{2} - 8x^{3}} - \sqrt[6]{1 - 6x + 9x^{2}} } \sim 1 + \dfrac{1}{6}(-6x + 12x^{2} - 8x^{3}) - 1 + \dfrac{1}{6}(-6x + 9x^{2}) \sim 2x^{2} - \dfrac{9}{6}x^{2} = \dfrac{1}{2}x^{2}$ 
+		- $\lim{x}{0} \dfrac{\dfrac{1}{2}x^{2}}{Cx^{2}} = 1 \implies m = 2; \ C = \dfrac{1}{2}$  
+### 655
+- Пусть $x \rightarrow 1$. Выделить главный член и определить порядок малости относительно $x - 1$.
+	- $3x^{2} - 3x  + 2$ 
+		- $\lim{x}{1} \dfrac{(x - 1)^{2}(x - 2)}{C(x - 1)^{m}} = 1 \implies m = 2; \ C = 1$
