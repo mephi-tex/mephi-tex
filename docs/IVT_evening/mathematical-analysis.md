@@ -722,6 +722,133 @@ $\lim{x}{0} f(x)=$ ?
 
 - $y = \arcsin{x}, \ x = \sin{y}$
 	- $(\arcsin{x})' = \dfrac{1}{(\sin{y})'} = \dfrac{1}{\cos{y}} = \dfrac{1}{\sqrt{1 - \sin^{2}y}} = \dfrac{1}{\sqrt{1 - x^{2}}}$ 
+
+## Лекция 26.10.2022
+
+### Таблица производных 
+
+
+№|f | f' 
+:------:|:--------:|------:
+Степенная и показательная функция||
+1 | $x^{n}$     | $nx^{n - 1}$
+2 |$a^{x}$     | $a^{x}\ln{a}$
+3 |$e^{x}$     | $e^{x}$
+4 |$x^{\alpha}, \ \alpha \in \RR$     | $\alpha x^{\alpha - 1}$
+5 |$\ln{x}$     | $\dfrac{1}{x}$
+6 |$\log_{a}{x}$     | $\dfrac{1}{x\ln{a}}$
+Тригонометрические функции||
+7 |$\sin{x}$     | $\cos{x}$   
+8 |$\cos{x}$     | $- \sin{x}$
+9 |$\tan{x}$     | $ \dfrac{1}{\cos{x}}$
+10 |$\cot{x}$     | $- \dfrac{1}{\sin{x}}$
+11 |$\arccos{x}$     | $- \dfrac{1}{\sqrt{1 - x^{2}}}$
+12 |$\arctan{x}$     | $\dfrac{1}{1 + x^{2}}$
+13 |$arccot{(x)}$     | $- \dfrac{1}{1 + x^{2}}$
+Гиперболические функции||
+14 |$sh{(x)}$     | $ch{(x)}$  
+15 |$ch(x)$     | $sh(x)$ 
+16 |$\tanh{x}$     | $\dfrac{1}{ch(x)}$
+17 |$\coth{x}$     | $ - \dfrac{1}{sh(x)}$ 
+
+***Основное тригонометрическое тождество гиперболической геометрии***
+
+- $ch^{2}(x) - sh^{2}(x) =\left ( \dfrac{e^{x} + e^{-x}}{2} \right )^{2} - \left ( \dfrac{e^{x} - e^{-x}}{2} \right )^{2} = \dfrac{1}{4} \left(4e^{x}e^{-x} \right) = 1$
+
+***Некоторые доказательства из таблицы производных***
+
+- Докажем $(5)$
+	- $\Delta y= y(x + \Delta x) - y(x) = \ln{(x + \Delta x)} - \ln{x} = \ln{\dfrac{x + \Delta x}{x}} = \ln{(1 + \dfrac{\Delta x}{x})} \sim \dfrac{\Delta x}{x}$ 
+	- $y' = \lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} = \lim{\Delta x}{0} \dfrac{\dfrac{\Delta y}{\Delta x}} {\Delta x} = \dfrac{1}{x}$
+- Докажем $(6)$
+	- $\log_{a}{x} = \dfrac{\ln{x}}{\ln{a}}$
+	- $\left (\dfrac{\ln{x}}{\ln{a}} \right)' = \dfrac{1}{x\ln{a}}$
+- Докажем $(2)$
+	- $y = a^{x}, \ x = \log_{a}{y}$
+	- $(a^{x})' = \dfrac{1}{(\log_{a}{y})'} = \dfrac{1}{\dfrac{1}{y\ln{a}}} = y\ln{a} = a^{x}\ln{a}$
+- Докажем $(4)$
+	- $x^{\alpha} = \left (e^{\ln{x}} \right )^{\alpha}$
+	- $\left ( \left (e^{\ln{x}} \right )^{\alpha} \right ) ' = e^{\alpha\ln{x}} \left (x\ln{x} \right)' = e^{\alpha\ln{x}} \cdot \alpha \cdot \dfrac{1}{x} = \alpha x^{\alpha - 1}$
+- Докажем $(9)$
+	- $\tan{x} = \left (\dfrac{\sin{x}}{\cos{x}} \right )' = \dfrac{\cos{x}(\sin{x})' - \sin{x}(\cos{x})'}{\cos^{2}{x}} = \dfrac{1}{\cos^{2}{x}}$ 
+- Докажем $(12)$
+	- $y = \arctan{x}, \ x = \tan{y}$ 
+	- $\arctan{x} = \dfrac{1}{(\tan{y})'}  = \cos^{2}{y} = \dfrac{1}{1 + \tan^{2}{y}} = \dfrac{1}{1 + x^{2}}$
+- Докажем $(14)$
+	- $ch(x) = \dfrac{e^{x} + e^{-x}}{2}$ 
+	- $sh(x) = \dfrac{e^{x} - e^{-x}}{2}$
+	- $\left (sh(x) \right )' = \left ( \dfrac{e^{x} - e^{-x}}{2} \right)' = \dfrac{1}{2}\left(e^{x} - e^{-x}(-x)' \right) = \dfrac{1}{2}\left(e^{x} + e^{-x}\right) = ch(x)$
+- Докажем $(15)$
+	- $\left (ch(x) \right )' = \dfrac{1}{2}\left(e^{x} - e^{-x}\right) = sh(x)$
+- Докажем $(16)$
+	- $\left (\tanh{x} \right )' = \left (\dfrac{sh(x)}{ch(x)} \right )' = \dfrac{ch(x)(sh(x))' - sh(x)(ch(x))'}{ch^{2}(x)} = \dfrac{1}{ch^{2}(x)}$
+- Докажем $(17)$
+	- $\left (\coth{x} \right )' = \left (\dfrac{ch(x)}{sh(x)} \right )' = - \dfrac{ch^{2}(x) - sh^{2}(x)}{sh^{2}(x)} = - \dfrac{1}{sh^{2}(x)}$
+
+### Производная параметрически заданной функции
+- $\begin{equation*}
+  	\begin{cases}
+	x = \phi{(t)} \\
+	y = \psi{(t)}
+	\end{cases}
+    \end{equation*}$
+
+***Пример***
+
+- Рассмотрим уравнение окружности : $x^{2} + y^{2} = R^{2}$
+	- $\begin{equation*}
+  	\begin{cases}
+	  x = R\cos{(t)}, \ t \in [0; 2\pi] \\
+	  y = R\sin{(t)}, \ t \in [0; 2\pi] 
+	  \end{cases}
+    \end{equation*}$
+- Пусть $x = \phi{(t)}, \ y = \psi{(t)},  \ \exists \lim{\Delta t}{0} \dfrac{\Delta x}{\Delta t} = \phi', \ \exists \lim{\Delta t}{0} \dfrac{\Delta y}{\Delta t} = \psi'$
+- Рассмотрим : $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x}=  y'(x) = \lim{\Delta x,\ \Delta y, \ \Delta t}{0, \ 0, \ 0 } \dfrac{\Delta y \cdot \Delta t}{\Delta x \cdot \Delta t} = \lim{\Delta t}{0} \dfrac{\Delta y}{\Delta t} \cdot  \lim{\Delta x}{0} \dfrac{\Delta t}{\Delta x} = \dfrac{\lim{\Delta t }{0} \dfrac{\Delta y}{\Delta t}}{\lim{\Delta t }{0} \dfrac{\Delta x}{\Delta t}} = \dfrac{y'(t)}{x'(t)}$
+
+### Производная неявно заданной функции
+- $x^{2} + y^{2} = R^{2}$
+- Возьмем производную от обеих частей, где $y = y(x)$:
+	- $2x + 2y(x) \cdot y'(x) = 0 \implies y'(x) = - \dfrac{x}{y}$ 
+
+### Необходимое условие существования производной
+
+***Вспомогательное определение непрерывности***
+
+- $f$ непрерывна в $x_{0}$ $\Longleftrightarrow$ При $\Delta x \rightarrow 0, \ \Delta y \rightarrow 0$.
+
+***Доказательство***
+- Действительно, возьмем $\Delta x \rightarrow 0, \ \Delta y = y(x + \Delta x) - y(x)$. Непрерывность означает : $\forall \eps > 0, \ \exists \delta > 0 : |x - x_{0}| < \delta \implies |\Delta y| < \eps$. Следствие можно переписать в виде $|f(x + \Delta x) - f(x)| < \eps$, что и означает совпадение $f(x)$ с ее пределом.
+
+***Теорема о существовании производной***
+
+- $f$ имеет производную в $x$ $\implies$ $f$ - непрерывна в $x$. 
+
+***Доказательство***
+
+- $f$ имеет производную $f'$ в $x$ $\implies$ $f'(x)  = \lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} \implies$ при $\Delta x \rightarrow 0$, $\Delta y \rightarrow 0$. Это и есть определение непрерывности $f$
+
+### Определение дифференцируемой функции и ее дифференциала
+***Обозначение дифференциала***
+
+- $A \Delta x = dy$ или $df$
+
+***Определение дифференцируемой функции***
+
+- $f$ -  дифференцируема в $x$ $\Longleftrightarrow$ $\Delta y = A \Delta x + o(\Delta x)$.
+- Выясним смысл $A$.
+	- Разделим обе части на $\Delta x$. Получим $\dfrac{\Delta y}{\Delta x} = A + \underbrace{\dfrac{o(\Delta x)}{\Delta x}}_{\rightarrow 0}$ 
+	- $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} = y'(x) = A \implies dy = y'(x) \cdot \Delta x$
+- Рассмотрим $y = x$, тогда $y' = 1 \implies \Delta y = \Delta x$. $dy = y'(x)\Delta x \ \implies $ $dx = 1 \cdot \Delta x = \Delta x$.
+- Перепишем : $dy = y'(x) dx \implies y'(x) = \dfrac{dy}{dx}$ (Определение производной по Коши)
+
+***Пример***
+- $y = x^{n}$
+	- $dy = nx^{n - 1}dx \implies \dfrac{dy}{dx} = nx^{n - 1}$ 
+
+### Алгебраические свойства дифференциала
+1. $d(u + v) = du + dv$
+2. $d(uv) = udv + vdu$
+3. $d\left (\dfrac{u}{v} \right) = \dfrac{vdu - udv}{v^{2}}$
 ## Семинар 13.09.2022  
 ***Разбор домашней работы***  
 Доказать по индукции :   
