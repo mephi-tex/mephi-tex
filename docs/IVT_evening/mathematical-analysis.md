@@ -369,7 +369,7 @@ depth: 3
 - $x_{n} $ - фундаментальная $\Longleftrightarrow$ $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$.  
 
 ***Теорема***  
-- Последовательность $\{x_{n}\}$ сходится $\implies$ она фундаментальная.  
+- Последовательность $\{x_{n}\}$ сходится $\Longleftrightarrow$ она фундаментальная.  
 	- Необходимость $(\implies)$: $\{x_{n}\}$ - сходится. Доказать : $\{x_{n}\}$ - фундаментальная. Доказательство: $ \lim{n}{\infty} \{x_{n}\} = a$. Рассмотрим $|x_{n + p} - x_{n}|$. $|x_{n + p} - x_{n}| = |x_{n + p} - x_{n} - a + a| = |x_{n + p} - a - (x_{n} - a)| \leq \underbrace{|x_{n + p} - a|}_{\leq \dfrac{\epsilon}{2}} + \underbrace{|x_{n} - a|}_{\leq \dfrac{\epsilon}{2}} < \eps$  
 	- Достаточность $(\Longleftarrow)$ : $\{x_{n}\}$ - фундаментальная. Докажем, что $\{x_{n}\}$ - сходится. Доказательство:  
 		- $(\forall \epsilon > 0, \exists N_{\epsilon}, \forall n > N_{\epsilon}) \wedge (\forall p \in \NN : |x_{n + p} - x_{n}| < \epsilon)$. Перепишем в виде $-\eps < x_{n + p} - x_{n} < \eps$ (начиная с некоторого номера). До этого промежутка лишь конечное число членов $\implies$ $\{x_{n}\}$ - ограничена, тогда по Т. Больцано - Вейерштрасса в $\{x_{n}\}$ существует $\{x_{n_{k}}\}$. $\lim{n}{\infty}{x_{n_{k}}} = a$.  
