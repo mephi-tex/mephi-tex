@@ -1,3 +1,4 @@
+import re
 from itertools import chain
 from pathlib import Path
 
@@ -121,8 +122,8 @@ def fix_usual_repr():
 
         for pattern, repl in USUAL_MAP.items():
             if pattern.startswith("\\"):  # latex command
-                text = text.replace(pattern + " ", repl)
-            text = text.replace(pattern, repl)
+                text = re.sub(pattern + " ", repl, text)
+            text = re.sub(pattern, repl, text)
 
         file.write_text(text, "utf-8")
 
