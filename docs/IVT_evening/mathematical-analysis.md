@@ -458,7 +458,7 @@ depth: 3
 - Пример:  
 	- Доказать непрерывность $y = \cos{x}$ в любой токе числовой оси.  
 	- Возьмем $x_{0}$, докажем, что $\exists \lim{x}{x_{0}} \cos{x} = \cos{x_{0}}$.  
-	- Доказательство по Коши: $\forall \epsilon > 0: |\cos{x} - \cos{x_{0}| = |2 \sin{\dfrac{x - x_{0}}{2}}} \sin{\dfrac{x + x_{0}}{2} }| \leq 2|\sin{\dfrac{x - x_{0}}{2} }| \leq 2 \dfrac{|x - x_{0}|}{2}$. При $|x - x_{0}| < \delta, |cos{x} - cos{x_{0}}| < \epsilon \implies \delta = \epsilon$  
+	- Доказательство по Коши: $\forall \epsilon > 0: |\cos{x} - \cos{x_{0}| = |2 \sin{\dfrac{x - x_{0}}{2}}} \sin{\dfrac{x + x_{0}}{2} }| \leq 2|\sin{\dfrac{x - x_{0}}{2} }| \leq 2 \dfrac{|x - x_{0}|}{2}$. При $|x - x_{0}| < \delta, |\cos{x} - \cos{x_{0}}| < \epsilon \implies \delta = \epsilon$  
 
 ## Лекция 06.10.2022  
 
@@ -525,7 +525,7 @@ $\lim{x}{0} f(x)=$ ?
 	- $\cos{(x)} <  \dfrac{x}{\sin{(x)}} < \dfrac{1}{\cos{(x)}}$  
 	- $\cos{(0)} \xrightarrow[n \to 0]{} 1 \implies \lim{x}{0 + 0} \dfrac{\sin{x}}{x} = 1$  
 -  Рассмотрим $\lim{x}{ 0 - 0} \dfrac{\sin{(x)}}{x}$  
-	- Так как $f(-x) = f(x) \implies \lim{x}{0 + 0} \dfrac{\sin{(x)}}{x} = \lim{x}{0 - 0} \dfrac{\sin(x)}{x} = \lim{x}{0} \dfrac{sin(x)}{x} = 1$  
+	- Так как $f(-x) = f(x) \implies \lim{x}{0 + 0} \dfrac{\sin{(x)}}{x} = \lim{x}{0 - 0} \dfrac{\sin(x)}{x} = \lim{x}{0} \dfrac{\sin(x)}{x} = 1$  
 - Докажем $(2)$  
 - $\lim{n}{\infty} (1 + \dfrac{1}{n})^{n} = 1^{\infty}$  
 - Докажем, что $\exists \lim{n}{\infty} f(x_{n})$. Воспользуемся Теоремой о возрастающей, ограниченной последовательности:  
