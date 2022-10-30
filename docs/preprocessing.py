@@ -101,14 +101,22 @@ def fix_line_endings():
 
 
 USUAL_MAP = {
-    "<=": r"\leq ",
-    ">=": r"\geq ",
+    "<=": r"\\leq ",
+    ">=": r"\\geq ",
     "-->": chr(0),
-    "<->": r"\leftrightarrow ",
-    "->": r"\rightarrow ",
-    "<-": r"\leftarrow ",
-    "<=>": r"\ident ",
-    chr(0): "-->",
+    "<->": r"\\leftrightarrow ",
+    "->": r"\\rightarrow ",
+    "<-": r"\\leftarrow ",
+    "<=>": r"\\ident ",
+    chr(0): r"-->",
+}
+
+FUNCTION_MAP = {
+    r"\bcos\b": r"\\cos",
+    r"\bsin\b": r"\\sin",
+    r"\btan\b": r"\\tan",
+    r"\btan\b": r"\\tan",
+    r"\btg\b": r"\\tg",
 }
 
 
@@ -121,9 +129,13 @@ def fix_usual_repr():
         text = file.read_text("utf-8")
 
         for pattern, repl in USUAL_MAP.items():
-            if pattern.startswith("\\"):  # latex command
+            if repl.startswith("\\"):  # latex command
                 text = re.sub(pattern + " ", repl, text)
             text = re.sub(pattern, repl, text)
+
+        for pattern, repl in FUNCTION_MAP.items():
+            text = re.sub(pattern, repl, text)
+            text = re.sub(r"\\" + repl, repl, text)
 
         file.write_text(text, "utf-8")
 
