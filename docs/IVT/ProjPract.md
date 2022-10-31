@@ -21,6 +21,10 @@ $\newcommand{\upline}[1]{\overline{#1}}$
 $\newcommand{\dnline}[1]{\underline{#1}}$
 $\def\ex{\exists}$
 $\def\exo{\ex!}$
+$\renewcommand{\fal}{\forall}$
+$\renewcommand{\int}{\intop}$
+$\def\inf{\infty}$
+$\renewcommand{\tg}{\tan}$
 $\renewcommand{\phi}{\varphi}$
 $\renewcommand{\epsilon}{\varepsilon}$
 $\def\alp{\alpha}$
@@ -39,15 +43,17 @@ $\newcommand{\UU}{\mathcal{U}}$
 $\newcommand\E{\mathbbold{e}}$
 $\newcommand\F{\mathbbold{f}}$
 $\newcommand\G{\mathbbold{g}}$
-$\renewcommand{\int}{\intop}$
-$\def\inf{\infty}$
-$\newcommand{\lim}[2]{\dn{{#1}\rightarrow{#2}}{lim}}$
-$\newcommand{\ans}[1]{\textbf{Ответ}: #1.}$
-$\newcommand{\proj}[2]{\text{пр.}_{#1}{#2}}$
+$\newcommand{\rawOlim}[3]{\dn{{#1}\rightarrow{#2}}{#3}}$
+$\newcommand{\lim}[2]{\rawOlim{#1}{#2}{lim}}$
+$\newcommand{\uplim}[2]{\rawOlim{#1}{#2}{\upline{lim}}}$
+$\newcommand{\dnlim}[2]{\rawOlim{#1}{#2}{\dnline{lim}}}$
 $\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}$
 $\newcommand{\ord}[1]{\operatorname{ord}(#1)}$
+$\newcommand{\ans}[1]{\textbf{Ответ}: #1.}$
 $\renewcommand{\gcd}{\text{НОД}}$
 $\newcommand{\lcm}{\text{НОК}}$
+$\newcommand{\proj}[2]{\text{пр.}_{#1}{#2}}$
+$\newcommand{\U}[2]{U_{#1}(#2)}$
 <!-- Macros: end -->
 # Проектная Пратика  
 
