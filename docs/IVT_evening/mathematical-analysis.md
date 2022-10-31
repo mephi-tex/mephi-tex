@@ -545,8 +545,8 @@ $\lim{x}{0} f(x)=$ ?
 ### Эквивалентные бесконечно малые величины  
 1. $\lim{x}{0} \dfrac{\sin(x)}{x} = 1 \Longleftrightarrow \sin{(x)} \sim x$  
 2. $\lim{x}{0} \dfrac{\ln{(1 + x)}}{x} = 1 \Longleftrightarrow \ln{(1 + x)} \sim x$  
-3. $\lim{x}{0} \dfrac{e^{x} - 1}{x} = 1 \Longleftrightarrow e^{x} \sim x$  
-4. $\lim{x}{0} \dfrac{\sqrt[n]{(1 + x)} - 1}{x} = \dfrac{1}{n} \Longleftrightarrow \sqrt[n]{(1 + x)} \sim \dfrac{x}{n}$  
+3. $\lim{x}{0} \dfrac{e^{x} - 1}{x} = 1 \Longleftrightarrow e^{x} - 1 \sim x$  
+4. $\lim{x}{0} \dfrac{\sqrt[n]{(1 + x)} - 1}{x} = \dfrac{1}{n} \Longleftrightarrow \sqrt[n]{(1 + x)} - 1 \sim \dfrac{x}{n}$  
 
 ## Лекция 12.10.2022  
 ### Система стягивающихся отрезков  
