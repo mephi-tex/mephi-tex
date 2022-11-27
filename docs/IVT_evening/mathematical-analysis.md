@@ -691,7 +691,7 @@ $\lim{x}{0} f(x)=$ ?
 	
 	- $\Delta v = v(x + \Delta x) - v(x)$
 	
-	- $(uv)' = \lim {\Delta x}{0} \left[ \dfrac{\Delta (uv)}{\Delta x}  = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x + \Delta x) + u(x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x) - u(x)}{\Delta x}v(x + \Delta x) + \dfrac{v(x + \Delta x) - v(x)}{\Delta x}u(x)  \right] = u'v + uv'$
+	- $(uv)' = \lim{\Delta x}{0} \left[ \dfrac{\Delta (uv)}{\Delta x}  = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x + \Delta x) + u(x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x) - u(x)}{\Delta x}v(x + \Delta x) + \dfrac{v(x + \Delta x) - v(x)}{\Delta x}u(x)  \right] = u'v + uv'$
 
 - Докажем $(5)$:
 	- Докажем : $\left( \dfrac{1}{v} \right)' = - \dfrac{v'}{v^{2}}$
@@ -1031,9 +1031,78 @@ $\lim{x}{0} f(x)=$ ?
 ***Доказательство***
 
 - Введем вспомогательную функцию $\psi(t) = f(x) - \Phi(x, t) - R_{n + 1}, t \in \left[a ; x\right]$. Запишем $R_{n + 1} = (x - t)^{P} \cdot Q(x)$. Проверим значение $\psi(t)$ на концах промежутка $t \in \left[a; x\right]$.
-- $\psi(t) = f(x) - \Phi(x, a) - R_{n + 1} = 0$
-- $\psi(t) = f(x) - \Phi(x, x) - R_{n + 1} = f(x) - f(x) - R_{n + 1} = 0$.
-- Условия теоремы Ролля выполнены, следовательно $\exists \xi \in \left[a; x\right]$ в которой $\psi'(\xi) = 0$ (производная по $t$).
+- $\psi(a) = f(a) - \Phi(x, a) - R_{n + 1} = 0$
+- $\psi(x) = f(x) - \Phi(x, x) - R_{n + 1} = 0$.
+- Условия теоремы Ролля выполнены $\implies$ $\exists \xi \in \left[a; x\right]$ ,  $\psi'(\xi) = 0$ (производная по $t$).
+- $\psi(t) = f(x) - f(t) - \dfrac{f'(t)}{1!}(x - t) - \dfrac{f''(t)}{2!}(x - t)^{2} - \dots - \dfrac{f^{n}(t)}{n!}(x - t)^{n} - (x - t)^{P} \cdot Q(x)$
+- $\psi'(t) = f'(t) + - f'(t) + \dfrac{f'(t)}{1!} - \dfrac{f''(t)}{1!}(x - t) + \dfrac{f''(t)}{2!}2(x - t) - \dfrac{f'''(t)}{2!}(x - t)^{2} + \dots + \dfrac{f^{(n)}(t)}{n!}n(x - t)^{n - 1} - \dfrac{f^{(n + 1)}(t)}{n!}(x - t)^{n} + p(x - t)^{p - 1} \cdot Q(x)$
+- $\psi'(\xi) = -\dfrac{f^{(n + 1)}(\xi)}{n!}(x - \xi)^{n} + p(x - \xi)^{p - 1} \cdot Q(x) = 0$
+- $Q(x) = \dfrac{f^{(n + 1)}(\xi)}{n!} \cdot \dfrac{(x - \xi)^{n}}{p(x - \xi)^{p - 1}} = \dfrac{f^{(n + 1)}(\xi)}{n!p}(x - \xi)^{n - p + 1}$
+- $R_{n + 1} = \dfrac{(x - a)^{n} \cdot f^{(n + 1)}(\xi)(x - \xi)^{n - p + 1}}{n!p} = \dfrac{(x - a)^{n}}{(x - \xi)^{p}} \cdot \dfrac{(x - \xi)^{n + 1}}{n!p} \cdot f^{(n + 1)}(\xi)$
+
+***Пример***
+
+- Разложить в точке $a$ произвольный многочлен степени $n$
+- $\Rho_{n}(x) = C_{n}x^{n} + C_{n - 1}x^{n - 1} + \cdots + C_{1}x + C_{0} = \underbrace{\Rho(a) + \dfrac{\Rho_{n}'(a)}{1!}(x - a) + \dfrac{\Rho_{n}''(a)}{2!}(x - a)^{2} + \dots + \dfrac{\Rho_{n}^{(n)}(a)}{n!}(x - a)^{n}}_{\Phi(x, a)} \implies R_{n + 1} = 0$
+- $\Phi(a, a) = f(a)$
+- $\Phi'(a, a) = f'(a)$
+- $\Phi''(a, a) = f''(a)$
+- $\Phi^{(n)}(a, a) = f^{(n)}(a)$
+## Лекция 23.11.2022
+### Оценка остаточного члена
+- Запишем остаточный член $R_{n + 1}$ в трех видах:
+	- В форме Лагранжа при $p = n + 1$, то есть $R_{n + 1} = \dfrac{(x - a)^{n + 1}}{(n + 1)!} \cdot f^{(n + 1)}(\xi)$ 
+	- В форме Коши. Введем вместо $\xi \in \left[a, x\right]$ промежуточную $\theta \in \left[0, 1\right] $ 
+		- $ \xi = a + \theta(x - a)$
+		- $ R_{n + 1} = \dfrac{x - 			a}{x - \xi} \cdot \dfrac{(x - \xi)^{n - 1}}{n!} \cdot f^{(n + 1)}(\xi) = \dfrac{x - a}{n!} 					\cdot \dfrac{x - \xi}{n!} \cdot f^{(n - 1)}(\xi)$
+		- $x - \xi = x - a - \theta(x - a) = (x - a)(1 - \theta)$
+		- $R_{n + 1} = \dfrac{(x - a)(x - a)^{n}(1 - \theta)^{n}}{n!} \cdot f(a + \theta(x - a))$
+		- $R_{n + 1} = \dfrac{(x - a)^{n + 1}(1 - \theta)^{n}}{n!} \cdot f^{(n + 1)}(a + \theta(x - a))$
+	- В форме Пиано. $R_{n + 1} = o((x - a)^{n})$ 
+### Доказательство формулы Тейлора с остаточным членом в форме Пиано
+***Доказательство***
+- Докажем $\lim{x}{a} \dfrac{R_{n + 1}}{(x - a)^{n}} = 0, \ \lim{x}{a} R_{n + 1} = 0$
+- Еще одно преимущество в форме Пиано - если формула Тейлора требует существования всех производных $f(x)$ до $n + 1$ порядка включительно в оркестности точки $a$, то в форме Пиано верна, при наличии $n$ - ого порядка производных в точке $a$ и $n - 1$ в окрестности $a$ .
+- $\lim{x}{a} {R_{n + 1}}{(x - a)^{n}} = \dfrac{0}{0}$ - Используем правило Лопиталя. 
+- $\lim{x}{a} \dfrac{(R_{n + 1})'}{n(x - a)^{n - 1}} = \dfrac{0}{0}$ - Повторим $n - 1$ раз. 
+- $\lim{x}{a} \dfrac{R^{(n - 1)}_{n + 1}}{n!(x - a)} = \dfrac{0}{0}$
+- $\lim{x}{a} \dfrac{R^{(n - 1)}_{n + 1}(x) - R^{(n - 1)}_{n + 1}(a)}{n!(x - a)} = \dfrac{R^{(n - 1)}_{n + 1}(a)}{n!} = 0$
+
+### Оценка остаточного члена в формуле Тейлора  
+- Рассмотрим класс функций, для которых все производные любого порядка ограничены одной и той же константой $M$ в окретности точки $a$
+- Используем форму Лагранжа и точку разложения возьмем $a = 0$ (Тогда формула Тейлора называется формулой Маклорена)
+- $f(x) = f(0) + \dfrac{f'(0)}{1!}x + \dfrac{f''(0)}{2!}x^{2} + \dots + \dfrac{f^{(n)}(0)}{n!}x^{n} + R_{n + 1}$
+- $R_{n + 1} = \dfrac{x^{n + 1}}{(n + 1)!} \cdot f^{(n + 1)}(\theta x)$
+- $\left|R_{n + 1} \right| \leq \dfrac{\left|x\right|^{n + 1}}{(n + 1)!} \cdot M$
+
+***Пример***
+- $f(x) = e^{x}$. В окрестности точки $0$ все производные $e^{x}$ на отрезке $x \in \left[-r; r\right], \ M = e^{r}$
+  - $\left|R_{n + 1}\right| \leq \dfrac{e^{r}\left|x\right|^{n + 1}}{(n + 1)!}$
+- $f(x) = \sin{x}; \ f(x) = \cos{x}; \ M = 1$
+  - $\left|R_{n + 1}\right| \leq \dfrac{|x|^{n + 1}}{(n + 1)!}$
+
+### Формула Маклорена для некоторых элементраных функций
+- $e^{x} = 1 + x + \dfrac{x^{2}}{2!} + \dfrac{x^{3}}{3!} + \dots + \dfrac{x^{n}}{n!} + R_{n + 1}$
+	- $R_{n + 1} = \dfrac{x^{n + 1}}{(n + 1)!} e^{\theta x}, \ (0 \leq \theta \leq 1), \ x \in \left[-r; r\right]$
+	
+	- $\left|R_{n + 1}\right| \leq \dfrac{r^{n + 1}}{(n + 1)!}$
+- $\sin{x}$
+	- $f^{(n)}(x) = \sin{\left(x + h \cdot \dfrac{\pi}{2}\right)}$
+	- $f^{(n)}(x) = 0$ - Для четных $n$
+	- $n = 2k + 1$
+	- $\sin{x} = x - \dfrac{x^{3}}{3!} + \dfrac{x^{5}}{5!} - \dots + (-1)^{k} \dfrac{x^{2k + 1}}{(2k + 1)!} + R_{n + 2}$
+- $\cos{x}$
+	- $\cos{x} = \cos{\left(x + n \cdot \dfrac{\pi}{2} \right)}$ 
+	- $\cos{x} = 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} \dots + \dfrac{(-1)^{k}x^{2k}}{(2k)!} + R_{n + 2}$
+- $\ln{\left(1 + x\right)}$
+  - $\ln{\left(1 + x\right)} = x - \dfrac{x^{2}}{2} + \dfrac{x^{3}}{3!} - \dfrac{x^{4}}{4} + \dots + (-1)^{(n - 1)} \dfrac{x^{n}}{n} + R_{n + 1}$
+  - $\ln'{\left(1 + x\right)} = \dfrac{1}{1 + x} \bigg|_{x = 0} = 1$
+  - $\ln''{\left(1 + x\right)} = - \dfrac{1}{(1 + x)^{2}} \bigg|_{x = 0} = -1$
+  - $\ln'''{\left(1 + x\right)} = \dfrac{2}{(1 + x)^{3}} \bigg|_{x = 0} = 2$
+- Биноминальное разложение
+	- $\left(1 + x\right)^{\alpha} = 1 + \alpha x + \dfrac{\alpha(\alpha - 1)}{2!}x^{2} + \dfrac{\alpha(\alpha - 1)(\alpha - 2)}{3!}x^{3} + \dots + \dfrac{\alpha(\alpha - 1) \dots (\alpha - n + 1)}{n!}x^{n} + R_{n + 1}$  
+
+
 ## Семинар 13.09.2022 
 ***Разбор домашней работы***  
 Доказать по индукции :   
