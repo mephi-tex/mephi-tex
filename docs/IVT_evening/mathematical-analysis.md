@@ -1043,7 +1043,7 @@ $\lim{x}{0} f(x)=$ ?
 ***Пример***
 
 - Разложить в точке $a$ произвольный многочлен степени $n$
-- $\Rho_{n}(x) = C_{n}x^{n} + C_{n - 1}x^{n - 1} + \cdots + C_{1}x + C_{0} = \underbrace{\Rho(a) + \dfrac{\Rho_{n}'(a)}{1!}(x - a) + \dfrac{\Rho_{n}''(a)}{2!}(x - a)^{2} + \dots + \dfrac{\Rho_{n}^{(n)}(a)}{n!}(x - a)^{n}}_{\Phi(x, a)} \implies R_{n + 1} = 0$
+- $P_{n}(x) = C_{n}x^{n} + C_{n - 1}x^{n - 1} + \cdots + C_{1}x + C_{0} = \underbrace{\Rho(a) + \dfrac{P_{n}'(a)}{1!}(x - a) + \dfrac{P_{n}''(a)}{2!}(x - a)^{2} + \dots + \dfrac{P_{n}^{(n)}(a)}{n!}(x - a)^{n}}_{\Phi(x, a)} \implies R_{n + 1} = 0$
 - $\Phi(a, a) = f(a)$
 - $\Phi'(a, a) = f'(a)$
 - $\Phi''(a, a) = f''(a)$
