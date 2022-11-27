@@ -1095,7 +1095,7 @@ $\lim{x}{0} f(x)=$ ?
 	- $\cos{x} = \cos{\left(x + n \cdot \dfrac{\pi}{2} \right)}$ 
 	- $\cos{x} = 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} \dots + \dfrac{(-1)^{k}x^{2k}}{(2k)!} + R_{n + 2}$
 - $\ln{\left(1 + x\right)}$
-  - $\ln{\left(1 + x\right)} = x - \dfrac{x^{2}}{2} + \dfrac{x^{3}}{3!} - \dfrac{x^{4}}{4} + \dots + (-1)^{(n - 1)} \dfrac{x^{n}}{n} + R_{n + 1}$
+  - $\ln{\left(1 + x\right)} = x - \dfrac{x^{2}}{2} + \dfrac{x^{3}}{3} - \dfrac{x^{4}}{4} + \dots + (-1)^{(n - 1)} \dfrac{x^{n}}{n} + R_{n + 1}$
   - $\ln'{\left(1 + x\right)} = \dfrac{1}{1 + x} \bigg|_{x = 0} = 1$
   - $\ln''{\left(1 + x\right)} = - \dfrac{1}{(1 + x)^{2}} \bigg|_{x = 0} = -1$
   - $\ln'''{\left(1 + x\right)} = \dfrac{2}{(1 + x)^{3}} \bigg|_{x = 0} = 2$
