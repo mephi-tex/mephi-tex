@@ -746,8 +746,8 @@ $\lim{x}{0} f(x)=$ ?
 Тригонометрические функции||
 7 |$\sin{x}$     | $\cos{x}$   
 8 |$\cos{x}$     | $- \sin{x}$
-9 |$\tan{x}$     | $ \dfrac{1}{\cos{x}}$
-10 |$\cot{x}$     | $- \dfrac{1}{\sin{x}}$
+9 |$\tan{x}$     | $ \dfrac{1}{\cos^{2}{x}}$ 
+10 |$\cot{x}$     | $- \dfrac{1}{\sin^{2}{x}}$ 
 11 |$\arccos{x}$     | $- \dfrac{1}{\sqrt{1 - x^{2}}}$
 12 |$\arctan{x}$     | $\dfrac{1}{1 + x^{2}}$
 13 |$arccot{(x)}$     | $- \dfrac{1}{1 + x^{2}}$
