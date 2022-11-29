@@ -778,18 +778,18 @@ $\lim{x}{0} f(x)=$ ?
 	- $\left ( \left (e^{\ln{x}} \right )^{\alpha} \right ) ' = e^{\alpha\ln{x}} \left (x\ln{x} \right)' = e^{\alpha\ln{x}} \cdot \alpha \cdot \dfrac{1}{x} = \alpha x^{\alpha - 1}$
 - Докажем $(9)$
 	- $\tan{x} = \left (\dfrac{\sin{x}}{\cos{x}} \right )' = \dfrac{\cos{x}(\sin{x})' - \sin{x}(\cos{x})'}{\cos^{2}{x}} = \dfrac{1}{\cos^{2}{x}}$ 
-- Докажем $(12)$
+- Докажем $(13)$
 	- $y = \arctan{x}, \ x = \tan{y}$ 
 	- $\arctan{x} = \dfrac{1}{(\tan{y})'}  = \cos^{2}{y} = \dfrac{1}{1 + \tan^{2}{y}} = \dfrac{1}{1 + x^{2}}$
-- Докажем $(14)$
+- Докажем $(15)$
 	- $ch(x) = \dfrac{e^{x} + e^{-x}}{2}$ 
 	- $sh(x) = \dfrac{e^{x} - e^{-x}}{2}$
 	- $\left (sh(x) \right )' = \left ( \dfrac{e^{x} - e^{-x}}{2} \right)' = \dfrac{1}{2}\left(e^{x} - e^{-x}(-x)' \right) = \dfrac{1}{2}\left(e^{x} + e^{-x}\right) = ch(x)$
-- Докажем $(15)$
-	- $\left (ch(x) \right )' = \dfrac{1}{2}\left(e^{x} - e^{-x}\right) = sh(x)$
 - Докажем $(16)$
-	- $\left (\tanh{x} \right )' = \left (\dfrac{sh(x)}{ch(x)} \right )' = \dfrac{ch(x)(sh(x))' - sh(x)(ch(x))'}{ch^{2}(x)} = \dfrac{1}{ch^{2}(x)}$
+	- $\left (ch(x) \right )' = \dfrac{1}{2}\left(e^{x} - e^{-x}\right) = sh(x)$
 - Докажем $(17)$
+	- $\left (\tanh{x} \right )' = \left (\dfrac{sh(x)}{ch(x)} \right )' = \dfrac{ch(x)(sh(x))' - sh(x)(ch(x))'}{ch^{2}(x)} = \dfrac{1}{ch^{2}(x)}$
+- Докажем $(18)$
 	- $\left (\coth{x} \right )' = \left (\dfrac{ch(x)}{sh(x)} \right )' = - \dfrac{ch^{2}(x) - sh^{2}(x)}{sh^{2}(x)} = - \dfrac{1}{sh^{2}(x)}$
 
 ### Производная параметрически заданной функции
