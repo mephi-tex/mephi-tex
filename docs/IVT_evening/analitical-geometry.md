@@ -438,7 +438,7 @@ depth: 3
     \lambda = \dfrac{x - x_{0}}{e} \\  
     \lambda = \dfrac{y - y_{0}}{m}  
    \end{cases}  
-   \end{equation*} = \dfrac{x - x_{0}}{e} = \dfrac{y - y_{0}}{m}$  
+   \end{equation*} \implies \dfrac{x - x_{0}}{e} = \dfrac{y - y_{0}}{m}$  
 ### Параметрическое уравнение прямой  
 - $ \dfrac{x - x_{0}}{e} = \dfrac{y - y_{0}}{m} = t$  
 - $ \begin{equation*}  
