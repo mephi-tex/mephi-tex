@@ -457,7 +457,7 @@ depth: 3
 ### Нормальное уравнение прямой   
 ![image5](angem_pictures/angem5.jpg)  
 - Необходимое и достаточное условие принадлежности точки данной: $pr_{\vec{n}}(\vec{OM}) = p$ - это уже уравнение прямой. Выразим его в координатах.   
-- $pr_{\vec{n}(\vec{OM})} = \dfrac{(\vec{OM}, \vec{n})}{|\vec{n}|} =(\vec{OM}, \vec{n}) = x\cos{\phi} + y\sin{\phi} = p \implies x\cos{\phi} + y\sin{\phi} - p = 0$  
+- $pr_{\vec{n}}(\vec{OM}) = \dfrac{(\vec{OM}, \vec{n})}{|\vec{n}|} =(\vec{OM}, \vec{n}) = x\cos{\phi} + y\sin{\phi} = p \implies x\cos{\phi} + y\sin{\phi} - p = 0$  
 
 ***Нормальное уравнение прямой из ее общего уравнения***  
 - $x\cos{\phi} + y\sin{\phi} - p = 0$  
