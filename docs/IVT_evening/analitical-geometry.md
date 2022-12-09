@@ -1031,9 +1031,9 @@ l_{2} & m_{2}  &n_{2}
    \hat{x} = x' + \dfrac{a_{13}'}{a_{11}'} \\
    \hat{y} = y' 
     \end{cases}  
-    \end{equation*} \implies a_{11}'\hat{x}^{2} + 2a_{23}\hat{y} + a_{33} = 0$ 
-- $y'' = \hat{y} + \dfrac{a_{33}}{2a_{23}} \implies a_{11}'\hat{x}^{2} + 2a_{23}'(\hat{y} + \dfrac{a_{33}}{2a_{23}}) = 0$
-- Заменим: $\hat{x} = x''$, $\hat{y} = y'' - \dfrac{a_{33}}{2a_{23}'}$
+    \end{equation*} \implies a_{11}'\hat{x}^{2} + 2a_{23}\hat{y} + a_{33}' = 0$ 
+- $y'' = \hat{y} + \dfrac{a_{33}}{2a_{23}} \implies a_{11}'\hat{x}^{2} + 2a_{23}'(\hat{y} + \dfrac{a_{33}'}{2a_{23}'}) = 0$
+- Заменим: $\hat{x} = x''$, $\hat{y} = y'' - \dfrac{a_{33}'}{2a_{23}'}$
 - Получим: $a_{11}'x''^{2} = -2a_{23}'y''$
 - Исходя из общего вида: $a_{11}'x^{2} + 2py + q = 0$:
 	- $p = 0, \ q = 0 \implies x^{2} = 0$ - Вертикальная прямая
