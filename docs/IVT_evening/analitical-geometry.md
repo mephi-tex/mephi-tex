@@ -540,7 +540,7 @@ depth: 3
 ### Уравнение плоскости в отрезках на координатных осях  
 - $Ax + By + Cz + D = 0 | \cdot (- \dfrac{1}{D})$  
 - $\dfrac{Ax}{-D} + \dfrac{By}{-D} + \dfrac{Cz}{-D} = 1$. Обозначим $\dfrac{A}{-D} = a, \dfrac{B}{-D} = b, \dfrac{C}{-D} = c$  
-- $ax + by + cz = 1$  
+- $\dfrac{x}{a} + \dfrac{y}{b} + \dfrac{z}{c} = 1$  
 ![image1](angem_pictures/angem11.jpg)  
 
 ### Угол между плоскостями. Условие параллельности и перпендикулярности двух плоскостей  
