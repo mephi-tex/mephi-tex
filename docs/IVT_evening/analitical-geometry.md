@@ -460,9 +460,10 @@ depth: 3
 - $pr_{\vec{n}}(\vec{OM}) = \dfrac{(\vec{OM}, \vec{n})}{|\vec{n}|} =(\vec{OM}, \vec{n}) = x\cos{\phi} + y\sin{\phi} = p \implies x\cos{\phi} + y\sin{\phi} - p = 0$  
 
 ***Нормальное уравнение прямой из ее общего уравнения***  
+
 - $x\cos{\phi} + y\sin{\phi} - p = 0$  
-- $Ax + By + C = 0$ $|(\cdot \dfrac{1}{\sqrt{A^2 + B^2}})$  
-- $\dfrac{A}{\sqrt{A^2 + B^2}}x + \dfrac{B}{\sqrt{A^2 + B^2}}y + \dfrac{C}{\sqrt{A^2 + B^2}} = 0 \implies (\dfrac{A}{\sqrt{A^2 + B^2}})^2 + (\dfrac{B}{\sqrt{A^2 + B^2}})^{2} + (\dfrac{C}{\sqrt{A^2 + B^2}})^2 = 1$  
+- $Ax + By + C = 0$ $|\left( \pm \dfrac{1}{\sqrt{A^2 + B^2}}\right)$  
+- $\dfrac{A}{\sqrt{A^2 + B^2}}x + \dfrac{B}{\sqrt{A^2 + B^2}}y - \dfrac{C}{\sqrt{A^2 + B^2}} = 0 \implies (\dfrac{A}{\sqrt{A^2 + B^2}})^2 + (\dfrac{B}{\sqrt{A^2 + B^2}})^{2} + (\dfrac{C}{\sqrt{A^2 + B^2}})^2 = 1$  
 
 ***Пример***  
 1. $3x - 4y + 5 = 0$ $|\cdot (- \dfrac{1}{5}) \implies - \dfrac{3}{5}x + \dfrac{4}{5}y - 1 = 0$  
@@ -569,8 +570,8 @@ depth: 3
 - $x\cos{\alpha} + y\cos{\beta} + z\cos{\gamma} - p = 0$ - Нормальное уравнение плоскости  
 
 ### Перевод из общего уравнение плоскости в нормальное  
-- $Ax + By + Cz + D = 0 \ |\cdot (\dfrac{1}{\sqrt{A^{2} + B^{2} + C^{2}}}) $ (Если свободный член $< 0, $ то $| \cdot (- \dfrac{1}{\sqrt{A^{2} + B^{2} + C^{2}}})$  
-- $\underbrace{\dfrac{A}{\sqrt{A^{2} + B^{2} + C^{2}}}}_{\cos{\alpha}}x + \underbrace{\dfrac{B}{\sqrt{A^{2} + B^{2} + C^{2}}}}_{\cos{\beta}}y +  \underbrace{\dfrac{C}{\sqrt{A^{2} + B^{2} + C^{2}}}}_{\cos{\beta}}z + \dfrac{D}{\sqrt{A^{2} + B^{2} + C^{2}}} = 0$  
+- $Ax + By + Cz + D = 0 \ |\cdot (\dfrac{1}{\sqrt{A^{2} + B^{2} + C^{2}}}) $ (Если свободный член $> 0, $ то $| \cdot (- \dfrac{1}{\sqrt{A^{2} + B^{2} + C^{2}}})$  
+- $\underbrace{\dfrac{A}{\sqrt{A^{2} + B^{2} + C^{2}}}}_{\cos{\alpha}}x + \underbrace{\dfrac{B}{\sqrt{A^{2} + B^{2} + C^{2}}}}_{\cos{\beta}}y +  \underbrace{\dfrac{C}{\sqrt{A^{2} + B^{2} + C^{2}}}}_{\cos{\beta}}z - \dfrac{D}{\sqrt{A^{2} + B^{2} + C^{2}}} = 0$  
 
 ### Расстояние от точки до плоскости  
 ![image1](angem_pictures/angem14.jpg)  
