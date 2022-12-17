@@ -706,8 +706,7 @@ depth: 3
     y - y_{0} = mt \\
     z - z_{0} = nt
    \end{cases}  
-   \end{equation*}$ $ \implies
-   \begin{equation*} 
+   \end{equation*}$  $ \implies \begin{equation*} 
    \begin{cases} 
     x = x_{0} + lt \\  
     y = y_{0} + mt \\
