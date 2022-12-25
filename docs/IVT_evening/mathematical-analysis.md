@@ -1241,6 +1241,116 @@ $\lim{x}{0} f(x)=$ ?
 	- Точки перегиба:
 		- $f''(x) = \dfrac{1}{2} \dfrac{7(3x^{2} - 7) - (x^{3} - 7 + 6 )3x}{x^{6}} = 0$
 		- $x = - \dfrac{9}{7}$ 
+## Лекция 13.12.2022
+### Первообразная и неопределенный интеграл
+- Пусть на некотором промежутке занана $f(x)$. Первообразная для этой функции на этом промежутке называется функция дифференциррования на этом промежутке $F(x)$, такая что $F'(x) = f(x)$.
+- Первообразная определена неоднозначно, т.к. если $F(x)$ - первообразная, то $F(x) + C$ - тоже первообразная.
+
+### Теорема об отличии первообразных на постоянные на промежутке
+
+***Теорема***
+
+- Любые две первообразные функции $f(x)$ на данном промежутке могут отличаться только на постоянные слагаемые
+
+***Доказательство***
+
+- Пусть на $\left(a;b\right)$ $f(x)$ имеет первообразные $F_{1}(x)$ и $F_{2}(x)$. Докажем, что отличаются на $C$. Введем функцию $\Phi(x) = F_{1}(x) + F_{2}(x)$ в любой точке $x$. $\Phi(x)' = F_{1}(x)'  + F_{2}(x)' = f(x) - f(x) = 0$. Если $x$ - любая точка просматриваемого промежутка, то по теореме Лагранжа о конечных приращениях существует внутри промежутка точка $\xi$, что $\Phi(b) - \Phi(a) = \Phi'(\xi)(b - a)$. $\Phi(x + \Delta x) - \Phi(x) = \Phi'(\xi) \Delta x$,  $\Phi'(\xi) = 0 \implies \Phi(x + \Delta x) = \Phi(x)  \implies \Phi(x) = const \implies F_{1}(x) - F_{2}(x) = C \implies F_{1}(x) = F_{2}(x) + C$.
+
+***Определение***
+- Если известна какая - то первообразная, то совокупность всех первообразных имеет вид $F(x) + C$ и называется неопределенным интегралом
+
+***Обозначение***
+- $F(x) + C = \int f(x) dx $
+
+### Алгебраические свойства неопределенного интеграла
+- $d\left(\int f(x) dx \right) = \left( F(x) + C \right) ' dx = F'(x) dx = dF(x)$
+- $\int dF = \int F'(x) dx = \int f(x) dx + C$
+- $\int \left(\alpha f(x) + \beta g(x) \right) dx = \alpha \int f(x) dx + \beta \int g(x) dx$
+
+### Таблица неопределенных интегралов
+№|f(x) | F(x) 
+:------:|:--------:|------:
+1 |  $C$ | $Cx + C_{1}$
+2 |$x^{n}$     | $\dfrac{x^{n + 1}}{n + 1} + C$ 
+3 |$\dfrac{1}{x}$     | $\ln{x} + C$
+4 |$a^{x}$     | $\dfrac{a^{x}}{\ln{a}} + C$
+5 |$e^{x}$     | $e^{x} + C$
+6 |$\sin{x}$     | $- \cos{x} + C$   
+7 |$\cos{x}$     | $\sin{x} + C$
+8 |$\dfrac{1}{\cos^{2}{x}}$     | $ \tan{x} + C$ 
+9 |$- \dfrac{1}{\sin^{2}{x}}$     | $\cot{x} + C$ 
+10 |$\dfrac{1}{\sqrt{1 + x^{2}}}$     | $ \arcsin{x} + C$
+11 |$- \dfrac{1}{\sqrt{1 + x^{2}}}$     | $\arccos{x} + C$
+12 | $\dfrac{1}{1 + x^{2}}$    | $\arctan{x} + C$  
+13 |$- \dfrac{1}{1 + x^{2}}$     | $arccot{(x)} + C$ 
+14 |$sh{(x)}$     | $ch{(x)} + C$ 
+15 |$ch(x)$     | $sh(x) + C$ 
+
+### Методы интегрирования 
+- Метод замены переменной
+	- Пусть имеем $\int f(x) dx$, если $x = \phi(t)$, так что $dx = \phi'(t) dt$, то обозначив первообразную функции $f(\phi(t))$ через $G(t)$ получим $\int f(\phi(t)) dt = G(t) + C \implies G'(t) = f(\phi(t)) \cdot \phi(t) \implies G(t) = \int f(\phi(t))\phi'(t) dt = \int f(x) dx$ 
+- Метод интегрирования по частям
+	- $d(u(x) v(x)) = udv + vdu$
+	- $\int d(uv) dx = \int u dv + \int v du$
+	- $\int u dv = uv - \int v du$
+## Лекция 20.12.2022
+### Интегрирование рациональных функций
+- Пусть имеем правильную несократимую дробь $\dfrac{P(x)}{Q(x)}$. Пусть далее многочлен $Q(x)$ имеет корень $x = a$ кратности $\alpha$, т. е. $Q(x) = (x - a)^{\alpha}\phi(x)$, причем $\phi(a) \neq 0$.
+
+### Теорема о разложении дроби на простейшие
+- $\dfrac{P(x)}{Q(x)} = \dfrac{A}{(x  - a)^{\alpha}} + \dfrac{\psi(x)}{(x - a)^{\alpha - k}\phi(x)}, \ k \geq 1$
+
+***Доказательство***
+
+- $\dfrac{P(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{P(x) - A\phi(x)}{Q(x)}\bigg|_{A = \dfrac{P(a)}{\phi(a)}} = \dfrac{\Phi(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{(x - a)^{k}\psi(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{\psi(x)}{(x - a)^{\alpha - k}\phi(x)}$
+
+***Замечание***
+- Если $Q(x)$ имеет комплексный корень $x = u + iv$, тогда он имеет комплексно - сопряженный корень $\upline{x} = u - iv$, т. е. $Q(x) = \left(u + iv\right)\left(u - iv \right) = u^{2} + v^{2}$. Обычно этот множитель встречается в виде $Q(x) = \left(x^{2} + px + q\right)^{\alpha} \cdot \phi(x) \implies \dfrac{P(x)}{Q(x)} = \dfrac{Mx + N}{(x^{2} + px + q)^{\alpha}} + \dfrac{\psi(x)}{(x^{2} + px + q)^{\alpha - k}\phi(x)}$
+
+***Общий вид разложения рациональной дроби на простейшие***
+
+- $\dfrac{P(x)}{Q(x)} = \dfrac{A_{1}}{(x - a)^{\alpha}} + \dfrac{A_{2}}{(x - a)^{\alpha - 1}} + \dots + \dfrac{A_{\alpha}}{x - a} + \dfrac{B_{1}}{(x - b)^{\beta}} + \dfrac{B_{2}}{(x - b)^{\beta - 1}} + \dots + \dfrac{B_{\beta}}{x - b} + \dots + \dfrac{C_{1}}{(x - c)^{\gamma}} + \dfrac{C_{2}}{(x - c)^{\gamma - 1}} + \dfrac{C_{\gamma}}{x - c} + \dfrac{M_{1}x + N_{1}}{(x^{2} + p_{1}x - q_{1})^{\delta}} +  \dfrac{M_{2}x + N_{2}}{(x^{2} + p_{1}x - q_{1})^{\delta - 1}} + \dots +  \dfrac{M_{\delta}x + N_{\delta}}{(x^{2} + p_{1}x - q_{1}} + \dfrac{K_{1}x + L_{1}}{(x^{2} + p_{2}x + q_{2})^{\eps}} + \dfrac{K_{2}x + L_{2}}{(x^{2} + p_{2}x + q_{2})^{\eps - 1}} + \dots + \dfrac{K_{\eps}x + L_{\eps}}{x^{2} + p_{2}x + q_{2}}$
+
+### Основные интегралы рациональных дробей
+1. $\int \dfrac{A}{x - a} dx = A\ln{(x - a)} + C$
+2. $\int \dfrac{A}{(x - a)^{\alpha}} dx = \dfrac{(x - a)^{\alpha + 1}}{-\alpha + 1} + C$
+3. $\int \dfrac{Mx + N}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{\dfrac{Mx + N}{M} \cdot 2}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + \dfrac{2N}{M}}{x^{2} + px + q}dx = \dfrac{M}{2} \int \dfrac{2x + p - p + \dfrac{2N}{M}}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + p}{x^{2} + px + q} dx + \dfrac{M}{2} \int \dfrac{\dfrac{2N}{M} - p}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{d(x^{2} + px q)}{x^{2} + px + q} + \dfrac{M}{2} \int \dfrac{B}{x^{2} + px + q} dx = \dfrac{M}{2} \ln{(x^{2} + px + q)} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + px + q} = \dfrac{M}{2} \ln{(x^{2} + px + q)} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + \dfrac{2px}{2} + q + \dfrac{p^{2}}{q} - \dfrac{p^{2}}{q}} =  \dfrac{M}{2} \ln{(x^{2} + px + q)} + \dfrac{MB}{2} \int \dfrac{dt}{t^{2} + \left(q - \dfrac{p}{q}\right)}\bigg|_{t = x + \dfrac{p}{2}}$. В зависимости от знака в знаменателе получаем $\ln$ либо $\arctan$
+4. $\int \dfrac{Mx + N}{(x^{2} + px + q)^{\alpha}} dx $ Решается понижением порядка с помощью рекуррентной формулы.
+	-  $I_{\alpha} = \int \dfrac{dt}{(t^{2} + 1)^{\alpha}} = \int \dfrac{1 - t^{2} + t^{2}}{(t^{2} + 1)^{\alpha}} dt = \int \dfrac{dt}{(t^{2} + 1)^{\alpha - 1}} - \int \dfrac{t^{2}dt}{(t^{2} + 1)^{\alpha}} = I_{\alpha - 1} - \int u dv \bigg|_{u = t}^{dv = \dfrac{tdt}{(t^{2} + 1)^{\alpha}}} = I_{\alpha - 1} -  t \cdot \dfrac{0.5}{(1 - \alpha)(t^{2} + 1)^{\alpha - 1}} + \int \dfrac{0.5}{(1 - \alpha)(t^{2} + 1)^{\alpha}}dt = I_{\alpha - 1} - \dfrac{t}{2(1 - \alpha)(t^{2} + 1)^{\alpha - 1}} + \dfrac{I_{\alpha - 1}}{2(1 - \alpha)} = - \dfrac{t}{2(\alpha - 1)(t^{2} + 1)^{\alpha - 1}} + I_{\alpha - 1} \left(\dfrac{2(1 - \alpha) + 1}{2(1 - \alpha)}\right)$
+
+### Комплексные числа
+- Комплексным числом называется упорядоченная пара действительных чисел $(a; b)$.
+
+***Обозначение***
+- $z = (a ; b)$
+- $a = \Re(z)$ - действительная часть
+- $b = \Im(z)$ - мнимая часть
+- $i = (0, 1)$
+
+### Алгебраические свойства комплексных чисел
+- $a_{1} = a_{2} , b_{1} = b_{2} \implies z_{1} = z_{2}$
+- $z_{1} + z_{2} = \left(a_{1} + a_{2}, b_{1} + b_{2}\right)$
+- $z_{1}z_{2} = \left(a_{1}a_{2} - b_{1}b_{2}, a_{1}b_{2} + a_{2}b_{1}\right)$
+- $z_{1} = z_{2}z \implies \dfrac{z_{1}}{z_{2}} = z$
+- $z = (a, b) = (a, 0) + b(0 , 1) = a + ib$ - алгебраическая форма записи комплексного числа
+### Модуль комплексного числа
+- $|z| = |x + iy| = \sqrt{x^{2} + y^{2}}$
+
+### Аргумент комплексного числа
+***Обозначение***
+- $0 \leq \phi \leq 2\pi \implies \phi = \arg{z} \implies  \arg{Z} = \arg{z} + 2\pi k$ 
+
+### Тригонометрическая форма записи комплексного числа
+- $z = x + iy = \rho\cos{\phi} + \rho i\sin{\phi} = \rho \left(\cos{\phi} + i\sin{\phi} \right)$
+- $e^{i\phi} = \cos{\phi} + i\sin{\phi} \implies z = \rho e^{i \phi}$
+- $z_{1}z_{2} = \rho_{1}\rho_{2}\left(\cos{\phi_{1}} + i \sin{\phi_{1}}\right)\left(\cos{\phi_{2}} + i \sin{\phi_{2}}\right) = \rho_{1}\rho_{2}\left(\cos{(\phi_{1} + \phi_{2}}) + i\sin{(\phi_{1} + \phi_{2})} \right)$
+
+### Формула Муавра
+- $z^{n} = \rho^{n}\left(\cos{(n\phi)} + i\sin{(n\phi)}\right)$
+
+### Извлечение корня из комплексного числа
+- $\sqrt[n]{z} = \sqrt[n]{\rho}\left(\cos{\dfrac{\phi}{n}} + i\sin{\dfrac{\phi}{n}}\right)$
+- Число корней: $n$
 ## Семинар 13.09.2022 
 ***Разбор домашней работы***  
 Доказать по индукции :   
