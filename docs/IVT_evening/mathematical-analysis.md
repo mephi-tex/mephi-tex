@@ -328,7 +328,7 @@ depth: 3
 	- $N = \max(N_{1}, N_{2}) \implies$ $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \dfrac{\epsilon}{2} +  \dfrac{\epsilon}{2} = \epsilon \implies \lim{n}{\infty} (x_{n} + y_{n}) = A + B$  
 - Докажем $(2)$   
 	- $ \lim{n}{\infty} x_{n} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon_{1})$  
-	- $ \lim{n}{\infty} x_{n} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon_{2})$  
+	- $ \lim{n}{\infty} y_{n} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |y_{n} - B| < \epsilon_{2})$  
 	- $N = \max(N_{1}, N_{2}) \implies$ $\forall n > N :|x_{n}y_{n} - AB| = \\ |x_{n}y_{n} -Ay_{n} + Ay_{n} - A B| = \\ |(x_{n} - A)y_{n} + A(y_{n} - B)| \leq |x_{n} - A||y_{n}| + |A||y_{n} - B|\bigg|_{|y_{n}| < M_{y}} \leq \eps_{1} M_{y} + |A|\eps_{2}\bigg|_{\eps_{1} = \dfrac{\eps}{2|M_{y}|}}^{\eps{2} = \dfrac{\eps}{2|A|}} \implies |x_{n}y_{n} - AB| < \eps \implies \lim{n}{\infty} (x_{n}y_{n}) = AB$  
 
 ## Лекция 21.09.2022  
@@ -568,8 +568,8 @@ $\lim{x}{0} f(x)=$ ?
 	- Множество левых концов ограничено сверху $b_{n}$ и монотонно возрастает $\implies \exists \ \sup{(a_{n})}$. Аналогично $\exists \ inf(b_{n}) \implies \lim{n}{\infty} a_{n} = \lim{n}{\infty} b_{n} = c$  
 
 ### Верхний и нижний пределы последовательности  
-- $\overline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \max(\lim{n}{\infty} \{a_{n}\})$  
-- $\underline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \min(\lim{n}{\infty} \{a_{n}\})$  
+- $\overline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \max(\lim{n}{\infty} \{a_{n_{k}}\})$  
+- $\underline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \min(\lim{n}{\infty} \{a_{n_{k}}\})$  
 
 ***Пример***  
 
