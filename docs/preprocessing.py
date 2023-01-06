@@ -1,3 +1,4 @@
+import ast
 import re
 from itertools import chain
 from pathlib import Path
@@ -143,6 +144,40 @@ def fix_usual_repr():
     print()
 
 
+def fix_obsidian_image_links():
+    # optional width - ![[image_path.jpg]] <!-- "width": "300px" -->
+    LINK_PATTERN = re.compile(
+        r"!\[\[(?P<path>.+)\]\][^\S|\n]*(?:<!--(?P<attrs>.*)-->)?"
+    )
+    LINK_FORMAT = '<img alt="{name}" src="{path}" width="{width}">'
+
+    def repl(match: re.Match) -> str:
+        data = match.groupdict("")
+
+        path = Path(data["path"])
+        data["path"] = str(path.as_posix())
+        data["name"] = path.name
+
+        data["width"] = "600px"
+        # also SEE: https://stackoverflow.com/a/69329600/12141949
+        data.update(ast.literal_eval("{" + data["attrs"] + "}"))
+
+        return LINK_FORMAT.format(**data)
+
+    prompt = "fixing obsidian image links..."
+    size = print_over(0, prompt)
+
+    for file in get_mds():
+        size = print_over(size, prompt, file)
+        text = file.read_text("utf-8")
+
+        text = LINK_PATTERN.sub(repl, text)
+        file.write_text(text, "utf-8")
+
+    print_over(size, prompt, "done")
+    print()
+
+
 def remove_private_parts():
     REMOVE_START = "<!-- start-private -->"
     REMOVE_END = "<!-- end-private -->"
@@ -281,6 +316,7 @@ def preprocess_locally():
 
 def preprocess_for_server():
     remove_private_parts()
+    fix_obsidian_image_links()
     fix_line_endings()
     fix_mermaid_code()
 
