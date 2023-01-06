@@ -4,7 +4,7 @@ $\newcommand{\cases}[1]{\block{cases}{#1}}$
 $\newcommand{\up}[2]{\stackrel{#1}{#2}}$
 $\def\dn#1#2{\mathrel{\mathop{#2}\limits_{#1}}}$
 $\def\ident{\Longleftrightarrow}$
-$\def\thus{\Rightarrow}$
+$\def\thus{\implies}$
 $\newcommand{\set}[1]{ \{ #1 \} }$
 $\newcommand{\bigset}[1]{ \left \{ #1 \right \} }$
 $\newcommand{\bracs}[1]{ ( #1 ) }$
@@ -43,7 +43,7 @@ $\newcommand{\UU}{\mathcal{U}}$
 $\newcommand\E{\mathbbold{e}}$
 $\newcommand\F{\mathbbold{f}}$
 $\newcommand\G{\mathbbold{g}}$
-$\newcommand{\rawOlim}[3]{\dn{{#1}\rightarrow{#2}}{#3}}$
+$\newcommand{\rawOlim}[3]{\dn{{#1}\implies{#2}}{#3}}$
 $\newcommand{\lim}[2]{\rawOlim{#1}{#2}{lim}}$
 $\newcommand{\uplim}[2]{\rawOlim{#1}{#2}{\upline{lim}}}$
 $\newcommand{\dnlim}[2]{\rawOlim{#1}{#2}{\dnline{lim}}}$
@@ -80,8 +80,8 @@ depth: 3
 
 ***Упражнение***  
 
-- Доказать, что $(\dfrac{m}{n})^2 \neq 2$, где $\dfrac{m}{n}$ - несократимая дробь.  
-	- Доказательство : Предположим, что $(\dfrac{m}{n})^2 = 2$, тогда :  
+- Доказать, что $\left(\dfrac{m}{n}\right)^2 \neq 2$, где $\dfrac{m}{n}$ - несократимая дробь.  
+	- Доказательство : Предположим, что $\left(\dfrac{m}{n}\right)^2 = 2$, тогда :  
 	$m^2 = 2n^2$ Т.к. $2n^2$ - четное, то и $m^2$ - четное, а следовательно $m$ - четное. $m = 2k$, $4k^2 = 2n^2$, $2k^2 = n^2$ - следовательно: $n^2$ - четное. Получим противоречие, т.к. $\dfrac{2n^2}{2k^2}$ - сократимая дробь.  
 
 
@@ -97,13 +97,13 @@ depth: 3
 Рассмотрим произвольное числовое множество $A$, состоящее из чисел $x \in A$.   
 
 ***Определение***  
-- Множество $A$ называется ограниченным сверху, если $\exists M : \forall x \in A \Rightarrow x \leq M$  
+- Множество $A$ называется ограниченным сверху, если $\exists M : \forall x \in A \implies x \leq M$  
 
 ***Определение***  
-- Множество $A$ называется ограниченным снизу, если $\exists m : \forall x \in A \Rightarrow x \geq m$  
+- Множество $A$ называется ограниченным снизу, если $\exists m : \forall x \in A \implies x \geq m$  
 
 ***Определение***  
-- Множество $A$ называется ограниченным снизу и сверху, если $\exists M, m : \forall x \in A \Rightarrow  m \leq x \leq M$  
+- Множество $A$ называется ограниченным снизу и сверху, если $\exists M, m : \forall x \in A \implies  m \leq x \leq M$  
 
 
 ***Определение***  
@@ -119,16 +119,18 @@ depth: 3
 
 ***Определение точной верхней грани***  
 
-- $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = \sup{X} $  
+- $(\forall x \in X : x \leq  M) \wedge (\forall x < M, \exists x' \in X : x' > x) \implies M = \sup{X} $  
 
 ***Определение точной нижней грани***  
-- $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m =inf{X}$  
+- $(\forall x \in X: x \geq m) \wedge (\forall x > m, \exists x' \in X: x' < x) \implies m =inf{X}$  
 
 ***Альтернативное определение точной нижней грани***  
-- $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf{X}$  
+
+- $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \implies m = inf{X}$  
 
 ***Альтернативное определение точной верхней грани***  
-- $(\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = \sup{X}$  
+
+- $(\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0, \exists x' \in X: x' > M - \epsilon) \implies M = \sup{X}$  
 
 ***Упражнение***  
 
@@ -139,11 +141,11 @@ depth: 3
 
 	2. Рассматриваемое множество содержит только отрицательные числа  
 
-		- Пусть $(1)$, тогда точная верхняя грань больше или равна нуля. Т.к. множество ограничено сверху, то его целые части не превышают этой грани. Отберем из множества те числа, у которых наибольшая целая часть $\overline{x_{0}}$, остальные числа отбросим. Среди оставшихся отберем те, у которых наибольший следующий разряд, т.е $\overline{x_{0}},\overline{x_{1}}$. И т.д. до бесконечности. Получаем число - бесконечную, вообще говоря, непериодическую десятичную дробь. $\overline{x_{0}}\overline{x_{1}}\overline{x_{2}} ... \overline{x_{n}} ... = \overline{x} (\sup)$  
+		- Пусть $(1)$, тогда $\sup{} \geq 0$. $X$ ограничено сверху $\implies x \in X : [x] \leq \sup$. Отберем из множества те числа, у которых наибольшая целая часть $\overline{x_{0}}$, остальные числа отбросим. Среди оставшихся отберем те, у которых наибольший следующий разряд, т.е. $\overline{x_{0}},\overline{x_{1}}$. И т.д. до бесконечности. Получаем число - бесконечную, вообще говоря, непериодическую десятичную дробь. $\overline{x_{0}}\overline{x_{1}}\overline{x_{2}} ... \overline{x_{n}} ... = \overline{x} \ (\sup)$  
 
-		- Докажем, что таким образом получим точную верхнюю грань данного множества. Действительно по первой части определения $\sup$ : $\forall x \in A \Rightarrow x \leq \overline{x}$. Но это и есть $\sup$ по характеру построения числа $\overline{x}$, так как на каждой позиции для построения $\overline{x}$ бралось наибольшее число. Теперь докажем вторую часть определения $\sup$. $\forall x < \overline{x}, \exists x' \in A: x' > x$. Действительно, берем произвольное число (не обязательно из множества $A$) , $x < \overline{x}$, т.к. $x < \overline{x}$ на каком - то знаке из $\overline{x_{0}},\overline{x_{1}}, ... ,\overline{x_{n}}, ... $. Докажем, что $\exists x' \in A$ , т.ч. $x' > x$. Т.к. $x' \in A$, то $x_{0}' \leq \overline{x_{0}}$, а если они равны, то $x_{1}' < \overline{x_{1}}$ и т.д. до позиции с номером $n$. Получим, что в элементах нашего множества есть число, у которого на $n$ - ом месте стоит $\overline{x_{n}}$, но $\overline{x_{n}} > x_{n} \Rightarrow x_{n}' > x_{n}$  
+		- Докажем, что таким образом получим точную верхнюю грань данного множества. Действительно по первой части определения $\sup$ : $\forall x \in A \implies x \leq \overline{x}$. Но это и есть $\sup$ по характеру построения числа $\overline{x}$, так как на каждой позиции для построения $\overline{x}$ бралось наибольшее число. Теперь докажем вторую часть определения $\sup : \forall x < \overline{x}, \exists x' \in A: x' > x$. Действительно, берем произвольное число (не обязательно из множества $A$) , $x < \overline{x}$, т.к. $x < \overline{x}$ на каком - то знаке из $\{\overline{x_{0}},\overline{x_{1}}, ... ,\overline{x_{n}}, ... \}$. Докажем, что $\exists x' \in A: x' > x$.  $x' \in A \implies x_{0}' \leq \overline{x_{0}}$, $x_{0}' = \overline{x_{0}} \implies$ $x_{1}' < \overline{x_{1}}$ и т.д. до позиции с номером $n$. Получим, что в элементах нашего множества есть число, у которого на $n$ - ом месте стоит $\overline{x_{n}} \implies \overline{x_{n}} > x_{n}' > x_{n}$  
 
-		- Докажем для пункта $(2)$. Если все числа множества $A$ - отрицательные, то $\forall x \in A: x = -|x|$, тогда отбрасываем все числа у которых наименьшая целая часть модуля $\overline{x_{0}}$, затем у которых $\overline{x_{0}}, \overline{x_{1}}$ и т.д. до бесконечности. Получаем бесконечную десятичную непериодическую дробь. Поставим перед числом знак $(-)$, получим $\sup$.  
+		- Докажем для пункта $(2)$. Если все числа множества $A$ - отрицательные, то $\forall x \in A: x = -|x|$, тогда отбрасываем все числа у которых наименьшая целая часть модуля $\overline{x_{0}}$, затем у которых $\overline{x_{0}} \overline{x_{1}}$ и т.д. до бесконечности. Получаем бесконечную десятичную непериодическую дробь. Поставим перед числом знак $(-)$, получим $\sup$.  
 
 ***Пример***  
 
@@ -154,7 +156,7 @@ depth: 3
 
 ***Определение***  
 
-- Рассмотрим упорядоченный набор натуральных чисел$\{1, 2, 3, ..., n, ...\}$ и каждому из этих натуральных чисел поставим в соответствие числа: $x_{1}, x_{2}, x_{3}, ... , x_{n}, ...$. Это и есть числовая последовательность.  
+- Рассмотрим упорядоченный набор натуральных чисел $\{1, 2, 3, ..., n, ...\}$ и каждому из этих натуральных чисел поставим в соответствие числа: $x_{1}, x_{2}, x_{3}, ... , x_{n}, ...$. Это и есть числовая последовательность.  
 
 
 ***Обозначение***  
@@ -162,7 +164,7 @@ depth: 3
 
 ***Свойства***  
 
-- Последовательность $\{x_{n}\}$ бывает ограниченной сверху, снизу и просто ограниченной.  
+- Последовательность $\{x_{n}\}$ бывает ограниченной сверху, снизу и ограниченной.  
 
  1.  $\forall n: x_{n} \leq M$  
  2.  $\forall n: x_{n} \geq m$  
@@ -200,47 +202,47 @@ depth: 3
 
 4. Натуральный ряд - $\{1, 2, 3, 4, \dots\}$  
 
-5. $x_{n} = 1^{(-1)^n}$  
+5. $x_{n} = 1^{\left(-1\right)^{n}}$  
 
 6. $x_{n} = - n^2$  
 
 
-- Последовательность называется ограниченной сверху $\Leftrightarrow \exists M: \forall n : x_{n} \leq M$  
+- Последовательность ограничена сверху $\Longleftrightarrow \exists M: \forall n : x_{n} \leq M$  
 
 ***Определение***  
-- Последовательность называется ограниченной снизу $\Leftrightarrow \exists m: \forall n : x_{n} \geq m$  
+- Последовательность ограничена снизу $\Longleftrightarrow \exists m: \forall n : x_{n} \geq m$  
 
 ***Определение***  
-- Последовательность называется ограниченной $\Leftrightarrow \exists m,M : \forall n :  m \leq x_{n} \leq M$ или в эквивалентной форме :  $\exists k , \forall n :  |x_{n}| \leq k$  
+- Последовательность ограничена $\Longleftrightarrow \exists m,M : \forall n :  m \leq x_{n} \leq M$ или в эквивалентной форме :  $\exists k , \forall n :  |x_{n}| \leq k$  
 
 ***Определение***  
 
-- $\forall m, \exists n : |x_{n}| > m \Leftrightarrow$ последовательность не ограничена. (не является ограниченной сверху или снизу)  
+- $\forall m, \exists n : |x_{n}| > m \Longleftrightarrow$ последовательность не ограничена. (не является ограниченной сверху или снизу)  
 
 ### Бесконечно большая и малая последовательность  
 
 ***Определение***  
 
-- $\{x_{n}\}$ называется бесконечно большой $\Leftrightarrow \forall A, \exists N_{0}: \forall n > N_{0} \rightarrow |x_{n}| > A$.  
+- $\{x_{n}\}$ называется бесконечно большой $\Longleftrightarrow \left(\forall A, \exists N_{0}: \forall n > N_{0}\right) \implies |x_{n}| > A$.  
 
 ***Пример***  
-- $\{1, -2, 3, -4, \dots, (-1)^{n+1} \cdot n, \dots\}$ (В отличие от неограниченной последовательности, члены бесконечно большой последовательности по модулю больше любого наперед заданного числа A, начиная с какого - то номера.)  
+- $\{1, -2, 3, -4, \dots, \left(-1\right)^{n+1} n, \dots\}$ (В отличие от неограниченной последовательности, члены бесконечно большой последовательности по модулю больше любого наперед заданного числа A, начиная с какого - то номера.)  
 
 ***Определение***  
 
-- $\{x_{n}\}$ называется бесконечно малой $\Leftrightarrow \forall A, \exists N_{0}: \forall n > N_{0} \rightarrow |x_{n}| < A$.  
+- $\{x_{n}\}$  бесконечно малая $\Longleftrightarrow \left(\forall A, \exists N_{0}: \forall n > N_{0} \right) \implies |x_{n}| < A$.  
 
 ***Теорема***  
 
 - Если $\{x_{n}\}$ - б. б. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена бесконечно малая последовательность: $\{ \dfrac{1}{x_{n}} \}$.  
-	- Доказательство : Действительно, т.к. $\{x_{n}\}$ - б. б. , то, начиная с $n > N_{0}: |x_{n}| > A$, где $A$ - любое число. Тогда для этих номеров: $\dfrac{1}{x_{n}} < \dfrac{1}{A}$. Если взять произвольное $\epsilon > 0$ и $A = \dfrac{1}{\epsilon}$, то $|\dfrac{1}{x_{n}}| , \epsilon$, а это и есть определение бесконечно малой последовательности. Справедливо и обратное: Если $\{ \dfrac{1}{x_{n}} \}$ - б. м. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена $\{x_{n}\}$ - б. б.  
+	- Доказательство : Действительно, $\{x_{n}\}$ - б. б. , $\implies \left(n > N_{0}: |x_{n}| > A\right)$, где $A$ - любое число. Тогда для этих номеров: $\dfrac{1}{x_{n}} < \dfrac{1}{A}$. Если взять произвольное $\epsilon > 0$ и $A = \dfrac{1}{\epsilon}$, то $|\dfrac{1}{x_{n}}| < \epsilon$, а это и есть определение бесконечно малой последовательности. Справедливо и обратное: Если $\{ \dfrac{1}{x_{n}} \}$ - б. м. , то начиная с какого - то номера, после которого нет нулевых членов, для этих номеров определена $\{x_{n}\}$ - б. б.  
 
 ### Монотонные последовательности  
 ***Определение***  
-- Последовательность $\{x_{n}\}$ называется возрастающей, если $\forall n : x_{n + 1} \geq x_{n}$ и строго возрастающей, если $x_{n + 1} > x_{n}$. (Иногда говорят: неубывающая, строго возрастающая).   
+- Последовательность $\{x_{n}\}$ возрастает $\Longleftrightarrow \left(\forall n : x_{n + 1} \geq x_{n}\right)$ и строго возрастает, если $x_{n + 1} > x_{n}$. (Иногда говорят: неубывающая, строго возрастающая).   
 
 ***Определение***  
-- Последовательность $\{x_{n}\}$ называется убывающей, если $\forall n : x_{n + 1} \leq x_{n}$ и строго убывающей, если $x_{n + 1} < x_{n}$. (Иногда говорят: невозрастающая, строго убывающая).   
+- Последовательность $\{x_{n}\}$ убывает, $\Longleftrightarrow \left(\forall n : x_{n + 1} \leq x_{n}\right)$ и строго убывает, если $x_{n + 1} < x_{n}$. (Иногда говорят: невозрастающая, строго убывающая).   
 
 ### Предел числовой последовательности  
 
@@ -253,13 +255,14 @@ depth: 3
 1. $x_{n} = \dfrac{1}{n}, \lim{n}{\infty} \dfrac{1}{n}  = 0$  
 2. $x_{n} = \dfrac{n - 1}{n}, \lim{n}{\infty} \dfrac{n - 1}{n}= 1$  
 
-
 ***Определение предела числовой последовательности***  
-- Число $A$ называется пределом $\{x_{n}\}$ $\Leftrightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon}  \Rightarrow |x_{n} - A| < \epsilon)$  
+
+- $A = \lim{n}{\infty} {x_{n}} \Longleftrightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon}  \implies |x_{n} - A| < \epsilon)$  
 
 ***Упражнение***  
-- С помощью определения докажем (1) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $ \lim{n}{\infty} \dfrac{1}{n} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\dfrac{1}{n}| < \epsilon \Rightarrow \dfrac{1}{n} < \epsilon \Rightarrow n > \dfrac{1}{\epsilon}$  
-- С помощью определения докажем (2) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Т. к. $ \lim{n}{\infty} \dfrac{1}{n} = 0 \Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \Rightarrow |x_{n} - 0| < \epsilon \Rightarrow |\dfrac{n - 1}{n} - 1| < \epsilon \Rightarrow \dfrac{1}{n} < \epsilon \Rightarrow n > \dfrac{1}{\epsilon}$  
+
+- С помощью определения докажем (1) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \implies |x_{n} - A| < \epsilon)$. Т. к. $ \lim{n}{\infty} \dfrac{1}{n} = 0 \implies (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \implies |x_{n} - 0| < \epsilon \implies |\dfrac{1}{n}| < \epsilon \implies \dfrac{1}{n} < \epsilon \implies n > \dfrac{1}{\epsilon}$  
+- С помощью определения докажем (2) из примера. (Т. е. найдем $N_{\epsilon}$, что $\forall n > N_{\epsilon} \implies |x_{n} - A| < \epsilon)$. Т. к. $ \lim{n}{\infty} \dfrac{n - 1}{n} = 1 \implies (\forall \epsilon > 0, \exists N_{\epsilon} : \forall n > N_{\epsilon})  \implies |x_{n} - 1| < \epsilon \implies |\dfrac{n - 1}{n} - 1| < \epsilon \implies \left|\dfrac{1}{n}\right| < \epsilon \implies n > \dfrac{1}{\epsilon}$  
 
 ### Свойства пределов  
 
@@ -269,13 +272,13 @@ depth: 3
 
 - Всякая сходящаяся последовательность имеет единственный предел.  
 	- Доказательство:  
-		- Пусть $  \lim{n}{\infty} x_{n} = A$. Докажем единственность от противного. Предположим, что $\exists   \lim{n}{\infty} x_{n} = B$ и $A > B$. Т. к. , $  \lim{n}{\infty} x_{n} = A \Rightarrow  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \Rightarrow |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\dfrac{A - B}{2} \Rightarrow$  
+		- Пусть $  \lim{n}{\infty} x_{n} = A$. Докажем единственность от противного. Предположим, что $\exists   \lim{n}{\infty} x_{n} = B$ и $A > B$. Т. к. , $  \lim{n}{\infty} x_{n} = A \implies  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \implies |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\dfrac{A - B}{2} \implies$  
 	  
 		1. $ -\dfrac{A - B}{2} < x_{n} - A < \dfrac{A - B}{2} $  
 		2. $-\dfrac{A - B}{2} + A< x_{n}  < \dfrac{A - B}{2} + A$  
 		3. $\dfrac{A + B}{2} < x_{n}  < \dfrac{3A - B}{2} $.  
 	  
-	- Т. к. $ \lim{n}{\infty} x_{n} = B \Rightarrow  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \Rightarrow |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\dfrac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \Rightarrow |x_{n} - B| < \dfrac{A - B}{2} \Rightarrow$  
+	-  $ \lim{n}{\infty} x_{n} = B \implies  (\forall \epsilon_{2} > 0, \exists N_{\epsilon_{2} } : \forall n > N_{\epsilon_{2} }  \implies |x_{n} - B| < \epsilon_{2})$. В качестве $\epsilon_{2}$ возьмем $\dfrac{A - B}{2}. $Возьмем $n > \max(N_{\epsilon_{1}}, N_{\epsilon_{2}}) \implies |x_{n} - B| < \dfrac{A - B}{2} \implies$  
 		1. $-\dfrac{A - B}{2} < x_{n} - B < \dfrac{A - B}{2}$  
 		2. $-\dfrac{A - B}{2} + B< x_{n}  < \dfrac{A - B}{2} + B$  
 		3. $\dfrac{3B - A}{2} < x_{n}  < \dfrac{A + B}{2} $.  
@@ -284,14 +287,14 @@ depth: 3
 ***Теорема***  
 
 - Сходящаяся последовательность ограничена  
-	- Доказательство: $\{x_{n}\}$ - сход. , $\Rightarrow (\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n} - A| < \epsilon)$. Это было бы доказательством ограниченности, если бы было верно для всех $n > 0$. Но до $N_{\epsilon}$ - конечное число членов. Если взять $M = \max(|x_{1}|, |x_{2}|, |x_{3}|, \dots, |x_{N_{\epsilon} - 1}|, A - \epsilon, A + \epsilon )$, то $\forall n: |x_{n}| \leq M $  
+	- Доказательство: $\lim{n}{\infty}\{x_{n}\} = A$ $\implies (\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - A| < \epsilon)$. Это было бы доказательством ограниченности, если бы было верно для всех $n > 0$. Но до $N_{\epsilon}$ - конечное число членов. Если взять $M = \max(|x_{1}|, |x_{2}|, |x_{3}|, \dots, |x_{N_{\epsilon} - 1}|, A - \epsilon, A + \epsilon )$, то $\forall n: |x_{n}| \leq M $  
 
 ***Теорема***  
 
-- $\{x_{n}\}$ - б. м. $\Rightarrow \forall k :\{ k x_{n}\}$ - б. м.  
+- $\{x_{n}\}$ - б. м. $\implies \forall k :\{ k x_{n}\}$ - б. м.  
 
 	- Доказательство:   
-		- Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \Rightarrow |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \dfrac{\epsilon}{|k|} \Rightarrow |x_{n}| < \dfrac{\epsilon}{|k|} \Rightarrow |k \cdot x_{n}| < |k| \dfrac{\epsilon}{|k|} = \epsilon \Rightarrow \lim{n}{\infty} k x_{n} = 0$  
+		- Действительно : т. к. $(\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n}  - 0| < \epsilon)$ . Возьмем $\epsilon = \dfrac{\epsilon}{|k|} \implies |x_{n}| < \dfrac{\epsilon}{|k|} \implies |k \cdot x_{n}| < \epsilon \implies \lim{n}{\infty} k x_{n} = 0$  
 
 ***Следствие***  
 
@@ -299,31 +302,34 @@ depth: 3
 
 ***Свойства пределов, выражаемые неравенствами***  
 
-- $(\forall n > N: x_{n} \geq y_{n}) \wedge ( \lim{n}{\infty} x_{n} = A,  \lim{n}{\infty} y_{n} = B) \Rightarrow A > B$  
+- $(\forall n > N: x_{n} \geq y_{n}) \wedge ( \lim{n}{\infty} x_{n} = A,  \lim{n}{\infty} y_{n} = B) \implies A > B$  
 	- Доказательство:   
-		- В качестве $\epsilon$ возьмем $\dfrac{A - B}{2}$. $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \Rightarrow |x_{n} - A| < \dfrac{A - B}{2} \Rightarrow -\dfrac{A - B}{2} < x_{n} - A < \dfrac{A - B}{2} \Rightarrow   -\dfrac{A - B}{2} + A < x_{n}  < \dfrac{A - B}{2} + A \Rightarrow  \dfrac{3A - B}{2} < x_{n}  < \dfrac{A + B}{2} $  
-		- $\forall n > N_{\epsilon_{2}} : |y_{n} - B| < \dfrac{B - A}{2} \Rightarrow \dfrac{B - A}{2} < y_{n} < \dfrac{3B - A}{2}$  
+		- В качестве $\epsilon$ возьмем $\dfrac{A - B}{2}$. 
+		- $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \implies |x_{n} - A| < \dfrac{A - B}{2} \implies \\ -\dfrac{A - B}{2} < x_{n} - A < \dfrac{A - B}{2} \implies \\   -\dfrac{A - B}{2} + A < x_{n}  < \dfrac{A - B}{2} + A \implies \\  \dfrac{3A - B}{2} < x_{n}  < \dfrac{A + B}{2} $  
+		- $\forall n > N_{\epsilon_{2}} : |y_{n} - B| < \dfrac{A - B}{2} \implies \dfrac{A - B}{2} < y_{n} < \dfrac{3B - A}{2}$  
 		- Получим $x_{n} < \dfrac{A + B}{2} < y_{n}$. Противоречие.  
-- $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim{n}{\infty}{x_{n}} = \lim{n}{\infty}{z_{n}}) \Rightarrow \{y_{n}\}$ - сходится, причем $\lim{n}{\infty}{x_{n}} = \lim{n}{\infty}{y_{n}} = \lim{n}{\infty}{z_{n}}$   
+- $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim{n}{\infty}{x_{n}} = \lim{n}{\infty}{z_{n}}) \implies \lim{n}{\infty}\{y_{n}\} = A$, причем $\lim{n}{\infty}{x_{n}} = \lim{n}{\infty}{y_{n}} = \lim{n}{\infty}{z_{n}}$   
 	- Доказательство :   
 		- Действительно :  
 		- $(\forall \epsilon > 0, \exists n > N_{1} : |x_{n} - A| < \epsilon)$  
 		- $(\forall \epsilon > 0, \exists n > N_{2} : |z_{n} - A| < \epsilon)$  
-		- $N = \max(N_{1}, N_{2}) \Rightarrow  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \Rightarrow |y_{n} - A| < \epsilon \Rightarrow \lim{n}{\infty}{y_{n}} = A$  
+		- $N = \max(N_{1}, N_{2}) \implies  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \implies |y_{n} - A| < \epsilon \implies \lim{n}{\infty}{y_{n}} = A$  
 
 ***Арифметические свойства пределов сходящихся  последовательностей***  
 
-1. $\lim{n}{\infty} x_{n} = A; \lim{n}{\infty}  y_{n} = B \Rightarrow  \lim{n}{\infty} (x_{n} + y_{n}) = A + B$  
-3. $ \lim{n}{\infty} x_{n}y_{n} = AB$  
-4. $ \lim{n}{\infty} \dfrac{x_{n}}{y_{n}} = \dfrac{A}{B}$  
+1. $\lim{n}{\infty} \{x_{n}\} = A; \lim{n}{\infty}  \{y_{n}\} = B \implies  \lim{n}{\infty} (\{x_{n}\} + \{y_{n}\}) = A + B$  
+3. $ \lim{n}{\infty} \{x_{n}y_{n}\} = AB$  
+4. $ \lim{n}{\infty} \{\dfrac{x_{n}}{y_{n}}\} = \dfrac{A}{B}$  
 - Докажем $(1)$  
-  1. Т. к. $\lim{n}{\infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \dfrac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \dfrac{\epsilon}{2})$  
-  2. Т. к. $\lim{n}{\infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \dfrac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \dfrac{\epsilon}{2})$  
-  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда: $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \dfrac{\epsilon}{2} +  \dfrac{\epsilon}{2} = \epsilon \Rightarrow \lim{n}{\infty} (x_{n} + y_{n}) = A + B$  
+  
+	- $\lim{n}{\infty}{x_{n}} = A$, то $(\forall \epsilon > 0, \epsilon = \dfrac{\epsilon}{2}, \forall n > N_{1} : |x_{n} - A| < \dfrac{\epsilon}{2})$  
+  
+	- $\lim{n}{\infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \dfrac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \dfrac{\epsilon}{2})$  
+	- $N = \max(N_{1}, N_{2}) \implies$ $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \dfrac{\epsilon}{2} +  \dfrac{\epsilon}{2} = \epsilon \implies \lim{n}{\infty} (x_{n} + y_{n}) = A + B$  
 - Докажем $(2)$   
-  1. Т. к. $ \lim{n}{\infty} x_{n} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon)$  
-  2. Т. к. $ \lim{n}{\infty} x_{n} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |x_{n} - B| < \epsilon)$  
-  3. Возьмем $N = \max(N_{1}, N_{2})$, тогда $\forall n > N : |x_{n}y_{n} - A B| = |(x_{n} - A + A)(y_{n} - B + B) - AB| \leq |x_{n}y_{n} - AB| + \dots  \implies  \lim{n}{\infty} (x_{n}y_{n}) = AB$  
+	- $ \lim{n}{\infty} x_{n} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon_{1})$  
+	- $ \lim{n}{\infty} y_{n} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |y_{n} - B| < \epsilon_{2})$  
+	- $N = \max(N_{1}, N_{2}) \implies$ $\forall n > N :|x_{n}y_{n} - AB| = \\ |x_{n}y_{n} -Ay_{n} + Ay_{n} - A B| = \\ |(x_{n} - A)y_{n} + A(y_{n} - B)| \leq |x_{n} - A||y_{n}| + |A||y_{n} - B|\bigg|_{|y_{n}| < M_{y}} \leq \eps_{1} M_{y} + |A|\eps_{2}\bigg|_{\eps_{1} = \dfrac{\eps}{2|M_{y}|}}^{\eps{2} = \dfrac{\eps}{2|A|}} \implies |x_{n}y_{n} - AB| < \eps \implies \lim{n}{\infty} (x_{n}y_{n}) = AB$  
 
 ## Лекция 21.09.2022  
 
@@ -340,15 +346,15 @@ depth: 3
 
 ***Пример***  
 1. $x_{n} = \dfrac{1 + (1)^{n}}{2}$  
-	- $\{x_{2k}\} \rightarrow 1$  
-	- $\{ x_{2k + 1} \} \rightarrow 0$  
+	- $\{x_{2k}\} \implies 1$  
+	- $\{ x_{2k + 1} \} \implies 0$  
 2. $\{x_{n}\} = 1 + \sin{\dfrac{\pi n}{2}}$  
-	- $\{x_{2k}\} = (1 + \sin{\pi k}) \rightarrow 1$  
-	- $\{x_{4k + 1}\} = (1 + \sin{\dfrac{\pi}{2}}) \rightarrow 2$  
-	- $\{x_{4k + 3}\} = (1 + \sin{\dfrac{3 \pi}{2}}) \rightarrow 0$  
+	- $\{x_{2k}\} = (1 + \sin{\pi k}) \implies 1$  
+	- $\{x_{4k + 1}\} = (1 + \sin{\dfrac{\pi}{2}}) \implies 2$  
+	- $\{x_{4k + 3}\} = (1 + \sin{\dfrac{3 \pi}{2}}) \implies 0$  
 3. $x_{n} = n^{(-1)^{n}}$  
-	- $\{x_{2k}\} \rightarrow \infty$  
-	- $\{x_{2k + 1}\} \rightarrow 0$  
+	- $\{x_{2k}\} \implies \infty$  
+	- $\{x_{2k + 1}\} \implies 0$  
 
 ***Определение предельной точки последовательности***  
 
@@ -434,7 +440,7 @@ depth: 3
 - $(К \implies Г)$  
 	- $\forall \epsilon > 0, \exists \delta > 0: \forall x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Возьмем произвольную $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \in X, x_{n} \neq x_{0}, \lim{n}{\infty} = x_{0}$, то есть $\forall \delta, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - x_{0}| < \delta$. Что есть в определении по Коши: $0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Получим определение сходимости $f(x_{n})$, т.к. $x_{n}$ - произвольная.  
  - $(Г \implies К)$  
-	- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{n}\} : x_{n} \in X, x_{n} \neq x_{0} \implies \lim{n}{\infty} x_{n} = x_{0}, \{f(x_{0}), f(x_{1}), \dots, f(x_{n}), \dots\} \implies \lim{n}{\infty} f(x_{n}) = A)$ . Докажем от противного: Пусть $Г \;\not\!\!\!\implies К$. Тогда $\exists \epsilon_{0} \forall \delta > 0, \exists x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| \geq \epsilon_{0}$. Пусть $\delta_{1} = 1$, тогда $\forall \delta > 0$ найдется $x_{1}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{1}) - A| \geq \epsilon_{0}$. Пусть $\delta_{2} = \dfrac{1}{2}$, тогда $\forall \delta > 0$ найдется $x_{2}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{2}) - A| \geq \epsilon_{0}$. И так далее  $\delta_{n} = \dfrac{1}{n}$, тогда $\forall \delta > 0$ найдется $x_{n}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{n}) - A| \geq \epsilon_{0}$. Получим: $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \rightarrow x_{0}, \{f(x_{1}),f(x_{2}), \dots, f(x_{n)}, \dots\} \;\not\rightarrow A$  
+	- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{n}\} : x_{n} \in X, x_{n} \neq x_{0} \implies \lim{n}{\infty} x_{n} = x_{0}, \{f(x_{0}), f(x_{1}), \dots, f(x_{n}), \dots\} \implies \lim{n}{\infty} f(x_{n}) = A)$ . Докажем от противного: Пусть $Г \;\not\!\!\!\implies К$. Тогда $\exists \epsilon_{0} \forall \delta > 0, \exists x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| \geq \epsilon_{0}$. Пусть $\delta_{1} = 1$, тогда $\forall \delta > 0$ найдется $x_{1}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{1}) - A| \geq \epsilon_{0}$. Пусть $\delta_{2} = \dfrac{1}{2}$, тогда $\forall \delta > 0$ найдется $x_{2}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{2}) - A| \geq \epsilon_{0}$. И так далее  $\delta_{n} = \dfrac{1}{n}$, тогда $\forall \delta > 0$ найдется $x_{n}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{n}) - A| \geq \epsilon_{0}$. Получим: $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \implies x_{0}, \{f(x_{1}),f(x_{2}), \dots, f(x_{n)}, \dots\} \;\not\longrightarrow A$  
 
 ### Примеры доказательств, используя $\eps - \delta$  
 - $y = x^{3}$  
@@ -446,10 +452,10 @@ depth: 3
 	- $|x| < \delta \implies |x| < \sqrt[\uproot{3}p]{\epsilon} \implies \delta = \sqrt[\uproot{3}p]{\epsilon} \implies |f(x) - A| < \epsilon$  
 - $f(x) = \sin{\dfrac{1}{x}}$  
 	- Докажем, что в $x_{0} = 0$ функция не имеет предела.   
-		- Возьмем $\dfrac{1}{x} = \pi k, x_{k} = \dfrac{1}{\pi k} \rightarrow 0 \implies f(x_{k}) = \sin{\pi k} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
+		- Возьмем $\dfrac{1}{x} = \pi k, x_{k} = \dfrac{1}{\pi k} \implies 0 \implies f(x_{k}) = \sin{\pi k} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
 		- Возьмем $\dfrac{1}{x_{k}} = (\dfrac{\pi}{2} + 2\pi k), x_{k} = (\dfrac{2}{\pi + \pi k}) \implies \begin{equation*}  
 	   \begin{cases}  
-	    x_{k} \rightarrow 0 \\  
+	    x_{k} \implies 0 \\  
 	    f(x_{k}) \equiv 1 \\  
 	    \end{cases}  
 	    \end{equation*} \implies \lim{k}{\infty} f(x_{k}) = 1$  
@@ -496,7 +502,7 @@ depth: 3
 
 ***Примеры***  
 
-- $\lim{x}{1} \dfrac{x^{2} - x - 2}{x^{2} + x - 3} = \dfrac{0}{0}$. Рассмотрим выколотую окрестность $\mathring{U}(1)$. $f(x) = \dfrac{x + 2}{x + 3} \implies \lim{x}{\to 1} f(x) = \dfrac{3}{4}$, $x = 1$ - Устранимая точка разрыва  
+- $\lim{x}{1} \dfrac{x^{2} - x - 2}{x^{2} + x - 3} = \dfrac{0}{0}$. Рассмотрим выколотую окрестность $\mathring{U}(1)$. $f(x) = \dfrac{x + 2}{x + 3} \implies \lim{x}{1} f(x) = \dfrac{3}{4}$, $x = 1$ - Устранимая точка разрыва  
 - $f(x) = \dfrac{1}{1 + 2^{\dfrac{1}{x}}}$. $f$ - не определена в $x = 0$.  
 	- $\lim{x}{0 + 0} f(x) = 0$  
 	- $\lim{x}{0 - 0} f(x) = 1$  
@@ -515,10 +521,10 @@ $\lim{x}{0} f(x)=$ ?
 1. $\lim{x}{0} \dfrac{\sin{(x)}}{x} = 1$ (первый замечательный предел)  
 2. $\lim{n}{\infty} (1 + \dfrac{1}{n})^{n} = e$ (второй замечательный предел)  
 3. $\lim{x}{\infty} (1 + \dfrac{1}{x})^{x} = e$ ($x$ - произвольное)  
-4. $\lim{t}{0} (1 + t)^{\dfrac{1}{t}} = e$ $(x = \dfrac{1}{t})$  
+4. $\lim{t}{0} (1 + t)^{\dfrac{1}{t}} = e$ $\left(x = \dfrac{1}{t}\right)$  
 5. $\lim{t}{0} \ln{(1 + t)}^{\dfrac{1}{t}} = \ln{(e)} = 1 \implies \lim{t}{0} \dfrac{ln{(1 + t)}}{t} = 1$  
 6. $\lim{x}{0}  \dfrac{1 - \cos{x} }{x^{2} } = \ \lim{x}{0}\ \dfrac{2\sin^{2}{(\dfrac{x}{2})}}{x^{2} } = \ \lim{x}{0} \dfrac{\dfrac{1}{2}\sin{(\dfrac{x}{2}) \sin{(\dfrac{x}{2}) } }}{\dfrac{1}{2}\dfrac{x^{2}}{2} } = \  \lim{x}{0}\ \dfrac{1}{2} \underbrace{\dfrac{\sin{(\dfrac{x}{2}) \sin{(\dfrac{x}{2}) } }}{\dfrac{x}{2} \dfrac{x}{2}}}_{1} = \dfrac{1}{2}$  
-7. $\lim{x}{0} \dfrac{\sqrt[n]{1 \ + \ x} \ - \ 1}{x} = \ \lim{x}{0} \dfrac{(\sqrt[n]{1 \ + \ x} \ -\  1)((\sqrt[\leftroot{-15} \uproot{7} n - 1]{1 \ + \ x} \ - \  1)^{(n - 1)}) \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ +\  x} \ -\  1)^{(n - 2)} \ + \ \dots \ + \ (\sqrt[n]{1 \ + \ x} \ - \  1)}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \ \lim{x}{0} \dfrac{1 \ + \ x \ - \  1}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \lim{x}{0} \dfrac{1}{1 \ + 1 \ + \ \dots + \ 1} = \ \dfrac{1}{n}$  
+7. $\lim{x}{0} \dfrac{\sqrt[n]{1 \ + \ x} \ - \ 1}{x} = \ \lim{x}{0} \dfrac{(\sqrt[n]{1 \ + \ x} \ -\  1)((\sqrt[\leftroot{-15} \uproot{7} n - 1]{1 \ + \ x} \ - \  1)^{(n - 1)}) \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ +\  x} \ -\  1)^{(n - 2)} \ + \ \dots \ + \ (\sqrt[n]{1 \ + \ x} \ - \  1)}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \\ \ \lim{x}{0} \dfrac{1 \ + \ x \ - \  1}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \lim{x}{0} \dfrac{1}{1 \ + 1 \ + \ \dots + \ 1} = \ \dfrac{1}{n}$  
 
 - Докажем $(1)$  
 -  Рассмотрим $\lim{x}{ 0 + 0} \dfrac{\sin{(x)}}{x} \stackrel{\text{?}}{=} 1$  
@@ -562,19 +568,19 @@ $\lim{x}{0} f(x)=$ ?
 	- Множество левых концов ограничено сверху $b_{n}$ и монотонно возрастает $\implies \exists \ \sup{(a_{n})}$. Аналогично $\exists \ inf(b_{n}) \implies \lim{n}{\infty} a_{n} = \lim{n}{\infty} b_{n} = c$  
 
 ### Верхний и нижний пределы последовательности  
-- $\overline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \max(\lim{n}{\infty} \{a_{n}\})$  
-- $\underline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \min(\lim{n}{\infty} \{a_{n}\})$  
+- $\overline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \max(\lim{n}{\infty} \{a_{n_{k}}\})$  
+- $\underline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \min(\lim{n}{\infty} \{a_{n_{k}}\})$  
 
 ***Пример***  
 
 - $a_{n} = 1 + \cos{(\dfrac{\pi n}{3})}$  
-	- $\{a_{3k}\} = 1 + (-1)^{k} \rightarrow (2 , 0)$   
-	- $\{a_{3k + 1}\} \rightarrow (\dfrac{1}{2} , \dfrac{7}{6})$   
-	- $\{a_{3k + 2}\} \rightarrow (\dfrac{1}{2} , \dfrac{3}{2})$   
+	- $\{a_{3k}\} = 1 + (-1)^{k} \implies (2 , 0)$   
+	- $\{a_{3k + 1}\} \implies (\dfrac{1}{2} , \dfrac{7}{6})$   
+	- $\{a_{3k + 2}\} \implies (\dfrac{1}{2} , \dfrac{3}{2})$   
 	- $\implies \overline{\lim{n}{\infty}} a_{n} = 2, \ \underline{\lim{n}{\infty}} a_{n} = 0$  
 
 ### Раскрытие неопределенностей  
-- $\lim{x}{x_{0}} (u(x)^{v(x)}); \lim{x}{x_{0}} u(x) = 1; \lim{x}{x_{0}} v(x) = \infty \implies \lim{x}{x_{0}} (u(x)^{v(x)}) = \lim{x}{x_{0}} ((u(x) - 1 + 1)^{v(x)}) = \lim{x}{x_{0}} [\underbrace{(1 + \underbrace{(u - 1)}_{0})^{\dfrac{1}{u - 1}}))}_{e}]^{(u - 1)v} = e^{(u - 1)v}$  
+- $\lim{x}{x_{0}} (u(x)^{v(x)}); \lim{x}{x_{0}} u(x) = 1; \lim{x}{x_{0}} v(x) = \infty \implies \lim{x}{x_{0}} (u(x)^{v(x)}) = \\ \lim{x}{x_{0}} ((u(x) - 1 + 1)^{v(x)}) = \lim{x}{x_{0}} [\underbrace{(1 + \underbrace{(u - 1)}_{0})^{\dfrac{1}{u - 1}}))}_{e}]^{(u - 1)v} = e^{(u - 1)v}$  
 
 ### Определение четности и нечетности функции  
 
@@ -618,14 +624,14 @@ $\lim{x}{0} f(x)=$ ?
 - Если $\alpha(x), \beta(x)$ - б. м. :
 	- $\lim{x}{x_{0}} \dfrac{\alpha(x)}{\beta(x)} = 0 \implies \alpha(x) = o(\beta(x))$
 	- $\lim{x}{x_{0}} \dfrac{\alpha(x)}{\beta(x)} = C \neq 0 \implies \alpha(x), \beta(x)$ - б. м. одинакового порядка малости
-	- $\lim{x}{x_{0}} \dfrac{\alpha(x)}{\beta(x)} = 1 \implies \alpha(x) \sim \beta(x), x \rightarrow x_{0}$
+	- $\lim{x}{x_{0}} \dfrac{\alpha(x)}{\beta(x)} = 1 \implies \alpha(x) \sim \beta(x), x \implies x_{0}$
 
 ***Примеры***
 
 1.
 
--  $\alpha(x) = \dfrac{1}{3}x^{4} - 2x^{3} - x \  (x \rightarrow x_{0})$
-- $\beta(x) = 2x^{4} + 3x^{2} + 2x \  (x \rightarrow x_{0})$
+-  $\alpha(x) = \dfrac{1}{3}x^{4} - 2x^{3} - x \  (x \implies x_{0})$
+- $\beta(x) = 2x^{4} + 3x^{2} + 2x \  (x \implies x_{0})$
 	- $\lim{x}{0} \dfrac{\alpha(x)}{\beta(x)} = - \dfrac{1}{2} \implies \alpha(x), \beta(x)$ - б. м. одинакового порядка малости
 
 2.
@@ -644,8 +650,8 @@ $\lim{x}{0} f(x)=$ ?
 - Пусть :  $\alpha = o(\beta), \ \gamma = o(\beta)$, тогда : 
 	- $o(\gamma) + o(\beta) = o(\beta)$
 	- $o(\beta) \pm o(\beta) = o(\beta)$
-	- $\alpha \cdot \gamma = o(\beta)$
-	- $ f \sim C \cdot (x - x_{0})^{m},  x \rightarrow x_{0} \implies (x - x_{0})^{m}$ - главный член $f$, причем $m$ - порядок малости.
+	- $\alpha \cdot \gamma = o(\beta^{2})$
+	- $ f \sim C \cdot (x - x_{0})^{m},  x \longrightarrow x_{0} \implies (x - x_{0})^{m}$ - главный член $f$, причем $m$ - порядок малости.
 
 ***Пример*** 
 
@@ -660,7 +666,7 @@ $\lim{x}{0} f(x)=$ ?
 ***Определение***
 
 - $A(x)$ - б. б. справа в $x_{0}$ $\Longleftrightarrow \exists \lim{x}{x_{0}} A(x) = + \infty \Longleftrightarrow (\forall E > 0, \ \forall \{x_{n}\} \in X, \ \exists N_{E}: \ \forall n > N_{E} \implies A(x_{n}) > E, \ x_{n} > x_{0})$
-- $A(x)$ - б. б. слева в $x_{0}$ $\Longleftrightarrow \exists \lim{x}{x_{0}} A(x) = + \infty \Longleftrightarrow (\forall E > 0, \ \forall \{x_{n}\} \in X, \ \exists N_{E}: \ \forall n > N_{E} \implies A(x_{n}) > E, \ x_{n} < x_{0})$
+- $A(x)$ - б. б. слева в $x_{0}$ $\Longleftrightarrow \exists \lim{x}{x_{0}} A(x) = - \infty \Longleftrightarrow (\forall E > 0, \ \forall \{x_{n}\} \in X, \ \exists N_{E}: \ \forall n > N_{E} \implies A(x_{n}) < -E, \ x_{n} < x_{0})$
 
 - Пусть две функции $A(x), B(x)$ определены на одном и том же множестве и являются бесконечно большими в окрестности $x_{0}$. Если в качестве функции сравнения $B(x)$ берется $(x - x_{0})^{m}$ и $\lim{x}{x_{0}} \dfrac{\alpha(x)}{ (x - x_{0})^{m} } = C  \neq 0 \implies \alpha(x)$ имеет в точке $x_{0}$ порядок роста $m$.
 
@@ -691,7 +697,7 @@ $\lim{x}{0} f(x)=$ ?
 	
 	- $\Delta v = v(x + \Delta x) - v(x)$
 	
-	- $(uv)' = \lim {\Delta x}{0} \left[ \dfrac{\Delta (uv)}{\Delta x}  = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x + \Delta x) + u(x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x) - u(x)}{\Delta x}v(x + \Delta x) + \dfrac{v(x + \Delta x) - v(x)}{\Delta x}u(x)  \right] = u'v + uv'$
+	- $(uv)' = \lim{\Delta x}{0} \left[ \dfrac{\Delta (uv)}{\Delta x}  = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x)v(x + \Delta x) - u(x)v(x + \Delta x) + u(x)v(x + \Delta x) - u(x)v(x)}{\Delta x} = \dfrac{u(x + \Delta x) - u(x)}{\Delta x}v(x + \Delta x) + \dfrac{v(x + \Delta x) - v(x)}{\Delta x}u(x)  \right] = u'v + uv'$
 
 - Докажем $(5)$:
 	- Докажем : $\left( \dfrac{1}{v} \right)' = - \dfrac{v'}{v^{2}}$
@@ -746,16 +752,17 @@ $\lim{x}{0} f(x)=$ ?
 Тригонометрические функции||
 7 |$\sin{x}$     | $\cos{x}$   
 8 |$\cos{x}$     | $- \sin{x}$
-9 |$\tan{x}$     | $ \dfrac{1}{\cos{x}}$
-10 |$\cot{x}$     | $- \dfrac{1}{\sin{x}}$
-11 |$\arccos{x}$     | $- \dfrac{1}{\sqrt{1 - x^{2}}}$
-12 |$\arctan{x}$     | $\dfrac{1}{1 + x^{2}}$
-13 |$arccot{(x)}$     | $- \dfrac{1}{1 + x^{2}}$
+9 |$\tan{x}$     | $ \dfrac{1}{\cos^{2}{x}}$ 
+10 |$\cot{x}$     | $- \dfrac{1}{\sin^{2}{x}}$ 
+11 |$\arcsin{x}$     | $ \dfrac{1}{\sqrt{1 - x^{2}}}$
+12 |$\arccos{x}$     | $- \dfrac{1}{\sqrt{1 - x^{2}}}$
+13 |$\arctan{x}$     | $\dfrac{1}{1 + x^{2}}$
+14 |$arccot{(x)}$     | $- \dfrac{1}{1 + x^{2}}$
 Гиперболические функции||
-14 |$sh{(x)}$     | $ch{(x)}$  
-15 |$ch(x)$     | $sh(x)$ 
-16 |$\tanh{x}$     | $\dfrac{1}{ch(x)}$
-17 |$\coth{x}$     | $ - \dfrac{1}{sh(x)}$ 
+15 |$sh{(x)}$     | $ch{(x)}$  
+16 |$ch(x)$     | $sh(x)$ 
+17 |$\tanh{x}$     | $\dfrac{1}{ch^{2}(x)}$ 
+18 |$\coth{x}$     | $ - \dfrac{1}{sh^{2}(x)}$ 
 
 ***Основное тригонометрическое тождество гиперболической геометрии***
 
@@ -777,18 +784,18 @@ $\lim{x}{0} f(x)=$ ?
 	- $\left ( \left (e^{\ln{x}} \right )^{\alpha} \right ) ' = e^{\alpha\ln{x}} \left (x\ln{x} \right)' = e^{\alpha\ln{x}} \cdot \alpha \cdot \dfrac{1}{x} = \alpha x^{\alpha - 1}$
 - Докажем $(9)$
 	- $\tan{x} = \left (\dfrac{\sin{x}}{\cos{x}} \right )' = \dfrac{\cos{x}(\sin{x})' - \sin{x}(\cos{x})'}{\cos^{2}{x}} = \dfrac{1}{\cos^{2}{x}}$ 
-- Докажем $(12)$
+- Докажем $(13)$
 	- $y = \arctan{x}, \ x = \tan{y}$ 
 	- $\arctan{x} = \dfrac{1}{(\tan{y})'}  = \cos^{2}{y} = \dfrac{1}{1 + \tan^{2}{y}} = \dfrac{1}{1 + x^{2}}$
-- Докажем $(14)$
+- Докажем $(15)$
 	- $ch(x) = \dfrac{e^{x} + e^{-x}}{2}$ 
 	- $sh(x) = \dfrac{e^{x} - e^{-x}}{2}$
 	- $\left (sh(x) \right )' = \left ( \dfrac{e^{x} - e^{-x}}{2} \right)' = \dfrac{1}{2}\left(e^{x} - e^{-x}(-x)' \right) = \dfrac{1}{2}\left(e^{x} + e^{-x}\right) = ch(x)$
-- Докажем $(15)$
-	- $\left (ch(x) \right )' = \dfrac{1}{2}\left(e^{x} - e^{-x}\right) = sh(x)$
 - Докажем $(16)$
-	- $\left (\tanh{x} \right )' = \left (\dfrac{sh(x)}{ch(x)} \right )' = \dfrac{ch(x)(sh(x))' - sh(x)(ch(x))'}{ch^{2}(x)} = \dfrac{1}{ch^{2}(x)}$
+	- $\left (ch(x) \right )' = \dfrac{1}{2}\left(e^{x} - e^{-x}\right) = sh(x)$
 - Докажем $(17)$
+	- $\left (\tanh{x} \right )' = \left (\dfrac{sh(x)}{ch(x)} \right )' = \dfrac{ch(x)(sh(x))' - sh(x)(ch(x))'}{ch^{2}(x)} = \dfrac{1}{ch^{2}(x)}$
+- Докажем $(18)$
 	- $\left (\coth{x} \right )' = \left (\dfrac{ch(x)}{sh(x)} \right )' = - \dfrac{ch^{2}(x) - sh^{2}(x)}{sh^{2}(x)} = - \dfrac{1}{sh^{2}(x)}$
 
 ### Производная параметрически заданной функции
@@ -820,10 +827,10 @@ $\lim{x}{0} f(x)=$ ?
 
 ***Вспомогательное определение непрерывности***
 
-- $f$ непрерывна в $x_{0}$ $\Longleftrightarrow$ При $\Delta x \rightarrow 0, \ \Delta y \rightarrow 0$.
+- $f$ непрерывна в $x_{0}$ $\Longleftrightarrow$ При $\Delta x \implies 0, \ \Delta y \implies 0$.
 
 ***Доказательство***
-- Действительно, возьмем $\Delta x \rightarrow 0, \ \Delta y = y(x + \Delta x) - y(x)$. Непрерывность означает : $\forall \eps > 0, \ \exists \delta > 0 : |x - x_{0}| < \delta \implies |\Delta y| < \eps$. Следствие можно переписать в виде $|f(x + \Delta x) - f(x)| < \eps$, что и означает совпадение $f(x)$ с ее пределом.
+- Действительно, возьмем $\Delta x \implies 0, \ \Delta y = y(x + \Delta x) - y(x)$. Непрерывность означает : $\forall \eps > 0, \ \exists \delta > 0 : |x - x_{0}| < \delta \implies |\Delta y| < \eps$. Следствие можно переписать в виде $|f(x + \Delta x) - f(x)| < \eps$, что и означает совпадение $f(x)$ с ее пределом.
 
 ***Теорема о существовании производной***
 
@@ -831,7 +838,7 @@ $\lim{x}{0} f(x)=$ ?
 
 ***Доказательство***
 
-- $f$ имеет производную $f'$ в $x$ $\implies$ $f'(x)  = \lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} \implies$ при $\Delta x \rightarrow 0$, $\Delta y \rightarrow 0$. Это и есть определение непрерывности $f$
+- $f$ имеет производную $f'$ в $x$ $\implies$ $f'(x)  = \lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} \implies$ при $\Delta x \implies 0$, $\Delta y \implies 0$. Это и есть определение непрерывности $f$
 
 ### Определение дифференцируемой функции и ее дифференциала
 ***Обозначение дифференциала***
@@ -842,7 +849,7 @@ $\lim{x}{0} f(x)=$ ?
 
 - $f$ -  дифференцируема в $x$ $\Longleftrightarrow$ $\Delta y = A \Delta x + o(\Delta x)$.
 - Выясним смысл $A$.
-	- Разделим обе части на $\Delta x$. Получим $\dfrac{\Delta y}{\Delta x} = A + \underbrace{\dfrac{o(\Delta x)}{\Delta x}}_{\rightarrow 0}$ 
+	- Разделим обе части на $\Delta x$. Получим $\dfrac{\Delta y}{\Delta x} = A + \underbrace{\dfrac{o(\Delta x)}{\Delta x}}_{\implies 0}$ 
 	- $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} = y'(x) = A \implies dy = y'(x) \cdot \Delta x$
 - Рассмотрим $y = x$, тогда $y' = 1 \implies \Delta y = \Delta x$. $dy = y'(x)\Delta x \ \implies $ $dx = 1 \cdot \Delta x = \Delta x$.
 - Перепишем : $dy = y'(x) dx \implies y'(x) = \dfrac{dy}{dx}$ (Определение производной по Коши)
@@ -863,9 +870,9 @@ $\lim{x}{0} f(x)=$ ?
 ***Доказательство***
 
 - Необходимость $\left(\implies \right)$
-	- Дано : $f$ дифференцируема в $x_{0}$. Доказать, что она имеет производную в $x_{0}$. Дифференцируемость означает, что в окрестности этой точки $\Delta y = A \cdot \Delta x + o\left(\Delta x\right)$. Поделим обе части на $\Delta x$. $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} = \lim{\Delta x}{0} \left(A + \dfrac{o\left(\Delta x\right)}{\Delta x}\right)$. Получим слева $f'(x_{0})$, а справа число $A$. $\dfrac{o\left(\Delta x\right)}{\Delta x} \rightarrow 0$, при $\Delta x \rightarrow 0 \implies A = f'(x_{0})$
+	- Дано : $f$ дифференцируема в $x_{0}$. Доказать, что она имеет производную в $x_{0}$. Дифференцируемость означает, что в окрестности этой точки $\Delta y = A \cdot \Delta x + o\left(\Delta x\right)$. Поделим обе части на $\Delta x$. $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} = \lim{\Delta x}{0} \left(A + \dfrac{o\left(\Delta x\right)}{\Delta x}\right)$. Получим слева $f'(x_{0})$, а справа число $A$. $\dfrac{o\left(\Delta x\right)}{\Delta x} \implies 0$, при $\Delta x \implies 0 \implies A = f'(x_{0})$
 - Достаточность $\left(\Longleftarrow \right)$
-	- Дано $f$ имеет в $x_{0}$ производную $f'(x_{0})$. Доказать, что она дифференцируема в $x_{0}$. $\exists f'(x_{0}) = \lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} \implies \dfrac{\Delta y}{\Delta x} = \underbrace{\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x}}_{f'(x_{0})} + \alpha(\Delta x), \ \alpha(\Delta x) \rightarrow 0$ при $\Delta x \rightarrow 0 \implies \dfrac{\Delta y}{\Delta x} = f'(x_{0}) + \alpha(\Delta x) \implies \Delta y = \underbrace{f'(x_{0})\Delta x}_{dy} + \underbrace{\alpha(\Delta x)\Delta x}_{o(\Delta x)} \implies f'(x_{0}) = \dfrac{dy}{dx} \implies dy = f'(x)dx$.
+	- Дано $f$ имеет в $x_{0}$ производную $f'(x_{0})$. Доказать, что она дифференцируема в $x_{0}$. $\exists f'(x_{0}) = \lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} \implies \dfrac{\Delta y}{\Delta x} = \underbrace{\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x}}_{f'(x_{0})} + \alpha(\Delta x), \ \alpha(\Delta x) \implies 0$ при $\Delta x \implies 0 \implies \dfrac{\Delta y}{\Delta x} = f'(x_{0}) + \alpha(\Delta x) \implies \Delta y = \underbrace{f'(x_{0})\Delta x}_{dy} + \underbrace{\alpha(\Delta x)\Delta x}_{o(\Delta x)} \implies f'(x_{0}) = \dfrac{dy}{dx} \implies dy = f'(x)dx$.
 
 ***Примеры***
 
@@ -936,7 +943,423 @@ $\lim{x}{0} f(x)=$ ?
 
 ***Доказательство***
 - Действительно, по определению непрерывной функции $\forall \eps > 0 \ \exists \delta > 0: f(x_{0} + \delta) > 0$ и $f(x_{0} - \delta) < 0$. Т. к. $\exists \lim{x}{x_{0}} f(x) \implies 0 > f(x_{0} - \delta) \leq f(x) \leq f(x_{0} + \delta) > 0$. Это верно для сколь угодно малого $\delta \implies f(x_{0} + 0) = 0, \ f(x_{0} - 0) = 0 \implies f(x_{0}) = 0$.
-## Семинар 13.09.2022  
+
+## Лекция 09.11.2022
+### Обобщение теоремы о равенстве нулю функции в окрестности точки
+- Непрерывная на отрезке $x \in \left[a; b\right]$ функция, принимающая на нем значения в промежутке $y \in \left[A;B\right], \ y(a) = A, \ y(b) = B$ примет в некоторой точке этого отрезка любое промежуточное значение $C$, такое, что $A < C < B$
+
+***Доказательство***
+- Введем вспомогательную функцию $\phi(x) = f(x) - C$, тогда $\phi(x)$ примет на концах значения: $\phi(a) = f(a) - C = A - C < 0, \ \phi(b) = f(b) - C = B - C > 0$. По предыдущей теореме $\phi(x)$ непрерывна на $\left[a;b\right]$ и принимает на его концах значения разных знаков, значит найдется такая точка $c \in \left[a;b\right]$ в которой $\phi(c) = 0$. $\phi(c) - C = 0 \implies f(c) = C$
+
+### Первая теорема Вейерштрасса о непрерывных функциях
+- Функция, непрерывная на отрезке ограничена на нем.
+
+***Доказательство***
+- Предположим противное, т . е. $f(x)$ не ограничена. Это значит: какое бы положительное число мы бы не взяли, найдется точка на отрезке, в которой функция будет больше этого числа. Возьмем например число 1. На отрезке найдется число $x_{1}$, такое что $f(x_{1}) > 1$, далее возьмем число 2, найдется $x_{2}$, такое что $f(x_{2}) > 2$ и т.д. Для числа $n$ найдется $x_{n}$, такое, что $f(x_{n}) > n$ и т.д. до $\infty$. Элементы последовательности $\{x_{1}, x_{2}, \dots , x_{n}\}$ принадлежат отрезку $\left[a;b\right]$ т.е. $\{x_{n}\}$ ограничена и по теореме Больцано - Вейерштрасса: $\lim{n_{k}}{\infty} x_{n_{k}} = c \in \left[a;b\right]$, а подпоследовательность $f(x_{n_{k}})$ - не ограничена, т.е. у нее нет предела, как у подпоследовательности расходящейся последовательности. А этого не может быть, т. к. $\lim{n}{\infty} f(x_{n_{k}}) = f(c)$ - противоречие.
+
+### Вторая теорема Вейерштрасса о непрерывных функциях
+- Функция, непрерывная на отрезке, достигает на нем супремум и инфимум.
+
+***Доказательство***
+- Докажем от противного для точной верхней грани $\left(\sup f(x) = M \right)$: Пусть во всех точках  отрезка $\left[a; b\right]$  выполняется $ f(x) \neq M$. Рассмотрим вспомогательную функцию $\phi(x) = \dfrac{1}{M - f(x)}$. Т. к.  $f(x)$ - непрерывна, то и $\phi(x)$ - непрерывна на отрезке $\implies \phi(x)$ - ограничена на нем. $|\phi(x)| = \phi(x) \leq B$. Отсюда: $\dfrac{1}{M - f(x)} \leq B, \ M - f(x) \geq \dfrac{1}{B}, \ f(x) \leq M - \dfrac{1}{B} \implies M = \sup{f(x)}$
+
+### Свойства функций, дифференцируемых на отрезке
+
+***Понятие локального максимума и минимума функции (локального экстремума)***
+
+- $f(x)$ имеет в точке $x_{0}$ максимум, если в некоторой окрестности этой точки выполняется $f(x) \leq f(x_{0})$ и имеет строгий максимум, если в точках окрестности $\left(x \neq x_{0} \right)$ выполняется$\ f(x) < f(x_{0})$. Аналогично для локального минимума и строгого минимума.
+
+### Теорема Ферма
+- $f(x)$, дифференцируемая в окрестности точки $x_{0}$ (включая $x_{0}$) имеет в этой точке $f'(x) = 0$, если $x_{0}$ - точка экстремума этой функции.
+
+***Доказательство***
+
+- Путь $x_{0}$ - максимум. $f'(x_{0}) = \lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x}$. Возьмем $\Delta x > 0$, тогда $\Delta y < 0$, т.к. $x_{0}$ - точка максимума и отношение $\dfrac{\Delta y}{\Delta x} < 0$, тогда $\lim{\Delta x}{0 + 0} \dfrac{\Delta y}{\Delta x} \leq 0$, аналогично возьмем $\Delta x < 0, \ \Delta y < 0 \implies \dfrac{\Delta y}{\Delta x} > 0 \implies \lim{\Delta x}{0 - 0} \dfrac{\Delta y}{\Delta x} \geq 0 \implies \lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x} = 0$
+
+### Теорема Ролля
+- Если $f$ дифференцируема на интервале $\left(a ; b\right)$ и непрерывна на замкнутом промежутке (включая концы) $\left[a;b\right]$ и на концах промежутка принимает одинаковые значения, то на этом отрезке найдется такая точка $\xi$ в которой $f'(\xi) = 0$.
+
+***Доказательство***
+
+- По предыдущим теоремам, $f$ непрерывна на отрезке, достигает на нем $\max{f} = M$ и $\min{f} = m$. Рассмотрим два случая:
+- $M = m \implies f' = const$
+- $M \neq m , \ f(a) = f(b) \implies$ либо $m$, либо $M$ принимаются функцией внутри отрезка. Тогда по Т. Ферма $f'$ в точке экстремума равна $0$.
+
+### Теорема Лагранжа (о конечных приращениях)
+- Пусть $f$ дифференцируема на интервале $\left(a; b\right)$ и непрерывна на $\left[a;b\right]$, принимает на концах отрезка значения $f(a) \neq f(b)$. Тогда на отрезке $\left[a;b\right]$ существует такая внутренняя точка $\xi$, в которой $f'(\xi) = \dfrac{f(b) - f(a)}{b - a}, \ f(b) > f(a)$.
+
+***Доказательство***
+
+- Введем вспомогательную функцию: $\digamma(x) = f(x) - f(a) - \dfrac{f(b) - f(a)}{b - a} (x - a)$
+- Проверим выполнение условий теоремы Ролля для $\digamma(x)$: $\digamma(a) = f(a) - f(a) - \dfrac{f(b) - f(a)}{b - a}(a - a) = 0, \ \digamma(b) = f(b) - f(a) - \dfrac{f(b) - f(a)}{b - a}(b - a) = 0$.
+- $\digamma(x)$ дифференцируема на $\left(a;b\right)$ и непрерывна на замкнутом промежутке $\left[a;b\right] \implies $ по Т. Ролля $\exists \ \xi: $ $\digamma'(\xi) = 0 \implies \digamma'(x) = f'(x) + \dfrac{f(b) - f(a)}{b - a} \implies f'(\xi) + \dfrac{f(b) - f(a)}{b - a} = 0 \implies f'(\xi) = \dfrac{f(b) - f(a)}{b - a}$.
+
+### Теорема Коши (о конечных приращениях)
+- Пусть $f$ и $g$ дифференцируемына интревале $\left(a;b\right)$ и непрерывны на отрезке $\left[a;b\right]$, $g'(x) \neq 0$. Тогда найдется такая точка $\xi$ этого отрезка, в которой $\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$
+
+***Доказательство***
+- Введем вспомогательную функцию $\digamma(x) = f(x) - f(a) - \dfrac{f(b) - f(a)}{g(b) - g(a)} (g(x) - g(a))$. Проверим выполнение условий теоремы Ролля:
+- $\digamma(a) = 0, \ \digamma(b) = 0$, $\digamma$ - непрерывна и дифференцируема $\implies \exists \xi: \ \digamma(\xi) = 0, \ \digamma'(x) = f'(x) - \dfrac{f(b) - f(a)}{g(b) - g(a)} \cdot g'(x)$
+- $f'(\xi) = \dfrac{f(b) - f(a)}{g(b) - g(a)} \cdot g(\xi) = 0 \implies \dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$
+
+## Лекция 16.11.2022
+### Правило Лопиталя
+- Пусть в окрестности точки $a$ определены две бесконечно малые $f$ и $g$ (в самой точке они могут быть не определены), непрерывны и дифференцируемы в проколотой окрестности точки $a$, причем $g' \neq 0$ в этой окрестности. Тогда, $\exists \lim{x}{a} \dfrac{f(x)}{g(x)} = \ \lim{x}{a} \dfrac{f'(x)}{g'(x)}$
+
+***Доказательство***
+- $f, \ g$ - непрерывны и дифференцируемы в проколотой окрестности $a$, доопределим их пределом, равным нулю $f(a) = g(a) = 0$. Тогда они станут непрерывными на всей окрестности точки $a$. Рассмотрим последовательность $x_{1}, x_{2}, \dots, x_{n}, \dots$ таких, что $\lim{n}{\infty} = a$ начиная с некоторого номера все члены последовательности будут принадлежать рассмотренной окрестности. Возьмем из них точку $x_{k}$ и рассмотрим отрезок $\left[a, x_{k}\right] \ (x_{k} > a)$. Тогда на этом отрезке $f, \ g$ непрерывны и дифференцируемы на интервале $(a , x_{k})$. На этом промежутке выполнено условие теоремы Коши о конечных приращениях, то есть $\exists \xi_{k} \in (a, x_{k})$, в которой $\dfrac{f(x_{k}) - f(a)}{g(x_{k}) - g(a)} = \dfrac{f'(\xi_{k})}{g'(\xi_{k})}$. $f(a) = g(a) = 0 \implies \dfrac{f(x_{k})}{g(x_{k})} = \dfrac{f'(\xi_{k})}{g'(\xi_{k})}$. $k \to \infty, \ x_{k} \to a \implies \xi_{k} \to a$. $\exists \lim{k}{\infty} \dfrac{f'(\xi_{k})}{g'(\xi_{k})} \implies \exists \lim{x}{a} \dfrac{f(x_{k})}{g(x_{k})} = \ \lim{x}{a} \dfrac{f'(x_{k})}{g'(x_{k})} \implies \lim{x}{a} \dfrac{f(x)}{g(x)} = \ \lim{x}{a} \dfrac{f'(x)}{g'(x)}$.
+
+***Пример***
+
+- Найти:  $\lim{x}{0} \dfrac{1 - \cos{x}}{x^{2}}$
+	- $\lim{x}{0} \dfrac{f'(x)}{g'(x)} = \ \lim{x}{0} \dfrac{\sin{x}}{2x} = \dfrac{1}{2}$ 
+- Найти:  $\lim{x}{0} \dfrac{x - \sin{x}}{x^{3}}$.
+	- $\lim{x}{0} \dfrac{f'(x)}{g'(x)} = \ \lim{x}{0} \dfrac{1 - \cos{x}}{3x^{2}} = \ \lim{x}{0} \dfrac{\sin{x}}{6x} = \dfrac{1}{6}$
+
+***Замечание***
+- Правило Лопиталя применимо и на полубесконечном промежутке $x \in \left[1; + \infty \right)$, $x \to + \infty, \ f(x) \to 0, \ g(x) \to 0$. А также, для раскрытия неопределенности вида $\dfrac{\infty}{\infty}$ .
+
+***Пример***
+
+- $\exists \lim{x}{a} \dfrac{f(x)}{g(x)}$, но правило Лопитая не выполнено, так как $\nexists  \ \lim{x}{a} \dfrac{f'(x)}{g'(x)}$.
+	- $\lim{x}{0} \dfrac{x^{2} \sin{\dfrac{1}{x}}}{\sin{x}} = \ \lim{x}{0} \dfrac{x \cdot x \cdot \sin{\dfrac{1}{x}}}{\sin{x}} = 0$
+	
+- Найдем предел отношения производных
+	- $\lim{x}{0} \dfrac{2x\sin{\dfrac{1}{x}} + x^{2} \cos{\dfrac{1}{x}} \left(- \dfrac{1}{x^{2}}\right)}{\cos{x}}$ - не существует, $\nexists \lim{x}{0} \cos{\dfrac{1}{x}}$
+	
+	- $\lim{x}{0} \dfrac{e^{-x^{2}} - \cos{x}}{\ln{(1 + 3x^{2}})} = \ \lim{x}{0} \dfrac{e^{-x}(-2x) + \sin{x}}{\dfrac{1}{3}x^{2} \cdot 6x} = \\ \ \lim{x}{0} \dfrac{(-2xe^{x^{2}} + \sin{x})(1 + 3x^{2})}{6x} = \ \lim{x}{0} \dfrac{\left[-2e^{-x^{2}} - 2xe^{-x^{2}} (-2x) + \cos{x}\right] \cdot (1 + 3x^{2}) + \left[-2xe^{-x^{2}} + \sin{x}\right]6x}{6} = - \dfrac{1}{6}$
+	
+### Формула Тейлора
+
+***Теорема***
+- Пусть $f$ имеет в окрестности точки $a$ производные порядков до $n + 1$ включительно. Тогда в любой точке $x$ этой окрестности $f$ представима в виде :
+- $f(x) = f(a) + \dfrac{f'(a)}{1!}(x - a) + \dfrac{f''(a)}{2!}(x - a)^{2} + \dots + \dfrac{f^{n}(a)}{n!}(x - a)^{n} + R_{n + 1}$ - Многочлен Тейлора $\Phi(x, a)$ с центром в точке $a$  и остаточным членом $R_{n + 1} = \left(\dfrac{x - a}{x - \xi}\right)^{p} \cdot \dfrac{\left(x - \xi\right)^{n + 1}}{n! \cdot p} \cdot f^{(n + 1)}(\xi)$, где $\xi$ - некоторая точка в окрестности точки $a$.
+
+***Доказательство***
+
+- Введем вспомогательную функцию $\psi(t) = f(x) - \Phi(x, t) - R_{n + 1}, t \in \left[a ; x\right]$. Запишем $R_{n + 1} = (x - t)^{P} \cdot Q(x)$. Проверим значение $\psi(t)$ на концах промежутка $t \in \left[a; x\right]$.
+- $\psi(a) = f(a) - \Phi(a, a) - R_{n + 1} = 0$
+- $\psi(x) = f(x) - \Phi(x, x) - R_{n + 1} = 0$.
+- Условия теоремы Ролля выполнены $\implies$ $\exists \xi \in \left[a; x\right]$ ,  $\psi'(\xi) = 0$ (производная по $t$).
+- $\psi(t) = f(t) - f(t) - \dfrac{f'(t)}{1!}(x - t) - \dfrac{f''(t)}{2!}(x - t)^{2} - \dots - \dfrac{f^{n}(t)}{n!}(x - t)^{n} - (x - t)^{P} \cdot Q(x)$
+- $\psi'(t) = f'(t) - f'(t) - \dfrac{f''(t)}{1!}(x - t) + \dfrac{f'(t)}{1!} - \dfrac{f'''(t)}{2!}(x - t)^{2} + \dfrac{f''(t)}{1!}(x - t) \\ \dots - \dfrac{f^{(n + 1)}(t)}{n!}(x - t)^{n} + \dfrac{f^{(n)}(t)}{(n - 1)!}(x - t)^{n - 1} + p(x - t)^{p - 1} \cdot Q(x)$
+- $\psi'(\xi) = -\dfrac{f^{(n + 1)}(\xi)}{n!}(x - \xi)^{n} + p(x - \xi)^{p - 1} \cdot Q(x) = 0$
+- $Q(x) = \dfrac{f^{(n + 1)}(\xi)}{n!} \cdot \dfrac{(x - \xi)^{n}}{p(x - \xi)^{p - 1}} = \dfrac{f^{(n + 1)}(\xi)}{n!p}(x - \xi)^{n - p + 1}$
+- $R_{n + 1} = \dfrac{(x - a)^{p} \cdot f^{(n + 1)}(\xi)(x - \xi)^{n - p + 1}}{n!p} = \left(\dfrac{x - a}{x - \xi}\right)^{p} \cdot \dfrac{(x - \xi)^{n + 1}}{n!p} \cdot f^{(n + 1)}(\xi)$
+
+***Пример***
+
+- Разложить в точке $a$ произвольный многочлен степени $n$
+- $P_{n}(x) = C_{n}x^{n} + C_{n - 1}x^{n - 1} + \cdots + C_{1}x + C_{0} = \underbrace{P(a) + \dfrac{P_{n}'(a)}{1!}(x - a) + \dfrac{P_{n}''(a)}{2!}(x - a)^{2} + \dots + \dfrac{P_{n}^{(n)}(a)}{n!}(x - a)^{n}}_{\Phi(x, a)} \implies R_{n + 1} = 0$
+- $\Phi(a, a) = f(a)$
+- $\Phi'(a, a) = f'(a)$
+- $\Phi''(a, a) = f''(a)$
+- $\Phi^{(n)}(a, a) = f^{(n)}(a)$
+
+## Лекция 23.11.2022
+### Оценка остаточного члена
+- Запишем остаточный член $R_{n + 1}$ в трех видах:
+	- В форме Лагранжа при $p = n + 1$, то есть $R_{n + 1} = \dfrac{(x - a)^{n + 1}}{(n + 1)!} \cdot f^{(n + 1)}(\xi)$ 
+	- В форме Коши. Введем вместо $\xi \in \left[a, x\right]$ промежуточную $\theta \in \left[0, 1\right] $ 
+		- $ \xi = a + \theta(x - a)$
+		- $ R_{n + 1} = \dfrac{x - a}{x - \xi} \cdot \dfrac{(x - \xi)^{n + 1}}{n!} \cdot f^{(n + 1)}(\xi) = (x - a) \cdot \dfrac{\left(x - \xi\right)^{n}}{n!} \cdot f^{(n + 1)}(\xi)$
+		- $x - \xi = x - a - \theta(x - a) = (x - a)(1 - \theta)$
+		- $R_{n + 1} = \dfrac{(x - a)(x - a)^{n}(1 - \theta)^{n}}{n!} \cdot f^{(n + 1)}(a + \theta(x - a))$
+		- $R_{n + 1} = \dfrac{(x - a)^{n + 1}(1 - \theta)^{n}}{n!} \cdot f^{(n + 1)}(a + \theta(x - a))$
+	- В форме Пеано. $R_{n + 1} = o((x - a)^{n})$ 
+### Доказательство формулы Тейлора с остаточным членом в форме Пеано
+***Доказательство***
+
+- Докажем $\lim{x}{a} \dfrac{R_{n + 1}}{(x - a)^{n}} = 0$
+-  $ \lim{x}{a} R_{n + 1} = 0$
+- Еще одно преимущество в форме Пеано - если формула Тейлора требует существования всех производных $f(x)$ до $n + 1$ порядка включительно в окрестности точки $a$, то в форме Пеано верна, при наличии $n$ - ого порядка производных в точке $a$ и $n - 1$ в окрестности $a$ .
+- $\lim{x}{a} \dfrac{R_{n + 1}(x)}{(x - a)^{n}} = \dfrac{0}{0}$ - Используем правило Лопиталя. 
+- $\lim{x}{a} \dfrac{(R_{n + 1}(x))'}{n(x - a)^{n - 1}} = \dfrac{0}{0}$ - Повторим $n - 1$ раз. 
+- $\lim{x}{a} \dfrac{R^{(n)}_{n + 1}(x) - R_{n + 1}^{(n)}(a)}{n!(x - a)} = \dfrac{R^{(n + 1)}_{n + 1}}{n!}= 0$
+
+### Оценка остаточного члена в формуле Тейлора  
+- Рассмотрим класс функций, для которых все производные любого порядка ограничены одной и той же константой $M$ в окретности точки $a$
+- Используем форму Лагранжа и точку разложения возьмем $a = 0$ (Тогда формула Тейлора называется формулой Маклорена)
+- $f(x) = f(0) + \dfrac{f'(0)}{1!}x + \dfrac{f''(0)}{2!}x^{2} + \dots + \dfrac{f^{(n)}(0)}{n!}x^{n} + R_{n + 1}$
+- $R_{n + 1} = \dfrac{x^{n + 1}}{(n + 1)!} \cdot f^{(n + 1)}(\theta x)$
+- $\left|R_{n + 1} \right| \leq \dfrac{\left|x\right|^{n + 1}}{(n + 1)!} \cdot M$
+
+***Пример***
+- $f(x) = e^{x}$. В окрестности точки $0$ все производные $e^{x}$ на отрезке $x \in \left[-r; r\right], \ M = e^{r}$
+  - $\left|R_{n + 1}\right| \leq \dfrac{e^{r}\left|x\right|^{n + 1}}{(n + 1)!}$
+- $f(x) = \sin{x}; \ f(x) = \cos{x}; \ M = 1$
+  - $\left|R_{n + 1}\right| \leq \dfrac{|x|^{n + 1}}{(n + 1)!}$
+
+### Формула Маклорена для некоторых элементраных функций
+- $e^{x} = 1 + x + \dfrac{x^{2}}{2!} + \dfrac{x^{3}}{3!} + \dots + \dfrac{x^{n}}{n!} + R_{n + 1}$
+	- $R_{n + 1} = \dfrac{x^{n + 1}}{(n + 1)!} e^{\theta x}, \ (0 \leq \theta \leq 1), \ x \in \left[-r; r\right]$
+	
+	- $\left|R_{n + 1}\right| \leq \dfrac{r^{n + 1}}{(n + 1)!}$
+- $\sin{x}$
+	- $f^{(n)}(x) = \sin{\left(x + h \cdot \dfrac{\pi}{2}\right)}$
+	- $f^{(n)}(x) = 0$ - Для четных $n$
+	- $n = 2k + 1$
+	- $\sin{x} = x - \dfrac{x^{3}}{3!} + \dfrac{x^{5}}{5!} - \dots + (-1)^{k} \dfrac{x^{2k + 1}}{(2k + 1)!} + R_{n + 2}$
+- $\cos{x}$
+	- $\cos{x} = \cos{\left(x + n \cdot \dfrac{\pi}{2} \right)}$ 
+	- $\cos{x} = 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} \dots + \dfrac{(-1)^{k}x^{2k}}{(2k)!} + R_{n + 2}$
+- $\ln{\left(1 + x\right)}$
+  - $\ln{\left(1 + x\right)} = x - \dfrac{x^{2}}{2} + \dfrac{x^{3}}{3} - \dfrac{x^{4}}{4} + \dots + (-1)^{(n - 1)} \dfrac{x^{n}}{n} + R_{n + 1}$
+  - $\ln'{\left(1 + x\right)} = \dfrac{1}{1 + x} \bigg|_{x = 0} = 1$
+  - $\ln''{\left(1 + x\right)} = - \dfrac{1}{(1 + x)^{2}} \bigg|_{x = 0} = -1$
+  - $\ln'''{\left(1 + x\right)} = \dfrac{2}{(1 + x)^{3}} \bigg|_{x = 0} = 2$
+- Биноминальное разложение
+	- $\left(1 + x\right)^{\alpha} = 1 + \alpha x + \dfrac{\alpha(\alpha - 1)}{2!}x^{2} + \dfrac{\alpha(\alpha - 1)(\alpha - 2)}{3!}x^{3} + \dots + \dfrac{\alpha(\alpha - 1) \dots (\alpha - n + 1)}{n!}x^{n} + R_{n + 1}$  
+
+## Лекция 30.11.2022
+### Нахождение пределов используя формулу Маклорена
+- $\lim{x}{0} \dfrac{\sin{x} - x}{x^{3}} = \ \lim{x}{0} \dfrac{x - \dfrac{x^{3}}{3!} + o(x^{4}) - x}{x^{3}} = - \dfrac{1}{6}$
+- $\lim{x}{0}  \dfrac{e^{- \dfrac{x^{2}}{2}} - \cos{x}}{x^{4}} = \ \lim{x}{0} \dfrac{1 - \dfrac{x^{2}}{2} + \dfrac{x^{4}}{2!\cdot 4} + o(x^{4}) - 1 - \dfrac{x^{2}}{2!} - \dfrac{x^{4}}{4!} + o(x^{4})}{x^{4}} = \dfrac{1}{8} - \dfrac{1}{24} = \dfrac{1}{12}$
+- $y = \left(\cos{x} + \dfrac{x^{2}}{2}\right)^{\dfrac{1}{x(\sin{x} - 1)}}$
+	- $\lim{x}{0} \ln{y} = \dfrac{\ln{\left(\cos{x} + \dfrac{x^{2}}{2}\right)}}{x(\sin{x} - x)} = \ \lim{x}{0} \dfrac{\left(1 - \dfrac{x^{2}}{2} + \dfrac{x^{4}}{4!} + o(x^{4}) + \dfrac{x^{2}}{2}\right)}{x\left(x - \dfrac{x^{3}}{3!} + o(x^{4}) - x\right)} = \ \lim{x}{0} \dfrac{\ln{\left(1 + \dfrac{x^{4}}{4!} + o(x^{4})\right)}}{-\dfrac{x^{4}}{6} + o(x^{4})} = \ \lim{x}{0} \dfrac{\dfrac{x^{4}}{4!} + o(x^{4})}{- \dfrac{x^{6}}{6} + o(x^{4})} = - \dfrac{6}{24} = - \dfrac{1}{4}$
+
+### Убывающие и возрастающие функции
+- $f(x) \uparrow \ x \in$  $\left[a; b\right]$$ \ \Longleftrightarrow$ $\forall x_{2} > x_{1} \in \left[a; b\right] \implies f(x_{2}) > f(x_{1})$
+- $f(x) \downarrow \ x \in$ $\left[a; b\right]$$ \ \Longleftrightarrow$ $\forall x_{2} > x_{1} \in \left[a; b\right] \implies f(x_{2}) < f(x_{1})$
+- Аналогично для неубывающей и невозрастающей.
+
+### Монотонные функции
+- Возрастающие и убывающие функции называются монотоными
+
+### Теорема о связи знака производной с возрастанием и убыванием функци
+
+***Теорема***
+
+- Если у дифференцируемой на промежутке $f$ в каждой точке производная положительна, то  $f \uparrow$ на этом промежутке. Если отрицательна, то $f \downarrow$.
+
+***Доказательство***
+
+- Действительно, пусть $f'(x) > 0, \ x \in \left[a; b\right] \implies f$ сохраняет знак в некоторой окрестности $x$. $\dfrac{\Delta f}{\Delta x} > 0 : \Delta x > 0 \implies \Delta f > 0; \ \Delta x < 0 \implies  \Delta f < 0$. Аналогично для $f'(x) < 0$.
+
+### Возрастание (убывание) в точке
+- $x_{0}$ называется точкой возрастания, если в левой (как угодно малой) окрестности $x_{0}: f(x) < f(x_{0})$, а в правой $f(x) > f(x_{0})$. Аналогично для точки убывания.
+
+### Утверждение о неотрицательной производной
+- Если $f$ дифференцируема в окрестности $x_{0}$ и $x_{0}$ - точка возрастания $\implies f'(x_{0}) \geq 0$. 
+- Если $f$ дифференцируема в окрестности $x_{0}$ и $f'(x_{0}) > 0 \implies \ x_{0}$ - точка возрастания.
+
+***Пример***
+- $f(x) = x^{3}, \ x_{0} = 0$
+- $f'(x_{0}) = 0 \implies $ $x_{0}$ - точка возрастания.
+
+### Экстремум функции 
+- $x_{0} $  -  $\max$ функции $f \Longleftrightarrow$ в окрестности $x_{0}: f(x) \leq f(x_{0})$
+- $x_{0}$ - строгий  $ \max$ функции $f \Longleftrightarrow$ в окрестности $x_{0}: f(x) < f(x_{0})$
+- Аналогично для $\min$.
+
+### Теорема Ферма
+- $f$ дифференцируема в окрестности точки возможного экстремума $\implies f$ имеет экстремум, если $f$ меняет знак при переходе через эту точку.
+
+### Первое достаточное условие экстремума
+- $f$ - дифференцируема в окрестности точки возможного экстремума. $f$ меняет знак с плюса на минус $x_{0}$. Тогда$ \dfrac{\Delta f}{\Delta x} < 0, \ \Delta x > 0 \implies \Delta f > 0; \  \dfrac{\Delta f}{\Delta x} > 0, \ \Delta x < 0 \implies \Delta f < 0$. А это и значит $\max$. Аналогично для $\min$.
+
+### Второе достаточное условие экстремума
+- Если $x_{0}$ - точка возможного экстремума, $f'(x) = 0$, то $f''(x_{0}) < 0 \implies x_{0} = \max; f''(x_{0}) > 0 \implies x_{0} = \min$
+
+***Доказательство***
+
+- Пусть $x_{0}$ - точка возможного экстремума, $\exists f'$ в некоторой окрестности $x_{0}$. $f''(x_{0}) = \ \lim{\Delta x}{0} \dfrac{\Delta f'}{\Delta x}$. Пусть далее $f''(x_{0}) < 0$. Значит, в окрестности $x_{0}$: $\dfrac{\Delta f'}{\Delta x} < 0$. $\Delta x > 0 \implies \Delta f' < 0, \ f'(x_{0}) = 0$, то есть производная изменила знак на отрицательный, аналогично, $\Delta x < 0, \ \dfrac{\Delta f'}{\Delta x} < 0 \implies \Delta f' > 0, \ f'(x_{0}) = 0$. То есть левее $x_{0}$ производная больше нуля $\implies x_{0}$ - точка $\max$. Аналогично для $\min$.
+
+***Пример***
+- Найти $\min{f}, \ \max{f}$,  $f \uparrow, f \downarrow$.
+- $f(x) = 3x^{3} - x^{2} - 2x + 5$
+	- $f'(x) = 9x^{2} - 2x - 2 = 0$
+	- $D = 76 \implies x_{1,2} = \dfrac{2 \pm \sqrt{76}}{18} = \dfrac{1 \pm \sqrt{19}}{9}$
+	- $9x^{2} - 2x - 2 = 9(x - \dfrac{1 + \sqrt{19}}{9})(x - \dfrac{1 - \sqrt{19}}{9})$ 
+	- $f''(x) = 18x - 2 = 2(9x - 1) \implies \dfrac{1 - \sqrt{19}}{9} = \max, \dfrac{1 + \sqrt{19}}{9} = \min$
+
+## Лекция 06.12.2022
+### Выпуклость и вогнутость графика функции
+- Пусть дифференцируема на некотором интервале $(a;b)$ $f$ всюду на этом интервале имеет график, расположенный ниже касательной в соответствующей точке, то в этой точке график имеет выпуклость вверх, если ниже, то выпуклость вниз (вогнутость).
+
+***Утверждение***
+- Если в окрестности некоторой точки $C$ вторая производная (если существует) не меняет знака и отрицательна, то в окрестности этой точки график функции направлен выпуклостью вверх, если положительна, то вниз. Пусть в окрестности $C$ $f''(x)$ отрицательна. Напишем уравнение касательной, проведенной в этой точке.  Пусть $Y$ - ордината к касательной, а $y$ - ордината графика функции. $Y =  f(С) + f'(С)(x - С)$
+- Разложим функцию $y = f(x)$ в точке $C$ по формуле Тейлора:
+	- $f(x) = f(С) + f'(С)(x - С) + \dfrac{f''(\xi)}{2!}(x - С)^{2}$ 
+	- $y - Y = \dfrac{f''(\xi)}{2!}(x - С)^{2}$
+- $f''(\xi) < 0 \implies y - Y < 0, \ y < Y$, а это и есть определение выпуклости вверх
+
+### Точка перегиба графика
+- Если дифференцируемая в окрестности $C$ и $f$ меняет при переходе через эту точку направление выпуклости, то точка $C$ называется точкой перегиба
+- Это также означает, что при переходе через $C$, $ \ f''$ (если существует) меняет знак
+
+### Третье достаточное условие экстремума и точки перегиба
+- Пусть $f$ дифференцируема в окрестности $C$ $n$ раз, а в $C$ - $(n + 1)$ раз. Если в точке $C$ производные до $n$ -ого порядка включительно равны нулю, $f^{(n + 1)}(C) \neq 0 \implies$  при $n$ - нечетном точка $C$ является точкой экстремума, а именно если  $f^{(n + 1)}(C) < 0$, то $\max$, если $f^{(n + 1)}(C) > 0$, то $\min$. Если $n$ - четное, то $C$ - точка перегиба.
+
+***Доказательство***
+- Действительно, пусть $n$ - нечетное, тогда при $f^{(n + 1)}(C) \neq 0$ для $f^{(n)}(x)$ как функции, для которой $f^{(n + 1)}$ - ее первая производная, $C$ - точка возрастания (убывания) для $f^{(n)}(x)$. Рассмотрим разложение по формуле Тейлора в точке $C$ второй производной:
+	- $f''(x) = f''(C) + \dfrac{f'''(C)}{1!}(x - C) + \dots + \dfrac{f^{(n)}(C)}{n!}(x - C)^{n} + \dfrac{f^{(n + 1)}(\xi)}{(n + 1)!}(x - C)^{n + 1}$
+	- Так как по условию все производные до $n$ включительно равны нулю в точке $C \implies f''(x) =\dfrac{f^{(n + 1)}(\xi)}{(n + 1)!}(x - C)^{n + 1}$
+	- $f^{(n + 1)}(\xi) < 0 \implies f''(C) < 0 \implies \max$
+	- $f^{(n + 1)}(\xi) > 0 \implies f''(C) > 0 \implies \min$
+- Пусть $n$ - четное, $f^{(n + 1)}(\xi) \neq 0$. Разложим по формуле Тейлора $f'(x)$.
+	- $f'(x) = f'(C) + \dfrac{f''(\xi)}{1!}(x - C)$. 
+    - $f'(x) = \dfrac{f''(\xi)}{1!}(x - C)$. $(x - C)$ меняет знак при переходе, значит $f'(x)$ меняет знак при переходе через $C$.
+
+### План исследования и построения графика функции
+- Найти область определения функции
+- Выяснить симметрию функции (четность, периодичность)
+- Исследовать поведение функции вблизи границ ее области определения
+- Найти точки пересечения графика с осями координат
+- Найти асимптоты графика
+- Вычислить производную и по ней найти промежутки возрастания (убывания), экстремум
+- Найти промежутки выпуклости (вогнутости) графика и точки перегиба
+- Построить график
+
+### Определени асимптоты
+- Прямая $x = a$ называется вертикальной асимптотой графика $f$ в точке $a$, если какой - либо из односторонних пределов функции в этой точке равен  $\pm \infty$.
+- Прямая $y = kx + b$ называется наклонной асимптотой графика функции при $x \implies \pm \infty$, если при этом расстояние между графиком функции и асимптоты стремится к нулю.
+
+### Необходимое и достаточное условие наклонной асимптоты
+- $\lim{x}{\pm \infty} \dfrac{f(x)}{x} = k, \ \lim{x}{\pm \infty} \left(f(x) - kx\right) = b$.
+
+***Доказательство***
+
+- Действительно: $\lim{x}{\pm \infty} \dfrac{y_{f}}{y_{a}} = 1$
+	- $\lim{x}{\pm \infty} \dfrac{f(x)}{kx + b} = 1 \Longleftrightarrow \lim{x}{\pm \infty} \dfrac{f(x)}{x} = k$
+	- Стремление расстояния к нулю также означает: $(y_{f} - y_{a}) \implies 0 \implies \lim{x}{\pm \infty}\left[f(x) - (kx + b)\right] = 0 \Longleftrightarrow \lim{x}{\pm \infty}(f(x) - kx) = b$ 
+
+### Пример исследования функции
+- Исследовать $y = \dfrac{2x^{3} - 5x^{2} + 14x - 6}{4x^{2}}$
+	- Область определения: $\left(-\infty; 0\right) \ \cup (0; +\infty)$ 
+	- Симметрия: Отсутствует (функция общего вида)
+	- Поведение вблизи границ: 
+		- $\lim{x}{-\infty} \dfrac{2x^{3} -5x^{2} + 14 - 6}{4x^{2}} = -\infty$
+		- $\lim{x}{+\infty} \dfrac{2x^{3} -5x^{2} + 14 - 6}{4x^{2}} = +\infty$
+		- $\lim{x}{0} \dfrac{2x^{3} -5x^{2} + 14 - 6}{4x^{2}} = -\infty$
+	- Точки пересечения с осями координат :
+		- Решить $2x^{3} -5x^{2} + 14 - 6 = 0$
+	- Асимптоты:
+		- Вертикальные: $x = 0$
+		- Наклонные:
+		- $k = \lim{x}{\pm \infty} \dfrac{2x^{3} - 5x^{2} + 14x - 6}{4x^{3}} = \dfrac{1}{2}$
+		- $b =  \lim{x}{\pm \infty} \dfrac{2x^{3} - 5x^{2} + 14x - 6}{4x^{2}} - \dfrac{x}{2} = - \dfrac{5}{4}$
+		- $y = \dfrac{x}{2} - \dfrac{5}{4}$
+	- Производные: 
+		- $f(x) = \dfrac{1}{4}\left(2x - 5 + \dfrac{14}{x} - \dfrac{6}{x^{2}}\right)$
+		- $f'(x) = \dfrac{1}{4}\left(2 - \dfrac{14}{x^{2}} + \dfrac{12}{x^{3}}\right) = \dfrac{x^{3} - 7x + 6}{2x^{3}}$
+	- Промежутки $\uparrow, \ \downarrow$ , экстремум:
+		- $x^{3} - 7x + 6 = 0 \implies x(x^{2} - 1) - 6(x - 1) = 0 \implies$ Корни: -3, 2.
+	- Точки перегиба:
+		- $f''(x) = \dfrac{1}{2} \dfrac{7(3x^{2} - 7) - (x^{3} - 7 + 6 )3x}{x^{6}} = 0$
+		- $x = - \dfrac{9}{7}$ 
+## Лекция 13.12.2022
+### Первообразная и неопределенный интеграл
+- Пусть на некотором промежутке занана $f(x)$. Первообразная для этой функции на этом промежутке называется функция дифференциррования на этом промежутке $F(x)$, такая что $F'(x) = f(x)$.
+- Первообразная определена неоднозначно, т.к. если $F(x)$ - первообразная, то $F(x) + C$ - тоже первообразная.
+
+### Теорема об отличии первообразных на постоянные на промежутке
+
+***Теорема***
+
+- Любые две первообразные функции $f(x)$ на данном промежутке могут отличаться только на постоянные слагаемые
+
+***Доказательство***
+
+- Пусть на $\left(a;b\right)$ $f(x)$ имеет первообразные $F_{1}(x)$ и $F_{2}(x)$. Докажем, что отличаются на $C$. Введем функцию $\Phi(x) = F_{1}(x) + F_{2}(x)$ в любой точке $x$. $\Phi(x)' = F_{1}(x)'  + F_{2}(x)' = f(x) - f(x) = 0$. Если $x$ - любая точка просматриваемого промежутка, то по теореме Лагранжа о конечных приращениях существует внутри промежутка точка $\xi$, что $\Phi(b) - \Phi(a) = \Phi'(\xi)(b - a)$. $\Phi(x + \Delta x) - \Phi(x) = \Phi'(\xi) \Delta x$,  $\Phi'(\xi) = 0 \implies \Phi(x + \Delta x) = \Phi(x)  \implies \Phi(x) = const \implies F_{1}(x) - F_{2}(x) = C \implies F_{1}(x) = F_{2}(x) + C$.
+
+***Определение***
+- Если известна какая - то первообразная, то совокупность всех первообразных имеет вид $F(x) + C$ и называется неопределенным интегралом
+
+***Обозначение***
+- $F(x) + C = \int f(x) dx $
+
+### Алгебраические свойства неопределенного интеграла
+- $d\left(\int f(x) dx \right) = \left( F(x) + C \right) ' dx = F'(x) dx = dF(x)$
+- $\int dF = \int F'(x) dx = \int f(x) dx + C$
+- $\int \left(\alpha f(x) + \beta g(x) \right) dx = \alpha \int f(x) dx + \beta \int g(x) dx$
+
+### Таблица неопределенных интегралов
+№|f(x) | F(x) 
+:------:|:--------:|------:
+1 |  $C$ | $Cx + C_{1}$
+2 |$x^{n}$     | $\dfrac{x^{n + 1}}{n + 1} + C$ 
+3 |$\dfrac{1}{x}$     | $\ln{x} + C$
+4 |$a^{x}$     | $\dfrac{a^{x}}{\ln{a}} + C$
+5 |$e^{x}$     | $e^{x} + C$
+6 |$\sin{x}$     | $- \cos{x} + C$   
+7 |$\cos{x}$     | $\sin{x} + C$
+8 |$\dfrac{1}{\cos^{2}{x}}$     | $ \tan{x} + C$ 
+9 |$- \dfrac{1}{\sin^{2}{x}}$     | $\cot{x} + C$ 
+10 |$\dfrac{1}{\sqrt{1 + x^{2}}}$     | $ \arcsin{x} + C$
+11 |$- \dfrac{1}{\sqrt{1 + x^{2}}}$     | $\arccos{x} + C$
+12 | $\dfrac{1}{1 + x^{2}}$    | $\arctan{x} + C$  
+13 |$- \dfrac{1}{1 + x^{2}}$     | $arccot{(x)} + C$ 
+14 |$sh{(x)}$     | $ch{(x)} + C$ 
+15 |$ch(x)$     | $sh(x) + C$ 
+
+### Методы интегрирования 
+- Метод замены переменной
+	- Пусть имеем $\int f(x) dx$, если $x = \phi(t)$, так что $dx = \phi'(t) dt$, то обозначив первообразную функции $f(\phi(t))$ через $G(t)$ получим $\int f(\phi(t)) dt = G(t) + C \implies G'(t) = f(\phi(t)) \cdot \phi(t) \implies G(t) = \int f(\phi(t))\phi'(t) dt = \int f(x) dx$ 
+- Метод интегрирования по частям
+	- $d(u(x) v(x)) = udv + vdu$
+	- $\int d(uv) dx = \int u dv + \int v du$
+	- $\int u dv = uv - \int v du$
+## Лекция 20.12.2022
+### Интегрирование рациональных функций
+- Пусть имеем правильную несократимую дробь $\dfrac{P(x)}{Q(x)}$. Пусть далее многочлен $Q(x)$ имеет корень $x = a$ кратности $\alpha$, т. е. $Q(x) = (x - a)^{\alpha}\phi(x)$, причем $\phi(a) \neq 0$.
+
+### Теорема о разложении дроби на простейшие
+- $\dfrac{P(x)}{Q(x)} = \dfrac{A}{(x  - a)^{\alpha}} + \dfrac{\psi(x)}{(x - a)^{\alpha - k}\phi(x)}, \ k \geq 1$
+
+***Доказательство***
+
+- $\dfrac{P(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{P(x) - A\phi(x)}{Q(x)}\bigg|_{A = \dfrac{P(a)}{\phi(a)}} = \dfrac{\Phi(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{(x - a)^{k}\psi(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{\psi(x)}{(x - a)^{\alpha - k}\phi(x)}$
+
+***Замечание***
+- Если $Q(x)$ имеет комплексный корень $x = u + iv$, тогда он имеет комплексно - сопряженный корень $\upline{x} = u - iv$, т. е. $Q(x) = \left(u + iv\right)\left(u - iv \right) = u^{2} + v^{2}$. Обычно этот множитель встречается в виде $Q(x) = \left(x^{2} + px + q\right)^{\alpha} \cdot \phi(x) \implies \dfrac{P(x)}{Q(x)} = \dfrac{Mx + N}{(x^{2} + px + q)^{\alpha}} + \dfrac{\psi(x)}{(x^{2} + px + q)^{\alpha - k}\phi(x)}$
+
+***Общий вид разложения рациональной дроби на простейшие***
+
+- $\dfrac{P(x)}{Q(x)} = \dfrac{A_{1}}{(x - a)^{\alpha}} + \dfrac{A_{2}}{(x - a)^{\alpha - 1}} + \dots + \dfrac{A_{\alpha}}{x - a} + \dfrac{B_{1}}{(x - b)^{\beta}} + \dfrac{B_{2}}{(x - b)^{\beta - 1}} + \dots + \dfrac{B_{\beta}}{x - b} + \dots + \dfrac{C_{1}}{(x - c)^{\gamma}} + \dfrac{C_{2}}{(x - c)^{\gamma - 1}} + \dfrac{C_{\gamma}}{x - c} \\ + \dfrac{M_{1}x + N_{1}}{(x^{2} + p_{1}x - q_{1})^{\delta}} +  \dfrac{M_{2}x + N_{2}}{(x^{2} + p_{1}x - q_{1})^{\delta - 1}} + \dots +  \dfrac{M_{\delta}x + N_{\delta}}{(x^{2} + p_{1}x - q_{1}} + \dfrac{K_{1}x + L_{1}}{(x^{2} + p_{2}x + q_{2})^{\eps}} + \dfrac{K_{2}x + L_{2}}{(x^{2} + p_{2}x + q_{2})^{\eps - 1}} + \dots + \dfrac{K_{\eps}x + L_{\eps}}{x^{2} + p_{2}x + q_{2}}$
+
+### Основные интегралы рациональных дробей
+1. $\int \dfrac{A}{x - a} dx = A\ln{(x - a)} + C$
+2. $\int \dfrac{A}{(x - a)^{\alpha}} dx = \dfrac{(x - a)^{\alpha + 1}}{-\alpha + 1} + C$
+3. $\int \dfrac{Mx + N}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{\dfrac{Mx + N}{M} \cdot 2}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + \dfrac{2N}{M}}{x^{2} + px + q}dx = \\ \dfrac{M}{2} \int \dfrac{2x + p - p + \dfrac{2N}{M}}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + p}{x^{2} + px + q} dx + \dfrac{M}{2} \int \dfrac{\dfrac{2N}{M} - p}{x^{2} + px + q} dx =  \\ \dfrac{M}{2} \int \dfrac{d(x^{2} + px q)}{x^{2} + px + q} + \dfrac{M}{2} \int \dfrac{B}{x^{2} + px + q} dx = \\ \dfrac{M}{2} \ln{(x^{2} + px + q)} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + px + q} = \dfrac{M}{2} \ln{(x^{2} + px + q)} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + \dfrac{2px}{2} + q + \dfrac{p^{2}}{q} - \dfrac{p^{2}}{q}} = \\  \dfrac{M}{2} \ln{(x^{2} + px + q)} + \dfrac{MB}{2} \int \dfrac{dt}{t^{2} + \left(q - \dfrac{p}{q}\right)}\bigg|_{t = x + \dfrac{p}{2}}$      
+В зависимости от знака в знаменателе получаем $\ln$ либо $\arctan$
+4. $\int \dfrac{Mx + N}{(x^{2} + px + q)^{\alpha}} dx $ Решается понижением порядка с помощью рекуррентной формулы.
+	-  $I_{\alpha} = \int \dfrac{dt}{(t^{2} + 1)^{\alpha}} = \int \dfrac{1 - t^{2} + t^{2}}{(t^{2} + 1)^{\alpha}} dt = \int \dfrac{dt}{(t^{2} + 1)^{\alpha - 1}} - \int \dfrac{t^{2}dt}{(t^{2} + 1)^{\alpha}} = \\ I_{\alpha - 1} - \int u dv \bigg|_{u = t}^{dv = \dfrac{tdt}{(t^{2} + 1)^{\alpha}}} = I_{\alpha - 1} -  t \cdot \dfrac{0.5}{(1 - \alpha)(t^{2} + 1)^{\alpha - 1}} + \int \dfrac{0.5}{(1 - \alpha)(t^{2} + 1)^{\alpha}}dt = \\ I_{\alpha - 1} - \dfrac{t}{2(1 - \alpha)(t^{2} + 1)^{\alpha - 1}} + \dfrac{I_{\alpha - 1}}{2(1 - \alpha)} = - \dfrac{t}{2(\alpha - 1)(t^{2} + 1)^{\alpha - 1}} + I_{\alpha - 1} \left(\dfrac{2(1 - \alpha) + 1}{2(1 - \alpha)}\right)$
+
+### Комплексные числа
+- Комплексным числом называется упорядоченная пара действительных чисел $(a; b)$.
+
+***Обозначение***
+- $z = (a ; b)$
+- $a = \Re(z)$ - действительная часть
+- $b = \Im(z)$ - мнимая часть
+- $i = (0, 1)$
+
+### Алгебраические свойства комплексных чисел
+- $a_{1} = a_{2} , b_{1} = b_{2} \implies z_{1} = z_{2}$
+- $z_{1} + z_{2} = \left(a_{1} + a_{2}, b_{1} + b_{2}\right)$
+- $z_{1}z_{2} = \left(a_{1}a_{2} - b_{1}b_{2}, a_{1}b_{2} + a_{2}b_{1}\right)$
+- $z_{1} = z_{2}z \implies \dfrac{z_{1}}{z_{2}} = z$
+- $z = (a, b) = (a, 0) + b(0 , 1) = a + ib$ - алгебраическая форма записи комплексного числа
+### Модуль комплексного числа
+- $|z| = |x + iy| = \sqrt{x^{2} + y^{2}}$
+
+### Аргумент комплексного числа
+***Обозначение***
+- $0 \leq \phi \leq 2\pi \implies \phi = \arg{z} \implies  \arg{Z} = \arg{z} + 2\pi k$ 
+
+### Тригонометрическая форма записи комплексного числа
+- $z = x + iy = \rho\cos{\phi} + \rho i\sin{\phi} = \rho \left(\cos{\phi} + i\sin{\phi} \right)$
+- $e^{i\phi} = \cos{\phi} + i\sin{\phi} \implies z = \rho e^{i \phi}$
+- $z_{1}z_{2} = \rho_{1}\rho_{2}\left(\cos{\phi_{1}} + i \sin{\phi_{1}}\right)\left(\cos{\phi_{2}} + i \sin{\phi_{2}}\right) = \rho_{1}\rho_{2}\left(\cos{(\phi_{1} + \phi_{2}}) + i\sin{(\phi_{1} + \phi_{2})} \right)$
+
+### Формула Муавра
+- $z^{n} = \rho^{n}\left(\cos{(n\phi)} + i\sin{(n\phi)}\right)$
+
+### Извлечение корня из комплексного числа
+- $\sqrt[n]{z} = \sqrt[n]{\rho}\left(\cos{\dfrac{\phi}{n}} + i\sin{\dfrac{\phi}{n}}\right)$
+- Число корней: $n$
+## Семинар 13.09.2022 
 ***Разбор домашней работы***  
 Доказать по индукции :   
 
@@ -965,41 +1388,42 @@ $\lim{x}{0} f(x)=$ ?
 
 1. $M = \sup{X} $ - наименьшая из всех верхних граней  
 
-2. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \Rightarrow M = \sup{X}$  
+2. $ (\forall x \in X : x \leq M) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M - \epsilon) \implies M = \sup{X}$  
 
-3. $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \Rightarrow M = \sup{X} $  
+3. $(\forall x \in X : x \leq  M) \wedge (\forall x < M \exists x' \in X : x' > x) \implies M = \sup{X} $  
 ### Точная нижняя грань ограниченного сверху множества  
 1. $m = inf{X}$ - наибольшая из всех нижних граней $X$  
-2. $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \Rightarrow m = inf{X})$  
-3. $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \Rightarrow m = inf{X}$  
+2. $(\forall x \in X: x \geq m ) \wedge (\forall \epsilon > 0, \exists x' \in X : x' < m + \epsilon) \implies m = inf{X})$  
+3. $(\forall x \in X x \geq m) \wedge (\forall > m, \exists x' \in X: x' < x) \implies m = inf{X}$  
 
 ***Задачи на семинаре***  
 
-1. Доказать, что $inf(-X) = - \sup{X}$. Доказательство: $(\forall x \in X: x \leq M) \wedge (\forall \epsilon > 0 : \exists x' \in X: x' > M - \epsilon ) \Rightarrow M =\sup{X}$. Рассмотрим множество ${-X}$. $(\forall (-x) : -x \geq -M = m) \wedge (\forall \epsilon > 0 : \exists -x' \in -X: -x' < \underbrace{-M}_{m} + \epsilon = m + \epsilon \Rightarrow m = -M)$  
+1. Доказать, что $inf(-X) = - \sup{X}$. Доказательство: $(\forall x \in X: x \leq M) \wedge (\forall \epsilon > 0 : \exists x' \in X: x' > M - \epsilon ) \implies M =\sup{X}$. Рассмотрим множество ${-X}$. $(\forall (-x) : -x \geq -M = m) \wedge (\forall \epsilon > 0 : \exists -x' \in -X: -x' < \underbrace{-M}_{m} + \epsilon = m + \epsilon \implies m = -M)$  
 
 2. Доказать, что $\sup{(X + Y)} = \sup{X} + \sup{Y}$  
-    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M_{1} - \dfrac{\epsilon}{2} \Rightarrow M_{1} = \sup{X}$  
-    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon > 0 \exists y' \in X: y' > M_{2} - \dfrac{\epsilon}{2} \Rightarrow M_2 = \sup{Y}$  
-    3. $ (\forall x + y \in X + Y : x + y \leq M_{1} + M_{2}) \wedge (\forall \epsilon > 0, \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \Rightarrow M_{1} + M_{2} = \sup{(X + Y)}$  
+    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon > 0 \exists x' \in X: x' > M_{1} - \dfrac{\epsilon}{2} \implies M_{1} = \sup{X}$  
+    2. $ (\forall y \in X : y \leq M_{2}) \wedge (\forall \epsilon > 0 \exists y' \in X: y' > M_{2} - \dfrac{\epsilon}{2} \implies M_2 = \sup{Y}$  
+    3. $ (\forall x + y \in X + Y : x + y \leq M_{1} + M_{2}) \wedge (\forall \epsilon > 0, \exists x' + y' \in X + Y: x' + y' > M_{1} +M_{2} - \epsilon \implies M_{1} + M_{2} = \sup{(X + Y)}$  
 
 3. Доказать, что $\sup{(XY)} = \sup{X} \cdot \sup{Y}$  
-    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M_{1} - \epsilon_{1}) \Rightarrow M_{1} = \sup{X}$  
-    2. $ (\forall y \in Y : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in Y: y' > M_{2} - \epsilon_{2}) \Rightarrow M_2 = \sup{Y}$  
-    3. $ (\forall x \cdot y \in XY : xy \leq M_{1}M_{2}) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \Rightarrow M_{1}M_{2} = \sup{XY}$  
+    1. $ (\forall x \in X : x \leq M_{1}) \wedge (\forall \epsilon_{1} > 0 \exists x' \in X: x' > M_{1} - \epsilon_{1}) \implies M_{1} = \sup{X}$  
+    2. $ (\forall y \in Y : y \leq M_{2}) \wedge (\forall \epsilon_{2} > 0 \exists y' \in Y: y' > M_{2} - \epsilon_{2}) \implies M_2 = \sup{Y}$  
+    3. $ (\forall x \cdot y \in XY : xy \leq M_{1}M_{2}) \wedge (\forall \epsilon > 0 \exists x'y' \in XY: x'y' > (M_{1} - \epsilon_{1})(M_{2} - \epsilon_{2}) = M_{1}M_{2} - \underbrace{ M_{1}\epsilon_{2} - M_{2}\epsilon_{1} + \epsilon_{1}\epsilon_{2}}_{= \epsilon} \implies M_{1}M_{2} = \sup{XY}$  
+
 
 ## Семинар 20.09.2022  
 
 ***Задачи на семинаре из Демидовича***   
 
 ### 43  
-- Доказать, что последовательность $x_{n} = \lg(\lg{n})$ имеет бесконечный предел при $n \rightarrow \infty$ (т.е. являются бесконечно большими), определив для всякого $E > 0$ число $N = N(E)$ такое, что $|x_{n}| > E$ при $n > N$  
+- Доказать, что последовательность $x_{n} = \lg(\lg{n})$ имеет бесконечный предел при $n \implies \infty$ (т.е. являются бесконечно большими), определив для всякого $E > 0$ число $N = N(E)$ такое, что $|x_{n}| > E$ при $n > N$  
 	- Доказательство:  
 		- $|\lg(\lg{n})| > E$  
 		- $|10^{\lg(\lg{n})}| > 10 ^{E}$  
 		- $|\lg| > 10^{E}$   
 		- $n > 10^{{10}^{E}}$  
 ### 44   
-- Показать, что $x_{n} = n^{(-1)^n}$ $n = (1, 2 , \dots)$ не ограничена, однако не является бесконечно большой при $n \rightarrow \infty$  
+- Показать, что $x_{n} = n^{(-1)^n}$ $n = (1, 2 , \dots)$ не ограничена, однако не является бесконечно большой при $n \implies \infty$  
 	- Последовательность не ограничена, так как ее члены чередуются: $a_{2k} > 1$,  $a_{2k + 1} \leq 1$  
 	- У нее отсутствует предел, по той же причине, поэтому она не является бесконечно большой.  
 
@@ -1032,7 +1456,7 @@ $\lim{x}{0} f(x)=$ ?
 	- $n > \dfrac{n(n-1)}{2}\alpha_{n}^2$  
 	- $1 > \dfrac{n - 1}{2}\alpha_{n}^2$   
 	- $\alpha_{n}^2 < \dfrac{2}{n -1}$  
-	- $\alpha_{n} < \dfrac{\sqrt{2}}{\sqrt{n - 1}} \rightarrow 0 \implies \lim{n}{\infty} \left [\sqrt[n]{n} \right] = 1$  
+	- $\alpha_{n} < \dfrac{\sqrt{2}}{\sqrt{n - 1}} \implies 0 \implies \lim{n}{\infty} \left [\sqrt[n]{n} \right] = 1$  
 
 ### 77  
 - Пользуясь теоремой о существовании предела монотонной и ограниченной последовательности, доказать сходимость следующих последовательностей: $x_{n} = p_{0} + \dfrac{p_{1}}{10} + \dots +  \dfrac{p_{n}}{10^{n}} $ $(n = 1, 2, \dots)$, где $p_{i}(i = 0, 1, 2, \dots)$ - целые неотрицательные числа, не превышающие $9$, начиная с $p_{i}$.  
@@ -1042,11 +1466,11 @@ $\lim{x}{0} f(x)=$ ?
 - Сформулировать определение последовательности, неограниченной сверху  
 	- $\forall  \ M  \ ,\exists \ N \in \NN \ ,  \forall n > N : x_{n} > M$  
 ### Задание 2  
-- Верно ли: $(x_{n} + y_{n}) \rightarrow A \implies x_{n} \rightarrow B, y_{n} \rightarrow C$  
+- Верно ли: $(x_{n} + y_{n}) \implies A \implies x_{n} \implies B, y_{n} \implies C$  
 	- Нет, например, при : $x_{n} = n, y_{n} = -n$  
 
 ### Задание 3  
-- Верно ли: $\{ kx_{n}\} \rightarrow A \implies \{x_{n}\} \rightarrow B$  
+- Верно ли: $\{ kx_{n}\} \implies A \implies \{x_{n}\} \implies B$  
 	- Верно, домножение последовательности на константу не влияет на сходимость. (см. лекция 2)  
 
 ## Семинар 27.09.2022  
@@ -1129,10 +1553,10 @@ $\lim{x}{0} f(x)=$ ?
 - $\lim{x}{- \infty} \dfrac{\ln{(1 + \underbrace{e^{x} }_{0}) }}{x} = \dfrac{e^{x}}{x} = 0$  
 
 ## Семинар 18.10.2022
-- $|\phi(x)| \leq A|\psi(x)| \implies \phi(x) = O(\psi(x)), \ x \rightarrow x_{0}$
+- $|\phi(x)| \leq A|\psi(x)| \implies \phi(x) = O(\psi(x)), \ x \implies x_{0}$
 
 ### 650
-- Пусть $x \rightarrow 0$. Доказать неравенства:
+- Пусть $x \implies 0$. Доказать неравенства:
 	- $2x - x^{2} = O(x)$ 
 		- $|2x - x^{2}| \leq |2x| \leq 2|x|$
 	- $x\sin{\dfrac{1}{x}} = O(|x|)$
@@ -1141,7 +1565,7 @@ $\lim{x}{0} f(x)=$ ?
 		- $\lim{x}{0} \left[ \dfrac{\sqrt{x + \sqrt{x + \sqrt{x}}}}{\sqrt[8]{x}} = \dfrac{\sqrt{x + \sqrt{\sqrt{x}(1 + \sqrt{x})}}}{\sqrt[8]{x}} = \dfrac{\sqrt{x + \sqrt[4]{x}}}{\sqrt[8]{x}} = \dfrac{\sqrt[8]{x}}{\sqrt[8]{x}}\right] = 1 $
 
 ### 651 
-- Пусть  $x \rightarrow +\infty$. Доказать неравенства:
+- Пусть  $x \implies +\infty$. Доказать неравенства:
 	- $2x^{3} - 3x^{2} + 1 = O(x^{3})$ 
 		- $|2x^{3} - 3x^{2} + 1| \leq 2 |x^{3}|$
 	- $x + x^{2}\sin{x} = O(x^{2})$
@@ -1152,10 +1576,10 @@ $\lim{x}{0} f(x)=$ ?
 		- $\lim{x}{+\infty} \left[ \dfrac{\sqrt{x + \sqrt{x + \sqrt{x}}}}{\sqrt{x}} = \dfrac{\sqrt{x + \sqrt{x^{2}(\dfrac{1}{x} + \dfrac{\sqrt{x}}{x^{2}})}}}{\sqrt{x}} = \sqrt{1 + \sqrt{(\dfrac{1}{x} + \dfrac{\sqrt{x}}{x^{2}})}} \right] = 1 $
 
 ### 653 
-- Пусть $x \rightarrow 0$. Выделить главный член и определить порядок малости относительно $x$.
+- Пусть $x \implies 0$. Выделить главный член и определить порядок малости относительно $x$.
 	- $2x - 3x^{2} + x^{5} \sim Cx^{n}$
 		- $\lim{x}{0} \left[ \dfrac{2x - 3x^{2} + x^{5}}{Cx^{n}} = \dfrac{x(2 - 3x + x^{4})}{Cx} \right] = \dfrac{2}{C} = 1 \implies n = 1; \ C = 2$ 
 ### 655
-- Пусть $x \rightarrow 1$. Выделить главный член и определить порядок малости относительно $x - 1$.
+- Пусть $x \implies 1$. Выделить главный член и определить порядок малости относительно $x - 1$.
 	- $3x^{2} - 3x  + 2$ 
 		- $\lim{x}{1} \dfrac{(x - 1)^{2}(x - 2)}{C(x - 1)^{m}} = 1 \implies m = 2; \ C = 1$
