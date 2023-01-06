@@ -1062,9 +1062,9 @@ $\lim{x}{0} f(x)=$ ?
 	- В форме Лагранжа при $p = n + 1$, то есть $R_{n + 1} = \dfrac{(x - a)^{n + 1}}{(n + 1)!} \cdot f^{(n + 1)}(\xi)$ 
 	- В форме Коши. Введем вместо $\xi \in \left[a, x\right]$ промежуточную $\theta \in \left[0, 1\right] $ 
 		- $ \xi = a + \theta(x - a)$
-		- $ R_{n + 1} = \dfrac{x - 			a}{x - \xi} \cdot \dfrac{(x - \xi)^{n - 1}}{n!} \cdot f^{(n + 1)}(\xi) = \dfrac{x - a}{n!} 					\cdot \dfrac{x - \xi}{n!} \cdot f^{(n - 1)}(\xi)$
+		- $ R_{n + 1} = \dfrac{x - a}{x - \xi} \cdot \dfrac{(x - \xi)^{n + 1}}{n!} \cdot f^{(n + 1)}(\xi) = (x - a) \cdot \dfrac{\left(x - \xi\right)^{n}}{n!} \cdot f^{(n + 1)}(\xi)$
 		- $x - \xi = x - a - \theta(x - a) = (x - a)(1 - \theta)$
-		- $R_{n + 1} = \dfrac{(x - a)(x - a)^{n}(1 - \theta)^{n}}{n!} \cdot f(a + \theta(x - a))$
+		- $R_{n + 1} = \dfrac{(x - a)(x - a)^{n}(1 - \theta)^{n}}{n!} \cdot f^{(n + 1)}(a + \theta(x - a))$
 		- $R_{n + 1} = \dfrac{(x - a)^{n + 1}(1 - \theta)^{n}}{n!} \cdot f^{(n + 1)}(a + \theta(x - a))$
 	- В форме Пеано. $R_{n + 1} = o((x - a)^{n})$ 
 ### Доказательство формулы Тейлора с остаточным членом в форме Пеано
