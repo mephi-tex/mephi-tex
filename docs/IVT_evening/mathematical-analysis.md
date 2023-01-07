@@ -1039,12 +1039,12 @@ $\lim{x}{0} f(x)=$ ?
 
 ***Доказательство***
 
-- Введем вспомогательную функцию $\psi(t) = f(x) - \Phi(x, t) - R_{n + 1}, t \in \left[a ; x\right]$. Запишем $R_{n + 1} = (x - t)^{P} \cdot Q(x)$. Проверим значение $\psi(t)$ на концах промежутка $t \in \left[a; x\right]$.
-- $\psi(a) = f(a) - \Phi(a, a) - R_{n + 1} = 0$
+- Введем вспомогательную функцию $\psi(t) = f(x) - \Phi(x, t) - R_{n + 1}, t \in \left[a ; \right]$. Запишем $R_{n + 1} = (x - t)^{P} \cdot Q(x)$. Проверим значение $\psi(t)$ на концах промежутка $t \in \left[a; b\right]$.
+- $\psi(a) = f(x) - \Phi(a, a) - R_{n + 1}= 0$
 - $\psi(x) = f(x) - \Phi(x, x) - R_{n + 1} = 0$.
-- Условия теоремы Ролля выполнены $\implies$ $\exists \xi \in \left[a; x\right]$ ,  $\psi'(\xi) = 0$ (производная по $t$).
-- $\psi(t) = f(t) - f(t) - \dfrac{f'(t)}{1!}(x - t) - \dfrac{f''(t)}{2!}(x - t)^{2} - \dots - \dfrac{f^{n}(t)}{n!}(x - t)^{n} - (x - t)^{P} \cdot Q(x)$
-- $\psi'(t) = f'(t) - f'(t) - \dfrac{f''(t)}{1!}(x - t) + \dfrac{f'(t)}{1!} - \dfrac{f'''(t)}{2!}(x - t)^{2} + \dfrac{f''(t)}{1!}(x - t) \\ \dots - \dfrac{f^{(n + 1)}(t)}{n!}(x - t)^{n} + \dfrac{f^{(n)}(t)}{(n - 1)!}(x - t)^{n - 1} + p(x - t)^{p - 1} \cdot Q(x)$
+- Условия теоремы Ролля выполнены $\implies$ $\exists \xi \in \left[a; b\right]$ ,  $\psi'(\xi) = 0$
+- $\psi(t) = f(x) - f(t) - \dfrac{f'(t)}{1!}(x - С) - \dfrac{f''(t)}{2!}(x - С)^{2} - \dots - \dfrac{f^{(n)}(t)}{n!}(x - С)^{n} - (x - С)^{P} \cdot Q(x)$
+- $\psi'(\xi) = - f'(\xi) - \dfrac{f''(\xi)}{1!}(x - \xi) + \dfrac{f'(\xi)}{1!} - \dfrac{f'''(\xi)}{2!}(x - \xi)^{2} + \dfrac{f''(\xi)}{1!}(x - \xi) + \dfrac{f^{(4)}(\xi)}{3!}(x - \xi)^{3} \\ \dots - \dfrac{f^{(n + 1)}(\xi)}{n!}(x - \xi)^{n} + \dfrac{f^{(n)}(\xi)}{(n - 1)!}(x - \xi)^{n - 1} + p(x - \xi)^{p - 1} \cdot Q(x)$
 - $\psi'(\xi) = -\dfrac{f^{(n + 1)}(\xi)}{n!}(x - \xi)^{n} + p(x - \xi)^{p - 1} \cdot Q(x) = 0$
 - $Q(x) = \dfrac{f^{(n + 1)}(\xi)}{n!} \cdot \dfrac{(x - \xi)^{n}}{p(x - \xi)^{p - 1}} = \dfrac{f^{(n + 1)}(\xi)}{n!p}(x - \xi)^{n - p + 1}$
 - $R_{n + 1} = \dfrac{(x - a)^{p} \cdot f^{(n + 1)}(\xi)(x - \xi)^{n - p + 1}}{n!p} = \left(\dfrac{x - a}{x - \xi}\right)^{p} \cdot \dfrac{(x - \xi)^{n + 1}}{n!p} \cdot f^{(n + 1)}(\xi)$
