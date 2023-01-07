@@ -289,7 +289,7 @@ depth: 3
 ***Теорема***  
 
 - Сходящаяся последовательность ограничена  
-	- Доказательство: $\lim{n}{\infty}\{x_{n}\} = A$ $\implies (\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - A| < \epsilon)$. Это было бы доказательством ограниченности, если бы было верно для всех $n > 0$. Но до $N_{\epsilon}$ - конечное число членов. Если взять $M = \max(|x_{1}|, |x_{2}|, |x_{3}|, \dots, |x_{N_{\epsilon} - 1}|, A - \epsilon, A + \epsilon )$, то $\forall n: |x_{n}| \leq M $  
+	- Доказательство: $\lim{n}{\infty}\{x_{n}\} = A$ $\implies (\forall \epsilon > 0, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - A| < \epsilon)$. Это было бы доказательством ограниченности, если бы было верно для всех $n > 0$. Но до $N_{\epsilon}$ - конечное число членов. Если взять $M = \max(|x_{1}|, |x_{2}|, |x_{3}|, \dots, |x_{N_{\epsilon}}|, |A - \epsilon|,| A + \epsilon |)$, то $\forall n: |x_{n}| \leq M $  
 
 ***Теорема***  
 
