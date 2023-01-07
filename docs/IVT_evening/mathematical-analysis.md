@@ -272,7 +272,7 @@ depth: 3
 
 - Всякая сходящаяся последовательность имеет единственный предел.  
 	- Доказательство:  
-		- Пусть $  \lim{n}{\infty} x_{n} = A$. Докажем единственность от противного. Предположим, что $\exists   \lim{n}{\infty} x_{n} = B$ и $A > B$. Т. к. , $  \lim{n}{\infty} x_{n} = A \implies  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \implies |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\dfrac{A - B}{2} \implies$  
+		- Пусть $  \lim{n}{\infty} x_{n} = A$. Докажем единственность от противного. Предположим, что $\exists   \lim{n}{\infty} x_{n} = B$ и $A > B$. $  \lim{n}{\infty} x_{n} = A \implies  (\forall \epsilon_{1} > 0, \exists N_{\epsilon_{1} } : \forall n > N_{\epsilon_{1} }  \implies |x_{n} - A| < \epsilon_{1})$. В качестве $\epsilon_{1}$ возьмем $\dfrac{A - B}{2} \implies$  
 	  
 		1. $ -\dfrac{A - B}{2} < x_{n} - A < \dfrac{A - B}{2} $  
 		2. $-\dfrac{A - B}{2} + A< x_{n}  < \dfrac{A - B}{2} + A$  
@@ -302,7 +302,7 @@ depth: 3
 
 ***Свойства пределов, выражаемые неравенствами***  
 
-- $(\forall n > N: x_{n} \geq y_{n}) \wedge ( \lim{n}{\infty} x_{n} = A,  \lim{n}{\infty} y_{n} = B) \implies A > B$  
+- $(\forall n > N: x_{n} \geq y_{n}) \wedge ( \lim{n}{\infty} x_{n} = A,  \lim{n}{\infty} y_{n} = B) \implies A \geq B$  
 	- Доказательство:   
 		- В качестве $\epsilon$ возьмем $\dfrac{A - B}{2}$. 
 		- $\forall n > N_{\epsilon_{1}}, N_{\epsilon_{1}} \implies |x_{n} - A| < \dfrac{A - B}{2} \implies \\ -\dfrac{A - B}{2} < x_{n} - A < \dfrac{A - B}{2} \implies \\   -\dfrac{A - B}{2} + A < x_{n}  < \dfrac{A - B}{2} + A \implies \\  \dfrac{3A - B}{2} < x_{n}  < \dfrac{A + B}{2} $  
@@ -311,9 +311,9 @@ depth: 3
 - $(x_{n} \leq y_{n} \leq z_{n}) \wedge (\forall n > N : \lim{n}{\infty}{x_{n}} = \lim{n}{\infty}{z_{n}}) \implies \lim{n}{\infty}\{y_{n}\} = A$, причем $\lim{n}{\infty}{x_{n}} = \lim{n}{\infty}{y_{n}} = \lim{n}{\infty}{z_{n}}$   
 	- Доказательство :   
 		- Действительно :  
-		- $(\forall \epsilon > 0, \exists n > N_{1} : |x_{n} - A| < \epsilon)$  
-		- $(\forall \epsilon > 0, \exists n > N_{2} : |z_{n} - A| < \epsilon)$  
-		- $N = \max(N_{1}, N_{2}) \implies  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \implies |y_{n} - A| < \epsilon \implies \lim{n}{\infty}{y_{n}} = A$  
+		- $(\forall \eps_{1} > 0, \exists n > N_{\eps_{1}} : |x_{n} - A| < \eps_{1})$  
+		- $(\forall \eps_{2} > 0, \exists n > N_{\eps_{2}} : |z_{n} - A| < \eps_{2})$  
+		- $N = \max(N_{\eps_{1}}, N_{\eps_{2}}) \implies  |x_{n} - A| < |y_{n} - A| < |z_{n} - A| \implies |y_{n} - A| < \epsilon \implies \lim{n}{\infty}{y_{n}} = A$  
 
 ***Арифметические свойства пределов сходящихся  последовательностей***  
 
@@ -327,9 +327,9 @@ depth: 3
 	- $\lim{n}{\infty}{x_{n}} = B$, то $(\forall \epsilon > 0, \epsilon = \dfrac{\epsilon}{2}, \forall n > N_{2} : |x_{n} - B| < \dfrac{\epsilon}{2})$  
 	- $N = \max(N_{1}, N_{2}) \implies$ $\forall n > N : |x_{n} + y_{n} - A - B| \leq |x_{n} - A| + |y_{n} - B| < \dfrac{\epsilon}{2} +  \dfrac{\epsilon}{2} = \epsilon \implies \lim{n}{\infty} (x_{n} + y_{n}) = A + B$  
 - Докажем $(2)$   
-	- $ \lim{n}{\infty} x_{n} = A$, то $(\forall \epsilon > 0, \forall n > N_{1} : |x_{n} - A| < \epsilon_{1})$  
-	- $ \lim{n}{\infty} y_{n} = B$, то $(\forall \epsilon > 0,  \forall n > N_{2} : |y_{n} - B| < \epsilon_{2})$  
-	- $N = \max(N_{1}, N_{2}) \implies$ $\forall n > N :|x_{n}y_{n} - AB| = \\ |x_{n}y_{n} -Ay_{n} + Ay_{n} - A B| = \\ |(x_{n} - A)y_{n} + A(y_{n} - B)| \leq |x_{n} - A||y_{n}| + |A||y_{n} - B|\bigg|_{|y_{n}| < M_{y}} \leq \eps_{1} M_{y} + |A|\eps_{2}\bigg|_{\eps_{1} = \dfrac{\eps}{2|M_{y}|}}^{\eps{2} = \dfrac{\eps}{2|A|}} \implies |x_{n}y_{n} - AB| < \eps \implies \lim{n}{\infty} (x_{n}y_{n}) = AB$  
+	- $ \lim{n}{\infty} x_{n} = A$, то $(\forall \epsilon_{1} > 0, \forall n > N_{\eps_{1}} : |x_{n} - A| < \epsilon_{1})$  
+	- $ \lim{n}{\infty} y_{n} = B$, то $(\forall \epsilon_{2} > 0,  \forall n > N_{\eps_{2}} : |y_{n} - B| < \epsilon_{2})$  
+	- $N = \max(N_{\eps_{1}}, N_{\eps_{2}}) \implies$ $\forall n > N :|x_{n}y_{n} - AB| = \\ |x_{n}y_{n} -Ay_{n} + Ay_{n} - A B| = \\ |(x_{n} - A)y_{n} + A(y_{n} - B)| \leq |x_{n} - A||y_{n}| + |A||y_{n} - B|\bigg|_{|y_{n}| < M_{y}} \leq \eps_{1} M_{y} + |A|\eps_{2}\bigg|_{\eps_{1} = \dfrac{\eps}{2|M_{y}|}}^{\eps{2} = \dfrac{\eps}{2|A|}} \implies |x_{n}y_{n} - AB| < \eps \implies \lim{n}{\infty} \left(x_{n}y_{n}\right) = AB$  
 
 ## Лекция 21.09.2022  
 
@@ -438,7 +438,7 @@ depth: 3
 
 ### Доказательство эквивалентности определения предела по Коши и Гейне  
 - $(К \implies Г)$  
-	- $\forall \epsilon > 0, \exists \delta > 0: \forall x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Возьмем произвольную $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \in X, x_{n} \neq x_{0}, \lim{n}{\infty} = x_{0}$, то есть $\forall \delta, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - x_{0}| < \delta$. Что есть в определении по Коши: $0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Получим определение сходимости $f(x_{n})$, т.к. $x_{n}$ - произвольная.  
+	- $\forall \epsilon > 0, \exists \delta > 0: \forall x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Возьмем произвольную $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \in X, x_{n} \neq x_{0}, \lim{n}{\infty} {x_{n}}= x_{0}$, то есть $\forall \delta, \exists N_{\epsilon}: \forall n > N_{\epsilon} \implies |x_{n} - x_{0}| < \delta$. Что есть в определении по Коши: $0 < |x - x_{0}| < \delta \implies |f(x) - A| < \epsilon$. Получим определение сходимости $f(x_{n})$, т.к. $x_{n}$ - произвольная.  
  - $(Г \implies К)$  
 	- $A = \lim{x}{x_{0}} f(x) \Longleftrightarrow (\forall \{x_{n}\} : x_{n} \in X, x_{n} \neq x_{0} \implies \lim{n}{\infty} x_{n} = x_{0}, \{f(x_{0}), f(x_{1}), \dots, f(x_{n}), \dots\} \implies \lim{n}{\infty} f(x_{n}) = A)$ . Докажем от противного: Пусть $Г \;\not\!\!\!\implies К$. Тогда $\exists \epsilon_{0} \forall \delta > 0, \exists x \in X: 0 < |x - x_{0}| < \delta \implies |f(x) - A| \geq \epsilon_{0}$. Пусть $\delta_{1} = 1$, тогда $\forall \delta > 0$ найдется $x_{1}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{1}) - A| \geq \epsilon_{0}$. Пусть $\delta_{2} = \dfrac{1}{2}$, тогда $\forall \delta > 0$ найдется $x_{2}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{2}) - A| \geq \epsilon_{0}$. И так далее  $\delta_{n} = \dfrac{1}{n}$, тогда $\forall \delta > 0$ найдется $x_{n}$ из $\delta$ - окрестности точки $x_{0}$, такое, что $|f(x_{n}) - A| \geq \epsilon_{0}$. Получим: $\{x_{1}, x_{2}, \dots, x_{n}, \dots\} \implies x_{0}, \{f(x_{1}),f(x_{2}), \dots, f(x_{n)}, \dots\} \;\not\longrightarrow A$  
 
@@ -453,7 +453,7 @@ depth: 3
 - $f(x) = \sin{\dfrac{1}{x}}$  
 	- Докажем, что в $x_{0} = 0$ функция не имеет предела.   
 		- Возьмем $\dfrac{1}{x} = \pi k, x_{k} = \dfrac{1}{\pi k} \implies 0 \implies f(x_{k}) = \sin{\pi k} \equiv 0 \implies \lim{n}{\infty} f(x_{n}) = 0$  
-		- Возьмем $\dfrac{1}{x_{k}} = (\dfrac{\pi}{2} + 2\pi k), x_{k} = (\dfrac{2}{\pi + \pi k}) \implies \begin{equation*}  
+		- Возьмем $\dfrac{1}{x_{k}} = \left(\dfrac{\pi}{2} + 2\pi k\right), x_{k} = \left(\dfrac{2}{\pi + \pi k}\right) \implies \begin{equation*}  
 	   \begin{cases}  
 	    x_{k} \implies 0 \\  
 	    f(x_{k}) \equiv 1 \\  
@@ -494,7 +494,7 @@ depth: 3
 
 ### Классификация точек разрыва  
 - Устранимая точка разрыва  
-	-  Существует конечные пределы этой функции слева и справа, они равны  
+	-  Существуют конечные пределы этой функции слева и справа, они равны  
 - Точка разрыва 1 - ого рода  
 	- Существуют конечные пределы слева и справа в точке, но они не равны друг другу  
 - Точка разрыва 2 - ого рода  
@@ -519,12 +519,12 @@ $\lim{x}{0} f(x)=$ ?
 
 ### Замечательные пределы  
 1. $\lim{x}{0} \dfrac{\sin{(x)}}{x} = 1$ (первый замечательный предел)  
-2. $\lim{n}{\infty} (1 + \dfrac{1}{n})^{n} = e$ (второй замечательный предел)  
-3. $\lim{x}{\infty} (1 + \dfrac{1}{x})^{x} = e$ ($x$ - произвольное)  
-4. $\lim{t}{0} (1 + t)^{\dfrac{1}{t}} = e$ $\left(x = \dfrac{1}{t}\right)$  
-5. $\lim{t}{0} \ln{(1 + t)}^{\dfrac{1}{t}} = \ln{(e)} = 1 \implies \lim{t}{0} \dfrac{ln{(1 + t)}}{t} = 1$  
-6. $\lim{x}{0}  \dfrac{1 - \cos{x} }{x^{2} } = \ \lim{x}{0}\ \dfrac{2\sin^{2}{(\dfrac{x}{2})}}{x^{2} } = \ \lim{x}{0} \dfrac{\dfrac{1}{2}\sin{(\dfrac{x}{2}) \sin{(\dfrac{x}{2}) } }}{\dfrac{1}{2}\dfrac{x^{2}}{2} } = \  \lim{x}{0}\ \dfrac{1}{2} \underbrace{\dfrac{\sin{(\dfrac{x}{2}) \sin{(\dfrac{x}{2}) } }}{\dfrac{x}{2} \dfrac{x}{2}}}_{1} = \dfrac{1}{2}$  
-7. $\lim{x}{0} \dfrac{\sqrt[n]{1 \ + \ x} \ - \ 1}{x} = \ \lim{x}{0} \dfrac{(\sqrt[n]{1 \ + \ x} \ -\  1)((\sqrt[\leftroot{-15} \uproot{7} n - 1]{1 \ + \ x} \ - \  1)^{(n - 1)}) \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ +\  x} \ -\  1)^{(n - 2)} \ + \ \dots \ + \ (\sqrt[n]{1 \ + \ x} \ - \  1)}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \\ \ \lim{x}{0} \dfrac{1 \ + \ x \ - \  1}{x (\sqrt[\leftroot{-15} \uproot{7} n -  1]{1 \  + \  x} - 1)^{(n \ - \  1)} \ + \ (\sqrt[\leftroot{-15} \uproot{7} n - 2]{1 \ + \ x}  \ - \ 1)^{(n \ -\  2)} \ + \ \dots \ + \ \sqrt[n]{1 \ + \ x} \ - \ 1)} = \lim{x}{0} \dfrac{1}{1 \ + 1 \ + \ \dots + \ 1} = \ \dfrac{1}{n}$  
+2. $\lim{n}{\infty} \left(1 + \dfrac{1}{n}\right)^{n} = e$ (второй замечательный предел)  
+3. $\lim{x}{\infty} \left(1 + \dfrac{1}{x}\right)^{x} = e$ ($x$ - произвольное)  
+4. $\lim{t}{0} \left(1 + t\right)^{\dfrac{1}{t}} = e$ $\left(x = \dfrac{1}{t}\right)$  
+5. $\lim{t}{0} \ln{\left(1 + t \right)}^{\dfrac{1}{t}} = \ln{(e)} = 1 \implies \lim{t}{0} \dfrac{\ln{(1 + t)}}{t} = 1$  
+6. $\lim{x}{0}  \dfrac{1 - \cos{x} }{x^{2}} = \ \lim{x}{0}\ \dfrac{2\sin^{2}{(\dfrac{x}{2})}}{x^{2} } = \ \lim{x}{0} \dfrac{\dfrac{1}{2}\sin{(\dfrac{x}{2}) \sin{(\dfrac{x}{2}) } }}{\dfrac{1}{2}\dfrac{x^{2}}{2} } = \  \lim{x}{0}\ \dfrac{1}{2} \underbrace{\dfrac{\sin{(\dfrac{x}{2}) \sin{(\dfrac{x}{2}) } }}{\dfrac{x}{2} \dfrac{x}{2}}}_{1} = \dfrac{1}{2}$  
+7. $\lim{x}{0} \dfrac{\sqrt[n]{1 \ + \ x} \ - \ 1}{x} = \ \lim{x}{0} \dfrac{\left(\sqrt[n]{1 \ + \ x} \ -\  1\right)\left(\left(\sqrt[n]{1 \ + \ x}\right)^{(n - 1)} + \left(\sqrt[ n]{1 \ + \ x}\right)^{(n - 2)}  + \ \dots \ + \ \left(\sqrt[n]{1 \ + \ x}\right)+ 1\right)}{x \left(\left(\sqrt[n]{1 \ + \ x}\right)^{(n - 1)} + \left(\sqrt[ n]{1 \ + \ x}\right)^{(n - 2)}  + \ \dots \ + \ \left(\sqrt[n]{1 \ + \ x}\right)+ 1\right)} = \\ \ \lim{x}{0} \dfrac{x}{x \left(\left(\sqrt[n]{1 \ + \ x}\right)^{(n - 1)} + \left(\sqrt[ n]{1 \ + \ x}\right)^{(n - 2)}  + \ \dots \ + \ \left(\sqrt[n]{1 \ + \ x}\right)+ 1\right)} = \ \dfrac{1}{n}$  
 
 - Докажем $(1)$  
 -  Рассмотрим $\lim{x}{ 0 + 0} \dfrac{\sin{(x)}}{x} \stackrel{\text{?}}{=} 1$  
@@ -568,8 +568,8 @@ $\lim{x}{0} f(x)=$ ?
 	- Множество левых концов ограничено сверху $b_{n}$ и монотонно возрастает $\implies \exists \ \sup{(a_{n})}$. Аналогично $\exists \ inf(b_{n}) \implies \lim{n}{\infty} a_{n} = \lim{n}{\infty} b_{n} = c$  
 
 ### Верхний и нижний пределы последовательности  
-- $\overline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \max(\lim{n}{\infty} \{a_{n_{k}}\})$  
-- $\underline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \min(\lim{n}{\infty} \{a_{n_{k}}\})$  
+- $\overline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \max{\left(\lim{n}{\infty} \{a_{n_{k}}\}\right)}$  
+- $\underline{\lim{n}{\infty}} a_{n} \Longleftrightarrow \min{\left(\lim{n}{\infty} \{a_{n_{k}}\}\right)}$  
 
 ***Пример***  
 
@@ -816,7 +816,7 @@ $\lim{x}{0} f(x)=$ ?
 	  \end{cases}
     \end{equation*}$
 - Пусть $x = \phi{(t)}, \ y = \psi{(t)},  \ \exists \lim{\Delta t}{0} \dfrac{\Delta x}{\Delta t} = \phi', \ \exists \lim{\Delta t}{0} \dfrac{\Delta y}{\Delta t} = \psi'$
-- Рассмотрим : $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x}=  y'(x) = \lim{\Delta x,\ \Delta y, \ \Delta t}{0, \ 0, \ 0 } \dfrac{\Delta y \cdot \Delta t}{\Delta x \cdot \Delta t} = \lim{\Delta t}{0} \dfrac{\Delta y}{\Delta t} \cdot  \lim{\Delta x}{0} \dfrac{\Delta t}{\Delta x} = \dfrac{\lim{\Delta t }{0} \dfrac{\Delta y}{\Delta t}}{\lim{\Delta t }{0} \dfrac{\Delta x}{\Delta t}} = \dfrac{y'(t)}{x'(t)}$
+- Рассмотрим : $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x}=  y'(x) = \lim{\Delta x, \ \Delta t}{0, \ 0, \ 0 } \dfrac{\Delta y \cdot \Delta t}{\Delta x \cdot \Delta t} = \lim{\Delta t}{0} \dfrac{\Delta y}{\Delta t} \cdot  \lim{\Delta x}{0} \dfrac{\Delta t}{\Delta x} = \dfrac{\lim{\Delta t }{0} \dfrac{\Delta y}{\Delta t}}{\lim{\Delta t }{0} \dfrac{\Delta x}{\Delta t}} = \dfrac{y'(t)}{x'(t)}$
 
 ### Производная неявно заданной функции
 - $x^{2} + y^{2} = R^{2}$
@@ -992,7 +992,7 @@ $\lim{x}{0} f(x)=$ ?
 
 - Введем вспомогательную функцию: $\digamma(x) = f(x) - f(a) - \dfrac{f(b) - f(a)}{b - a} (x - a)$
 - Проверим выполнение условий теоремы Ролля для $\digamma(x)$: $\digamma(a) = f(a) - f(a) - \dfrac{f(b) - f(a)}{b - a}(a - a) = 0, \ \digamma(b) = f(b) - f(a) - \dfrac{f(b) - f(a)}{b - a}(b - a) = 0$.
-- $\digamma(x)$ дифференцируема на $\left(a;b\right)$ и непрерывна на замкнутом промежутке $\left[a;b\right] \implies $ по Т. Ролля $\exists \ \xi: $ $\digamma'(\xi) = 0 \implies \digamma'(x) = f'(x) + \dfrac{f(b) - f(a)}{b - a} \implies f'(\xi) + \dfrac{f(b) - f(a)}{b - a} = 0 \implies f'(\xi) = \dfrac{f(b) - f(a)}{b - a}$.
+- $\digamma(x)$ дифференцируема на $\left(a;b\right)$ и непрерывна на замкнутом промежутке $\left[a;b\right] \implies $ по Т. Ролля $\exists \ \xi: $ $\digamma'(\xi) = 0 \implies \digamma'(x) = f'(x) - \dfrac{f(b) - f(a)}{b - a} \implies f'(\xi) - \dfrac{f(b) - f(a)}{b - a} = 0 \implies f'(\xi) = \dfrac{f(b) - f(a)}{b - a}$.
 
 ### Теорема Коши (о конечных приращениях)
 - Пусть $f$ и $g$ дифференцируемына интревале $\left(a;b\right)$ и непрерывны на отрезке $\left[a;b\right]$, $g'(x) \neq 0$. Тогда найдется такая точка $\xi$ этого отрезка, в которой $\dfrac{f'(\xi)}{g'(\xi)} = \dfrac{f(b) - f(a)}{g(b) - g(a)}$
@@ -1007,7 +1007,7 @@ $\lim{x}{0} f(x)=$ ?
 - Пусть в окрестности точки $a$ определены две бесконечно малые $f$ и $g$ (в самой точке они могут быть не определены), непрерывны и дифференцируемы в проколотой окрестности точки $a$, причем $g' \neq 0$ в этой окрестности. Тогда, $\exists \lim{x}{a} \dfrac{f(x)}{g(x)} = \ \lim{x}{a} \dfrac{f'(x)}{g'(x)}$
 
 ***Доказательство***
-- $f, \ g$ - непрерывны и дифференцируемы в проколотой окрестности $a$, доопределим их пределом, равным нулю $f(a) = g(a) = 0$. Тогда они станут непрерывными на всей окрестности точки $a$. Рассмотрим последовательность $x_{1}, x_{2}, \dots, x_{n}, \dots$ таких, что $\lim{n}{\infty} = a$ начиная с некоторого номера все члены последовательности будут принадлежать рассмотренной окрестности. Возьмем из них точку $x_{k}$ и рассмотрим отрезок $\left[a, x_{k}\right] \ (x_{k} > a)$. Тогда на этом отрезке $f, \ g$ непрерывны и дифференцируемы на интервале $(a , x_{k})$. На этом промежутке выполнено условие теоремы Коши о конечных приращениях, то есть $\exists \xi_{k} \in (a, x_{k})$, в которой $\dfrac{f(x_{k}) - f(a)}{g(x_{k}) - g(a)} = \dfrac{f'(\xi_{k})}{g'(\xi_{k})}$. $f(a) = g(a) = 0 \implies \dfrac{f(x_{k})}{g(x_{k})} = \dfrac{f'(\xi_{k})}{g'(\xi_{k})}$. $k \to \infty, \ x_{k} \to a \implies \xi_{k} \to a$. $\exists \lim{k}{\infty} \dfrac{f'(\xi_{k})}{g'(\xi_{k})} \implies \exists \lim{x}{a} \dfrac{f(x_{k})}{g(x_{k})} = \ \lim{x}{a} \dfrac{f'(x_{k})}{g'(x_{k})} \implies \lim{x}{a} \dfrac{f(x)}{g(x)} = \ \lim{x}{a} \dfrac{f'(x)}{g'(x)}$.
+- $f, \ g$ - непрерывны и дифференцируемы в проколотой окрестности $a$, доопределим их пределом, равным нулю $f(a) = g(a) = 0$. Тогда они станут непрерывными на всей окрестности точки $a$. Рассмотрим последовательность $\{x_{1}, x_{2}, \dots, x_{n}, \dots\}$ таких, что $\lim{n}{\infty}{x_{n}} = a$ начиная с некоторого номера все члены последовательности будут принадлежать рассмотренной окрестности. Возьмем из них точку $x_{k}$ и рассмотрим отрезок $\left[a, x_{k}\right] \ (x_{k} > a)$. Тогда на этом отрезке $f, \ g$ непрерывны и дифференцируемы на интервале $(a , x_{k})$. На этом промежутке выполнено условие теоремы Коши о конечных приращениях, то есть $\exists \xi_{k} \in (a, x_{k})$, в которой $\dfrac{f(x_{k}) - f(a)}{g(x_{k}) - g(a)} = \dfrac{f'(\xi_{k})}{g'(\xi_{k})}$. $f(a) = g(a) = 0 \implies \dfrac{f(x_{k})}{g(x_{k})} = \dfrac{f'(\xi_{k})}{g'(\xi_{k})}$. $k \to \infty, \ x_{k} \to a \implies \xi_{k} \to a$. $\exists \lim{k}{\infty} \dfrac{f'(\xi_{k})}{g'(\xi_{k})} \implies \exists \lim{x}{a} \dfrac{f(x_{k})}{g(x_{k})} = \ \lim{x}{a} \dfrac{f'(x_{k})}{g'(x_{k})} \implies \lim{x}{a} \dfrac{f(x)}{g(x)} = \ \lim{x}{a} \dfrac{f'(x)}{g'(x)}$.
 
 ***Пример***
 
@@ -1057,7 +1057,7 @@ $\lim{x}{0} f(x)=$ ?
 - $\Phi^{(n)}(a, a) = f^{(n)}(a)$
 
 ## Лекция 23.11.2022
-### Оценка остаточного члена
+### Остаточный член в трех видах
 - Запишем остаточный член $R_{n + 1}$ в трех видах:
 	- В форме Лагранжа при $p = n + 1$, то есть $R_{n + 1} = \dfrac{(x - a)^{n + 1}}{(n + 1)!} \cdot f^{(n + 1)}(\xi)$ 
 	- В форме Коши. Введем вместо $\xi \in \left[a, x\right]$ промежуточную $\theta \in \left[0, 1\right] $ 
@@ -1096,12 +1096,12 @@ $\lim{x}{0} f(x)=$ ?
 	
 	- $\left|R_{n + 1}\right| \leq \dfrac{r^{n + 1}}{(n + 1)!}$
 - $\sin{x}$
-	- $f^{(n)}(x) = \sin{\left(x + h \cdot \dfrac{\pi}{2}\right)}$
+	- $f^{(n)}(x) = \sin{\left(x + n \cdot \dfrac{\pi}{2}\right)}$
 	- $f^{(n)}(x) = 0$ - Для четных $n$
 	- $n = 2k + 1$
 	- $\sin{x} = x - \dfrac{x^{3}}{3!} + \dfrac{x^{5}}{5!} - \dots + (-1)^{k} \dfrac{x^{2k + 1}}{(2k + 1)!} + R_{n + 2}$
 - $\cos{x}$
-	- $\cos{x} = \cos{\left(x + n \cdot \dfrac{\pi}{2} \right)}$ 
+	- $\left(\cos{x}\right)^{(n)} = \cos{\left(x + n \cdot \dfrac{\pi}{2} \right)}$ 
 	- $\cos{x} = 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} \dots + \dfrac{(-1)^{k}x^{2k}}{(2k)!} + R_{n + 2}$
 - $\ln{\left(1 + x\right)}$
   - $\ln{\left(1 + x\right)} = x - \dfrac{x^{2}}{2} + \dfrac{x^{3}}{3} - \dfrac{x^{4}}{4} + \dots + (-1)^{(n - 1)} \dfrac{x^{n}}{n} + R_{n + 1}$
