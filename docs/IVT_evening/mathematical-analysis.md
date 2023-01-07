@@ -532,7 +532,7 @@ $\lim{x}{0} f(x)=$ ?
 -  Рассмотрим $\lim{x}{ 0 + 0} \dfrac{\sin{(x)}}{x} \stackrel{\text{?}}{=} 1$  
 	![image1](matan_pictures/matan1.jpg)  
 	- $\sin{(\alpha)} = y(A)$  
-	- $\cos{(\alpha)} = y(A)$  
+	- $\cos{(\alpha)} = x(A)$  
 	- $S_{OAA'} < S_{OAB'} < S_{OBB'}$  
 	- $\dfrac{1}{2}\cos{(x)}\sin{(x)} < \dfrac{1}{2} \cdot 1 \cdot x < \dfrac{1}{2} \cdot 1 \cdot \tan{(x)}$  
 	- $\cos{(x)}\sin{(x)} <  x < \tan{(x)}$  
