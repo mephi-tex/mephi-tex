@@ -816,7 +816,7 @@ $\lim{x}{0} f(x)=$ ?
 	  \end{cases}
     \end{equation*}$
 - Пусть $x = \phi{(t)}, \ y = \psi{(t)},  \ \exists \lim{\Delta t}{0} \dfrac{\Delta x}{\Delta t} = \phi', \ \exists \lim{\Delta t}{0} \dfrac{\Delta y}{\Delta t} = \psi'$
-- Рассмотрим : $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x}=  y'(x) = \lim{\Delta x, \ \Delta t}{0, \ 0,} \dfrac{\Delta y \cdot \Delta t}{\Delta x \cdot \Delta t} = \lim{\Delta t}{0} \dfrac{\Delta y}{\Delta t} \cdot  \lim{\Delta x}{0} \dfrac{\Delta t}{\Delta x} = \dfrac{\lim{\Delta t }{0} \dfrac{\Delta y}{\Delta t}}{\lim{\Delta t }{0} \dfrac{\Delta x}{\Delta t}} = \dfrac{y'(t)}{x'(t)}$
+- Рассмотрим : $\lim{\Delta x}{0} \dfrac{\Delta y}{\Delta x}=  y'(x) = \lim{\Delta x, \ \Delta t}{0, \ 0} \dfrac{\Delta y \cdot \Delta t}{\Delta x \cdot \Delta t} = \lim{\Delta t}{0} \dfrac{\Delta y}{\Delta t} \cdot  \lim{\Delta x}{0} \dfrac{\Delta t}{\Delta x} = \dfrac{\lim{\Delta t }{0} \dfrac{\Delta y}{\Delta t}}{\lim{\Delta t }{0} \dfrac{\Delta x}{\Delta t}} = \dfrac{y'(t)}{x'(t)}$
 
 ### Производная неявно заданной функции
 - $x^{2} + y^{2} = R^{2}$
