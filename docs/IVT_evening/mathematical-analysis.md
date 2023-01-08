@@ -1281,7 +1281,7 @@ $\lim{x}{0} f(x)=$ ?
 :------:|:--------:|------:
 1 |  $C$ | $Cx + C_{1}$
 2 |$x^{n}$     | $\dfrac{x^{n + 1}}{n + 1} + C$ 
-3 |$\dfrac{1}{x}$     | $\ln{x} + C$
+3 |$\dfrac{1}{x}$     | $\ln{|x|} + C$ 
 4 |$a^{x}$     | $\dfrac{a^{x}}{\ln{a}} + C$
 5 |$e^{x}$     | $e^{x} + C$
 6 |$\sin{x}$     | $- \cos{x} + C$   
@@ -1294,6 +1294,10 @@ $\lim{x}{0} f(x)=$ ?
 13 |$- \dfrac{1}{1 + x^{2}}$     | $arccot{(x)} + C$ 
 14 |$sh{(x)}$     | $ch{(x)} + C$ 
 15 |$ch(x)$     | $sh(x) + C$ 
+16 | $\dfrac{1}{\sqrt{a^{2} - x^{2}}}$ | $\arcsin{\dfrac{x}{a}} + C$
+17 | $\dfrac{1}{a^{2} +x^{2}}$ | $\dfrac{1}{a} \arctan{\dfrac{x}{a}} + C$ 
+18 | $\dfrac{1}{a^{2} - x^{2}}$ | $\dfrac{1}{2a} \ln{\bigg|\dfrac{a + x}{a - x}\bigg|} + C$ 
+19 | $\dfrac{1}{\sqrt{x^{2} \pm a^{2}}}$ | $\ln{\bigg|x + \sqrt{x^{2} \pm a^{2}}\bigg|}+ C$
 
 ### Методы интегрирования 
 - Метод замены переменной
@@ -1323,7 +1327,7 @@ $\lim{x}{0} f(x)=$ ?
 ### Основные интегралы рациональных дробей
 1. $\int \dfrac{A}{x - a} dx = A\ln{|x - a|} + C$
 2. $\int \dfrac{A}{(x - a)^{\alpha}} dx = \dfrac{A(x - a)^{-\alpha + 1}}{-\alpha + 1} + C$
-3. $\int \dfrac{Mx + N}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{\dfrac{Mx + N}{M} \cdot 2}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + \dfrac{2N}{M}}{x^{2} + px + q}dx = \\ \dfrac{M}{2} \int \dfrac{2x + p - p + \dfrac{2N}{M}}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + p}{x^{2} + px + q} dx + \dfrac{M}{2} \int \dfrac{\dfrac{2N}{M} - p}{x^{2} + px + q} dx =  \\ \dfrac{M}{2} \int \dfrac{d(x^{2} + px )}{x^{2} + px + q} + \dfrac{M}{2} \int \dfrac{B}{x^{2} + px + q} dx = \\ \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + px + q} = \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + \dfrac{2px}{2} + q + \dfrac{p^{2}}{4} - \dfrac{p^{2}}{4}} = \\  \dfrac{M}{2} \ln{|(x^{2} + px + q)|} + \dfrac{MB}{2} \int \dfrac{dt}{t^{2} + \left(q - \dfrac{p^{2}}{4}\right)}\bigg|_{t = x + \dfrac{p}{2}} = \\  \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dt}{t^{2}  \pm A}\bigg|_{t = x + \dfrac{p}{2}}^{A = q - \dfrac{p^{2}}{4}}$      
+3. $\int \dfrac{Mx + N}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{\dfrac{Mx + N}{M} \cdot 2}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + \dfrac{2N}{M}}{x^{2} + px + q}dx = \\ \dfrac{M}{2} \int \dfrac{2x + p - p + \dfrac{2N}{M}}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + p}{x^{2} + px + q} dx + \dfrac{M}{2} \int \dfrac{\dfrac{2N}{M} - p}{x^{2} + px + q} dx =  \\ \dfrac{M}{2} \int \dfrac{d(x^{2} + px)}{x^{2} + px + q} + \dfrac{M}{2} \int \dfrac{B}{x^{2} + px + q} dx = \\ \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + px + q} = \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + \dfrac{2px}{2} + q + \dfrac{p^{2}}{4} - \dfrac{p^{2}}{4}} = \\  \dfrac{M}{2} \ln{|(x^{2} + px + q)|} + \dfrac{MB}{2} \int \dfrac{dt}{t^{2} + \left(q - \dfrac{p^{2}}{4}\right)}\bigg|_{t = x + \dfrac{p}{2}} = \\  \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dt}{t^{2}  \pm A}\bigg|_{t = x + \dfrac{p}{2}}^{A = q - \dfrac{p^{2}}{4}}$      
 В зависимости от знака в знаменателе получаем $\dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{4\sqrt{A}} \ln{\bigg|\dfrac{\sqrt{A} - x}{\sqrt{A} + x}}\bigg| + C$ либо $\dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2\sqrt{A}} \arctan{(\dfrac{x}{\sqrt{A}})} + C$
 4. $\int \dfrac{Mx + N}{(x^{2} + px + q)^{\alpha}} dx $ Решается понижением порядка с помощью рекуррентной формулы.
 	-  $I_{\alpha} = \int \dfrac{dt}{(t^{2} + 1)^{\alpha}} = \int \dfrac{1 - t^{2} + t^{2}}{(t^{2} + 1)^{\alpha}} dt = \int \dfrac{dt}{(t^{2} + 1)^{\alpha - 1}} - \int \dfrac{t^{2}dt}{(t^{2} + 1)^{\alpha}} = \\ I_{\alpha - 1} - \int u dv \bigg|_{u = t}^{dv = \dfrac{tdt}{(t^{2} + 1)^{\alpha}}} = I_{\alpha - 1} -  t \cdot \dfrac{1}{2(1 - \alpha)(t^{2} + 1)^{\alpha - 1}} + \int \dfrac{1}{2(1 - \alpha)(t^{2} + 1)^{\alpha - 1}}dt = \\ I_{\alpha - 1} - \dfrac{t}{2(1 - \alpha)(t^{2} + 1)^{\alpha - 1}} + \dfrac{I_{\alpha - 1}}{2(1 - \alpha)} = - \dfrac{t}{2(\alpha - 1)(t^{2} + 1)^{\alpha - 1}} + I_{\alpha - 1} \left(\dfrac{2(1 - \alpha) + 1}{2(1 - \alpha)}\right)$
