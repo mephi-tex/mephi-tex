@@ -1281,7 +1281,7 @@ $\lim{x}{0} f(x)=$ ?
 :------:|:--------:|------:
 1 |  $C$ | $Cx + C_{1}$
 2 |$x^{n}$     | $\dfrac{x^{n + 1}}{n + 1} + C$ 
-3 |$\dfrac{1}{x}$     | $\ln{|x|} + C$ 
+3 |$\dfrac{1}{x}$     | $\ln{x} + C$ 
 4 |$a^{x}$     | $\dfrac{a^{x}}{\ln{a}} + C$
 5 |$e^{x}$     | $e^{x} + C$
 6 |$\sin{x}$     | $- \cos{x} + C$   
@@ -1296,8 +1296,8 @@ $\lim{x}{0} f(x)=$ ?
 15 |$ch(x)$     | $sh(x) + C$ 
 16 | $\dfrac{1}{\sqrt{a^{2} - x^{2}}}$ | $\arcsin{\dfrac{x}{a}} + C$
 17 | $\dfrac{1}{a^{2} +x^{2}}$ | $\dfrac{1}{a} \arctan{\dfrac{x}{a}} + C$ 
-18 | $\dfrac{1}{a^{2} - x^{2}}$ | $\dfrac{1}{2a} \ln{\bigg|\dfrac{a + x}{a - x}\bigg|} + C$ 
-19 | $\dfrac{1}{\sqrt{x^{2} \pm a^{2}}}$ | $\ln{\bigg|x + \sqrt{x^{2} \pm a^{2}}\bigg|}+ C$
+18 | $\dfrac{1}{a^{2} - x^{2}}$ | $\dfrac{1}{2a} \ln{\dfrac{a + x}{a - x}} + C$ 
+19 | $\dfrac{1}{\sqrt{x^{2} \pm a^{2}}}$ | $\ln{(x + \sqrt{x^{2} \pm a^{2}})}+ C$ 
 
 ### Методы интегрирования 
 - Метод замены переменной
