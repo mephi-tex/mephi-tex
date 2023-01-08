@@ -1311,7 +1311,7 @@ $\lim{x}{0} f(x)=$ ?
 
 ***Доказательство***
 
-- $\dfrac{P(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{P(x) - A\phi(x)}{Q(x)}\bigg|_{A = \dfrac{P(a)}{\phi(a)}} = \dfrac{\Phi(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{(x - a)^{k}\psi(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{\psi(x)}{(x - a)^{\alpha - k}\phi(x)}$
+- $\dfrac{P(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}\phi(x)} + \dfrac{P(x) - A\phi{(x)}}{Q(x)}\bigg|_{A = \dfrac{P(a)}{\phi(a)}} = \dfrac{\Phi(x)}{Q(x)}  = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{(x - a)^{k}\psi(x)}{Q(x)} = \dfrac{A}{(x - a)^{\alpha}} + \dfrac{\psi(x)}{(x - a)^{\alpha - k}\phi(x)}$
 
 ***Замечание***
 - Если $Q(x)$ имеет комплексный корень $x = u + iv$, тогда он имеет комплексно - сопряженный корень $\upline{x} = u - iv$, т. е. $Q(x) = \left(u + iv\right)\left(u - iv \right) = u^{2} + v^{2}$. Обычно этот множитель встречается в виде $Q(x) = \left(x^{2} + px + q\right)^{\alpha} \cdot \phi(x) \implies \dfrac{P(x)}{Q(x)} = \dfrac{Mx + N}{(x^{2} + px + q)^{\alpha}} + \dfrac{\psi(x)}{(x^{2} + px + q)^{\alpha - k}\phi(x)}$
