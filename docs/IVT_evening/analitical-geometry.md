@@ -949,10 +949,10 @@ l_{2} & m_{2}  &n_{2}
 - Парабола - это геометрическое место точек, расстояние которых до данной фиксированной точки равно расстоянию до данной фиксированной прямой.
 ![image1](angem_pictures/angem45.jpg)
 - $r = d$
-- $r = \sqrt{(x - \dfrac{p}{2})^{2} + y^{2}}$
-- $d = x + \dfrac{p}{2}$
-- $\sqrt{(x - \dfrac{p}{2})^{2} + y^{2}} = x + \dfrac{p}{2}$
-- $(x - \dfrac{p}{2})^{2} + y^{2} = (x - \dfrac{p}{2})^{2}$
+- $r = \sqrt{\left(x - \dfrac{p}{2}\right)^{2} + y^{2}}$
+- $d = \sqrt{\left(x + \dfrac{p}{2}\right)^{2}}$
+- $\sqrt{(x - \dfrac{p}{2})^{2} + y^{2}} = \sqrt{\left(x + \dfrac{p}{2}\right)^{2}}$
+- $\left(x - \dfrac{p}{2}\right)^{2} + y^{2} = \left(x + \dfrac{p}{2}\right)^{2}$
 - $-px + y^{2} = px$
 - $y^{2} = 2px$ - Каноническое уравнение параболы
 
