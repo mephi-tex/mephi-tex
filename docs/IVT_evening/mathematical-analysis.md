@@ -1311,7 +1311,7 @@ $\lim{x}{0} f(x)=$ ?
 - Пусть имеем правильную несократимую дробь $\dfrac{P(x)}{Q(x)}$. Пусть далее многочлен $Q(x)$ имеет корень $x = a$ кратности $\alpha$, т. е. $Q(x) = (x - a)^{\alpha}\phi(x)$, причем $\phi(a) \neq 0$.
 
 ### Теорема о разложении дроби на простейшие
-- $\dfrac{P(x)}{Q(x)} = \dfrac{A}{(x  - a)^{\alpha}} + \dfrac{\psi(x)}{(x - a)^{\alpha - k}\phi(x)}, \ k \geq 1$
+- $\dfrac{P(x)}{Q(x)} = \dfrac{A}{(x  - a)^{\alpha}\phi(x)} + \dfrac{\psi(x)}{(x - a)^{\alpha - k}\phi(x)}, \ k \geq 1$
 
 ***Доказательство***
 
