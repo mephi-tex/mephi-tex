@@ -104,7 +104,7 @@ depth: 3
 
 3. $$\exists \vec{0} : \vec{a} + \vec{0} = \vec{a}$$  
 
-4. $$\forall \vec{v} \in \RR^n : \exists \vec{v}^{-1} : \vec{v} + \vec{v}^{-1} = \vec{0} $$  
+4. $$\forall \vec{v} \in \RR^3 : \exists \vec{v}^{-1} : \vec{v} + \vec{v}^{-1} = \vec{0} $$  
 
 
 - Вектором $\lambda \vec{a}$ называется вектор, такой что : $|\lambda\vec{a}| = |\lambda||\vec{a}|$  
@@ -115,11 +115,11 @@ depth: 3
 **Умножение векторов на константу**  
 
 
-- $$ \lambda (\vec{a} + \vec{b}) = \lambda\vec{b} + \lambda\vec{a}$$  
+- $ \lambda (\vec{a} + \vec{b}) = \lambda\vec{b} + \lambda\vec{a}$ 
 
-- $$ (\lambda + \mu)\vec{a} = \lambda\vec{a} + \mu\vec{b}4$$  
+- $ (\lambda + \mu)\vec{a} = \lambda\vec{a} + \mu\vec{b}$  
 
-- $$\lambda(\mu\vec{a}) = (\lambda\mu)\vec{a}$$  
+- $\lambda(\mu\vec{a}) = (\lambda\mu)\vec{a}$  
 
 ### Линейная зависимость системы векторов  
 
@@ -140,7 +140,7 @@ depth: 3
 
 4. Получим: $\vec{a}_{i} = -\dfrac{\alpha_{1}}{\alpha_{i}}\vec{a}_{1} - -\dfrac{\alpha_{2}}{\alpha_{i}}\vec{a}_{2} - ... - -\dfrac{\alpha_{i - 1}}{\alpha_{i}}\vec{a}_{i - 1} ... -\dfrac{\alpha_{n}}{\alpha_{i}}\vec{a}_{n}$  
 
-5. Назовем коэффициенты при $\vec{a}_{i}$ --- $\lambda_{i}$, тогда $\vec{a}_{i} = \lambda_{1} \vec{a}_{1} + \lambda_{2} \vec{a}_{2} + ... + \lambda_{i - 1} \vec{a}_{i - 1} + ... + \lambda_{n} \vec{a}_{n}$  
+5. Назовем коэффициенты при $\vec{a}_{i}:$ $\lambda_{i}$, тогда $\vec{a}_{i} = \lambda_{1} \vec{a}_{1} + \lambda_{2} \vec{a}_{2} + ... + \lambda_{i - 1} \vec{a}_{i - 1} + ... + \lambda_{n} \vec{a}_{n}$  
 
 6. Получим представление $\vec{a}_{i}$ в виде остальных векторов  
 
@@ -420,7 +420,7 @@ depth: 3
 
 ### Каноническое уравнение прямой    
 
-- Через точку $M_{0}(x_{0}, y_{0})$ проведем прямую, параллельную данному вектору $\vec{a} = (e, m)$. Этот вектор называется направляющим вектором прямой $\ell$.    
+- Через точку $M_{0}(x_{0}, y_{0})$ проведем прямую, параллельную данному вектору $\vec{a} = (l, m)$. Этот вектор называется направляющим вектором прямой $\ell$.    
   ![image4](angem_pictures/angem4.jpg)   
   
 - Условием принадлежности точки данной прямой является коллинеарность векторов $\vec{M_{0}M}$ и $\vec{a}$.  
@@ -430,20 +430,20 @@ depth: 3
 - Так как коллинеарные векторы отличаются на константу, то $\vec{M_{0}M} = \lambda \vec{a}$:  
 - $\begin{equation*}  
  \begin{cases}  
-   x - x_{0}  = \lambda e\\  
+   x - x_{0}  = \lambda l\\  
    y - y_{0} = \lambda m  
   \end{cases}  
   \end{equation*} \implies$ $ \begin{equation*}  
    \begin{cases}  
-    \lambda = \dfrac{x - x_{0}}{e} \\  
+    \lambda = \dfrac{x - x_{0}}{l} \\  
     \lambda = \dfrac{y - y_{0}}{m}  
    \end{cases}  
-   \end{equation*} \implies \dfrac{x - x_{0}}{e} = \dfrac{y - y_{0}}{m}$  
+   \end{equation*} \implies \dfrac{x - x_{0}}{l} = \dfrac{y - y_{0}}{m}$  
 ### Параметрическое уравнение прямой  
-- $ \dfrac{x - x_{0}}{e} = \dfrac{y - y_{0}}{m} = t$  
+- $ \dfrac{x - x_{0}}{l} = \dfrac{y - y_{0}}{m} = t$  
 - $ \begin{equation*}  
    \begin{cases}  
-    \dfrac{x - x_{0}}{e}  = t \\  
+    \dfrac{x - x_{0}}{l}  = t \\  
     \dfrac{y - y_{0}}{m} = t  
    \end{cases}  
    \end{equation*} \implies$ $\begin{equation*}  
@@ -457,13 +457,13 @@ depth: 3
 ### Нормальное уравнение прямой   
 ![image5](angem_pictures/angem5.jpg)  
 - Необходимое и достаточное условие принадлежности точки данной: $pr_{\vec{n}}(\vec{OM}) = p$ - это уже уравнение прямой. Выразим его в координатах.   
-- $pr_{\vec{n}}(\vec{OM}) = \dfrac{(\vec{OM}, \vec{n})}{|\vec{n}|} =(\vec{OM}, \vec{n}) = x\cos{\phi} + y\sin{\phi} = p \implies x\cos{\phi} + y\sin{\phi} - p = 0$  
+- $pr_{\vec{n}}(\vec{OM}) = \dfrac{\left(\vec{OM}, \vec{n}\right)}{|\vec{n}|} = \left(\vec{OM}, \vec{n}\right) = x\cos{\phi} + y\sin{\phi} = p \implies x\cos{\phi} + y\sin{\phi} - p = 0$  
 
 ***Нормальное уравнение прямой из ее общего уравнения***  
 
 - $x\cos{\phi} + y\sin{\phi} - p = 0$  
 - $Ax + By + C = 0$ $|\left( \pm \dfrac{1}{\sqrt{A^2 + B^2}}\right)$  
-- $\dfrac{A}{\sqrt{A^2 + B^2}}x + \dfrac{B}{\sqrt{A^2 + B^2}}y - \dfrac{C}{\sqrt{A^2 + B^2}} = 0 \implies (\dfrac{A}{\sqrt{A^2 + B^2}})^2 + (\dfrac{B}{\sqrt{A^2 + B^2}})^{2} + (\dfrac{C}{\sqrt{A^2 + B^2}})^2 = 1$  
+- $\dfrac{A}{\sqrt{A^2 + B^2}}x + \dfrac{B}{\sqrt{A^2 + B^2}}y - \dfrac{C}{\sqrt{A^2 + B^2}} = 0 \implies \left(\dfrac{A}{\sqrt{A^2 + B^2}}\right)^2 + \left(\dfrac{B}{\sqrt{A^2 + B^2}}\right)^{2} + \left(\dfrac{C}{\sqrt{A^2 + B^2}}\right)^2 = 1$  
 
 ***Пример***  
 1. $3x - 4y + 5 = 0$ $|\cdot (- \dfrac{1}{5}) \implies - \dfrac{3}{5}x + \dfrac{4}{5}y - 1 = 0$  
@@ -471,7 +471,7 @@ depth: 3
 ### Применение нормального уравнения прямой для нахождения расстояния от данной точки до данной прямой    
 ![image6](angem_pictures/angem6.jpg)  
 
-- $pr_{\vec{n}}(\vec{OM}) = \dfrac{(\vec{OM}, \vec{n})}{|\vec{n}|} = x^{\star} \cos{\phi} + y^{\star} \sin{\phi}$  
+- $pr_{\vec{n}}(\vec{OM}) = \dfrac{(\vec{OM}, \vec{n})}{|\vec{n}|}  = x^{\star} \cos{\phi} + y^{\star} \sin{\phi}$  
 - $d = x^{\star} \cos{\phi} + y^{\star} \sin{\phi} - p$. Это верно, если $M^{\star}$ и $O$ лежат по разные стороны от прямой   
 ![image1](angem_pictures/angem7.jpg)   
 - $pr_{\vec{n}}(\vec{OM}) = p - d$  
