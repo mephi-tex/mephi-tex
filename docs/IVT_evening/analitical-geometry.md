@@ -448,8 +448,8 @@ depth: 3
    \end{cases}  
    \end{equation*} \implies$ $\begin{equation*}  
    \begin{cases}  
-    x  = x_{0} + t \\  
-    y = y_{0} + t  
+    x  = x_{0} + lt \\  
+    y = y_{0} + mt  
    \end{cases}  
    \end{equation*}$  
 - $t$  можно трактовать, как время движения точки вдоль прямой.  
