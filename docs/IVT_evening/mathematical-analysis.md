@@ -1363,3 +1363,47 @@ $\lim{x}{0} f(x)=$ ?
 ### Извлечение корня из комплексного числа
 - $\sqrt[n]{z} = \sqrt[n]{\rho}\left(\cos{\dfrac{\phi}{n}} + i\sin{\dfrac{\phi}{n}}\right)$
 - Число корней: $n$
+
+## Лекция 08.02.2023
+### Определенный интеграл
+- На отрезке $\left[a;b\right]$ задана $f$, $a = x_{0} < x_{1} < x_{2} < \dots < x_{n-1} < x_{n} = b$
+- $\left[x_{i -1};x_{i}\right]$ - $i$ - отрезок разбиения
+- Внутри каждого отрезка разбиения возьмем произвольную точку $\xi_{i}$
+- $\sigma = f(\xi_{1})\Delta x_{1} + f(\xi_{2})\Delta x_{2} + \dots +f(\xi_{n})\Delta x_{n}= \sum\limits_{i = 1}^{n} f(\xi_{i})\Delta x_{i}$
+- $T$ - разбиение, $t$ - выбранный отрезок и точка $\xi$
+- $\Delta = \max{\left|\Delta x_{i}\right|}$ - характеристика $T$
+- Определенным интегралом называется $\lim{\Delta}{0}\sigma = I = \int\limits_{a}^{b} f(x)dx$
+- $f$ имеет интеграл на $\left[a;b\right] \implies$ она интегрируема
+### Ограниченность интегрируемой функции на отрезке
+- $f$ интегрируема на $\left[a;b\right] \implies$ она ограничена на нем
+
+***Доказательство***
+- Предположим противное, т.е. $f$ интегрируема, но не ограничена $\implies$ в интегральной сумме $f$ обращается в $\inf$ на некотором $\Delta x \implies \lim{\Delta}{0}\sigma = \inf$
+### Верхняя и нижняя интегральная суммы
+- $S = M_{1}\Delta x_{1} + M_{2}\Delta x_{2} + \dots +M_{n}\Delta x_{n} = \sum\limits_{i = 1}^{n} M_{i}\Delta x_{i} \ , M_{i} = \sup_{\left[x_{i - 1}, x_{i}\right]}{f(x)}$ - Верхняя интегральная сумма
+- $s = m_{1}\Delta x_{1} + m_{2}\Delta x_{2} + \dots +m_{n}\Delta x_{n} = \sum\limits_{i = 1}^{n} m_{i}\Delta x_{i} \ , m_{i} = inf_{\left[x_{i - 1}, x_{i}\right]}{f(x)}$ - Нижняя интегральная сумма
+- $s \leq f(\xi_{i})\Delta x_{i} \leq S \implies s \leq \sigma \leq S$
+
+### Свойства интегральных сумм
+- Если к данному $T$ добавить $t$, то у получившегося разбиения $T'$: $S' \leq S$, $s \leq s'$
+	- $T: S = M_{i}\Delta x_{i}$
+	- $T': S' = M'\Delta x' + M_{i}\Delta x_{i}$
+	- Отсюда следует, что это утверждение верно при добавлении $p$ точек
+- Для двух произвольных разбиений $T'$ и $T''$ выполняется: $s' \leq S''$, $s'' \leq S'$
+	- Возьмем $T$, состоящее из точек разбиения $T'$ и $T''$. Его можно рассматривать как разбиение, полученное из $T'$ добавлением $T''$, при этом $s' \leq s$ и $S \leq S'$. Аналогично, его можно рассматривать как получившееся из $T''$ добавлением $T'$, при этом $s'' \leq s$ и $S \leq S''$.
+	- $s' \leq s \leq S \leq S''$
+	- Это свойство показывает, что все нижние интегральные суммы $s$ ограничены сверху множеством верхних интегральных сумм, значит имеет точную верхнюю грань $\underline{I} = \sup{s}$ - нижний интеграл Дарбу, $\upline{I} = inf{S}$
+- $\underline{I} \leq \upline{I}$
+	- Действительно, предположим противное $\upline{I} \leq \underline{I} \implies \upline{I} - \underline{I} > 0$. Возьмем $\eps = \upline{I} - \underline{I}$. По определению точных граней: $\exists S: S < \upline{I} + \eps$ и $\exists s: s > \underline{I} - \eps$. Положим $\eps = \dfrac{\eps}{2}$
+	- $S - s < \upline{I} - \underline{I} + \eps$
+	- $S - s < -\eps + \eps = 0$
+	- $S  < s$ Получим противоречие.
+- Пусть разбиение $T'$ получено из $T$ добавлением некоторого произвольного $p$ точек разбиения. Пусть далее $M = \sup_{\left[a;b\right]}{f(x)}, \ m = inf_{\left[a;b\right]}{f(x)} \implies S - S' \leq \left(M - m \right) p \Delta$
+	- Докажем для $p = 1$.
+	- $S - S'' \leq \left(M - m\right) \Delta$. Так как добавление одной точки произведено на некотором частичном отрезке $\left[x_{i-1}, x_{i}\right]$, то рассмотрим изменение интегральных сумм на этом фрагменте.
+	- $\Delta x' + \Delta x'' = \Delta x$
+	- $S - S' = M_{i}\Delta x_{i} - M'_{i}\Delta x' - M''_{i}\Delta x'' = \\ M_{i}\left(\Delta x' + \Delta x'' \right) - M'_{i}\Delta x' - M''_{i}\Delta x'' \leq M\left(\Delta x' + \Delta x''\right) - m\left(\Delta x' + \Delta x''\right) = \left(M - m\right)\Delta x' + \left(M - m \right)\Delta x'' = \\ \left(M - m\right)\Delta x$ 
+### Лемма Дарбу
+- $\lim{\Delta}{0} S = \upline{I}$, $\lim{\Delta}{0} s = \underline{I}$
+- Докажем $\lim{\Delta}{0} S = \upline{I}$
+	- Пусть найдется некоторое $T$ т.ч. $\forall \eps: S - \upline{I} < \eps$. Далее возьмем такое разбиение $T'$, которое получено из $T$ добавлением строго внутренних точек $T$. Рассмотрим $T': \Delta < \dfrac{\eps}{\left(M - m\right)p} \implies S' - S \leq \left(M - m\right)p \cdot  \dfrac{\eps}{\left(M - m\right)p} = \eps \implies \lim{\Delta}{0}S = \upline{I}$
