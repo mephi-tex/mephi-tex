@@ -1,6 +1,7 @@
 /build
 /site
-/.obsidian
-/docs/.obsidian/
+# /.obsidian
+# /docs/.obsidian/
+/docs/.trash/
 
 **/__pycache__
