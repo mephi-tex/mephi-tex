@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Алгоритмы и структуры данных.md",
+                "file": "IVT/Инф.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IVT/Ист.md",
+                "file": "IVT/combinatorics.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -122,7 +122,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "IVT/МатАн.md",
+            "file": "IVT/LinAlg.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "IVT/МатАн.md",
+            "file": "IVT/LinAlg.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -151,24 +151,24 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "IVT/МатАн.md"
+            "file": "IVT/LinAlg.md"
           }
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "3474b5aaf30e7b06",
+  "active": "03d03bd2a69eeed2",
   "lastOpenFiles": [
-    "IVT/АнГем.md",
-    "IVT/LinAlg.md",
-    "IVT/МатАн.md",
-    "IVT/Физ.md",
-    "IVT/Комбинаторика.md",
-    "IVT/ProjPract.md",
+    "IVT/combinatorics.md",
     "IVT/Ист.md",
-    "Алгоритмы и структуры данных.md",
+    "IVT/МатАн.md",
+    "IVT/LinAlg.md",
     "IVT/Инф.md",
+    "IVT/АнГем.md",
+    "IVT/Физ.md",
+    "IVT/ProjPract.md",
+    "Алгоритмы и структуры данных.md",
     "Untitled.md"
   ]
 }
