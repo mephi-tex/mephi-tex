@@ -56,7 +56,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -122,7 +122,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "IVT/LinAlg.md",
+            "file": "IVT/МатАн.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "IVT/LinAlg.md",
+            "file": "IVT/МатАн.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -151,21 +151,21 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "IVT/LinAlg.md"
+            "file": "IVT/МатАн.md"
           }
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "03d03bd2a69eeed2",
+  "active": "03ff88704767f826",
   "lastOpenFiles": [
+    "IVT/АнГем.md",
+    "IVT/LinAlg.md",
     "IVT/combinatorics.md",
     "IVT/Ист.md",
     "IVT/МатАн.md",
-    "IVT/LinAlg.md",
     "IVT/Инф.md",
-    "IVT/АнГем.md",
     "IVT/Физ.md",
     "IVT/ProjPract.md",
     "Алгоритмы и структуры данных.md",
