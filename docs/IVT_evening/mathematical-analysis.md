@@ -1419,10 +1419,10 @@ $\lim{x}{0} f(x)=$ ?
 ### Необходимое и достаточное условие интегрируемости функции на отрезке
 - Необходимость
 - Дано : $\exists I = \int_\limits{a}^{b} f(x)dx = \lim{\Delta}{0} \sigma$ $, \forall \eps > 0 \ \exists \delta > 0 : \Delta < \delta \rightarrow \left|I - \sigma\right| < \eps$
-- Доказать: $\forall \eps > 0 \ \exist T: S - s < \eps$
+- Доказать: $\forall \eps > 0 \ \exists T: S - s < \eps$
 	- $S - s = S - \sigma_{i} + \sigma_{i} - I + I - \sigma_{k} + \sigma_{k} - S \leq \left|S - \sigma_{i}\right| + \left|\sigma_{i} - I\right| + \left|I - \sigma_{k}\right| + \left|\sigma_{k} - S\right| \leq \dfrac{\eps}{4} + \dfrac{\eps}{4} + \dfrac{\eps}{4} + \dfrac{\eps}{4} = \eps$
 - Достаточность
-- Дано: $\forall \eps > 0 \ \exist T: S - s < \eps$
+- Дано: $\forall \eps > 0 \ \exists T: S - s < \eps$
 - Доказать: $\exists I = \int_\limits{a}^{b} f(x)dx = \lim{\Delta}{0} \sigma$ $, \forall \eps > 0 \ \exists \delta > 0 : \Delta < \delta \rightarrow \left|I - \sigma\right| < \eps$
 	- $\upline{I} = \lim{\Delta}{0}S \implies S - \upline{I} < \dfrac{\eps}{2}$
 	- $\underline{I} = \lim{\Delta}{0}s \implies S - \underline{I} < \dfrac{\eps}{2}$
