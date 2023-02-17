@@ -1414,4 +1414,44 @@ $\lim{x}{0} f(x)=$ ?
 	- $ S' - \upline{I} \leq S^{\star} - \upline{I} < \dfrac{\eps}{2}$
 	- $S - S' + S' - \upline{I} \leq \dfrac{\eps}{2} + \dfrac{\eps}{2}$
 	- $S - \upline{I} < \eps \implies \lim{\Delta}{0} = \upline{I}$
+
 ## Лекция 15.02.2023
+### Необходимое и достаточное условие интегрируемости функции на отрезке
+- Необходимость
+- Дано : $\exists I = \int_\limits{a}^{b} f(x)dx = \lim{\Delta}{0} \sigma$ $, \forall \eps > 0 \ \exists \delta > 0 : \Delta < \delta \rightarrow \left|I - \sigma\right| < \eps$
+- Доказать: $\forall \eps > 0 \ \exist T: S - s < \eps$
+	- $S - s = S - \sigma_{i} + \sigma_{i} - I + I - \sigma_{k} + \sigma_{k} - S \leq \left|S - \sigma_{i}\right| + \left|\sigma_{i} - I\right| + \left|I - \sigma_{k}\right| + \left|\sigma_{k} - S\right| \leq \dfrac{\eps}{4} + \dfrac{\eps}{4} + \dfrac{\eps}{4} + \dfrac{\eps}{4} = \eps$
+- Достаточность
+- Дано: $\forall \eps > 0 \ \exist T: S - s < \eps$
+- Доказать: $\exists I = \int_\limits{a}^{b} f(x)dx = \lim{\Delta}{0} \sigma$ $, \forall \eps > 0 \ \exists \delta > 0 : \Delta < \delta \rightarrow \left|I - \sigma\right| < \eps$
+	- $\upline{I} = \lim{\Delta}{0}S \implies S - \upline{I} < \dfrac{\eps}{2}$
+	- $\underline{I} = \lim{\Delta}{0}s \implies S - \underline{I} < \dfrac{\eps}{2}$
+	- $S - \upline{I} + \underline{I} - s < \eps \implies \upline{I} - \underline{I} < \eps$
+	- $\lim{\Delta}{0} \upline{I} = \underline{I} = I$
+	- $s < \sigma < S \implies \lim{\Delta}{0} = I$
+
+### Некоторые классы интегрируемых функций
+- Непрерывная на отрезке функция интегрируема на нем
+	- Доказательство: $f(x)$  непрерывна на $\left[a; b\right] \implies$ она равномерно непрерывна на $\left[a; b\right]$ по Теореме Кантора.
+	- $S - s = \sum\limits_{i = 1}^{n}\left(M_{i} - m_{i}\right)\Delta x_{i} \leq \dfrac{\eps}{b - a}\sum\limits_{i = 1}^{n}\Delta x_{i} = \eps$
+	- В силу равномерной непрерывности $\forall \eps > 0 \ \exists \delta > 0: \Delta < \delta \implies \left|f(x_{i}) - f(x_{i}')\right| < \eps$, где $x_{i} - x_{i}' < \delta$
+- Монотонная и определенная на отрезке функция интегрируема на нем
+	- Доказательство : Для монотонно возрастающей
+	- $\Delta < \delta = \dfrac{\eps}{f(b) - f(a)}$
+	- $S - s = \sum\limits^{n}_{i = 1}\left(M_{i} - m_{i}\right)\Delta x_{i} = \Delta  \sum\limits_{i = 1}^{n}\left(M_{i} - m_{i}\right) = \Delta \left(f(x_{1}) - f(a) + f(x_{2}) - f(x_{1}) + \dots + f(b)\right) = \Delta \left(f(b) - f(a)\right) < \eps$ 
+- Пример : $f(x) = \begin{equation*}  
+	  \begin{cases}  
+		   0, x \in \RR \backslash \QQ \\  
+		   1, x \in \QQ  
+	  \end{cases}  
+	  \end{equation*}$
+- $x \in \RR \backslash \QQ : \sigma = 1 \cdot \Delta x_{1} + 1  \cdot \Delta x_{2} + \dots + 1 \cdot \Delta x_{n} = b - a, \ \lim{\Delta}{0} \sigma = b - a$
+- $ x \in \QQ : \sigma = 0 \cdot \Delta x_{1} + 0  \cdot \Delta x_{2} + \dots + 0 \cdot \Delta x_{n} = 0, \ \lim{\Delta}{0} \sigma = 0$
+### Теорема о среднем
+- Пусть $f(x)$ интегрируема на $\left[a;b\right]$. Тогда $\exists \mu \ \left(m < \mu < M\right): \int\limits_{a}^{b} f(x) dx = \mu\left(b - a\right)$
+	- Доказательство: 
+	- $f(x)$ интегрируема $\implies$ она ограничена: $m \leq f(x) \leq M$ 
+	- $m\left(b - a\right) \leq \int\limits_{a}^{b} f(x) dx \leq M\left(b - a\right)$
+	- $m \leq \dfrac{\int\limits_{a}^{b} f(x) dx}{\left(b - a\right)} \leq M \implies \dfrac{\int\limits_{a}^{b} f(x) dx}{\left(b - a\right)} = \mu \implies \int\limits_{a}^{b} f(x) dx = \mu\left(b - a\right)$
+### Следствие из теоремы о среднем
+- $f(x)$ непрерывна на $\left[a;b\right] \implies \xi \in \left[a;b\right] : f(\xi) = \mu \implies \int\limits_{a}^{b} f(x) dx = f(\xi)(b - a)$
