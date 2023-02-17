@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "ded46e559dddbbfa",
+    "type": "split",
+    "children": [
+      {
+        "id": "baea6e8f4c077916",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6524ab8a21103925",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IVT/Инф.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "da045bf46cd1c00e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IVT/combinatorics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "03d03bd2a69eeed2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IVT/LinAlg.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "03ff88704767f826",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IVT/МатАн.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0d10e6d910e07ce8",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "3474b5aaf30e7b06",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "bae364ce7ac22423",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "2bbb30c2924ae4f5",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "e0c00ff97ce58e3b",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "c959a472b5be72de",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "fba6cba586834d99",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "IVT/МатАн.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "a6bca55a11033736",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "IVT/МатАн.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "a3604c892f1669a3",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "IVT/МатАн.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "active": "03ff88704767f826",
+  "lastOpenFiles": [
+    "IVT/АнГем.md",
+    "IVT/LinAlg.md",
+    "IVT/combinatorics.md",
+    "IVT/Ист.md",
+    "IVT/МатАн.md",
+    "IVT/Инф.md",
+    "IVT/Физ.md",
+    "IVT/ProjPract.md",
+    "Алгоритмы и структуры данных.md",
+    "Untitled.md"
+  ]
+}
