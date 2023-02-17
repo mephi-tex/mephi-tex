@@ -17,9 +17,9 @@
 	- Достаточность: Докажем, что $A^{-1}$ обратная к $A, \ det{A} \neq 0$.
 	- $AA^{-1} =\dfrac{1}{\Delta} \begin{pmatrix}
   a_{11} & a_{12} & \dots & a_{1n} \\
-  A_{21} & A_{22} & \dots & A_{2n} \\
+  a_{21} & a_{22} & \dots & a_{2n} \\
   \dots  & \dots & \dots & \dots\\
-  A_{n1} & A_{n2} & \dots & A_{nn}
+  a_{n1} & a_{n2} & \dots & a_{nn}
   \end{pmatrix} \begin{pmatrix}
   A_{11} & A_{21} & \dots & A_{n1} \\
   A_{12} & A_{22} & \dots & A_{n2} \\
