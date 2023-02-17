@@ -1428,7 +1428,7 @@ $\lim{x}{0} f(x)=$ ?
 	- $\underline{I} = \lim{\Delta}{0}s \implies S - \underline{I} < \dfrac{\eps}{2}$
 	- $S - \upline{I} + \underline{I} - s < \eps \implies \upline{I} - \underline{I} < \eps$
 	- $\lim{\Delta}{0} \upline{I} = \underline{I} = I$
-	- $s < \sigma < S \implies \lim{\Delta}{0} = I$
+	- $s < \sigma < S \implies \lim{\Delta}{0} \sigma = I$
 
 ### Некоторые классы интегрируемых функций
 - Непрерывная на отрезке функция интегрируема на нем
