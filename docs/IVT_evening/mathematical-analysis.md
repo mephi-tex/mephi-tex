@@ -1406,4 +1406,12 @@ $\lim{x}{0} f(x)=$ ?
 ### Лемма Дарбу
 - $\lim{\Delta}{0} S = \upline{I}$, $\lim{\Delta}{0} s = \underline{I}$
 - Докажем $\lim{\Delta}{0} S = \upline{I}$
-	- Пусть найдется некоторое $T$ т.ч. $\forall \eps: S - \upline{I} < \eps$. Далее возьмем такое разбиение $T'$, которое получено из $T$ добавлением строго внутренних точек $T$. Рассмотрим $T': \Delta < \dfrac{\eps}{\left(M - m\right)p} \implies S' - S \leq \left(M - m\right)p \cdot  \dfrac{\eps}{\left(M - m\right)p} = \eps \implies \lim{\Delta}{0}S = \upline{I}$
+	-  $\upline{I} = inf(S) \implies \forall \eps \ \exists T^{\star}: S^{\star} - \upline{I} < \dfrac{\eps}{2}$
+	- Рассмотрим все разбиение, $\Delta < \delta: T, \ \delta = \dfrac{\eps}{2\left(M - m\right)p}$ ; $M$ = $\max_{\left[a; b\right]}{f}$; $m$ = $\min_{\left[a; b\right]}{f}$; $p$ - число точек в $T^{\star}$
+	- Добавим к $T$ точки $T^{\star}$, получим $T', S' \implies S - S' \leq \left(M - m\right)p\Delta \leq \left(M - m\right)p\dfrac{\eps}{2(M - m)p} = \dfrac{\eps}{2}$ 
+	- Добавим к $T^{\star}$ точки $T$, получим $T'$, $S' \implies S - S^{\star} \leq \dfrac{\eps}{2}$
+	- $\upline{I} \leq S' \leq S^{\star}$
+	- $ S' - \upline{I} \leq S^{\star} - \upline{I} < \dfrac{\eps}{2}$
+	- $S - S' + S' - \upline{I} \leq \dfrac{\eps}{2} + \dfrac{\eps}{2}$
+	- $S - \upline{I} < \eps \implies \lim{\Delta}{0} = \upline{I}$
+## Лекция 15.02.2023
