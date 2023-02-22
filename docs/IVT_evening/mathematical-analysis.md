@@ -1438,7 +1438,7 @@ $\lim{x}{0} f(x)=$ ?
 - Монотонная и определенная на отрезке функция интегрируема на нем
 	- Доказательство : Для монотонно возрастающей
 	- $\Delta < \delta = \dfrac{\eps}{f(b) - f(a)}$
-	- $S - s = \sum\limits^{n}_{i = 1}\left(M_{i} - m_{i}\right)\Delta x_{i} = \Delta  \sum\limits_{i = 1}^{n}\left(M_{i} - m_{i}\right) = \Delta \left(f(x_{1}) - f(a) + f(x_{2}) - f(x_{1}) + \dots + f(b)\right) = \Delta \left(f(b) - f(a)\right) < \eps$ 
+	- $S - s = \sum\limits^{n}_{i = 1}\left(M_{i} - m_{i}\right)\Delta x_{i} \leq \Delta  \sum\limits_{i = 1}^{n}\left(M_{i} - m_{i}\right) = \Delta \left(f(x_{1}) - f(a) + f(x_{2}) - f(x_{1}) + \dots + f(b)\right) = \Delta \left(f(b) - f(a)\right) < \eps$ 
 - Пример : $f(x) = \begin{equation*}  
 	  \begin{cases}  
 		   0, x \in \RR \backslash \QQ \\  
