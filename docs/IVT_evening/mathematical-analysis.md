@@ -1445,8 +1445,8 @@ $\lim{x}{0} f(x)=$ ?
 		   1, x \in \QQ  
 	  \end{cases}  
 	  \end{equation*}$
-- $x \in \RR \backslash \QQ : \sigma = 1 \cdot \Delta x_{1} + 1  \cdot \Delta x_{2} + \dots + 1 \cdot \Delta x_{n} = b - a, \ \lim{\Delta}{0} \sigma = b - a$
-- $ x \in \QQ : \sigma = 0 \cdot \Delta x_{1} + 0  \cdot \Delta x_{2} + \dots + 0 \cdot \Delta x_{n} = 0, \ \lim{\Delta}{0} \sigma = 0$
+- $x \in \QQ  : \sigma = 1 \cdot \Delta x_{1} + 1  \cdot \Delta x_{2} + \dots + 1 \cdot \Delta x_{n} = b - a, \ \lim{\Delta}{0} \sigma = b - a$
+- $x \in \RR \backslash \QQ : \sigma = 0 \cdot \Delta x_{1} + 0  \cdot \Delta x_{2} + \dots + 0 \cdot \Delta x_{n} = 0, \ \lim{\Delta}{0} \sigma = 0$
 ### Теорема о среднем
 - Пусть $f(x)$ интегрируема на $\left[a;b\right]$. Тогда $\exists \mu \ \left(m < \mu < M\right): \int\limits_{a}^{b} f(x) dx = \mu\left(b - a\right)$
 	- Доказательство: 
