@@ -1497,9 +1497,9 @@ $\lim{x}{0} f(x)=$ ?
 - $\displaystyle\int\limits_{1}^{2} \ln{x}dx$.
 	-  $\ln{x} = u(x), \ du = \dfrac{dx}{x}$
 	- $\displaystyle\int\limits_{1}^{2} \ln{x}dx = x \ln{x}\bigg|^{2}_{1} - \displaystyle\int\limits_{1}^{2} x\dfrac{1}{x}dx = x\ln{x}\bigg|^{2}_{1} - \displaystyle\int\limits_{1}^{2} dx = x\ln{x}\bigg|^{2}_{1} - x\bigg|^{2}_{1}$
-- $\displaystyle\int\limits_{0}^{1} x\atan{x}dx$
-	- Положим $\atan{x} = u(x)$
-	- $\dfrac{1}{2}\displaystyle\int\limits_{0}^{1} \atan{x}dx^{2} = \dfrac{1}{2}x^{2}\atan{x}\bigg|^{1}_{0} - \dfrac{1}{2}\displaystyle\int\limits_{0}^{1}  \dfrac{x^{2}}{1 + x^{2}}dx = \dfrac{\pi}{8} - \dfrac{1}{2}\displaystyle\int\limits_{0}^{1} \dfrac{x^{2}}{1 + x^{2}}dx = \dfrac{\pi}{8} - \dfrac{1}{2}\left(x - \atan{x}\right)\bigg|^{1}_{0} = \dfrac{\pi}{8} - \dfrac{1}{2}\left(1 - \dfrac{\pi}{4}\right)$
+- $\displaystyle\int\limits_{0}^{1} x\arctan{x}dx$
+	- Положим $\arctan{x} = u(x)$
+	- $\dfrac{1}{2}\displaystyle\int\limits_{0}^{1} \arctan{x}dx^{2} = \dfrac{1}{2}x^{2}\arctan{x}\bigg|^{1}_{0} - \dfrac{1}{2}\displaystyle\int\limits_{0}^{1}  \dfrac{x^{2}}{1 + x^{2}}dx = \dfrac{\pi}{8} - \dfrac{1}{2}\displaystyle\int\limits_{0}^{1} \dfrac{x^{2}}{1 + x^{2}}dx = \dfrac{\pi}{8} - \dfrac{1}{2}\left(x - \arctan{x}\right)\bigg|^{1}_{0} = \dfrac{\pi}{8} - \dfrac{1}{2}\left(1 - \dfrac{\pi}{4}\right)$
 
 ### Применения определенного интеграла 
 - Вычисление площади плоской фигуры
