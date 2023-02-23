@@ -1268,12 +1268,12 @@ $\lim{x}{0} f(x)=$ ?
 - Если известна какая - то первообразная, то совокупность всех первообразных имеет вид $F(x) + C$ и называется неопределенным интегралом
 
 ***Обозначение***
-- $F(x) + C = \int f(x) dx $
+- $F(x) + C = \displaystyle\int f(x) dx $
 
 ### Алгебраические свойства неопределенного интеграла
-- $d\left(\int f(x) dx \right) = \left( F(x) + C \right) ' dx = F'(x) dx = dF(x)$
-- $\int dF = \int F'(x) dx = \int f(x) dx + C$
-- $\int \left(\alpha f(x) + \beta g(x) \right) dx = \alpha \int f(x) dx + \beta \int g(x) dx$
+- $d\left(\displaystyle\int f(x) dx \right) = \left( F(x) + C \right) ' dx = F'(x) dx = dF(x)$
+- $\displaystyle\int dF = \displaystyle\int F'(x) dx = \displaystyle\int f(x) dx + C$
+- $\displaystyle\int \left(\alpha f(x) + \beta g(x) \right) dx = \alpha \displaystyle\int f(x) dx + \beta \displaystyle\int g(x) dx$
 
 ### Таблица неопределенных интегралов
 №|f(x) | F(x) 
@@ -1300,11 +1300,11 @@ $\lim{x}{0} f(x)=$ ?
 
 ### Методы интегрирования 
 - Метод замены переменной
-	- Пусть имеем $\int f(x) dx$, если $x = \phi(t)$, так что $dx = \phi'(t) dt$, то обозначив первообразную функции $f(\phi(t))$ через $G(t)$ получим $\int f(\phi(t)) dt = G(t) + C \implies G'(t) = f(\phi(t)) \cdot \phi(t) \implies G(t) = \int f(\phi(t))\phi'(t) dt = \int f(x) dx$ 
+	- Пусть имеем $\displaystyle\int f(x) dx$, если $x = \phi(t)$, так что $dx = \phi'(t) dt$, то обозначив первообразную функции $f(\phi(t))$ через $G(t)$ получим $\displaystyle\int f(\phi(t)) dt = G(t) + C \implies G'(t) = f(\phi(t)) \cdot \phi(t) \implies G(t) = \displaystyle\int f(\phi(t))\phi'(t) dt = \displaystyle\int f(x) dx$ 
 - Метод интегрирования по частям
 	- $d(u(x) v(x)) = udv + vdu$
-	- $\int d(uv) dx = \int u dv + \int v du$
-	- $\int u dv = uv - \int v du$
+	- $\displaystyle\int d(uv) dx = \displaystyle\int u dv + \displaystyle\int v du$
+	- $\displaystyle\int u dv = uv - \displaystyle\int v du$
 ## Лекция 20.12.2022
 ### Интегрирование рациональных функций
 - Пусть имеем правильную несократимую дробь $\dfrac{P(x)}{Q(x)}$. Пусть далее многочлен $Q(x)$ имеет корень $x = a$ кратности $\alpha$, т. е. $Q(x) = (x - a)^{\alpha}\phi(x)$, причем $\phi(a) \neq 0$.
@@ -1324,11 +1324,11 @@ $\lim{x}{0} f(x)=$ ?
 - $\dfrac{P(x)}{Q(x)} = \dfrac{A_{1}}{(x - a)^{\alpha}} + \dfrac{A_{2}}{(x - a)^{\alpha - 1}} + \dots + \dfrac{A_{\alpha}}{x - a} + \dfrac{B_{1}}{(x - b)^{\beta}} + \dfrac{B_{2}}{(x - b)^{\beta - 1}} + \dots + \dfrac{B_{\beta}}{x - b} + \dots + \dfrac{C_{1}}{(x - c)^{\gamma}} + \dfrac{C_{2}}{(x - c)^{\gamma - 1}} + \dfrac{C_{\gamma}}{x - c} \\ + \dfrac{M_{1}x + N_{1}}{(x^{2} + p_{1}x - q_{1})^{\delta}} +  \dfrac{M_{2}x + N_{2}}{(x^{2} + p_{1}x - q_{1})^{\delta - 1}} + \dots +  \dfrac{M_{\delta}x + N_{\delta}}{x^{2} + p_{1}x - q_{1}} + \dfrac{K_{1}x + L_{1}}{(x^{2} + p_{2}x + q_{2})^{\eps}} + \dfrac{K_{2}x + L_{2}}{(x^{2} + p_{2}x + q_{2})^{\eps - 1}} + \dots + \dfrac{K_{\eps}x + L_{\eps}}{x^{2} + p_{2}x + q_{2}}$
 
 ### Основные интегралы рациональных дробей
-1. $\int \dfrac{A}{x - a} dx = A\ln{|x - a|} + C$
-2. $\int \dfrac{A}{(x - a)^{\alpha}} dx = \dfrac{A(x - a)^{-\alpha + 1}}{-\alpha + 1} + C$
-3. $\int \dfrac{Mx + N}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{\dfrac{Mx + N}{M} \cdot 2}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + \dfrac{2N}{M}}{x^{2} + px + q}dx = \\ \dfrac{M}{2} \int \dfrac{2x + p - p + \dfrac{2N}{M}}{x^{2} + px + q} dx = \dfrac{M}{2} \int \dfrac{2x + p}{x^{2} + px + q} dx + \dfrac{M}{2} \int \dfrac{\dfrac{2N}{M} - p}{x^{2} + px + q} dx =  \\ \dfrac{M}{2} \int \dfrac{d(x^{2} + px)}{x^{2} + px + q} + \dfrac{M}{2} \int \dfrac{B}{x^{2} + px + q} dx = \\ \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + px + q} = \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dx}{x^{2} + \dfrac{2px}{2} + q + \dfrac{p^{2}}{4} - \dfrac{p^{2}}{4}} = \\  \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dt}{t^{2} + \left(q - \dfrac{p^{2}}{4}\right)}\bigg|_{t = x + \dfrac{p}{2}} = \\  \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \int \dfrac{dt}{t^{2}  - A}\bigg|_{t = x + \dfrac{p}{2}}^{A = - q + \dfrac{p^{2}}{4}} = \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{4\sqrt{A}} \ln{\bigg|\dfrac{\sqrt{A} - x}{\sqrt{A} + x}}\bigg| + C$
-4. $\int \dfrac{Mx + N}{(x^{2} + px + q)^{\alpha}} dx $ Решается понижением порядка с помощью рекуррентной формулы.
-	-  $I_{\alpha} = \int \dfrac{dt}{(t^{2} + A)^{\alpha}} = \int \dfrac{A - t^{2} + t^{2}}{(t^{2} + A)^{\alpha}} dt = \int \dfrac{dt}{(t^{2} + A)^{\alpha - 1}} - \int \dfrac{t^{2}dt}{(t^{2} + A)^{\alpha}} = \\ I_{\alpha - 1} - \int u dv \bigg|_{A = -C} = I_{\alpha - 1} - \dfrac{t}{2(C - \alpha)(t^{2} + C)^{\alpha - 1}} + \int \dfrac{dt}{2(C - \alpha)(t^{2} + C)^{\alpha - 1}} = \\ I_{\alpha - 1} - \dfrac{t}{2(C - \alpha)(t^{2} + C)^{\alpha - 1}} + \dfrac{I_{\alpha - 1}}{2(C - \alpha)} = - \dfrac{t}{2(\alpha - C)(t^{2} + C)^{\alpha - 1}} + I_{\alpha - 1} \left(\dfrac{2(C - \alpha) + 1}{2(C - \alpha)}\right)$
+1. $\displaystyle\int \dfrac{A}{x - a} dx = A\ln{|x - a|} + C$
+2. $\displaystyle\int \dfrac{A}{(x - a)^{\alpha}} dx = \dfrac{A(x - a)^{-\alpha + 1}}{-\alpha + 1} + C$
+3. $\displaystyle\int \dfrac{Mx + N}{x^{2} + px + q} dx = \dfrac{M}{2} \displaystyle\int \dfrac{\dfrac{Mx + N}{M} \cdot 2}{x^{2} + px + q} dx = \dfrac{M}{2} \displaystyle\int \dfrac{2x + \dfrac{2N}{M}}{x^{2} + px + q}dx = \\ \dfrac{M}{2} \displaystyle\int \dfrac{2x + p - p + \dfrac{2N}{M}}{x^{2} + px + q} dx = \dfrac{M}{2} \displaystyle\int \dfrac{2x + p}{x^{2} + px + q} dx + \dfrac{M}{2} \displaystyle\int \dfrac{\dfrac{2N}{M} - p}{x^{2} + px + q} dx =  \\ \dfrac{M}{2} \displaystyle\int \dfrac{d(x^{2} + px)}{x^{2} + px + q} + \dfrac{M}{2} \displaystyle\int \dfrac{B}{x^{2} + px + q} dx = \\ \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \displaystyle\int \dfrac{dx}{x^{2} + px + q} = \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \displaystyle\int \dfrac{dx}{x^{2} + \dfrac{2px}{2} + q + \dfrac{p^{2}}{4} - \dfrac{p^{2}}{4}} = \\  \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \displaystyle\int \dfrac{dt}{t^{2} + \left(q - \dfrac{p^{2}}{4}\right)}\bigg|_{t = x + \dfrac{p}{2}} = \\  \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{2} \displaystyle\int \dfrac{dt}{t^{2}  - A}\bigg|_{t = x + \dfrac{p}{2}}^{A = - q + \dfrac{p^{2}}{4}} = \dfrac{M}{2} \ln{|x^{2} + px + q|} + \dfrac{MB}{4\sqrt{A}} \ln{\bigg|\dfrac{\sqrt{A} - x}{\sqrt{A} + x}}\bigg| + C$
+4. $\displaystyle\int \dfrac{Mx + N}{(x^{2} + px + q)^{\alpha}} dx $ Решается понижением порядка с помощью рекуррентной формулы.
+	-  $I_{\alpha} = \displaystyle\int \dfrac{dt}{(t^{2} + A)^{\alpha}} = \displaystyle\int \dfrac{A - t^{2} + t^{2}}{(t^{2} + A)^{\alpha}} dt = \displaystyle\int \dfrac{dt}{(t^{2} + A)^{\alpha - 1}} - \displaystyle\int \dfrac{t^{2}dt}{(t^{2} + A)^{\alpha}} = \\ I_{\alpha - 1} - \displaystyle\int u dv \bigg|_{A = -C} = I_{\alpha - 1} - \dfrac{t}{2(C - \alpha)(t^{2} + C)^{\alpha - 1}} + \displaystyle\int \dfrac{dt}{2(C - \alpha)(t^{2} + C)^{\alpha - 1}} = \\ I_{\alpha - 1} - \dfrac{t}{2(C - \alpha)(t^{2} + C)^{\alpha - 1}} + \dfrac{I_{\alpha - 1}}{2(C - \alpha)} = - \dfrac{t}{2(\alpha - C)(t^{2} + C)^{\alpha - 1}} + I_{\alpha - 1} \left(\dfrac{2(C - \alpha) + 1}{2(C - \alpha)}\right)$
 
 ### Комплексные числа
 - Комплексным числом называется упорядоченная пара действительных чисел $(a; b)$.
@@ -1372,7 +1372,7 @@ $\lim{x}{0} f(x)=$ ?
 - $\sigma = f(\xi_{1})\Delta x_{1} + f(\xi_{2})\Delta x_{2} + \dots +f(\xi_{n})\Delta x_{n}= \sum\limits_{i = 1}^{n} f(\xi_{i})\Delta x_{i}$
 - $T$ - разбиение, $t$ - выбранный отрезок и точка $\xi$
 - $\Delta = \max{\left|\Delta x_{i}\right|}$ - характеристика $T$
-- Определенным интегралом называется $\lim{\Delta}{0}\sigma = I = \int\limits_{a}^{b} f(x)dx$
+- Определенным интегралом называется $\lim{\Delta}{0}\sigma = I = \displaystyle\int\limits_{a}^{b} f(x)dx$
 - $f$ имеет интеграл на $\left[a;b\right] \implies$ она интегрируема
 ### Ограниченность интегрируемой функции на отрезке
 - $f$ интегрируема на $\left[a;b\right] \implies$ она ограничена на нем
@@ -1418,12 +1418,12 @@ $\lim{x}{0} f(x)=$ ?
 ## Лекция 15.02.2023
 ### Необходимое и достаточное условие интегрируемости функции на отрезке
 - Необходимость
-- Дано : $\exists I = \int_\limits{a}^{b} f(x)dx = \lim{\Delta}{0} \sigma$ $, \forall \eps > 0 \ \exists \delta > 0 : \Delta < \delta \rightarrow \left|I - \sigma\right| < \eps$
+- Дано : $\exists I = \displaystyle\int_\limits{a}^{b} f(x)dx = \lim{\Delta}{0} \sigma$ $, \forall \eps > 0 \ \exists \delta > 0 : \Delta < \delta \rightarrow \left|I - \sigma\right| < \eps$
 - Доказать: $\forall \eps > 0 \ \exists T: S - s < \eps$
 	- $S - s = S - \sigma_{i} + \sigma_{i} - I + I - \sigma_{k} + \sigma_{k} - S \leq \left|S - \sigma_{i}\right| + \left|\sigma_{i} - I\right| + \left|I - \sigma_{k}\right| + \left|\sigma_{k} - S\right| \leq \dfrac{\eps}{4} + \dfrac{\eps}{4} + \dfrac{\eps}{4} + \dfrac{\eps}{4} = \eps$
 - Достаточность
 - Дано: $\forall \eps > 0 \ \exists T: S - s < \eps$
-- Доказать: $\exists I = \int_\limits{a}^{b} f(x)dx = \lim{\Delta}{0} \sigma$ $, \forall \eps > 0 \ \exists \delta > 0 : \Delta < \delta \rightarrow \left|I - \sigma\right| < \eps$
+- Доказать: $\exists I = \displaystyle\int_\limits{a}^{b} f(x)dx = \lim{\Delta}{0} \sigma$ $, \forall \eps > 0 \ \exists \delta > 0 : \Delta < \delta \rightarrow \left|I - \sigma\right| < \eps$
 	- $\upline{I} = \lim{\Delta}{0}S \implies S - \upline{I} < \dfrac{\eps}{2}$
 	- $\underline{I} = \lim{\Delta}{0}s \implies S - \underline{I} < \dfrac{\eps}{2}$
 	- $S - \upline{I} + \underline{I} - s < \eps \implies \upline{I} - \underline{I} < \eps$
@@ -1448,10 +1448,65 @@ $\lim{x}{0} f(x)=$ ?
 - $x \in \QQ  : \sigma = 1 \cdot \Delta x_{1} + 1  \cdot \Delta x_{2} + \dots + 1 \cdot \Delta x_{n} = b - a, \ \lim{\Delta}{0} \sigma = b - a$
 - $x \in \RR \backslash \QQ : \sigma = 0 \cdot \Delta x_{1} + 0  \cdot \Delta x_{2} + \dots + 0 \cdot \Delta x_{n} = 0, \ \lim{\Delta}{0} \sigma = 0$
 ### Теорема о среднем
-- Пусть $f(x)$ интегрируема на $\left[a;b\right]$. Тогда $\exists \mu \ \left(m < \mu < M\right): \int\limits_{a}^{b} f(x) dx = \mu\left(b - a\right)$
+- Пусть $f(x)$ интегрируема на $\left[a;b\right]$. Тогда $\exists \mu \ \left(m < \mu < M\right): \displaystyle\int\limits_{a}^{b} f(x) dx = \mu\left(b - a\right)$
 	- Доказательство: 
 	- $f(x)$ интегрируема $\implies$ она ограничена: $m \leq f(x) \leq M$ 
-	- $m\left(b - a\right) \leq \int\limits_{a}^{b} f(x) dx \leq M\left(b - a\right)$
-	- $m \leq \dfrac{\int\limits_{a}^{b} f(x) dx}{\left(b - a\right)} \leq M \implies \dfrac{\int\limits_{a}^{b} f(x) dx}{\left(b - a\right)} = \mu \implies \int\limits_{a}^{b} f(x) dx = \mu\left(b - a\right)$
+	- $m\left(b - a\right) \leq \displaystyle\int\limits_{a}^{b} f(x) dx \leq M\left(b - a\right)$
+	- $m \leq \dfrac{\displaystyle\int\limits_{a}^{b} f(x) dx}{\left(b - a\right)} \leq M \implies \dfrac{\displaystyle\int\limits_{a}^{b} f(x) dx}{\left(b - a\right)} = \mu \implies \displaystyle\int\limits_{a}^{b} f(x) dx = \mu\left(b - a\right)$
 ### Следствие из теоремы о среднем
-- $f(x)$ непрерывна на $\left[a;b\right] \implies \xi \in \left[a;b\right] : f(\xi) = \mu \implies \int\limits_{a}^{b} f(x) dx = f(\xi)(b - a)$
+- $f(x)$ непрерывна на $\left[a;b\right] \implies \xi \in \left[a;b\right] : f(\xi) = \mu \implies \displaystyle\int\limits_{a}^{b} f(x) dx = f(\xi)(b - a)$
+
+## Лекция 22.02.2023
+### Интеграл с переменным верхним пределом
+- Пусть $f(x)$ непрерывна на $\left[a; b\right]$ и существует интеграл $\displaystyle\int\limits_{a}^{b} f(x) dx$, а также для любой точки $C$ этого интервала существует интеграл $\displaystyle\int\limits_{C}^{x} f(t) dt$ 
+- Тогда функция верхнего предела $F(x) = \displaystyle\int\limits_{C}^{x} f(t) dt$ является первообразной на $\left[a;b\right]$ для $f(x)$
+- Доказательство
+	- $\Delta F = F(x + \Delta x) - F(x)$
+	- Надо доказать, что $\lim{\Delta x}{0} \dfrac{\Delta F}{\Delta x} = f(x)$ то есть $\forall \eps > 0 \ \exists \delta > 0: \forall \ |\Delta x| < \delta \ \implies \left|\dfrac{\Delta F}{\Delta x} - f(x)\right| < \eps$
+	- $F(x) = \displaystyle\int\limits_{C}^{x} f(t) dt$
+	- $F(x + \Delta x) = \displaystyle\int\limits_{C}^{x + \Delta x} f(t) dt$
+	- $F(x + \Delta x) - F(x) = \displaystyle\int\limits_{C}^{x + \Delta x} f(t) dt - \displaystyle\int\limits_{C}^{x} f(t) dt = \displaystyle\int\limits_{C}^{x} f(t) dt + \displaystyle\int\limits_{x}^{x + \Delta x} f(t) dt - \displaystyle\int\limits_{C}^{x} f(t) dt = f(\xi) \Delta x$
+- Если в предыдущей теореме $f(x)$ как непрерывную функцию заменить на требование только лишь интегрируемости, то можно доказать, что $F(x)$ будет непрерывной функцией на $\left[a;b\right]$
+- Действительно: $F(x + \Delta x) - F(x) = \Delta F = \displaystyle\int\limits_{x}^{x + \Delta x} f(t) dt = \mu \Delta x$
+### Формула Ньютона - Лейбница
+- Возьмем в качестве $C$ точку $a$, тогда $F(x) = \displaystyle\int\limits_{a}^{x} f(t) dt \implies F(a) = \displaystyle\int\limits_{a}^{a} f(t) dt = 0 \implies F(x) = \displaystyle\int\limits_{a}^{x} f(t) dt + F(a)$.
+- $F(b) = \displaystyle\int\limits_{a}^{b} f(t) dt + F(a)$  $\implies \displaystyle\int\limits_{a}^{b} f(x) dx = F(b) - F(a)$
+
+***Пример***
+
+- $\displaystyle\int\limits_{0}^{\pi} \sin{x} dx = - \cos{\pi} + \cos{0} = 1 + 1 = 2$
+- Обычно найдя первообразную пишут: $\displaystyle\int\limits_{a}^{b} f(x) dx = F(x)\bigg|^{b}_{a} = F(b) - F(a)$
+
+### Теорема о замене переменной в определенном интеграле
+
+- Пусть на $\left[a;b\right]$ задана непрерывная $f(x)$ имеющая на этом промежутке $F(x)$, так что $\displaystyle\int\limits_{a}^{b} f(x) dx = F(b) - F(a)$. Пусть далее отрезок $\left[\alpha; \beta\right]$ будет областью определения дифференцируемой на нем функции $x = \phi(t). \ t \in \left[\alpha; \beta\right], \ \left[a ; b\right]$ - область значений этой функции, причем $\phi(\alpha) = a, \ \phi(\beta) = b \implies F(x)$ - первообразная для $f(\phi(t))\phi'(t), \ \displaystyle\int\limits_{a}^{b} f(x) dx = F(\phi(\beta)) - F(\phi(\alpha))$
+- Доказательство :
+	- $\dfrac{d}{dt} \left[F(\phi(t))\right] = F'(\phi(t))\phi'(t) = f(\phi(t))\phi'(t) \implies \displaystyle\int\limits_{\phi(\alpha)}^{\phi(\beta)} f(\phi(t))\phi'(t) dt  =\displaystyle\int\limits_{a}^{b} f(x) dx = F(\phi(t))\bigg|^{\phi(\beta)}_{\phi(\alpha)} = F(\phi(\beta)) - F(\phi(\alpha)) = F(b) - F(a)$
+
+***Пример***
+
+- $\displaystyle\int\limits_{1}^{2} \dfrac{\ln{x}}{x} dx\bigg|^{x = e^{t}}_{dx = e^{t} dt} = \displaystyle\int\limits_{0}^{\ln{2}} tdt  = \dfrac{t^{2}}{2}\bigg|^{\ln{2}}_{0}$
+
+### Метод интегрирования по частям в определенном интеграле
+- Теорема: Пусть на $\left[a; b\right]$ заданы дифференцируемые функции $u(x), \ v(x)$, причем существует интеграл $\displaystyle\int\limits_{a}^{b} v(x) du(x).$ $\exists \ \displaystyle\int\limits_{a}^{b} u(x) dv(x) = u(x)v(x)\bigg|^{b}_{a} - \displaystyle\int\limits_{a}^{b} v(x) du(x)$ 
+	- Доказательство: $d\left[u(x) v(x)\right] = u(x)dv(x) + v(x)du(x)$
+	- $\displaystyle\int\limits_{a}^{b} d\left[u(x) v(x)\right] = \displaystyle\int\limits_{a}^{b} u(x)dv(x) + \displaystyle\int\limits_{a}^{b} v(x)du(x)$
+	- $u(x) v(x)\bigg|^{b}_{a} = \displaystyle\int\limits_{a}^{b} u(x)dv(x) + \displaystyle\int\limits_{a}^{b} v(x)du(x) \implies \displaystyle\int\limits_{a}^{b} u(x)dv(x) = u(x)v(x)\bigg|^{b}_{a} - \displaystyle\int\limits_{a}^{b} v(x)du(x)$. Эти интегралы существуют по условию теоремы.
+
+***Пример*** 
+- $\displaystyle\int\limits_{1}^{2} \ln{x}dx$.
+	-  $\ln{x} = u(x), \ du = \dfrac{dx}{x}$
+	- $\displaystyle\int\limits_{1}^{2} \ln{x}dx = x \ln{x}\bigg|^{2}_{1} - \displaystyle\int\limits_{1}^{2} x\dfrac{1}{x}dx = x\ln{x}\bigg|^{2}_{1} - \displaystyle\int\limits_{1}^{2} dx = x\ln{x}\bigg|^{2}_{1} - x\bigg|^{2}_{1}$
+- $\displaystyle\int\limits_{0}^{1} x\atan{x}dx$
+	- Положим $\atan{x} = u(x)$
+	- $\dfrac{1}{2}\displaystyle\int\limits_{0}^{1} \atan{x}dx^{2} = \dfrac{1}{2}x^{2}\atan{x}\bigg|^{1}_{0} - \dfrac{1}{2}\displaystyle\int\limits_{0}^{1}  \dfrac{x^{2}}{1 + x^{2}}dx = \dfrac{\pi}{8} - \dfrac{1}{2}\displaystyle\int\limits_{0}^{1} \dfrac{x^{2}}{1 + x^{2}}dx = \dfrac{\pi}{8} - \dfrac{1}{2}\left(x - \atan{x}\right)\bigg|^{1}_{0} = \dfrac{\pi}{8} - \dfrac{1}{2}\left(1 - \dfrac{\pi}{4}\right)$
+
+### Применения определенного интеграла 
+- Вычисление площади плоской фигуры
+	- Геометрический смысл определенного интеграла : площадь криволинейной трапеции $\left(f(x) \geq 0\right)$. $\displaystyle\int\limits^{b}_{a} f(x) dx = S$. Найдем площадь плоской фигуры, ограниченной замкнутой линией, такой что любая прямая, параллельная оси $Oy$ и пересекающая эту фигуру пересекает ее только два раза: при входе через нижнюю границу $y = \phi(x)$ и при выходе через внешнюю границу $y = \psi(x)$. Крайняя левая точка имеет координату $a$, а крайняя правая $b$. Причем: $\phi(x), \ \psi(x)$ интегрируемы на $\left[a; b\right]$. Рассмотрим $\displaystyle\int\limits^{b}_{a} \psi(x) dx = S_{1}$ (площадь криволинейной трапеции, расположенной под кривой $y = \psi(x)$. Площадь под кривой $\phi(x): S_{2} =\displaystyle\int\limits^{b}_{a} \phi(x) dx  \implies S = S_{1} - S_{2}$. Если условие пересечения фигуры прямой, параллельной оси $Oy$ не выполняется, то площадь бывает возможным вычислить разбив фигуру на части для которых это условие выполняется.
+
+***Пример***
+- Найти площадь кольца: 
+	- В силу симметрии фигуры достаточно найти площадь ее четвертой части в первой четверти.
+	- Уравнения внутренней окружности: $x^{2} + y^{2} = r^{2}, \ x^{2} + y^{2} = R^{2}$. В первой четверти $y > 0, \ x > 0 \implies y_{1} = \sqrt{R^{2} - x^{2}} \ y_{2} = \sqrt{r^{2} - x^{2}}$. 
+	- $S = \left(\displaystyle\int\limits_{0}^{R} \left(\sqrt{R^{2} - x^{2}} \right)dx - \displaystyle\int\limits_{0}^{r} \left(\sqrt{r^{2} - x^{2}} \right)dx\right)\bigg|^{x = R\cos{\phi}}_{dx = - R\sin{\phi}d\phi} = \\ - \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \left(R^{2}\sin^{2}{\phi} \right)d\phi + \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \left(r^{2}\sin^{2}{\psi} \right)d\psi = R^{2} \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \sin^{2}{\phi}d\phi - r^{2}\displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \sin^{2}{\psi} d\psi = \dfrac{\pi}{4}\left(R^{2} - r^{2}\right)$
