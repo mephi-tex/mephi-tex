@@ -1510,3 +1510,56 @@ $\lim{x}{0} f(x)=$ ?
 	- В силу симметрии фигуры достаточно найти площадь ее четвертой части в первой четверти.
 	- Уравнения внутренней окружности: $x^{2} + y^{2} = r^{2}, \ x^{2} + y^{2} = R^{2}$. В первой четверти $y > 0, \ x > 0 \implies y_{1} = \sqrt{R^{2} - x^{2}} \ y_{2} = \sqrt{r^{2} - x^{2}}$. 
 	- $S = \left(\displaystyle\int\limits_{0}^{R} \left(\sqrt{R^{2} - x^{2}} \right)dx - \displaystyle\int\limits_{0}^{r} \left(\sqrt{r^{2} - x^{2}} \right)dx\right)\bigg|^{x = R\cos{\phi}}_{dx = - R\sin{\phi}d\phi} = \\ - \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \left(R^{2}\sin^{2}{\phi} \right)d\phi + \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \left(r^{2}\sin^{2}{\psi} \right)d\psi = R^{2} \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \sin^{2}{\phi}d\phi - r^{2}\displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \sin^{2}{\psi} d\psi = \dfrac{\pi}{4}\left(R^{2} - r^{2}\right)$
+
+### Лекция 01.03.2023
+### Вычисление длины кривой
+- Дана кривая на отрезке $\left[a;b\right]$ . Разобъем кривую на отрезки, устремим число точек деления к бесконечности. $\Delta = \max{(\Delta l_{i})}$ - характеристика разбиения. $\Delta \rightarrow 0$. Если длина ломаной при стремлении $n \rightarrow \inf$ имеет предел, то кривая называется спрямляемой, а этот предел называется длиной кривой. Рассмотрим длину ломаной 
+	- $\Delta l_{1} + \Delta l_{2} + \dots + \Delta l_{n} = \sqrt{\Delta l_{1}^{2} + \Delta l_{2}^{2}  + \dots + \Delta l_{n}^{2} }$.
+- Пусть кривая задана параметрически: $x = \phi(t), \ y = \psi(t),\alpha \leq t \leq \beta \  \implies \Delta y = \phi'(t)\Delta t, \ \Delta x = \psi'(t)\Delta t$
+	- $\Delta l_{1} + \Delta l_{2} + \dots + \Delta l_{n}  = \sum\limits_{i = 1}^{n} \sqrt{\Delta x_{i}^{2} + \Delta y_{i}^{2}} = \sum\limits_{i = 1}^{n} \sqrt{\left(\Delta \phi(t)_{i}\right)^{2} + \left(\Delta \psi(t)_{i}\right)^{2}} = \lim{n}{\inf} \sum\limits_{i = 1}^{n} \sqrt{\left(\phi_{i}'(t)\right)^{2} + \left(\psi_{i}'(t)\right)^{2}} = \displaystyle\int\limits_{a}^{b} \left[\sqrt{\left(\phi'(t)\right)^{2} + \left(\psi'(t)\right)^{2}}\right] dt$
+- Если кривая задана в явном виде $y = f(x)$,  $ \implies \ell = \displaystyle\int\limits_{a}^{b} \sqrt{1 + y'(x)^{2}}dx$
+- Если кривая задана в полярных координатах: $\phi \in \left[\alpha; \beta\right]$ $x =\rho(\phi)\cos{\phi}, \ y = \rho(\phi)\sin{\phi}$ $ \implies \Delta x^{2} + \Delta y^{2} = \Delta \ell^{2}$
+	- $\dfrac{d x}{d \phi} = \dfrac{d \rho}{d \phi}\cos{\phi} - \rho(\phi)\sin{\phi}$
+	- $\dfrac{d y}{d \phi} = \dfrac{d \rho}{d \phi}\sin{\phi} + \rho(\phi)\cos{\phi}$
+	- $dx = \left(d\rho \cos{\phi} - \rho(\phi)\sin{\phi}\right)d\phi$
+	- $dy = \left(d\rho \sin{\phi} + \rho(\phi)\cos{\phi}\right)d\phi$
+	- $dx^{2} + dy^{2} = \left(\left(d\rho \cos{\phi} - \rho\sin{\phi}\right)d\phi\right)^{2} + \left(\left(d\rho \sin{\phi} + \cos{\phi}\right)d\phi\right)^{2} = \left(d\rho^{2} + \rho^{2}\right)d\phi^{2}$
+	- $\ell = \displaystyle \int\limits_{\alpha}^{\beta} \sqrt{d\rho^{2} + \rho^{2}}d\phi$
+
+### Вычисление объемов и поверхности тел
+- Рассмотрим тела, ограниченные такой поверхностью, что любая прямая, параллельная оси $Oz$, один раз входит и один раз выходит в поверхность. Пусть при любом $z$ известна площадь сечения этого тела плоскостью, параллельной плоскости $Oxy$ $\Delta z_{i}$ - расстояние между этими сечениями. Тогда разбиваем тело сечениями и составляем интегральную сумму: $\sigma = \sum\limits_{i=1}^{n} S(z_{i})\Delta z_{i} \implies $  $\lim{n}{\inf} \sigma = V = \displaystyle\int S(z) dz$. 
+- Вычисление объема тела вращения
+	- Вращаем криволинейною трапецию вокруг оси $X$, это и называется телом вращения. Делаем разбиение отрезка $[a;b]$ точками $x_{1}, x_{2}. \dots, x_{n}$. Составляем интегральную сумму $\sigma = \sum\limits_{i=1}^{n} f(\xi_{i})^{2} \pi\ \Delta x_{i} \implies \lim{n}{\inf} \sigma = V = \pi \displaystyle\int\limits_{a}^{b} f(x)^{2} dx $
+- Вычисление поверхности тела вращения
+	- $2\pi r \ell \leq S \leq 2\pi R \ell $
+	- $\Delta S_{i} = 2\pi \dfrac{f(x_{i + 1}) - f(x_{i})}{2} \Delta l_{i}$
+	- $\lim{n}{\inf} \sigma = \lim{n}{\inf} \sum\limits_{i = 1}^{n} \Delta S_{i} \implies 2 \pi \displaystyle\int_{a}^{b} f(x) \sqrt{1 + y'(x)^{2}}dx$
+
+### Несобственные интегралы первого рода 
+- Пусть $f(x)$ задана на бесконечном промежутке $\left[a;+ \inf\right]$, где она ограничена и интегрируема на каждом конечном промежутке по Риману. Тогда $\lim{A}{\inf} \displaystyle\int\limits_{a}^{A} f(x) dx$. Если предел существует, то существует $\displaystyle\int\limits_{a}^{\inf} f(x) dx$ .
+
+### Несобственные интегралы второго рода 
+- Пусть $f(x)$ задана на $(a;b), x \rightarrow b-0 \implies \ f(x) \rightarrow \pm \inf$
+	- $\forall \eps > 0 \ \exists \delta > 0, \ \bigg|\displaystyle\int\limits_{a}^{b - \delta} f(x) dx\bigg| < \eps \implies \exists\lim{\delta}{0} \int\limits_{a}^{b - \delta} dx$. Аналогично определяется интеграл второго рода, если $f(x)$ обращается в $\inf$ вблизи правого конца или в какой - то внутренней точке. $\implies \displaystyle\int\limits_{a}^{b} = \lim{\delta_{1}, \delta_{2}}{0}\left[\displaystyle\int\limits_{a}^{c - \delta_{1}} + \displaystyle\int\limits_{c + \delta_{2}}^{b}\right]$.
+
+***Пример***
+- $y = f(x) = e^{-x}$
+	- $\lim{A}{+\inf} \int\limits_{0}^{A} = \lim{A}{+\inf}[-e^{x}]\bigg|^{A}_{0} = \lim{\Delta }{+\inf}[-e^{-A} + 1] = 1$
+- Аналогично рассматриваются  $\displaystyle\int\limits_{-\inf}^{a} f(x) dx$, $\displaystyle\int\limits_{-\inf}^{+\inf} f(x) dx = \lim{A, B}{\inf} \displaystyle\int\limits_{-A}^{B} f(x) dx$
+
+### Критерий Коши сходимости несобственного интеграла
+- $\displaystyle\int\limits_{a}^{+\inf} f(x) dx$ Сходится тогда и только тогда, когда $\forall E > 0 \ \forall \eps > 0  \ \exists E_{1}, E_{2} > E:  \displaystyle\int\limits_{E_{1}}^{E_{2}} f(x) dx < \eps $
+
+### Признак сравнения несобственных интегралов
+- Если $f(x)$ на $[a;+\inf)$ удовлетворяет условию $f(x) \leq g(x)$
+	- $\displaystyle\int\limits_{a}^{+\inf} f(x) dx$ сходится $ \implies$  $\displaystyle\int\limits_{a}^{+\inf} g(x) dx$ сходится
+	- $\displaystyle\int\limits_{a}^{+\inf} f(x) dx$ расходится$\implies \displaystyle\int\limits_{a}^{+\inf} g(x) dx$ расходится 
+
+***Пример***
+
+- $f(x) = \dfrac{1}{x^{n}}, \ \displaystyle\int\limits_{a}^{+\inf} \dfrac{dx}{x^{n}} = \lim{A}{+\inf} \displaystyle\int\limits_{a}^{A} \dfrac{dx}{x^{n}} = \lim{A}{+\inf} \dfrac{x^{-n + 1}}{-n + 1}\bigg|^{A}_{a} $. Сходится при $n > 1$. При $n=1 \implies \displaystyle\int\limits_{a}^{+\inf} \dfrac{dx}{x} = \ln{x}\bigg|^{+\inf}_{a}$. При $n <  1$ расходится.
+	- Для несобственного интеграла второго рода ситуация обратная $\displaystyle\int\limits_{a}^{b} f(x) dx = \int\limits_{a}^{0} + \int\limits_{0}^{b}$
+	- $\displaystyle\int\limits_{a}^{0} \dfrac{dx}{x^{n}} $. При $n \geq 1$ расходится, при $n < 1$ сходится.
+
+### Признак Дирихле
+- $\displaystyle\int\limits_{a}^{+\inf} g(x)f(x)dx $ Сходится, если $g(x)$ монотонно убывает, а $f(x)$ имеет ограниченную первообразную.
