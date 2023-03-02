@@ -1511,7 +1511,7 @@ $\lim{x}{0} f(x)=$ ?
 	- Уравнения внутренней окружности: $x^{2} + y^{2} = r^{2}, \ x^{2} + y^{2} = R^{2}$. В первой четверти $y > 0, \ x > 0 \implies y_{1} = \sqrt{R^{2} - x^{2}} \ y_{2} = \sqrt{r^{2} - x^{2}}$. 
 	- $S = \left(\displaystyle\int\limits_{0}^{R} \left(\sqrt{R^{2} - x^{2}} \right)dx - \displaystyle\int\limits_{0}^{r} \left(\sqrt{r^{2} - x^{2}} \right)dx\right)\bigg|^{x = R\cos{\phi}}_{dx = - R\sin{\phi}d\phi} = \\ - \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \left(R^{2}\sin^{2}{\phi} \right)d\phi + \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \left(r^{2}\sin^{2}{\psi} \right)d\psi = R^{2} \displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \sin^{2}{\phi}d\phi - r^{2}\displaystyle\int\limits_{0}^{\dfrac{\pi}{2}} \sin^{2}{\psi} d\psi = \dfrac{\pi}{4}\left(R^{2} - r^{2}\right)$
 
-### Лекция 01.03.2023
+## Лекция 01.03.2023
 ### Вычисление длины кривой
 - Дана кривая на отрезке $\left[a;b\right]$ . Разобъем кривую на отрезки, устремим число точек деления к бесконечности. $\Delta = \max{(\Delta l_{i})}$ - характеристика разбиения. $\Delta \rightarrow 0$. Если длина ломаной при стремлении $n \rightarrow \inf$ имеет предел, то кривая называется спрямляемой, а этот предел называется длиной кривой. Рассмотрим длину ломаной 
 	- $\Delta l_{1} + \Delta l_{2} + \dots + \Delta l_{n} = \sqrt{\Delta l_{1}^{2} + \Delta l_{2}^{2}  + \dots + \Delta l_{n}^{2} }$.
