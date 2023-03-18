@@ -310,4 +310,4 @@ depth: 3
   - $\left(-1\right)\vec{a} = \left(-1\right)\vec{a} + \vec{0} = \left(-1\right) \vec{a} + \vec{a} + \vec{a}' = (-1 + 1) \vec{a} + \vec{a}' = 0 \vec{a} + \vec{a}' = \vec{0} + \vec{a}' = \vec{a}'$
 
 ### Базис и размерность $\RR^{n}$
-- Совокупность элементов $\vec{e}_{1}, \vec{e_{2}}, \dots, \vec{e_{n}} \in \RR^{n}$ называется линейно независимой, если $ \lambda_{1}\vec{e_{1}} +  \lambda_{2}\vec{e}_{2} +  \lambda_{n} \vec{e_{n}} = 0 \implies $ $\lambda_{1} = \lambda_{2} = \lambda_{3} = \dots = \lambda_{n} = 0$. 
+- Совокупность элементов $\vec{e}_{1}, \vec{e_{2}}, \dots, \vec{e_{n}} \in \RR^{n}$ называется линейно независимой, если $ \lambda_{1}\vec{e_{1}} +  \lambda_{2}\vec{e}_{2} + \dots +  \lambda_{n} \vec{e_{n}} = 0 \implies $ $\lambda_{1} = \lambda_{2} = \lambda_{3} = \dots = \lambda_{n} = 0$. 
