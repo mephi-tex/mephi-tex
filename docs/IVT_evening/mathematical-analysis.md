@@ -1563,3 +1563,73 @@ $\lim{x}{0} f(x)=$ ?
 
 ### Признак Дирихле
 - $\displaystyle\int\limits_{a}^{+\inf} g(x)f(x)dx $ Сходится, если $g(x)$ монотонно убывает, а $f(x)$ имеет ограниченную первообразную.
+
+## Лекция 15.03.2023
+### Числовые ряды 
+- Составим бесконечную сумму чисел $a_{1} + a_{2} + \dots + a_{n}$. На основе элементов этой суммы составим частичные суммы: $S_{1} = a_{1}, \ S_{2} = a_{1} + a_{2}, \ S_{3} = a_{1} + a_{2} + a_{3}, \dots , S_{n} = a_{1} + a_{2} + \dots + a_{n}. \ S =  \lim{n}{\inf} S_{n}$. Если этот предел существует, он называется суммой бесконечного ряда.
+
+***Обозначение***
+- $\displaystyle\sum_\limits{n=1}^{\inf} a_{n} = S$. Если этот предел существует, то ряд называется сходящимся, иначе расходящимся.
+
+### Критерий Коши сходимости числового ряда
+- $\{S_{n}\}$ сходится тогда и только тогда, когда $\forall \eps > 0 \ \exists N_{\eps} \ : \forall n > N_{\eps} \ \forall p \in \NN \implies \left|S_{n + p} - S_{n}\right| < \eps$
+
+***Пример***
+- Гармонический ряд: $\displaystyle\sum\limits_{n=1}^{\inf}\dfrac{1}{n}$ (Расходится)
+
+### Признаки сходимости рядов с положительными членами 
+- Если имеются два ряда с положительными членами $\rho_{k}, \rho_{k}'$. $\lim{k}{\inf}\dfrac{\rho_{k}}{\rho_{k}'} = C \neq 0 \implies$ оба ряда сходятся и расходятся одновременно.
+- $\forall k:$ $\rho_{k} \leq \rho_{k}':$  $\displaystyle\sum\limits_{k=1}^{\inf} \rho_{k}'$ сходится $\implies$ $\displaystyle\sum\limits_{k=1}^{\inf} \rho_{k}$ сходится .  $\displaystyle\sum\limits_{k=1}^{\inf} \rho_{k}$ расходится $\implies$  $\displaystyle\sum\limits_{k=1}^{\inf} \rho_{k}'$ расходится.
+
+### Признак Даламбера 
+- $\exists N \in \NN : \forall n > N:$ $\dfrac{p_{n+1}}{p_{n}} = |q| < 1 \implies \displaystyle\sum\limits_{n=1}^{\inf} p_{n}$ сходится. $\dfrac{p_{n+1}}{p_{n}} = |q| > 1 \implies \displaystyle\sum\limits_{n=1}^{\inf} p_{n}$ расходится 
+- Доказательство (на основе геометрической прогрессии):
+	- $\dfrac{p_{k + 1}}{p_{k}} = |q| < 1$
+	- $p_{k + n} = q^{n} p_{k}$
+	- Получим последовательность, зависящую от номера $n$ и имеет вид геометрической прогрессии со знаменателем $|q| < 1$. Это сходящаяся последовательность.
+- Доказательство (на основе предельной формы):
+	- $\lim{n}{\inf} \dfrac{p_{n + 1}}{p_{n}} = q \implies $$\forall \eps > 0 \ \exists N_{\eps} : \forall n > N_{\eps} \implies \bigg|\dfrac{p_{n+ 1}}{p_{n}} - q\bigg| < \eps$.
+	- $\lim{n}{\inf}\dfrac{p_{n + 1}}{p_{n}} = q > 1 \implies $ ряд расходится
+	- $\bigg|\dfrac{p_{n + 1}}{p_{n}} - q\bigg| < \eps$
+	- $q - \eps < \dfrac{p_{n + 1}}{p_{n}} < q + \eps$
+	- $q = 1 + \alpha \implies q = 1 + \alpha > q - \eps \implies $ Ряд расходится.
+
+***Пример***
+- Рассмотрим ряд $\displaystyle\sum\limits_{n=1}^{\inf} \dfrac{1}{n^{\alpha}}$. Доказана расходимость гармонического ряда, $\sum\limits_{n=1}^{\inf} \dfrac{1}{n^{\alpha}} \left(\alpha = 1\right)$ 
+	- $\alpha < 1: \dfrac{1}{n^{\alpha}} >  \dfrac{1}{n}$ (Ряд расходится)
+
+### Радикальный Признак Коши сходимости положительных рядов
+- Ряд с положительными членами $\displaystyle\sum\limits_{n=1}^{\inf} p_{n}$ сходится $\implies \forall N \in \NN \ \exists n > N:$ $\sqrt[n]{p_{n}}  < 1$. Если $\sqrt[n]{p_{n}} > 1$ ряд расходится.
+- Доказательство: 
+	- $ \sqrt[n]{p_{n}} \leq q$
+	- $p_{n} \leq q^{n}, \ p_{n + 1} \leq q^{n + 1}p_{n}$
+- Верна и предельная форма: $\lim{n}{\inf}\sqrt[n]{p_{n}} = q < 1 \implies \displaystyle\sum\limits_{n=1}^{\inf} p_{n}$ Сходится.
+
+### Знакопеременные ряды
+- $\forall n$ встречаются как положительные, так и отрицательные члены.
+
+### Знакочередующиеся ряды
+- $p_{1} - p_{2} + p_{3} - p_{4} + \dots + \left(-1\right)^{n + 1}p_{n} + \dots = \displaystyle\sum\limits_{n=1}^{\inf}(-1)^{n + 1}p_{n}$, $p_{i} > 0$
+
+### Признак Лейбница сходимости знакочередующегося ряда
+- Знакочередующийся ряд, в котором $|p_{n}|$ $\rightarrow 0$.
+- Доказательство: 
+  - $S_{2n + 1} = S_{2n - 1} - (a_{2n} - a_{2n + 1}) \implies$ Убывает
+  - $S_{2n} + (a_{2n - 1} - a_{2n}) = S_{2n + 2} \implies$ Возрастает.
+  - $S_{2n} = p_{1} - \left(p_{2} - p_{3}\right) - \left(p_{4} - p_{5}\right) - \dots - \left(p_{2n - 1} - p_{2n}\right) \implies$ $S_{2n} < p_{1}$ 
+  - $S_{2n + 1} = \left(p_{1} - p_{2}\right) + \left(p_{3} - p_{4}\right) + \dots + \left(p_{2n} - p_{2n + 1}\right) \implies S_{2n + 1} > 0$
+  - $S_{2n + 1} - S_{2n} = a_{2n + 1} \rightarrow 0 \implies \lim{n}{\inf} S_{2n} = \lim{n}{\inf}S_{2n + 1} = 0 \implies$ $S$ сходится.
+
+
+***Пример*** 
+- $\displaystyle\sum\limits_{n=1}^{\inf} \dfrac{(-1)^{n - 1}}{n}$ ряд Лейбница.
+
+### Интегральный признак сходимости рядов с положительными членами
+- Рассмотрим $f(x)$,$ \ x \in \left[1; +\inf\right)$, $f(x)$ $\downarrow$ 
+- $\displaystyle\sum\limits_{x=1}^{\inf}f(x)$, $\displaystyle\int\limits_{1}^{\inf} f(x) dx$ сходятся и расходятся одновременно.
+- Доказательство:
+  -  $k \leq x \leq k + 1$
+  - $f(k) \geq f(x) \geq f(k + 1)$
+  - $\displaystyle\int\limits_{k}^{k + 1} f(k) dx \geq \displaystyle\int\limits_{k}^{k + 1} f(x) dx \geq \displaystyle\int\limits_{k}^{k + 1}f(k + 1) dx$
+  - $\displaystyle\sum\limits_{x=1}^{k} f(x) \leq \displaystyle\int\limits_{1}^{k + 1}f(x) dx \leq \displaystyle\sum\limits_{x =1}^{k + 1} f(x) $
+  - $k \rightarrow +\inf \implies$ из сходимости и расходимости $\displaystyle\int\limits_{1}^{\inf} f(x) dx$ следует сходимость и расходимость $\displaystyle\sum\limits_{x=1}^{\inf}f(x)$
