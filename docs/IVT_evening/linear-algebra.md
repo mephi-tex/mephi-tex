@@ -284,7 +284,7 @@ depth: 3
 		- $\vec{a} + \vec{b} = \vec{b} + \vec{a}$
 		- $(\vec{a} + \vec{b}) + \vec{c} = \vec{a} + (\vec{b} + \vec{c})$
 		- $\forall \vec{a}: \vec{a} + \vec{0} = \vec{a}$
-		- $\forall \vec{a} \in \R^{n} \ \exists \vec{a}': \vec{a}' + \vec{a} = \vec{0}$
+		- $\forall \vec{a} \in \RR^{n} \ \exists \vec{a}': \vec{a}' + \vec{a} = \vec{0}$
 	- На данном множестве определена операция умножения элемента пространства на число, со следующими свойствами:
 		- $(\lambda \mu)\vec{a} = \lambda(\mu \vec{a})$ 
 		- $(\lambda + \mu)\vec{a} = \lambda \vec{a} + \mu \vec{a}$
