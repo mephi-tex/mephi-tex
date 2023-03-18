@@ -1,4 +1,63 @@
+<!-- Macros: start -->
+$\newcommand{\block}[2]{\begin{#1} #2 \end{#1}}$
+$\newcommand{\cases}[1]{\block{cases}{#1}}$
+$\newcommand{\up}[2]{\stackrel{#1}{#2}}$
+$\def\dn#1#2{\mathrel{\mathop{#2}\limits_{#1}}}$
+$\def\ident{\Longleftrightarrow}$
+$\def\thus{\rightarrow}$
+$\newcommand{\set}[1]{ \{ #1 \} }$
+$\newcommand{\bigset}[1]{ \left \{ #1 \right \} }$
+$\newcommand{\bracs}[1]{ ( #1 ) }$
+$\newcommand{\bigbracs}[1]{ \left ( #1 \right ) }$
+$\newcommand{\bkets}[1]{\langle #1 \rangle}$
+$\newcommand{\bigbkets}[1]{\left \langle #1 \right \rangle}$
+$\newcommand{\mat}[1]{\block{Vmatrix}{#1}}$
+$\newcommand{\det}[1]{\block{vmatrix}{#1}}$
+$\newcommand{\pmat}[1]{\block{pmatrix}{#1}}$
+$\newcommand{\emat}[1]{\block{matrix}{#1}}$
+$\renewcommand{\geq}{\geqslant}$
+$\renewcommand{\leq}{\leqslant}$
+$\newcommand{\upline}[1]{\overline{#1}}$
+$\newcommand{\dnline}[1]{\underline{#1}}$
+$\def\ex{\exists}$
+$\def\exo{\ex!}$
+$\renewcommand{\fal}{\forall}$
+$\renewcommand{\int}{\intop}$
+$\def\inf{\infty}$
+$\renewcommand{\tg}{\tan}$
+$\renewcommand{\phi}{\varphi}$
+$\renewcommand{\epsilon}{\varepsilon}$
+$\def\alp{\alpha}$
+$\def\lam{\lambda}$
+$\def\gam{\gamma}$
+$\def\eps{\epsilon}$
+$\def\sig{\sigma}$
+$\newcommand{\NN}{\mathbb{N}}$
+$\newcommand{\ZZ}{\mathbb{Z}}$
+$\newcommand{\RR}{\mathbb{R}}$
+$\newcommand{\CC}{\mathbb{C}}$
+$\newcommand{\FF}{\mathbb{F}}$
+$\newcommand{\QQ}{\mathbb{Q}}$
+$\newcommand{\EE}{\mathbb{E}}$
+$\newcommand{\UU}{\mathcal{U}}$
+$\newcommand\E{\mathbbold{e}}$
+$\newcommand\F{\mathbbold{f}}$
+$\newcommand\G{\mathbbold{g}}$
+$\newcommand{\rawOlim}[3]{\dn{{#1}\rightarrow{#2}}{#3}}$
+$\newcommand{\lim}[2]{\rawOlim{#1}{#2}{lim}}$
+$\newcommand{\uplim}[2]{\rawOlim{#1}{#2}{\upline{lim}}}$
+$\newcommand{\dnlim}[2]{\rawOlim{#1}{#2}{\dnline{lim}}}$
+$\newcommand{\norm}[1]{\left \lVert #1 \right \rVert}$
+$\newcommand{\ord}[1]{\operatorname{ord}(#1)}$
+$\newcommand{\ans}[1]{\textbf{Ответ}: #1.}$
+$\renewcommand{\gcd}{\text{НОД}}$
+$\newcommand{\lcm}{\text{НОК}}$
+$\newcommand{\proj}[2]{\text{пр.}_{#1}{#2}}$
+$\newcommand{\U}[2]{U_{#1}(#2)}$
+<!-- Macros: end -->  
+
 # Линейная алгебра  
+
 ```{contents} Линейная алгебра  
 ---  
 depth: 3  
@@ -216,7 +275,7 @@ depth: 3
 
 ***Обозначение***
 
-- $\R^{n}$
+- $\RR^{n}$
 
 ***Определение***
 
@@ -238,7 +297,7 @@ depth: 3
 	- Пространство упорядоченных наборов чисел $a = \left(x_{1}, x_{2}, \dots, x_{n}\right)$
 	- Пространство всех многочленов $P_{n}(x), \deg{P} \leq n$
 
-### Некоторые свойства $\R^{n}$ 
+### Некоторые свойства $\RR^{n}$ 
 - Единственность нулевого элемента
 	- Предположим, что есть два различных нулевых элемента $\vec{0_{1}}, \ \vec{0_{2}} \in \R^{n}$. Взяв за нулевой элемент $\vec{0_{1}}$, за произвольный $\vec{0_{2}}:$  $\vec{0_{2}} + \vec{0_{1}} = \vec{0_{2}}$. Наоборот:  $\vec{0_{2}}: \vec{0_{1}} + \vec{0_{2}} = \vec{0_{1}} \implies \vec{0_{1}} = \vec{0_{2}}$
 - Единственность противоположного элемента для любого элемента $\vec{a} \in \R^{n}$. 
@@ -250,5 +309,5 @@ depth: 3
   - Докажем, что  $\vec{a}' = \left(-1\right)\vec{a}$
   - $\left(-1\right)\vec{a} = \left(-1\right)\vec{a} + \vec{0} = \left(-1\right) \vec{a} + \vec{a} + \vec{a}' = (-1 + 1) \vec{a} + \vec{a}' = 0 \vec{a} + \vec{a}' = \vec{0} + \vec{a}' = \vec{a}'$
 
-### Базис и размерность $\R^{n}$
+### Базис и размерность $\RR^{n}$
 - Совокупность элементов $\vec{e}_{1}, \vec{e_{2}}, \dots, \vec{e_{n}} \in \R^{n}$ называется линейно независимой, если $ \lambda_{1}\vec{e_{1}} +  \lambda_{2}\vec{e}_{2} +  \lambda_{n} \vec{e_{n}} = 0 \implies $ $\lambda_{1} = \lambda_{2} = \lambda_{3} = \dots = \lambda_{n} = 0$. 
