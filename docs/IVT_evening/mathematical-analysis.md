@@ -137,7 +137,7 @@ depth: 3
 ### Определение ограниченной последовательности 
  - $\forall n: x_{n} \leq M$ - Ограничена сверху
  -  $\forall n: x_{n} \geq m$  - Ограничена снизу
- - $\forall n: m \leq x_{n}  \leq M \ \or \ $$\exists k  \ \forall n :  |x_{n}| \leq k$  - Ограничена снизу и сверху
+ - $\forall n: m \leq x_{n}  \leq M \ \wedge \ $$\exists k  \ \forall n :  |x_{n}| \leq k$  - Ограничена снизу и сверху
  - $\forall k \ \exists n : |x_{n}| > k$ - Не ограничена
 
 ### Примеры ограниченной и неограниченной последовательностей
@@ -457,7 +457,7 @@ $\lim{n}{\infty} \{x_{n}\} = A \implies  \lim{n}{\infty} \{x_{n_{k}}\} = A $
 - $f$ четная, если: $\forall x \in X : f(-x) = f(x)$  
 - $f$ четная, если: $\forall x \in X: f(-x) = - f(x)$  
 ### Понятие обратной функции  
-- Пусть $ \exists f(x): \ y \in [c; d] \ , x \in [a;b]$.  Тогда $\exist f^{-1}(y)$.
+- Пусть $ \exists f(x): \ y \in [c; d] \ , x \in [a;b]$.  Тогда $\exists f^{-1}(y)$.
 
 ### Свойства обратной функции
 
