@@ -2,6 +2,7 @@ sphinx~=4.5.0  # defenitely works
 sphinxcontrib-applehelp==1.0.4
 sphinxcontrib-devhelp==1.0.2
 sphinxcontrib.htmlhelp==2.0.0
+sphinxcontrib.serializinghtml==1.1.5
 sphinxcontrib-mermaid==0.7.1  # defenitely works
 myst-parser[linkify]==0.18.1  # defenitely works
 sphinx-book-theme==0.3.3
