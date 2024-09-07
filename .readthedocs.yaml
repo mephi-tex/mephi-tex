@@ -22,5 +22,5 @@ sphinx:
   configuration: docs/conf.py
 
 # Build the docs in additional formats
-formats:
-  - pdf
+# formats:
+#   - pdf
