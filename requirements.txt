@@ -1,4 +1,4 @@
-sphinx  # 4.5.0 defenitely works
+sphinx==5.0.0 defenitely works
 sphinxcontrib-mermaid  # 0.7.1 defenitely works
 myst-parser[linkify]  # 0.18.1 defenitely works
 sphinx-book-theme==0.3.3
