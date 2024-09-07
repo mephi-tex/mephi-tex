@@ -44,19 +44,55 @@
             }
           },
           {
+            "id": "3c1f3b8bea622207",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Электротехника.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "67e7092290fec56a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Экономика.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "03ff88704767f826",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IVT/МатАн.md",
+                "file": "IVT/Ист.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fb67e8735ebbdd4e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "IVT/Физ.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -108,6 +144,14 @@
           "type": "starred",
           "state": {}
         }
+      },
+      {
+        "id": "d3f7d16af974e2eb",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
       }
     ],
     "currentTab": 0
@@ -122,7 +166,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "IVT/МатАн.md",
+            "file": "Экономика.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -139,7 +183,7 @@
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "IVT/МатАн.md",
+            "file": "Экономика.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -151,24 +195,37 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "IVT/МатАн.md"
+            "file": "Экономика.md"
           }
         }
       }
     ],
     "currentTab": 0
   },
-  "active": "03ff88704767f826",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "67e7092290fec56a",
   "lastOpenFiles": [
-    "IVT/АнГем.md",
+    "Электротехника.md",
+    "Экономика.md",
     "IVT/LinAlg.md",
-    "IVT/combinatorics.md",
+    "Untitled",
     "IVT/Ист.md",
-    "IVT/МатАн.md",
-    "IVT/Инф.md",
+    "IVT/combinatorics.md",
     "IVT/Физ.md",
-    "IVT/ProjPract.md",
-    "Алгоритмы и структуры данных.md",
-    "Untitled.md"
+    "_static/literature/физ_Семинар(мех)_5.pdf",
+    "Untitled.md",
+    "IVT/МатАн.md",
+    "IVT/АнГем.md",
+    "IVT/Инф.md",
+    "IVT/ProjPract.md"
   ]
 }
