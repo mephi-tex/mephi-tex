@@ -16,7 +16,7 @@ python:
     - requirements: requirements.txt
     - method: setuptools  # runs setup.py
       path: .
-  system_packages: true
+    # system_packages: true
 
 sphinx:
   builder: html
